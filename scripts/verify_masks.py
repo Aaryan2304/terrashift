@@ -1,10 +1,13 @@
-import glob, os
+import glob, os, sys
 import xml.etree.ElementTree as ET  # trusted ESA Copernicus product metadata
 import numpy as np
 import rasterio
 
-BASE = "/home/aaryan/projects/skyserve"
-safes = sorted(glob.glob(os.path.join(BASE, "*.SAFE")))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from data.manifest import load_manifest
+
+MANIFEST = load_manifest()
+safes = sorted(p["path"] for p in MANIFEST["products"])
 
 def loc(t):
     return t.split("}")[-1]

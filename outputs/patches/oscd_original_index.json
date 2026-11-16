@@ -1,0 +1,28 @@
+{
+  "index_csv": "/home/aaryan/projects/skyserve_assignment/outputs/patches/oscd_original_index.csv",
+  "patch_size": 128,
+  "stride": 128,
+  "patch_count_by_split": {
+    "train": 399,
+    "validation": 62,
+    "test": 230
+  },
+  "region_count_by_split": {
+    "train": 11,
+    "validation": 2,
+    "test": 10
+  },
+  "official_test_regions": [
+    "brasilia",
+    "chongqing",
+    "dubai",
+    "lasvegas",
+    "milano",
+    "montpellier",
+    "norcia",
+    "rio",
+    "saclay_w",
+    "valencia"
+  ],
+  "test_labels_read_during_index_build": false
+}

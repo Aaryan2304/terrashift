@@ -1,4 +1,4 @@
-# Python
+# Python caches
 __pycache__/
 *.py[cod]
 *.egg-info/
@@ -8,30 +8,12 @@ venv/
 .mypy_cache/
 .ipynb_checkpoints/
 
-# Data and products (large)
-*.SAFE/
+# Downloaded public datasets (large, not authored here)
+data/oscd/
+data/Onera*
 *.zip
 *.tar.gz
-labels/*.tif
-labels/*.geojson
-
-# Outputs (large)
-outputs/checkpoints/
-outputs/**/*.pt
-outputs/**/*.onnx
-outputs/**/*.tif
-outputs/**/*.png
-outputs/**/*.jpg
-outputs/**/*.geojson
-outputs/**/*.csv
-# Keep the small audit text files. These negations MUST come after the
-# exclusion above, otherwise git applies the last matching pattern and the
-# files stay ignored.
-!outputs/audit/*.csv
-!outputs/audit/*.json
-!outputs/audit/*.md
-!outputs/audit/*.txt
-!outputs/**/.gitkeep
+*.SAFE/
 
 # OS and editor
 .DS_Store

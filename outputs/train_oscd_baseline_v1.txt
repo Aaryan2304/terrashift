@@ -1,0 +1,19 @@
+/home/aaryan/miniconda/envs/gpu/lib/python3.11/site-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+device: cuda bands: ['B02', 'B03', 'B04', 'B08'] base: 16
+train samples: 60 validation samples: 20
+training statistics (train split only):
+  mean: [1519.08349609375, 1481.2452392578125, 1542.990234375, 2349.7373046875]
+  std: [517.9737548828125, 668.9503173828125, 953.0055541992188, 868.7835083007812]
+parameters: 482881
+/home/aaryan/miniconda/envs/gpu/lib/python3.11/site-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+epoch 1/5 train loss 1.41946 F1 0.1974 | val loss 1.60623 F1 0.1278 IoU 0.0683 | 129.4s
+epoch 2/5 train loss 1.32911 F1 0.3813 | val loss 1.52814 F1 0.1626 IoU 0.0885 | 54.8s
+epoch 3/5 train loss 1.25972 F1 0.4593 | val loss 1.28085 F1 0.4189 IoU 0.2650 | 2.5s
+epoch 4/5 train loss 1.20025 F1 0.5525 | val loss 1.22481 F1 0.5017 IoU 0.3348 | 3.6s
+epoch 5/5 train loss 1.15261 F1 0.6311 | val loss 1.41634 F1 0.1824 IoU 0.1003 | 3.4s
+wrote outputs/checkpoints/oscd_baseline_v1/train_log.csv
+best validation checkpoint: outputs/checkpoints/oscd_baseline_v1/best.pt F1=0.5017
+The official test split was not opened.
+PYTHON_EXIT=0

@@ -1,0 +1,1 @@
+epoch,train_loss,train_ap,train_auc,train_f1,val_loss,val_ap,val_auc,val_f1,val_iou,train_seconds,val_seconds,gpu_util_mean_pct,gpu_util_max_pct,gpu_memory_used_max_mib,peak_allocated_gib,peak_reserved_gib

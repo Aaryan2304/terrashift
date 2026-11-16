@@ -16,18 +16,16 @@ import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+from data.manifest import load_manifest
 from data.safeloader import SafeProduct, BAND_ORDER, canonical_band
 from data.masks import QualityMasks, CLASSI_BANDS
+from preprocess.indices import normalized_difference
 
-SAFE_DIR = "/home/aaryan/projects/skyserve"
 OUT_DIR = "outputs/audit"
 
-PRODUCTS = [
-    ("QBB_2022_12_23", "A", "S2A_MSIL1C_20221223T054241_N0510_R005_T43QBB_20240809T025636.SAFE"),
-    ("QBB_2023_05_12", "A", "S2A_MSIL1C_20230512T053641_N0510_R005_T43QBB_20240908T023323.SAFE"),
-    ("RGM_2023_10_06", "B", "S2A_MSIL1C_20231006T052701_N0510_R105_T43RGM_20241101T065943.SAFE"),
-    ("RGM_2026_10_22", "B", "S2A_MSIL1C_20261022T053241_N0513_R105_T43RGM_20261022T091024.SAFE"),
-]
+MANIFEST = load_manifest()
+# (product id, pair, absolute path)
+PRODUCTS = [(p["id"], p["pair"], p["path"]) for p in MANIFEST["products"]]
 
 # 10 m windows used for the radiometry example
 SEA_WINDOW = ((1000, 2000), (1000, 2000))      # Arabian Sea, 10 m grid
@@ -73,8 +71,8 @@ def main():
     w("| ID | Pair | Tile | Quantification | Offset (all bands) |")
     w("|----|------|------|----------------|--------------------|")
     prods = {}
-    for pid, pair, safe in PRODUCTS:
-        p = SafeProduct(os.path.join(SAFE_DIR, safe))
+    for pid, pair, path in PRODUCTS:
+        p = SafeProduct(path)
         prods[pid] = p
         offsets = sorted(set(p.offsets.values()))
         w("| %s | %s | %s | %d | %s |" % (
@@ -135,9 +133,7 @@ def main():
         p = prods[pid]
         b03, _, _ = p.read_band("B03", out_shape=(1098, 1098))
         b08, _, _ = p.read_band("B08", out_shape=(1098, 1098))
-        denom = b03 + b08
-        ndwi = np.divide(b03 - b08, denom, out=np.zeros_like(b03, dtype=np.float32),
-                         where=np.abs(denom) > 1e-9)
+        ndwi = normalized_difference(b03, b08)
         valid = np.isfinite(ndwi)
         fracs = []
         for t in [-0.2, -0.1, 0.0, 0.1, 0.2]:

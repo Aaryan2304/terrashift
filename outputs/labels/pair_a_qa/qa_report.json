@@ -1,0 +1,1724 @@
+{
+ "summary": {
+  "features": 70,
+  "class_counts": {
+   "uncertain": 13,
+   "change": 28,
+   "no_change": 29
+  },
+  "status_counts": {
+   "pass": 66,
+   "fail": 4
+  },
+  "failing_records": [
+   {
+    "record_id": "A_9",
+    "reason": "overlap: 5 pixels already claimed by an earlier annotation"
+   },
+   {
+    "record_id": "A_46",
+    "reason": "partition: touches the guard band (48 of 48 burned pixels); covers 0 partitions ()"
+   },
+   {
+    "record_id": "A_51",
+    "reason": "partition: touches the guard band (574 of 574 burned pixels); covers 0 partitions ()"
+   },
+   {
+    "record_id": "A_58",
+    "reason": "partition: touches the guard band (448 of 576 burned pixels)"
+   }
+  ],
+  "source_crs": "EPSG:32643",
+  "partition_raster": "/home/aaryan/projects/skyserve_assignment/outputs/partitions_v2_observation_valid/pair_A_partition_10m.tif",
+  "validity_raster": "/home/aaryan/projects/skyserve_assignment/outputs/baseline_v2_observation_valid/observation_valid_A.tif",
+  "class_values": {
+   "no_change": 0,
+   "change": 1,
+   "uncertain": 255
+  }
+ },
+ "records": [
+  {
+   "record_id": "A_3",
+   "label_class": "uncertain",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 22718.7,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 228,
+   "guard_fraction": 0.0,
+   "pixels": 228,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_4",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 22433.0,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 228,
+   "guard_fraction": 0.0,
+   "pixels": 228,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_5",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 100082.7,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 1007,
+   "guard_fraction": 0.0,
+   "pixels": 1007,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_6",
+   "label_class": "uncertain",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 126455.6,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 1267,
+   "guard_fraction": 0.0,
+   "pixels": 1267,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_8",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 15540.7,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 143,
+   "guard_fraction": 0.0,
+   "pixels": 143,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_7",
+   "label_class": "uncertain",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 31328.3,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 305,
+   "guard_fraction": 0.0,
+   "pixels": 305,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_9",
+   "label_class": "no_change",
+   "errors": [
+    "overlap: 5 pixels already claimed by an earlier annotation"
+   ],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 14910.2,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 143,
+   "guard_fraction": 0.0,
+   "pixels": 143,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 5,
+   "status": "fail"
+  },
+  {
+   "record_id": "A_10",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 12913.9,
+   "partition_codes": [
+    2
+   ],
+   "partitions": [
+    "validation"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 126,
+   "guard_fraction": 0.0,
+   "pixels": 126,
+   "split": "validation",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_11",
+   "label_class": "uncertain",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 4173.1,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 42,
+   "guard_fraction": 0.0,
+   "pixels": 42,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_12",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 8936.8,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 95,
+   "guard_fraction": 0.0,
+   "pixels": 95,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_13",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 60463.1,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 603,
+   "guard_fraction": 0.0,
+   "pixels": 603,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_14",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 35679.0,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 354,
+   "guard_fraction": 0.0,
+   "pixels": 354,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_15",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 141038.1,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 1411,
+   "guard_fraction": 0.0,
+   "pixels": 1411,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_16",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 48055.4,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 493,
+   "guard_fraction": 0.0,
+   "pixels": 493,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_17",
+   "label_class": "uncertain",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 48898.9,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 487,
+   "guard_fraction": 0.0,
+   "pixels": 487,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_18",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 9194.7,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 90,
+   "guard_fraction": 0.0,
+   "pixels": 90,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_19",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 112560.5,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 1125,
+   "guard_fraction": 0.0,
+   "pixels": 1125,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_1",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 11503.9,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 117,
+   "guard_fraction": 0.0,
+   "pixels": 117,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_2",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 67895.3,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 663,
+   "guard_fraction": 0.0,
+   "pixels": 663,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_20",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 111590.3,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 1121,
+   "guard_fraction": 0.0,
+   "pixels": 1121,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_21",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 66948.6,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 649,
+   "guard_fraction": 0.0,
+   "pixels": 649,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_22",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 9063.4,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 88,
+   "guard_fraction": 0.0,
+   "pixels": 88,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_23",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 25241.2,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 255,
+   "guard_fraction": 0.0,
+   "pixels": 255,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_24",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 12703.2,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 126,
+   "guard_fraction": 0.0,
+   "pixels": 126,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_25",
+   "label_class": "uncertain",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 19368.1,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 180,
+   "guard_fraction": 0.0,
+   "pixels": 180,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_26",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 78667.7,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 782,
+   "guard_fraction": 0.0,
+   "pixels": 782,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_27",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 10570.7,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 106,
+   "guard_fraction": 0.0,
+   "pixels": 106,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_28",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 45559.9,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 448,
+   "guard_fraction": 0.0,
+   "pixels": 448,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_29",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 28195.6,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 288,
+   "guard_fraction": 0.0,
+   "pixels": 288,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_30",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 4624.6,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 45,
+   "guard_fraction": 0.0,
+   "pixels": 45,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_31",
+   "label_class": "uncertain",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 7972.8,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 79,
+   "guard_fraction": 0.0,
+   "pixels": 79,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_32",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 78719.5,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 792,
+   "guard_fraction": 0.0,
+   "pixels": 792,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_33",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 26289.1,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 263,
+   "guard_fraction": 0.0,
+   "pixels": 263,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_34",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 18883.9,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 190,
+   "guard_fraction": 0.0,
+   "pixels": 190,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_35",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 21525.2,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 220,
+   "guard_fraction": 0.0,
+   "pixels": 220,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_36",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 43411.6,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 434,
+   "guard_fraction": 0.0,
+   "pixels": 434,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_37",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 27590.6,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 274,
+   "guard_fraction": 0.0,
+   "pixels": 274,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_38",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 29595.3,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 300,
+   "guard_fraction": 0.0,
+   "pixels": 300,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_39",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 54496.1,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 547,
+   "guard_fraction": 0.0,
+   "pixels": 547,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_40",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 22329.5,
+   "partition_codes": [
+    2
+   ],
+   "partitions": [
+    "validation"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 221,
+   "guard_fraction": 0.0,
+   "pixels": 221,
+   "split": "validation",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_41",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 5132.9,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 48,
+   "guard_fraction": 0.0,
+   "pixels": 48,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_42",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 27232.2,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 273,
+   "guard_fraction": 0.0,
+   "pixels": 273,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_43",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 11924.7,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 120,
+   "guard_fraction": 0.0,
+   "pixels": 120,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_44",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 30582.4,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 310,
+   "guard_fraction": 0.0,
+   "pixels": 310,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_45",
+   "label_class": "uncertain",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 13337.9,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 130,
+   "guard_fraction": 0.0,
+   "pixels": 130,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_46",
+   "label_class": "no_change",
+   "errors": [
+    "partition: touches the guard band (48 of 48 burned pixels); covers 0 partitions ()"
+   ],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 4944.4,
+   "partition_codes": [
+    0
+   ],
+   "partitions": [],
+   "guard_pixels": 48,
+   "burned_pixels": 48,
+   "guard_fraction": 1.0,
+   "pixels": 48,
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "fail"
+  },
+  {
+   "record_id": "A_47",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 12566.7,
+   "partition_codes": [
+    2
+   ],
+   "partitions": [
+    "validation"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 126,
+   "guard_fraction": 0.0,
+   "pixels": 126,
+   "split": "validation",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_48",
+   "label_class": "uncertain",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 25320.7,
+   "partition_codes": [
+    2
+   ],
+   "partitions": [
+    "validation"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 252,
+   "guard_fraction": 0.0,
+   "pixels": 252,
+   "split": "validation",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_49",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 4926.0,
+   "partition_codes": [
+    2
+   ],
+   "partitions": [
+    "validation"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 49,
+   "guard_fraction": 0.0,
+   "pixels": 49,
+   "split": "validation",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_50",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 4828.7,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 42,
+   "guard_fraction": 0.0,
+   "pixels": 42,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_51",
+   "label_class": "change",
+   "errors": [
+    "partition: touches the guard band (574 of 574 burned pixels); covers 0 partitions ()"
+   ],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 57521.0,
+   "partition_codes": [
+    0
+   ],
+   "partitions": [],
+   "guard_pixels": 574,
+   "burned_pixels": 574,
+   "guard_fraction": 1.0,
+   "pixels": 574,
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "fail"
+  },
+  {
+   "record_id": "A_52",
+   "label_class": "uncertain",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 39071.7,
+   "partition_codes": [
+    2
+   ],
+   "partitions": [
+    "validation"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 391,
+   "guard_fraction": 0.0,
+   "pixels": 391,
+   "split": "validation",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_53",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 55568.4,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 556,
+   "guard_fraction": 0.0,
+   "pixels": 556,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_54",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 37879.6,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 377,
+   "guard_fraction": 0.0,
+   "pixels": 377,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_55",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 12063.4,
+   "partition_codes": [
+    2
+   ],
+   "partitions": [
+    "validation"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 120,
+   "guard_fraction": 0.0,
+   "pixels": 120,
+   "split": "validation",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_56",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 59459.0,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 596,
+   "guard_fraction": 0.0,
+   "pixels": 596,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_57",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 13622.3,
+   "partition_codes": [
+    2
+   ],
+   "partitions": [
+    "validation"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 133,
+   "guard_fraction": 0.0,
+   "pixels": 133,
+   "split": "validation",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_58",
+   "label_class": "no_change",
+   "errors": [
+    "partition: touches the guard band (448 of 576 burned pixels)"
+   ],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 58279.7,
+   "partition_codes": [
+    0,
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 448,
+   "burned_pixels": 576,
+   "guard_fraction": 0.7778,
+   "pixels": 576,
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "fail"
+  },
+  {
+   "record_id": "A_59",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 18029.9,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 180,
+   "guard_fraction": 0.0,
+   "pixels": 180,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_60",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 8860.3,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 80,
+   "guard_fraction": 0.0,
+   "pixels": 80,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_61",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 16361.9,
+   "partition_codes": [
+    2
+   ],
+   "partitions": [
+    "validation"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 153,
+   "guard_fraction": 0.0,
+   "pixels": 153,
+   "split": "validation",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_62",
+   "label_class": "change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 14070.7,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 141,
+   "guard_fraction": 0.0,
+   "pixels": 141,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_63",
+   "label_class": "uncertain",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 10241.5,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 103,
+   "guard_fraction": 0.0,
+   "pixels": 103,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_64",
+   "label_class": "uncertain",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 14158.3,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 140,
+   "guard_fraction": 0.0,
+   "pixels": 140,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_65",
+   "label_class": "uncertain",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 6543.3,
+   "partition_codes": [
+    1
+   ],
+   "partitions": [
+    "train"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 64,
+   "guard_fraction": 0.0,
+   "pixels": 64,
+   "split": "train",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_66",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 22990.2,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 230,
+   "guard_fraction": 0.0,
+   "pixels": 230,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_67",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 9531.1,
+   "partition_codes": [
+    2
+   ],
+   "partitions": [
+    "validation"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 101,
+   "guard_fraction": 0.0,
+   "pixels": 101,
+   "split": "validation",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_68",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 16185.4,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 162,
+   "guard_fraction": 0.0,
+   "pixels": 162,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_69",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 7016.6,
+   "partition_codes": [
+    3
+   ],
+   "partitions": [
+    "test"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 72,
+   "guard_fraction": 0.0,
+   "pixels": 72,
+   "split": "test",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  },
+  {
+   "record_id": "A_70",
+   "label_class": "no_change",
+   "errors": [],
+   "warnings": [],
+   "attributes_valid": true,
+   "geometry_valid": true,
+   "geometry_type": "Polygon",
+   "area_m2": 22067.2,
+   "partition_codes": [
+    2
+   ],
+   "partitions": [
+    "validation"
+   ],
+   "guard_pixels": 0,
+   "burned_pixels": 223,
+   "guard_fraction": 0.0,
+   "pixels": 223,
+   "split": "validation",
+   "invalid_pixels": 0,
+   "overlap_pixels": 0,
+   "status": "pass"
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+  "dataset": "original_oscd",
+  "data_root": "/home/aaryan/projects/skyserve_assignment/data",
+  "split_config": "/home/aaryan/projects/skyserve_assignment/configs/oscd_region_splits.yaml",
+  "patch_index": "/home/aaryan/projects/skyserve_assignment/outputs/patches/oscd_original_index.csv",
+  "patch_size": 128,
+  "patch_stride": 128,
+  "train_regions": [
+    "aguasclaras",
+    "bercy",
+    "nantes",
+    "paris",
+    "rennes",
+    "saclay_e",
+    "abudhabi",
+    "cupertino",
+    "beihai",
+    "hongkong",
+    "beirut"
+  ],
+  "validation_regions": [
+    "bordeaux",
+    "pisa"
+  ],
+  "official_test_regions_locked": [
+    "brasilia",
+    "montpellier",
+    "norcia",
+    "rio",
+    "saclay_w",
+    "valencia",
+    "dubai",
+    "lasvegas",
+    "milano",
+    "chongqing"
+  ],
+  "excluded_regions": [
+    "mumbai"
+  ],
+  "seed": 44,
+  "epochs": 20,
+  "batch_size": 8,
+  "base_filters": 16,
+  "lr": 0.0001,
+  "workers": 0,
+  "bands": [
+    "B02",
+    "B03",
+    "B04",
+    "B08"
+  ],
+  "mean_train_only": [
+    1395.5416259765625,
+    1322.2628173828125,
+    1355.57861328125,
+    1996.9359130859375
+  ],
+  "std_train_only": [
+    443.1914978027344,
+    576.5599975585938,
+    819.3471069335938,
+    902.7374267578125
+  ],
+  "train_change_fraction": 0.023919146739606118,
+  "pos_weight": 40.807511400235974,
+  "threshold": 0.5,
+  "selection_metric": "average_precision",
+  "augmentation": {
+    "enabled": true
+  },
+  "device": "cuda",
+  "cli_overrides": {
+    "config": "config.yaml",
+    "dataset": "oscd_original",
+    "epochs": 20,
+    "batch_size": 8,
+    "base": 16,
+    "seeds": "43,44",
+    "workers": 0,
+    "max_train_batches": 0,
+    "max_val_batches": 0,
+    "output_dir": "outputs/checkpoints/oscd_gpu_v1/baseline_seeds_43_44"
+  },
+  "official_test_labels_read": false
+}

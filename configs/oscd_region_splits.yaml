@@ -1,0 +1,65 @@
+# Region-level split for the original OSCD dataset.
+# The official test regions are kept intact. The validation regions were
+# selected by ascending SHA-256 of "oscd-val-v1:<city>" from the 14 official
+# training regions after excluding Mumbai, which overlaps the local T43QBB tile.
+version: 1
+images_root: "./data/Onera Satellite Change Detection dataset - Images"
+labels_root: "./data"
+official_train:
+  - aguasclaras
+  - bercy
+  - bordeaux
+  - nantes
+  - paris
+  - rennes
+  - saclay_e
+  - abudhabi
+  - cupertino
+  - pisa
+  - beihai
+  - hongkong
+  - beirut
+  - mumbai
+official_test:
+  - brasilia
+  - montpellier
+  - norcia
+  - rio
+  - saclay_w
+  - valencia
+  - dubai
+  - lasvegas
+  - milano
+  - chongqing
+train:
+  - aguasclaras
+  - bercy
+  - nantes
+  - paris
+  - rennes
+  - saclay_e
+  - abudhabi
+  - cupertino
+  - beihai
+  - hongkong
+  - beirut
+validation:
+  - bordeaux
+  - pisa
+test:
+  - brasilia
+  - montpellier
+  - norcia
+  - rio
+  - saclay_w
+  - valencia
+  - dubai
+  - lasvegas
+  - milano
+  - chongqing
+excluded:
+  mumbai: "Same local tile T43QBB; exclude to avoid geographic overlap with Pair A."
+validation_selection:
+  method: "ascending SHA-256 of oscd-val-v1:<city>"
+  excluded_before_selection:
+    - mumbai

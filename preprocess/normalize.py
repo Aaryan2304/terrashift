@@ -24,28 +24,62 @@ transformation", Remote Sensing of Environment, 2008.
 import numpy as np
 
 
-def _valid(*arrays):
-    """Return a mask of pixels that are finite in every array."""
-    mask = np.ones(arrays[0].shape, dtype=bool)
-    for a in arrays:
-        mask &= np.isfinite(a)
-    return mask
+def reference_scaled_change_score(ref_bands, mov_bands, valid):
+    """Euclidean spectral difference, scaled by the reference date's spread.
 
+    This is the single change-score definition used for PIF selection, for
+    candidate ranking, and for the normalisation comparison. An earlier
+    version of this module standardised each date independently; that makes
+    the score depend on both scene-wide distributions, so a scene-wide
+    brightening can hide or invent change. One scale per band from the
+    reference date, computed on ``valid`` pixels only, keeps the score
+    comparable between dates.
 
-def change_score(ref_bands, mov_bands):
-    """A per-pixel change magnitude.
+    Parameters
+    ----------
+    ref_bands, mov_bands : sequence of numpy.ndarray
+        Matched band stacks, same shape.
+    valid : numpy.ndarray of bool
+        The pixels that may enter the score *and* its scale estimate. Pass the
+        paired observation-valid mask, not a finite-value mask.
 
-    The bands are first normalised by their own standard deviation so that no
-    single band dominates. The score is the Euclidean norm of the differences.
+    Returns
+    -------
+    (score, complete) : (float32 array, bool array)
+        ``score`` is NaN outside ``complete``. ``complete`` is the intersection
+        of ``valid`` and the finite footprint of every band.
+
+    Raises
+    ------
+    ValueError
+        If ``valid`` is empty, or a reference band has zero or invalid spread
+        on the valid pixels. There is no silent fallback: a score normalised
+        by a zero spread would be meaningless.
     """
-    score = np.zeros(ref_bands[0].shape, dtype=np.float32)
-    for r, m in zip(ref_bands, mov_bands):
-        valid = _valid(r, m)
-        rs = np.nanstd(r) + 1e-9
-        ms = np.nanstd(m) + 1e-9
-        d = (r / rs) - (m / ms)
-        score += np.where(valid, d * d, 0.0)
-    return np.sqrt(score)
+    if len(ref_bands) != len(mov_bands):
+        raise ValueError("reference and moving band counts differ")
+    if not ref_bands:
+        raise ValueError("at least one band is required")
+    valid = np.asarray(valid, dtype=bool)
+    if valid.shape != np.shape(ref_bands[0]):
+        raise ValueError("valid mask shape does not match the bands")
+
+    complete = valid.copy()
+    for band in list(ref_bands) + list(mov_bands):
+        complete &= np.isfinite(band)
+    if not complete.any():
+        raise ValueError("no valid pixels remain for the change score")
+
+    score_sq = np.zeros(valid.shape, dtype=np.float64)
+    for ref, mov in zip(ref_bands, mov_bands):
+        scale = float(np.std(ref[complete], dtype=np.float64))
+        if not np.isfinite(scale) or scale <= 1e-9:
+            raise ValueError("reference band has zero or invalid spread on valid pixels")
+        delta = (np.asarray(ref, dtype=np.float64) - np.asarray(mov, dtype=np.float64)) / scale
+        score_sq += np.where(complete, delta * delta, 0.0)
+    score = np.sqrt(score_sq).astype(np.float32)
+    score[~complete] = np.nan
+    return score, complete
 
 
 def select_pifs(change, valid, fraction=0.5):
@@ -140,8 +174,8 @@ def evaluate(ref_bands, mov_bands, valid):
     if not abs_diff:
         return {}
     ad = np.concatenate(abs_diff)
-    score = change_score(ref_bands, mov_bands)
-    sv = score[valid & np.isfinite(score)]
+    score, complete = reference_scaled_change_score(ref_bands, mov_bands, valid)
+    sv = score[complete]
     return {
         "mae_mean": float(ad.mean()),
         "mae_median": float(np.median(ad)),
@@ -166,8 +200,8 @@ def run(ref_bands, mov_bands, valid, method, pif_fraction=0.5):
         params["method"] = "global"
         corrected = apply_linear(mov_bands, params)
     elif method == "pif":
-        score = change_score(ref_bands, mov_bands)
-        pif = select_pifs(score, valid, fraction=pif_fraction)
+        score, complete = reference_scaled_change_score(ref_bands, mov_bands, valid)
+        pif = select_pifs(score, complete, fraction=pif_fraction)
         params = fit_global(ref_bands, mov_bands, pif)
         params["method"] = "pif"
         params["pif_pixels"] = int(pif.sum())

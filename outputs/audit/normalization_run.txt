@@ -15,3 +15,4 @@ PAIR B valid land pixels: 1198362 stable water: 2962 dynamic: 4280
 
 wrote outputs/audit/normalization_comparison.csv
 wrote outputs/audit/normalization_parameters.json
+NORM_EXIT=0

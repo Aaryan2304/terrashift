@@ -1,0 +1,91 @@
+{
+ "candidates": 10,
+ "eligible_train_candidates": 180,
+ "per_pair": 5,
+ "strata_per_pair": 5,
+ "context_radius_m": 1000,
+ "selected": [
+  {
+   "nav_order": 1,
+   "candidate_id": "A_1",
+   "pair": "A",
+   "area_px": 15,
+   "max_score": 9.652,
+   "context": "inland"
+  },
+  {
+   "nav_order": 2,
+   "candidate_id": "A_2",
+   "pair": "A",
+   "area_px": 117,
+   "max_score": 12.6287,
+   "context": "inland"
+  },
+  {
+   "nav_order": 3,
+   "candidate_id": "A_9",
+   "pair": "A",
+   "area_px": 20,
+   "max_score": 28.5229,
+   "context": "inland"
+  },
+  {
+   "nav_order": 4,
+   "candidate_id": "A_13",
+   "pair": "A",
+   "area_px": 9,
+   "max_score": 22.1029,
+   "context": "coastal_margin"
+  },
+  {
+   "nav_order": 5,
+   "candidate_id": "A_59",
+   "pair": "A",
+   "area_px": 9,
+   "max_score": 14.1177,
+   "context": "coastal_margin"
+  },
+  {
+   "nav_order": 6,
+   "candidate_id": "B_115",
+   "pair": "B",
+   "area_px": 9,
+   "max_score": 8.6358,
+   "context": "inland"
+  },
+  {
+   "nav_order": 7,
+   "candidate_id": "B_136",
+   "pair": "B",
+   "area_px": 133,
+   "max_score": 18.115,
+   "context": "inland"
+  },
+  {
+   "nav_order": 8,
+   "candidate_id": "B_148",
+   "pair": "B",
+   "area_px": 24,
+   "max_score": 15.6599,
+   "context": "inland"
+  },
+  {
+   "nav_order": 9,
+   "candidate_id": "B_107",
+   "pair": "B",
+   "area_px": 12,
+   "max_score": 20.2002,
+   "context": "inland"
+  },
+  {
+   "nav_order": 10,
+   "candidate_id": "B_100",
+   "pair": "B",
+   "area_px": 9,
+   "max_score": 8.3743,
+   "context": "inland"
+  }
+ ],
+ "status": "calibration_shortlist_not_labels",
+ "decisions_recorded": false
+}

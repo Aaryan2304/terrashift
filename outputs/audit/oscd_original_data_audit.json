@@ -1,0 +1,985 @@
+{
+  "data_root": "/home/aaryan/projects/skyserve_assignment/data",
+  "official_split_counts": {
+    "train": 14,
+    "test": 10,
+    "all": 24
+  },
+  "official_split_disjoint": true,
+  "split_union_matches_all": true,
+  "scene_directory_count": 24,
+  "rectified_band_files": 624,
+  "native_band_files": 624,
+  "native_crs": "EPSG:4326",
+  "rectified_crs": null,
+  "rectified_transform_is_identity": true,
+  "rectified_grid": "pixel coordinates; identity transform; 10 m-resampled according to the dataset README",
+  "label_encodings": {
+    "observed_1_no_change_2_change": 24
+  },
+  "label_value_mappings": {
+    "1_2": 24
+  },
+  "cities": [
+    {
+      "city": "aguasclaras",
+      "official_split": "train",
+      "dates": [
+        "date_1: 20150916",
+        "date_2: 20171015"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        471,
+        525
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          471,
+          525
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 243219,
+        "change_pixels": 4056,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "bercy",
+      "official_split": "train",
+      "dates": [
+        "date_1: 20161130",
+        "date_2: 20170829"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        395,
+        360
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          395,
+          360
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 141154,
+        "change_pixels": 1046,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "bordeaux",
+      "official_split": "train",
+      "dates": [
+        "date_1: 20160504",
+        "date_2: 20171026"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        517,
+        461
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          517,
+          461
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 235957,
+        "change_pixels": 2380,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "nantes",
+      "official_split": "train",
+      "dates": [
+        "date_1: 20150821",
+        "date_2: 20171014"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        522,
+        582
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          522,
+          582
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 300355,
+        "change_pixels": 3449,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "paris",
+      "official_split": "train",
+      "dates": [
+        "date_1: 20161130",
+        "date_2: 20171107"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        408,
+        390
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          408,
+          390
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 158662,
+        "change_pixels": 458,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "rennes",
+      "official_split": "train",
+      "dates": [
+        "date_1: 20150821",
+        "date_2: 20170621"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        339,
+        563
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          339,
+          563
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 185925,
+        "change_pixels": 4932,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "saclay_e",
+      "official_split": "train",
+      "dates": [
+        "date_1: 20160315",
+        "date_2: 20170829"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        639,
+        688
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          639,
+          688
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 435286,
+        "change_pixels": 4346,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "abudhabi",
+      "official_split": "train",
+      "dates": [
+        "date_1: 20160120",
+        "date_2: 20180328"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        799,
+        785
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          799,
+          785
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 603623,
+        "change_pixels": 23592,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "cupertino",
+      "official_split": "train",
+      "dates": [
+        "date_1: 20150918",
+        "date_2: 20180326"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        1015,
+        788
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          1015,
+          788
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 780878,
+        "change_pixels": 18942,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "pisa",
+      "official_split": "train",
+      "dates": [
+        "date_1: 20150704",
+        "date_2: 20180211"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        776,
+        718
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          776,
+          718
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 548038,
+        "change_pixels": 9130,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "beihai",
+      "official_split": "train",
+      "dates": [
+        "date_1: 20161209",
+        "date_2: 20180309"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        902,
+        772
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          902,
+          772
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 679026,
+        "change_pixels": 17318,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "hongkong",
+      "official_split": "train",
+      "dates": [
+        "date_1: 20160927",
+        "date_2: 20180323"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        695,
+        540
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          695,
+          540
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 361921,
+        "change_pixels": 13379,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "beirut",
+      "official_split": "train",
+      "dates": [
+        "date_1: 20150820",
+        "date_2: 20171003"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        1180,
+        1070
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          1180,
+          1070
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 1228682,
+        "change_pixels": 33918,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "mumbai",
+      "official_split": "train",
+      "dates": [
+        "date_1: 20151130",
+        "date_2: 20180319"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        858,
+        557
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          858,
+          557
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 465662,
+        "change_pixels": 12244,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "brasilia",
+      "official_split": "test",
+      "dates": [
+        "date_1: 20150916",
+        "date_2: 20171017"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        433,
+        469
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          433,
+          469
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 197835,
+        "change_pixels": 5242,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "montpellier",
+      "official_split": "test",
+      "dates": [
+        "date_1: 20150812",
+        "date_2: 20171030"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        426,
+        451
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          426,
+          451
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 179072,
+        "change_pixels": 13054,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "norcia",
+      "official_split": "test",
+      "dates": [
+        "date_1: 20150711",
+        "date_2: 20171018"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        241,
+        385
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          241,
+          385
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 91558,
+        "change_pixels": 1227,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "rio",
+      "official_split": "test",
+      "dates": [
+        "date_1: 20160424",
+        "date_2: 20171011"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        353,
+        426
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          353,
+          426
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 141826,
+        "change_pixels": 8552,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "saclay_w",
+      "official_split": "test",
+      "dates": [
+        "date_1: 20160315",
+        "date_2: 20170829"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        639,
+        688
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          639,
+          688
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 434614,
+        "change_pixels": 5018,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "valencia",
+      "official_split": "test",
+      "dates": [
+        "date_1: 20160730",
+        "date_2: 20171107"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        458,
+        476
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          458,
+          476
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 217039,
+        "change_pixels": 969,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "dubai",
+      "official_split": "test",
+      "dates": [
+        "date_1: 20151211",
+        "date_2: 20180330"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        774,
+        634
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          774,
+          634
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 442027,
+        "change_pixels": 48689,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "lasvegas",
+      "official_split": "test",
+      "dates": [
+        "date_1: 20150820",
+        "date_2: 20180205"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        824,
+        716
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          824,
+          716
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 544714,
+        "change_pixels": 45270,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "milano",
+      "official_split": "test",
+      "dates": [
+        "date_1: 20161228",
+        "date_2: 20180122"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        545,
+        558
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          545,
+          558
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 301691,
+        "change_pixels": 2419,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    },
+    {
+      "city": "chongqing",
+      "official_split": "test",
+      "dates": [
+        "date_1: 20170414",
+        "date_2: 20180402"
+      ],
+      "image_file_counts": {
+        "imgs_1": 13,
+        "imgs_1_rect": 13,
+        "imgs_2": 13,
+        "imgs_2_rect": 13
+      },
+      "rectified_shape": [
+        730,
+        544
+      ],
+      "native_crs": [
+        "EPSG:4326"
+      ],
+      "rectified_crs": [
+        "None"
+      ],
+      "rectified_transform_is_identity": true,
+      "label": {
+        "shape": [
+          730,
+          544
+        ],
+        "encoding": "observed_1_no_change_2_change",
+        "no_change_value": 1,
+        "change_value": 2,
+        "no_change_pixels": 368483,
+        "change_pixels": 28637,
+        "png_visual_agreement": {
+          "no_change_dark_fraction": 1.0,
+          "change_light_fraction": 1.0
+        }
+      }
+    }
+  ]
+}

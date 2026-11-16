@@ -1,0 +1,41 @@
+{
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+  "total_vram_gib": 4.0,
+  "patch_size": 128,
+  "base_filters": 16,
+  "amp": true,
+  "steps_per_size": 3,
+  "headroom_required_gib": 0.75,
+  "results": [
+    {
+      "batch_size": 2,
+      "seconds_per_step": 0.02438187599182129,
+      "steps": 3,
+      "peak_allocated_gib": 0.04,
+      "peak_reserved_gib": 0.059
+    },
+    {
+      "batch_size": 4,
+      "seconds_per_step": 0.019711971282958984,
+      "steps": 3,
+      "peak_allocated_gib": 0.077,
+      "peak_reserved_gib": 0.096
+    },
+    {
+      "batch_size": 8,
+      "seconds_per_step": 0.03542041778564453,
+      "steps": 3,
+      "peak_allocated_gib": 0.151,
+      "peak_reserved_gib": 0.164
+    },
+    {
+      "batch_size": 16,
+      "seconds_per_step": 0.04334902763366699,
+      "steps": 3,
+      "peak_allocated_gib": 0.3,
+      "peak_reserved_gib": 0.332
+    }
+  ],
+  "largest_batch_with_headroom": 16
+}

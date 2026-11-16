@@ -1,0 +1,2818 @@
+{
+ "type": "FeatureCollection",
+ "name": "manual_labels_A",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_3",
+    "pair": "A",
+    "label_class": "uncertain",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T11:15:00+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A bright feature is visible in the Before image but absent in the After image. Its appearance is not sufficient to identify it confidently as a man-made structure.",
+    "confidence": "low"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.68385134663666,
+       19.845995647916506
+      ],
+      [
+       72.6828702880505,
+       19.845542084816483
+      ],
+      [
+       72.68288295652854,
+       19.844669438480725
+      ],
+      [
+       72.68494169531739,
+       19.844696185283233
+      ],
+      [
+       72.68493236226118,
+       19.845339652720405
+      ],
+      [
+       72.68438235802559,
+       19.845358958098547
+      ],
+      [
+       72.68385134663666,
+       19.845995647916506
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_4",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T11:15:00+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is visible in the Before image but is absent at the corresponding location in the After image. The polygon traces its approximate former footprint.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.72294166014152,
+       19.843523042595805
+      ],
+      [
+       72.72367885857061,
+       19.842429463567594
+      ],
+      [
+       72.72401616060519,
+       19.84261760190738
+      ],
+      [
+       72.72402385811698,
+       19.843051018950362
+      ],
+      [
+       72.72468046168024,
+       19.84323010115171
+      ],
+      [
+       72.72479614919834,
+       19.843389148057124
+      ],
+      [
+       72.72471676530476,
+       19.844090636837254
+      ],
+      [
+       72.72347415197687,
+       19.844133862695717
+      ],
+      [
+       72.72294166014152,
+       19.843523042595805
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_5",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T11:47:09+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is visible in the Before image but is absent at the corresponding location in the After image. The polygon traces its approximate former footprint.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.76301951243993,
+       19.83886937891178
+      ],
+      [
+       72.7630039319598,
+       19.83407908226023
+      ],
+      [
+       72.76539186766927,
+       19.83412640303906
+      ],
+      [
+       72.76537496291346,
+       19.835334585091037
+      ],
+      [
+       72.76513626462955,
+       19.83532290068589
+      ],
+      [
+       72.76512203297224,
+       19.836339859376995
+      ],
+      [
+       72.76491983168773,
+       19.83634601886826
+      ],
+      [
+       72.76491758151474,
+       19.83716317752033
+      ],
+      [
+       72.7634419270108,
+       19.838883370887753
+      ],
+      [
+       72.76301951243993,
+       19.83886937891178
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_6",
+    "pair": "A",
+    "label_class": "uncertain",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T11:49:55+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A bright feature is visible in the Before image but absent in the After image. Its appearance is not sufficient to identify it confidently as a man-made structure.",
+    "confidence": "low"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.7112977546132,
+       19.82815914417584
+      ],
+      [
+       72.71064047115159,
+       19.826574823616426
+      ],
+      [
+       72.71069187747315,
+       19.82589259881216
+      ],
+      [
+       72.71148987085209,
+       19.82540380515916
+      ],
+      [
+       72.71050934555728,
+       19.82410425109794
+      ],
+      [
+       72.71065674192128,
+       19.823502052126738
+      ],
+      [
+       72.71105872058544,
+       19.823533473951695
+      ],
+      [
+       72.71142960655078,
+       19.82282908157491
+      ],
+      [
+       72.7126983331114,
+       19.823383778018975
+      ],
+      [
+       72.71250725382681,
+       19.824129875842196
+      ],
+      [
+       72.71365319145195,
+       19.824538535793057
+      ],
+      [
+       72.71330536134793,
+       19.82557153900252
+      ],
+      [
+       72.71368802344199,
+       19.825983547839048
+      ],
+      [
+       72.7133973791138,
+       19.826899091966403
+      ],
+      [
+       72.71231888143421,
+       19.827594415725
+      ],
+      [
+       72.71233873444018,
+       19.828146231217964
+      ],
+      [
+       72.7112977546132,
+       19.82815914417584
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_8",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T11:52:04+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.76062669399131,
+       19.723337429869186
+      ],
+      [
+       72.76174655634887,
+       19.723342728377947
+      ],
+      [
+       72.76175396339512,
+       19.722151898733507
+      ],
+      [
+       72.76063423045032,
+       19.722137909737064
+      ],
+      [
+       72.76062669399131,
+       19.723337429869186
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_7",
+    "pair": "A",
+    "label_class": "uncertain",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T11:53:38+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A bright feature is visible in the Before image but absent in the After image. Its appearance is not sufficient to identify it confidently as a man-made structure.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.69083383508682,
+       19.823123919046292
+      ],
+      [
+       72.69088230005342,
+       19.820565919901913
+      ],
+      [
+       72.68995074562677,
+       19.820542975782104
+      ],
+      [
+       72.68935798853929,
+       19.82175473117001
+      ],
+      [
+       72.69016429577114,
+       19.82248376266876
+      ],
+      [
+       72.6901321643462,
+       19.823114837175925
+      ],
+      [
+       72.69083383508682,
+       19.823123919046292
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_9",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T11:54:52+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.76161916118771,
+       19.721579260851076
+      ],
+      [
+       72.76292034718485,
+       19.72162192444028
+      ],
+      [
+       72.76287848497135,
+       19.72262520499531
+      ],
+      [
+       72.76163294947686,
+       19.722592040834368
+      ],
+      [
+       72.76161916118771,
+       19.721579260851076
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_10",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T11:56:27+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.01284861877663,
+       19.676317000944536
+      ],
+      [
+       73.01285492052001,
+       19.67524805133804
+      ],
+      [
+       73.01401796967882,
+       19.6752413621212
+      ],
+      [
+       73.01401098082646,
+       19.675808386878185
+      ],
+      [
+       73.01372887839551,
+       19.67580526677794
+      ],
+      [
+       73.01372220969796,
+       19.676346221302946
+      ],
+      [
+       73.01284861877663,
+       19.676317000944536
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_11",
+    "pair": "A",
+    "label_class": "uncertain",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T11:59:12+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A bright feature is visible in the After image but absent in the Before image. Its appearance is not sufficient to identify it confidently as a man-made structure.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.07991715880758,
+       19.666114250189587
+      ],
+      [
+       73.07992812309234,
+       19.665483406428592
+      ],
+      [
+       73.0804974038537,
+       19.66549602807734
+      ],
+      [
+       73.08048993138148,
+       19.66612364011573
+      ],
+      [
+       73.07991715880758,
+       19.666114250189587
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_12",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T12:01:40+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.74512731222752,
+       19.63205231471229
+      ],
+      [
+       72.74601391385067,
+       19.63204592652066
+      ],
+      [
+       72.74597072618414,
+       19.63117041505207
+      ],
+      [
+       72.74508388511376,
+       19.631194299843884
+      ],
+      [
+       72.74512731222752,
+       19.63205231471229
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_13",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T12:02:45+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.75671389337664,
+       19.616568702422512
+      ],
+      [
+       72.76206633552633,
+       19.616057940284584
+      ],
+      [
+       72.76192911028052,
+       19.614967075513714
+      ],
+      [
+       72.75664247305934,
+       19.615727981541646
+      ],
+      [
+       72.75671389337664,
+       19.616568702422512
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_14",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T12:03:39+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.76190813545132,
+       19.614391542491262
+      ],
+      [
+       72.7615972029432,
+       19.61264080811704
+      ],
+      [
+       72.75963688290787,
+       19.613013440222435
+      ],
+      [
+       72.76000896381161,
+       19.61438115566558
+      ],
+      [
+       72.76190813545132,
+       19.614391542491262
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_15",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T12:05:17+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.75151250740568,
+       19.61058215570006
+      ],
+      [
+       72.75200008675249,
+       19.607386197355986
+      ],
+      [
+       72.75588965440487,
+       19.608510810466033
+      ],
+      [
+       72.75542145577161,
+       19.61131333211887
+      ],
+      [
+       72.75151250740568,
+       19.61058215570006
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_16",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T12:06:02+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.75148980681612,
+       19.605021684766417
+      ],
+      [
+       72.75442776332366,
+       19.605058341234674
+      ],
+      [
+       72.75438031911845,
+       19.60366541238561
+      ],
+      [
+       72.75146523144264,
+       19.603586850852786
+      ],
+      [
+       72.75148980681612,
+       19.605021684766417
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_17",
+    "pair": "A",
+    "label_class": "uncertain",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T12:07:11+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A bright feature is visible in the Before image but absent in the After image. Its appearance is not sufficient to identify it confidently as a man-made structure.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.74163468243421,
+       19.604564446417495
+      ],
+      [
+       72.74355482767638,
+       19.602519097626008
+      ],
+      [
+       72.7423550949753,
+       19.60177910925519
+      ],
+      [
+       72.74025747671833,
+       19.603584960685065
+      ],
+      [
+       72.74163468243421,
+       19.604564446417495
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_18",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T12:17:13+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.17686678708867,
+       19.575115638411052
+      ],
+      [
+       73.17752540816656,
+       19.575061658032208
+      ],
+      [
+       73.17734588226789,
+       19.57395972022821
+      ],
+      [
+       73.17655845682592,
+       19.574090359653077
+      ],
+      [
+       73.17686678708867,
+       19.575115638411052
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_19",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T12:26:43+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is visible in the Before image but is absent at the corresponding location in the After image. The polygon traces its approximate former footprint.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.10184080971977,
+       19.543772215120768
+      ],
+      [
+       73.10405174945167,
+       19.542187556178536
+      ],
+      [
+       73.10175490516941,
+       19.53932676023052
+      ],
+      [
+       73.09965120577236,
+       19.539997466969137
+      ],
+      [
+       73.10184080971977,
+       19.543772215120768
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_1",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T12:57:28+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is visible in the Before image but is absent at the corresponding location in the After image. The polygon traces its approximate former footprint.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.73361022572529,
+       19.867340637046443
+      ],
+      [
+       72.73488750160327,
+       19.867383603712074
+      ],
+      [
+       72.73487771139848,
+       19.866581936337305
+      ],
+      [
+       72.73362820257559,
+       19.86657272106322
+      ],
+      [
+       72.73361022572529,
+       19.867340637046443
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_2",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T12:58:28+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is visible in the Before image but is absent at the corresponding location in the After image. The polygon traces its approximate former footprint.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.73651215775065,
+       19.86624251311062
+      ],
+      [
+       72.73653468507189,
+       19.864655705796434
+      ],
+      [
+       72.74024659539623,
+       19.864723995616142
+      ],
+      [
+       72.74022440480277,
+       19.86628964951651
+      ],
+      [
+       72.73651215775065,
+       19.86624251311062
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_20",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T13:00:26+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.8382921092005,
+       19.382144950491554
+      ],
+      [
+       72.83829389726209,
+       19.379916690712857
+      ],
+      [
+       72.83861152336159,
+       19.379920465988807
+      ],
+      [
+       72.84044707528929,
+       19.375839607943373
+      ],
+      [
+       72.841551663453,
+       19.375865826744164
+      ],
+      [
+       72.84141027425605,
+       19.37821040237133
+      ],
+      [
+       72.83954177537909,
+       19.380600004481387
+      ],
+      [
+       72.83948011695294,
+       19.382132854497684
+      ],
+      [
+       72.8382921092005,
+       19.382144950491554
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_21",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T13:02:03+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.17798710713504,
+       19.37996845687811
+      ],
+      [
+       73.17799341021777,
+       19.378289244278744
+      ],
+      [
+       73.18145760708789,
+       19.37834152605967
+      ],
+      [
+       73.18143929240553,
+       19.379991263196153
+      ],
+      [
+       73.17798710713504,
+       19.37996845687811
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_22",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T13:02:48+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.17535953138602,
+       19.37795257591349
+      ],
+      [
+       73.1763983197956,
+       19.37796952290788
+      ],
+      [
+       73.1764067504102,
+       19.377212152010397
+      ],
+      [
+       73.17536086879973,
+       19.377214723612255
+      ],
+      [
+       73.17535953138602,
+       19.37795257591349
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_23",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T13:04:01+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.1515348725619,
+       19.363069630504796
+      ],
+      [
+       73.15155714779674,
+       19.36170843993838
+      ],
+      [
+       73.1531781147868,
+       19.361757777906895
+      ],
+      [
+       73.15315637148406,
+       19.363072936759746
+      ],
+      [
+       73.1515348725619,
+       19.363069630504796
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_24",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T13:05:13+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.15696738020446,
+       19.363231511494725
+      ],
+      [
+       73.15699714331154,
+       19.36180804995756
+      ],
+      [
+       73.15775384877739,
+       19.361828772077246
+      ],
+      [
+       73.15775176111086,
+       19.36323945228033
+      ],
+      [
+       73.15696738020446,
+       19.363231511494725
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_25",
+    "pair": "A",
+    "label_class": "uncertain",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T13:06:07+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A bright feature is visible in the After image but absent in the Before image. Its appearance is not sufficient to identify it confidently as a man-made structure.",
+    "confidence": "low"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.1578575931946,
+       19.35920402372788
+      ],
+      [
+       73.15931997639355,
+       19.359218815890586
+      ],
+      [
+       73.15932146410086,
+       19.35806023148737
+      ],
+      [
+       73.1578818751982,
+       19.358067531080945
+      ],
+      [
+       73.1578575931946,
+       19.35920402372788
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_26",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T13:07:17+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.12714349397604,
+       19.358106277167646
+      ],
+      [
+       73.12720005303686,
+       19.355760986819103
+      ],
+      [
+       73.12986439604462,
+       19.355830768388394
+      ],
+      [
+       73.12983362160628,
+       19.35852962159891
+      ],
+      [
+       73.12714349397604,
+       19.358106277167646
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_27",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T13:07:58+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.14359939626118,
+       19.342663083060888
+      ],
+      [
+       73.14390974339516,
+       19.34199346965809
+      ],
+      [
+       73.14503282177624,
+       19.342475198302875
+      ],
+      [
+       73.14451562028493,
+       19.3431818979126
+      ],
+      [
+       73.14359939626118,
+       19.342663083060888
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_28",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T13:08:45+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.10099628954589,
+       19.34207168658526
+      ],
+      [
+       73.10099734904766,
+       19.340777432291148
+      ],
+      [
+       73.10403021711683,
+       19.340795812842167
+      ],
+      [
+       73.10401526986608,
+       19.34208992440085
+      ],
+      [
+       73.10099628954589,
+       19.34207168658526
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_29",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T13:09:22+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.10239050038598,
+       19.3407700853133
+      ],
+      [
+       73.10240669914683,
+       19.339368713417887
+      ],
+      [
+       73.10414127095613,
+       19.339395530285767
+      ],
+      [
+       73.10412518812713,
+       19.340788145007114
+      ],
+      [
+       73.10239050038598,
+       19.3407700853133
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_30",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T13:10:05+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.13533414650828,
+       19.34068989053825
+      ],
+      [
+       73.13534345745934,
+       19.33987015992814
+      ],
+      [
+       73.1358354156884,
+       19.339878460338785
+      ],
+      [
+       73.13581585972904,
+       19.340691553847833
+      ],
+      [
+       73.13533414650828,
+       19.34068989053825
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_31",
+    "pair": "A",
+    "label_class": "uncertain",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T13:11:05+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A bright feature is visible in the After image but absent in the Before image. Its appearance is not sufficient to identify it confidently as a man-made structure.",
+    "confidence": "low"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.11649755828134,
+       19.338220535267336
+      ],
+      [
+       73.11617072349382,
+       19.337757358454734
+      ],
+      [
+       73.11712283915891,
+       19.33719792553509
+      ],
+      [
+       73.11759311898311,
+       19.337623171448936
+      ],
+      [
+       73.11649755828134,
+       19.338220535267336
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_32",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T13:12:21+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.09392056944357,
+       19.332585653038116
+      ],
+      [
+       73.09226811819431,
+       19.332568363424752
+      ],
+      [
+       73.09226546747784,
+       19.32888763895061
+      ],
+      [
+       73.0943166668047,
+       19.328969434372652
+      ],
+      [
+       73.09392056944357,
+       19.332585653038116
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_33",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T13:13:19+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.10632304147192,
+       19.329994796833734
+      ],
+      [
+       73.10567367018642,
+       19.32860598602761
+      ],
+      [
+       73.10758102138126,
+       19.32841524862017
+      ],
+      [
+       73.1078417787198,
+       19.329476098721
+      ],
+      [
+       73.10632304147192,
+       19.329994796833734
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_34",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T13:15:06+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.10155259096419,
+       19.329234659984323
+      ],
+      [
+       73.10159099967908,
+       19.328306538784645
+      ],
+      [
+       73.10338071072327,
+       19.328342688080603
+      ],
+      [
+       73.10336137167293,
+       19.32921845098749
+      ],
+      [
+       73.10155259096419,
+       19.329234659984323
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_35",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T13:16:22+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.1018944986478,
+       19.32824622772035
+      ],
+      [
+       73.10135837884026,
+       19.327325841505022
+      ],
+      [
+       73.10273259225927,
+       19.326691352221935
+      ],
+      [
+       73.10338752946619,
+       19.32797629744282
+      ],
+      [
+       73.1018944986478,
+       19.32824622772035
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_36",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T14:20:40+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.15301462995764,
+       19.324585639695602
+      ],
+      [
+       73.15161159412403,
+       19.323412782279537
+      ],
+      [
+       73.1533480292943,
+       19.322069522342897
+      ],
+      [
+       73.15455117943185,
+       19.32361198287844
+      ],
+      [
+       73.15301462995764,
+       19.324585639695602
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_37",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T14:21:21+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.10854714477557,
+       19.307282732012297
+      ],
+      [
+       73.10861682095842,
+       19.306011488902605
+      ],
+      [
+       73.11035887490773,
+       19.306134083499604
+      ],
+      [
+       73.11023185917973,
+       19.307605112614958
+      ],
+      [
+       73.10854714477557,
+       19.307282732012297
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_38",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T14:22:04+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.13531704326282,
+       19.307383791948034
+      ],
+      [
+       73.13533678375498,
+       19.305642574342055
+      ],
+      [
+       73.13387642910575,
+       19.305670963918942
+      ],
+      [
+       73.13392868414611,
+       19.307499554294278
+      ],
+      [
+       73.13531704326282,
+       19.307383791948034
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_39",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T14:22:53+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "low"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.83585904363532,
+       19.305074313750573
+      ],
+      [
+       72.83645778821656,
+       19.29988805348861
+      ],
+      [
+       72.83728109696403,
+       19.29988044327228
+      ],
+      [
+       72.83682802288669,
+       19.30512054291526
+      ],
+      [
+       72.83585904363532,
+       19.305074313750573
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_40",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T14:24:19+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A bright feature is visible in the After image but absent in the Before image. Its appearance is not sufficient to identify it confidently as a man-made structure.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.00371810678371,
+       19.29287057521187
+      ],
+      [
+       73.00373240471343,
+       19.291691682919907
+      ],
+      [
+       73.00536086881775,
+       19.291717137791082
+      ],
+      [
+       73.00535473752298,
+       19.29288846418874
+      ],
+      [
+       73.00371810678371,
+       19.29287057521187
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_41",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T14:25:17+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.08766940435552,
+       19.28942006576967
+      ],
+      [
+       73.08768134679487,
+       19.288688214227694
+      ],
+      [
+       73.08828337226586,
+       19.28870758906098
+      ],
+      [
+       73.08827491146172,
+       19.289436209541297
+      ],
+      [
+       73.08766940435552,
+       19.28942006576967
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_42",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T14:26:13+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.14417016284158,
+       19.287286319975102
+      ],
+      [
+       73.14373773708284,
+       19.28614499910954
+      ],
+      [
+       73.1419195750996,
+       19.286793630924002
+      ],
+      [
+       73.14268775896159,
+       19.287994746946985
+      ],
+      [
+       73.14417016284158,
+       19.287286319975102
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_43",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T14:27:24+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.03874723403517,
+       19.272805838913676
+      ],
+      [
+       73.03800558623887,
+       19.272058988908743
+      ],
+      [
+       73.0389278754638,
+       19.271513088252046
+      ],
+      [
+       73.03955905777718,
+       19.272284904912784
+      ],
+      [
+       73.03874723403517,
+       19.272805838913676
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_44",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T14:29:17+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.06916941076304,
+       19.26824389913689
+      ],
+      [
+       73.07003384343336,
+       19.267123571750766
+      ],
+      [
+       73.0695252119464,
+       19.26672586228221
+      ],
+      [
+       73.06989629750788,
+       19.266040217572932
+      ],
+      [
+       73.0692474698468,
+       19.265855029606445
+      ],
+      [
+       73.06790318766474,
+       19.26732695218459
+      ],
+      [
+       73.06916941076304,
+       19.26824389913689
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_45",
+    "pair": "A",
+    "label_class": "uncertain",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T14:30:01+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A bright feature is visible in the After image but absent in the Before image. Its appearance is not sufficient to identify it confidently as a man-made structure.",
+    "confidence": "low"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.06599102184195,
+       19.267980692582256
+      ],
+      [
+       73.06597750038239,
+       19.266786483741985
+      ],
+      [
+       73.06694992052095,
+       19.266822918235317
+      ],
+      [
+       73.06694519774408,
+       19.268008218762688
+      ],
+      [
+       73.06599102184195,
+       19.267980692582256
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_47",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T14:45:28+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.02856704716393,
+       19.25302179741413
+      ],
+      [
+       73.02857096815976,
+       19.252401358859988
+      ],
+      [
+       73.02685592744785,
+       19.25237290929394
+      ],
+      [
+       73.02684830838734,
+       19.253009897792378
+      ],
+      [
+       73.02856704716393,
+       19.25302179741413
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_48",
+    "pair": "A",
+    "label_class": "uncertain",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T14:46:44+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A bright feature is visible in the After image but absent in the Before image. Its appearance is not sufficient to identify it confidently as a man-made structure.",
+    "confidence": "low"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.90627788397238,
+       19.246886431275467
+      ],
+      [
+       72.90785458134076,
+       19.2454180910765
+      ],
+      [
+       72.90879297043767,
+       19.24644375047747
+      ],
+      [
+       72.90674088824048,
+       19.247343537176683
+      ],
+      [
+       72.90627788397238,
+       19.246886431275467
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_49",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T14:53:57+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.02522631252015,
+       19.246029920789955
+      ],
+      [
+       73.0252267830297,
+       19.245415204703377
+      ],
+      [
+       73.025915148038,
+       19.245429173556452
+      ],
+      [
+       73.02591468008893,
+       19.24604388987219
+      ],
+      [
+       73.02522631252015,
+       19.246029920789955
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_50",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T15:00:28+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.03941661490241,
+       19.242220374235437
+      ],
+      [
+       73.03942342028226,
+       19.241647417050707
+      ],
+      [
+       73.04015138343546,
+       19.241661802334878
+      ],
+      [
+       73.04014465877114,
+       19.24222817405178
+      ],
+      [
+       73.03941661490241,
+       19.242220374235437
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_52",
+    "pair": "A",
+    "label_class": "uncertain",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T15:03:02+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A bright feature is visible in the After image but absent in the Before image. Its appearance is not sufficient to identify it confidently as a man-made structure.",
+    "confidence": "low"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.91409011127861,
+       19.182826027431293
+      ],
+      [
+       72.91294027884209,
+       19.181244737601666
+      ],
+      [
+       72.9137619325309,
+       19.180256822410605
+      ],
+      [
+       72.91558860811337,
+       19.181533679094706
+      ],
+      [
+       72.91409011127861,
+       19.182826027431293
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_53",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T15:05:44+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.11034303765214,
+       19.129087442632496
+      ],
+      [
+       73.10940232539608,
+       19.127105820665264
+      ],
+      [
+       73.11185586215957,
+       19.126370416297146
+      ],
+      [
+       73.11206733501018,
+       19.12862625034888
+      ],
+      [
+       73.11034303765214,
+       19.129087442632496
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_54",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T15:06:57+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.1143413740314,
+       19.128141274941427
+      ],
+      [
+       73.11360713545146,
+       19.12582976049438
+      ],
+      [
+       73.11487905629782,
+       19.12543621634853
+      ],
+      [
+       73.11561228713644,
+       19.127838069069206
+      ],
+      [
+       73.1143413740314,
+       19.128141274941427
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_55",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T15:09:09+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.95010965558144,
+       19.121642196124117
+      ],
+      [
+       72.95011627921548,
+       19.120728860110937
+      ],
+      [
+       72.95125802817434,
+       19.12075040553661
+      ],
+      [
+       72.95125157398206,
+       19.12165050616073
+      ],
+      [
+       72.95010965558144,
+       19.121642196124117
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_56",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T15:10:11+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is absent at the corresponding location in the Before image but is visible in the After image. The polygon traces its approximate new footprint.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.12950443331297,
+       19.114903754736385
+      ],
+      [
+       73.13195194812404,
+       19.114054124482962
+      ],
+      [
+       73.13237472782085,
+       19.11634303227627
+      ],
+      [
+       73.13020831181548,
+       19.11673641357874
+      ],
+      [
+       73.12950443331297,
+       19.114903754736385
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_57",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T15:11:58+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.0296465005043,
+       19.113119946387076
+      ],
+      [
+       73.02966694269755,
+       19.11139486176056
+      ],
+      [
+       73.030350806746,
+       19.111410852381237
+      ],
+      [
+       73.03032135466826,
+       19.113127171329694
+      ],
+      [
+       73.0296465005043,
+       19.113119946387076
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_59",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T15:21:14+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.8663129875446,
+       19.095971091000465
+      ],
+      [
+       72.8651278105656,
+       19.094909403416786
+      ],
+      [
+       72.86574240238991,
+       19.094261558112407
+      ],
+      [
+       72.86703922383371,
+       19.09521319009306
+      ],
+      [
+       72.8663129875446,
+       19.095971091000465
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_60",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T15:22:12+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.87093694705673,
+       19.09378687236546
+      ],
+      [
+       72.87228702511837,
+       19.093802475858347
+      ],
+      [
+       72.87221380570709,
+       19.09450022628605
+      ],
+      [
+       72.87138722372157,
+       19.094490673636177
+      ],
+      [
+       72.87093694705673,
+       19.09378687236546
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_61",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T15:23:18+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.88848157168809,
+       19.086977659270865
+      ],
+      [
+       72.89011539217223,
+       19.087005058856725
+      ],
+      [
+       72.89012638874019,
+       19.086137239423486
+      ],
+      [
+       72.88849235665519,
+       19.086127197123226
+      ],
+      [
+       72.88848157168809,
+       19.086977659270865
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_62",
+    "pair": "A",
+    "label_class": "change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T15:25:22+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A man-made structure is visible in the Before image but is absent at the corresponding location in the After image. The polygon traces its approximate former footprint.",
+    "confidence": "low"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.86230964824297,
+       19.06822503846252
+      ],
+      [
+       72.86232322626287,
+       19.067166318056504
+      ],
+      [
+       72.86369239744712,
+       19.06783170582315
+      ],
+      [
+       72.86318801882803,
+       19.068666413656892
+      ],
+      [
+       72.86230964824297,
+       19.06822503846252
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_63",
+    "pair": "A",
+    "label_class": "uncertain",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T15:27:19+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "A bright feature is visible in the After image but absent in the Before image. Its appearance is not sufficient to identify it confidently as a man-made structure.",
+    "confidence": "low"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.8707413436891,
+       19.050939691247248
+      ],
+      [
+       72.87019176057358,
+       19.05029153574016
+      ],
+      [
+       72.87109430391341,
+       19.04972562988183
+      ],
+      [
+       72.871565970306,
+       19.050543160953385
+      ],
+      [
+       72.8707413436891,
+       19.050939691247248
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_64",
+    "pair": "A",
+    "label_class": "uncertain",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T15:52:48+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "Cloud cover in the After image obscures the candidate region. The presence or absence of a man-made structural change cannot be reliably established.",
+    "confidence": "low"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.81058378490992,
+       18.971265350650157
+      ],
+      [
+       72.81059552333458,
+       18.970366790057312
+      ],
+      [
+       72.811939950821,
+       18.970371654692535
+      ],
+      [
+       72.81191641496007,
+       18.971286617086605
+      ],
+      [
+       72.81058378490992,
+       18.971265350650157
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_65",
+    "pair": "A",
+    "label_class": "uncertain",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T15:53:45+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "Cloud cover in the After image obscures the candidate region. The presence or absence of a man-made structural change cannot be reliably established.",
+    "confidence": "low"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.80425315612686,
+       18.961076476302612
+      ],
+      [
+       72.80426724137601,
+       18.960351436600902
+      ],
+      [
+       72.80503863597984,
+       18.960351840824668
+      ],
+      [
+       72.80502449688618,
+       18.961081248960642
+      ],
+      [
+       72.80425315612686,
+       18.961076476302612
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_66",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T15:54:56+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.04636208682346,
+       18.956951819917336
+      ],
+      [
+       73.04710639439618,
+       18.954836081687763
+      ],
+      [
+       73.04802404508123,
+       18.955045106902947
+      ],
+      [
+       73.04709686649872,
+       18.95721959618107
+      ],
+      [
+       73.04636208682346,
+       18.956951819917336
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_67",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T15:55:43+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.97963940315869,
+       18.918548190337695
+      ],
+      [
+       72.98021129712458,
+       18.917854566126838
+      ],
+      [
+       72.98096067197268,
+       18.918405592224293
+      ],
+      [
+       72.98021706201818,
+       18.91909080961761
+      ],
+      [
+       72.97963940315869,
+       18.918548190337695
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_68",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T15:56:47+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.1288349481111,
+       18.91923110806985
+      ],
+      [
+       73.12847879440234,
+       18.91770304067251
+      ],
+      [
+       73.12933645488366,
+       18.91751246422567
+      ],
+      [
+       73.12967325895569,
+       18.91914427723932
+      ],
+      [
+       73.1288349481111,
+       18.91923110806985
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_69",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T16:00:29+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.04706413617254,
+       18.917511665851915
+      ],
+      [
+       73.0470696427472,
+       18.9164463703313
+      ],
+      [
+       73.04765324444583,
+       18.916459045052246
+      ],
+      [
+       73.04762050187445,
+       18.917504446681928
+      ],
+      [
+       73.04706413617254,
+       18.917511665851915
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_70",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T16:01:18+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.99430798048887,
+       18.911885188917296
+      ],
+      [
+       72.99270245560378,
+       18.910878188350623
+      ],
+      [
+       72.99330146281056,
+       18.910059954747073
+      ],
+      [
+       72.99494033075177,
+       18.911177271126764
+      ],
+      [
+       72.99430798048887,
+       18.911885188917296
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

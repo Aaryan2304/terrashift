@@ -1,24 +1,25 @@
-import os, glob
+import os, glob, sys
 import numpy as np
 import rasterio
 import cv2
 
-BASE = "/home/aaryan/projects/skyserve"
-PRODUCTS = {
-    "QBB_2022_12_23": "S2A_MSIL1C_20221223T054241_N0510_R005_T43QBB_20240809T025636.SAFE",
-    "QBB_2023_05_12": "S2A_MSIL1C_20230512T053641_N0510_R005_T43QBB_20240908T023323.SAFE",
-    "RGM_2023_10_06": "S2A_MSIL1C_20231006T052701_N0510_R105_T43RGM_20241101T065943.SAFE",
-    "RGM_2026_10_22": "S2A_MSIL1C_20261022T053241_N0513_R105_T43RGM_20261022T091024.SAFE",
-}
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from data.manifest import load_manifest
 
-def img_dir(safe):
-    return glob.glob(os.path.join(BASE, safe, "GRANULE", "*", "IMG_DATA"))[0]
+MANIFEST = load_manifest()
+PRODUCT_PATHS = {p["id"]: p["path"] for p in MANIFEST["products"]}
 
-def bp(safe, band):
-    return glob.glob(os.path.join(img_dir(safe), f"*_{band}.jp2"))[0]
 
-def read_win(safe, band, r0, r1, c0, c1):
-    with rasterio.open(bp(safe, band)) as ds:
+def img_dir(product_id):
+    return glob.glob(os.path.join(PRODUCT_PATHS[product_id], "GRANULE", "*", "IMG_DATA"))[0]
+
+
+def bp(product_id, band):
+    return glob.glob(os.path.join(img_dir(product_id), f"*_{band}.jp2"))[0]
+
+
+def read_win(product_id, band, r0, r1, c0, c1):
+    with rasterio.open(bp(product_id, band)) as ds:
         return ds.read(1, window=((r0, r1), (c0, c1))).astype(np.float32)
 
 # land windows (rows, cols) at native 10 m
@@ -35,7 +36,7 @@ for pname, k1, k2 in [("A", "QBB_2022_12_23", "QBB_2023_05_12"),
                       ("B", "RGM_2023_10_06", "RGM_2026_10_22")]:
     print("=" * 90)
     print("PAIR", pname)
-    s1, s2 = PRODUCTS[k1], PRODUCTS[k2]
+    s1, s2 = k1, k2
     shifts = []
     for (r0, r1, c0, c1) in WINDOWS[pname]:
         a = read_win(s1, "B08", r0, r1, c0, c1)

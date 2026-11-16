@@ -115,3 +115,4 @@ of the per-pixel change magnitude on the validation pixels.
 
 
 wrote outputs/audit/data_audit.md
+AUDIT_EXIT=0

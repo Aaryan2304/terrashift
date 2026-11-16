@@ -1,0 +1,1 @@
+register_id,pair,tile,date1,date2,geometry_wkt,crs,longitude,latitude,area_m2,area_ha,change_type,confidence,status,detection_source,score,threshold,evidence,before_image,after_image,reviewer,reviewed_at,notes

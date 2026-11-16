@@ -1,0 +1,79 @@
+{
+ "threshold": 0.9,
+ "min_area_px": 64,
+ "operating_point_note": "fixed for comparability; each model's own best threshold is in results/*/thresholds.csv",
+ "families": {
+  "arch_resnet18": {
+   "seeds": [
+    42,
+    43,
+    44
+   ],
+   "ap_values": [
+    0.3067165086921774,
+    0.2178841358454806,
+    0.2420039271277908
+   ],
+   "ap_mean": 0.2555348572218163,
+   "ap_sd": 0.04593595724811547,
+   "object_f1_values": [
+    0.08391608391608392,
+    0.06557377049180328,
+    0.12738853503184713
+   ],
+   "object_f1_mean": 0.09229279647991144,
+   "object_f1_sd": 0.03174733475140874
+  },
+  "baseline": {
+   "seeds": [
+    42,
+    43,
+    44
+   ],
+   "ap_values": [
+    0.28064561704998864,
+    0.21679526489211745,
+    0.21493377038998612
+   ],
+   "ap_mean": 0.23745821744403073,
+   "ap_sd": 0.03741296438387215,
+   "object_f1_values": [
+    0.21238938053097345,
+    0.10852713178294573,
+    0.15151515151515152
+   ],
+   "object_f1_mean": 0.1574772212763569,
+   "object_f1_sd": 0.05218717644812187
+  },
+  "loss_bce": {
+   "seeds": [
+    42
+   ],
+   "ap_values": [
+    0.26664009690623464
+   ],
+   "ap_mean": 0.26664009690623464,
+   "ap_sd": null,
+   "object_f1_values": [
+    0.1643835616438356
+   ],
+   "object_f1_mean": 0.1643835616438356,
+   "object_f1_sd": null
+  },
+  "loss_focal": {
+   "seeds": [
+    42
+   ],
+   "ap_values": [
+    0.25797119877085695
+   ],
+   "ap_mean": 0.25797119877085695,
+   "ap_sd": null,
+   "object_f1_values": [
+    0.025
+   ],
+   "object_f1_mean": 0.025,
+   "object_f1_sd": null
+  }
+ }
+}

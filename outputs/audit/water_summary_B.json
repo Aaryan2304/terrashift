@@ -1,0 +1,28 @@
+{
+  "pair": "B",
+  "grid": {
+    "crs": "EPSG:32643",
+    "width": 5490,
+    "height": 5490,
+    "pixels": 30140100
+  },
+  "thresholds": {
+    "ndwi_threshold": 0.0,
+    "nir_threshold": 0.15
+  },
+  "class_counts": {
+    "invalid": 59,
+    "land": 29713929,
+    "stable_water": 168602,
+    "dynamic_shoreline": 257510
+  },
+  "class_fractions": {
+    "invalid": 1.957525024800847e-06,
+    "land": 0.9858603322484,
+    "stable_water": 0.0055939429530758025,
+    "dynamic_shoreline": 0.008543767273499425
+  },
+  "observation_valid_fraction": 0.9999980424749751,
+  "raster": "/home/aaryan/projects/skyserve_assignment/outputs/audit/water_masks_B.tif",
+  "figure": "/home/aaryan/projects/skyserve_assignment/outputs/figures/audit_pair_B.png"
+}

@@ -1,0 +1,175 @@
+{
+  "type": "FeatureCollection",
+  "name": "local_pair_A_partitions",
+  "crs_note": "RFC 7946 longitude/latitude coordinates (EPSG:4326)",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.87671531,
+              18.89200149
+            ],
+            [
+              72.86381501,
+              19.88360824
+            ],
+            [
+              72.13509248,
+              19.8733712
+            ],
+            [
+              72.1523808,
+              18.88231357
+            ],
+            [
+              72.87671531,
+              18.89200149
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "pair": "A",
+        "split": "train",
+        "split_code": 1,
+        "axis": "x",
+        "train_from": "low-coordinate",
+        "train_fraction_of_extent": 0.7,
+        "validation_fraction_of_extent": 0.15,
+        "test_fraction_of_extent": 0.15000000000000005,
+        "buffer_m_each_side_of_boundary": 500.0,
+        "valid_land_pixels_by_split": {
+          "train": 2809724,
+          "validation": 3591773,
+          "test": 4142947
+        },
+        "valid_land_fraction_by_split": {
+          "train": 0.2550220452362784,
+          "validation": 0.3260040119543569,
+          "test": 0.3760308191286774
+        },
+        "valid_land_retained_fraction": 0.9570568763193128,
+        "baseline_valid_land_pixels": 11017573,
+        "valid_pixels_used_only_for_axis_selection": true,
+        "labels_used_for_partition_selection": false,
+        "validity_source": "observation_validity_raster"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.03290513,
+              18.89372054
+            ],
+            [
+              73.02095222,
+              19.88542473
+            ],
+            [
+              72.87336112,
+              19.88372255
+            ],
+            [
+              72.88620387,
+              18.89210967
+            ],
+            [
+              73.03290513,
+              18.89372054
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "pair": "A",
+        "split": "validation",
+        "split_code": 2,
+        "axis": "x",
+        "train_from": "low-coordinate",
+        "train_fraction_of_extent": 0.7,
+        "validation_fraction_of_extent": 0.15,
+        "test_fraction_of_extent": 0.15000000000000005,
+        "buffer_m_each_side_of_boundary": 500.0,
+        "valid_land_pixels_by_split": {
+          "train": 2809724,
+          "validation": 3591773,
+          "test": 4142947
+        },
+        "valid_land_fraction_by_split": {
+          "train": 0.2550220452362784,
+          "validation": 0.3260040119543569,
+          "test": 0.3760308191286774
+        },
+        "valid_land_retained_fraction": 0.9570568763193128,
+        "baseline_valid_land_pixels": 11017573,
+        "valid_pixels_used_only_for_axis_selection": true,
+        "labels_used_for_partition_selection": false,
+        "validity_source": "observation_validity_raster"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.19404625,
+              18.89535651
+            ],
+            [
+              73.18307114,
+              19.88715344
+            ],
+            [
+              73.03049938,
+              19.88553063
+            ],
+            [
+              73.04239472,
+              18.89382075
+            ],
+            [
+              73.19404625,
+              18.89535651
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "pair": "A",
+        "split": "test",
+        "split_code": 3,
+        "axis": "x",
+        "train_from": "low-coordinate",
+        "train_fraction_of_extent": 0.7,
+        "validation_fraction_of_extent": 0.15,
+        "test_fraction_of_extent": 0.15000000000000005,
+        "buffer_m_each_side_of_boundary": 500.0,
+        "valid_land_pixels_by_split": {
+          "train": 2809724,
+          "validation": 3591773,
+          "test": 4142947
+        },
+        "valid_land_fraction_by_split": {
+          "train": 0.2550220452362784,
+          "validation": 0.3260040119543569,
+          "test": 0.3760308191286774
+        },
+        "valid_land_retained_fraction": 0.9570568763193128,
+        "baseline_valid_land_pixels": 11017573,
+        "valid_pixels_used_only_for_axis_selection": true,
+        "labels_used_for_partition_selection": false,
+        "validity_source": "observation_validity_raster"
+      }
+    }
+  ]
+}

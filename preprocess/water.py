@@ -22,7 +22,8 @@ import numpy as np
 
 
 def water_masks(ndwi1, ndwi2, ndwi_threshold=0.0,
-                b08_1=None, b08_2=None, nir_threshold=None):
+                b08_1=None, b08_2=None, nir_threshold=None,
+                observation_valid=None):
     """Build the water masks for two dates.
 
     Parameters
@@ -37,14 +38,32 @@ def water_masks(ndwi1, ndwi2, ndwi_threshold=0.0,
         ``nir_threshold``, water must also satisfy B08 < nir_threshold.
     nir_threshold : float, optional
         NIR reflectance threshold. Clear water absorbs NIR strongly.
+    observation_valid : numpy.ndarray of bool, optional
+        Paired observation validity from :mod:`data.validity`. Finite NDWI is
+        not the same as a valid observation: a cloud pixel has a finite NDWI
+        and would otherwise be classified as land or water and enter the
+        statistics. When supplied, it is ANDed into ``valid``.
 
     Returns
     -------
     dict with stable, dynamic, land and the two raw water masks.
+
+    Notes
+    -----
+    A water-to-land transition stays in ``dynamic_shoreline`` and stays
+    *valid*. It may be a real reclamation or construction event, so it is not
+    excluded. Only quality, NoData, and registration coverage remove a pixel
+    from the comparison.
     """
     valid = np.isfinite(ndwi1) & np.isfinite(ndwi2)
     if b08_1 is not None and b08_2 is not None and nir_threshold is not None:
         valid &= np.isfinite(b08_1) & np.isfinite(b08_2)
+    if observation_valid is not None:
+        observation_valid = np.asarray(observation_valid, dtype=bool)
+        if observation_valid.shape != valid.shape:
+            raise ValueError("observation_valid must have the same shape as the indices")
+        valid &= observation_valid
+    if b08_1 is not None and b08_2 is not None and nir_threshold is not None:
         w1 = (ndwi1 > ndwi_threshold) & (b08_1 < nir_threshold) & valid
         w2 = (ndwi2 > ndwi_threshold) & (b08_2 < nir_threshold) & valid
     else:
@@ -67,6 +86,47 @@ def water_masks(ndwi1, ndwi2, ndwi_threshold=0.0,
         "fraction_water_date1": float(w1.sum()) / max(valid.sum(), 1),
         "fraction_water_date2": float(w2.sum()) / max(valid.sum(), 1),
     }
+
+
+def thresholds_from_config(cfg):
+    """Read the water thresholds from the configuration, with validation.
+
+    The thresholds used to be duplicated as module constants in
+    ``scripts/run_classical_baseline.py`` and ``scripts/run_normalization.py``,
+    so editing ``config.yaml`` changed nothing. This is now the single source.
+    """
+    thresholds = cfg["preprocess"]["thresholds"]
+    try:
+        ndwi_value = float(thresholds["water_ndwi"])
+        nir_value = float(thresholds["water_nir_max"])
+    except KeyError as exc:
+        raise ValueError("config is missing a water threshold: %s" % exc) from exc
+    if not -1.0 <= ndwi_value <= 1.0:
+        raise ValueError("water_ndwi must lie in [-1, 1], found %r" % ndwi_value)
+    if not 0.0 < nir_value < 1.0:
+        raise ValueError("water_nir_max must lie in (0, 1), found %r" % nir_value)
+    return {"ndwi_threshold": ndwi_value, "nir_threshold": nir_value}
+
+
+def classify(water, observation_valid=None):
+    """Water-state classes as uint8, one class per pixel.
+
+    Values: 0 = invalid observation, 1 = land, 2 = stable water,
+    3 = dynamic shoreline. The shoreline keeps its own class because a
+    water-to-land transition can be a real reclamation change, so it must not
+    be folded into "invalid" or into "land".
+    """
+    shape = water["land"].shape
+    classes = np.ones(shape, dtype=np.uint8)
+    classes[water["stable_water"]] = 2
+    classes[water["dynamic_shoreline"]] = 3
+    classes[~water["valid"]] = 0
+    if observation_valid is not None:
+        observation_valid = np.asarray(observation_valid, dtype=bool)
+        if observation_valid.shape != shape:
+            raise ValueError("observation_valid must match the water masks")
+        classes[~observation_valid] = 0
+    return classes
 
 
 def invalid_mask(classi_flags, qualit_flags=None, extra=None):

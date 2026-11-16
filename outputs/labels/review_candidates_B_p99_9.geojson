@@ -1,0 +1,7608 @@
+{
+  "type": "FeatureCollection",
+  "name": "unreviewed_candidate_components",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.1327938,
+              28.86206997
+            ],
+            [
+              78.13688898,
+              28.86197467
+            ],
+            [
+              78.13698108,
+              28.86503894
+            ],
+            [
+              78.13288577,
+              28.86513426
+            ],
+            [
+              78.1327938,
+              28.86206997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_8",
+        "pair": "B",
+        "component_id": 8,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 217,
+        "bbox_area_m2": 136000,
+        "mean_score": 9.758142934966196,
+        "max_score": 12.722676277160645,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.14349447,
+              28.80229607
+            ],
+            [
+              78.14799655,
+              28.80219106
+            ],
+            [
+              78.14810501,
+              28.80579609
+            ],
+            [
+              78.14360278,
+              28.8059011
+            ],
+            [
+              78.14349447,
+              28.80229607
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_19",
+        "pair": "B",
+        "component_id": 19,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 202,
+        "bbox_area_m2": 176000,
+        "mean_score": 9.20064357011625,
+        "max_score": 12.680707931518555,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.1508737,
+              28.8297216
+            ],
+            [
+              78.15333001,
+              28.82966416
+            ],
+            [
+              78.15351493,
+              28.83579264
+            ],
+            [
+              78.15105847,
+              28.83585009
+            ],
+            [
+              78.1508737,
+              28.8297216
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_10",
+        "pair": "B",
+        "component_id": 10,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 172,
+        "bbox_area_m2": 163200,
+        "mean_score": 9.151779036189234,
+        "max_score": 11.059508323669434,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.14268241,
+              28.80934974
+            ],
+            [
+              78.14534292,
+              28.80928771
+            ],
+            [
+              78.14543506,
+              28.81235199
+            ],
+            [
+              78.14277447,
+              28.81241402
+            ],
+            [
+              78.14268241,
+              28.80934974
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_17",
+        "pair": "B",
+        "component_id": 17,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 147,
+        "bbox_area_m2": 88400,
+        "mean_score": 9.375837384438029,
+        "max_score": 11.660741806030273,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.16778721,
+              28.21804315
+            ],
+            [
+              77.17023133,
+              28.21800438
+            ],
+            [
+              77.17029703,
+              28.22125176
+            ],
+            [
+              77.16785283,
+              28.22129054
+            ],
+            [
+              77.16778721,
+              28.21804315
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_138",
+        "pair": "B",
+        "component_id": 138,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 133,
+        "bbox_area_m2": 86400,
+        "mean_score": 11.323163401811643,
+        "max_score": 18.08126449584961,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.66689388,
+              28.63250155
+            ],
+            [
+              77.66955104,
+              28.6324492
+            ],
+            [
+              77.66962868,
+              28.63551485
+            ],
+            [
+              77.66697145,
+              28.63556721
+            ],
+            [
+              77.66689388,
+              28.63250155
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_50",
+        "pair": "B",
+        "component_id": 50,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 116,
+        "bbox_area_m2": 88400,
+        "mean_score": 11.531088935917822,
+        "max_score": 18.549373626708984,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.59801042,
+              28.17409727
+            ],
+            [
+              77.59984219,
+              28.17406249
+            ],
+            [
+              77.59991201,
+              28.17694816
+            ],
+            [
+              77.59808019,
+              28.17698295
+            ],
+            [
+              77.59801042,
+              28.17409727
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_156",
+        "pair": "B",
+        "component_id": 156,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 115,
+        "bbox_area_m2": 57600,
+        "mean_score": 15.787206935882569,
+        "max_score": 21.26445198059082,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.23174977,
+              28.2859511
+            ],
+            [
+              77.23338015,
+              28.28592444
+            ],
+            [
+              77.23342911,
+              28.28826965
+            ],
+            [
+              77.2317987,
+              28.28829631
+            ],
+            [
+              77.23174977,
+              28.2859511
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_115",
+        "pair": "B",
+        "component_id": 115,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 80,
+        "bbox_area_m2": 41600,
+        "mean_score": 12.244808393716813,
+        "max_score": 18.869789123535156,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.61287147,
+              28.6970647
+            ],
+            [
+              77.61512131,
+              28.69702121
+            ],
+            [
+              77.61516617,
+              28.69882459
+            ],
+            [
+              77.61291629,
+              28.69886809
+            ],
+            [
+              77.61287147,
+              28.6970647
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_41",
+        "pair": "B",
+        "component_id": 41,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 73,
+        "bbox_area_m2": 44000,
+        "mean_score": 11.860311011745505,
+        "max_score": 15.702862739562988,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.16741792,
+              28.73337365
+            ],
+            [
+              78.16987193,
+              28.73331609
+            ],
+            [
+              78.16994271,
+              28.73565932
+            ],
+            [
+              78.16748865,
+              28.7357169
+            ],
+            [
+              78.16741792,
+              28.73337365
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_34",
+        "pair": "B",
+        "component_id": 34,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 69,
+        "bbox_area_m2": 62400,
+        "mean_score": 9.142608379972154,
+        "max_score": 11.769315719604492,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.04832582,
+              28.23594718
+            ],
+            [
+              77.04995563,
+              28.23592275
+            ],
+            [
+              77.04999013,
+              28.23772699
+            ],
+            [
+              77.04836029,
+              28.23775142
+            ],
+            [
+              77.04832582,
+              28.23594718
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_127",
+        "pair": "B",
+        "component_id": 127,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 65,
+        "bbox_area_m2": 32000,
+        "mean_score": 11.720501210139348,
+        "max_score": 14.630486488342285,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.56764418,
+              28.41916339
+            ],
+            [
+              77.56907219,
+              28.41913644
+            ],
+            [
+              77.56912012,
+              28.42112032
+            ],
+            [
+              77.56769208,
+              28.42114727
+            ],
+            [
+              77.56764418,
+              28.41916339
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_100",
+        "pair": "B",
+        "component_id": 100,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 63,
+        "bbox_area_m2": 30800,
+        "mean_score": 12.495194041539753,
+        "max_score": 15.682026863098145,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.16736031,
+              28.73824518
+            ],
+            [
+              78.16960993,
+              28.73819241
+            ],
+            [
+              78.16964805,
+              28.73945415
+            ],
+            [
+              78.16739841,
+              28.73950693
+            ],
+            [
+              78.16736031,
+              28.73824518
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_31",
+        "pair": "B",
+        "component_id": 31,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 59,
+        "bbox_area_m2": 30800,
+        "mean_score": 8.760651386390299,
+        "max_score": 11.186457633972168,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.3076133,
+              28.32493172
+            ],
+            [
+              77.30842875,
+              28.32491792
+            ],
+            [
+              77.30849114,
+              28.32780416
+            ],
+            [
+              77.30767567,
+              28.32781796
+            ],
+            [
+              77.3076133,
+              28.32493172
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_110",
+        "pair": "B",
+        "component_id": 110,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 58,
+        "bbox_area_m2": 25600,
+        "mean_score": 8.15464265593167,
+        "max_score": 10.292545318603516,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.15929011,
+              28.26148999
+            ],
+            [
+              77.16173524,
+              28.26145132
+            ],
+            [
+              77.16176437,
+              28.2628946
+            ],
+            [
+              77.15931921,
+              28.26293328
+            ],
+            [
+              77.15929011,
+              28.26148999
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_118",
+        "pair": "B",
+        "component_id": 118,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 57,
+        "bbox_area_m2": 38400,
+        "mean_score": 10.144037991239314,
+        "max_score": 13.492082595825195,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.42267047,
+              28.19156931
+            ],
+            [
+              77.4240956,
+              28.19154407
+            ],
+            [
+              77.42413225,
+              28.19316747
+            ],
+            [
+              77.42270709,
+              28.19319272
+            ],
+            [
+              77.42267047,
+              28.19156931
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_153",
+        "pair": "B",
+        "component_id": 153,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 54,
+        "bbox_area_m2": 25200,
+        "mean_score": 9.212816467991582,
+        "max_score": 10.908331871032715,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.3109033,
+              28.36385444
+            ],
+            [
+              77.31294265,
+              28.36381984
+            ],
+            [
+              77.31297004,
+              28.36508256
+            ],
+            [
+              77.31093067,
+              28.36511716
+            ],
+            [
+              77.3109033,
+              28.36385444
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_106",
+        "pair": "B",
+        "component_id": 106,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 53,
+        "bbox_area_m2": 28000,
+        "mean_score": 10.34273960905255,
+        "max_score": 12.5765962600708,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.14588512,
+              28.82731283
+            ],
+            [
+              78.14731794,
+              28.82727938
+            ],
+            [
+              78.14737764,
+              28.82926214
+            ],
+            [
+              78.14594479,
+              28.82929559
+            ],
+            [
+              78.14588512,
+              28.82731283
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_14",
+        "pair": "B",
+        "component_id": 14,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 49,
+        "bbox_area_m2": 30800,
+        "mean_score": 8.659159018068898,
+        "max_score": 10.241923332214355,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.28253922,
+              28.5061706
+            ],
+            [
+              77.28458134,
+              28.50613627
+            ],
+            [
+              77.28460856,
+              28.50739899
+            ],
+            [
+              77.28256641,
+              28.50743332
+            ],
+            [
+              77.28253922,
+              28.5061706
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_80",
+        "pair": "B",
+        "component_id": 80,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 46,
+        "bbox_area_m2": 28000,
+        "mean_score": 12.571292514386384,
+        "max_score": 17.025014877319336,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.58399437,
+              28.47045782
+            ],
+            [
+              77.58542305,
+              28.47043065
+            ],
+            [
+              77.58546699,
+              28.47223414
+            ],
+            [
+              77.58403828,
+              28.47226131
+            ],
+            [
+              77.58399437,
+              28.47045782
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_88",
+        "pair": "B",
+        "component_id": 88,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 45,
+        "bbox_area_m2": 28000,
+        "mean_score": 11.758675702412923,
+        "max_score": 13.221494674682617,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.48789471,
+              28.49985802
+            ],
+            [
+              77.48932389,
+              28.49983183
+            ],
+            [
+              77.48936625,
+              28.50163545
+            ],
+            [
+              77.48793704,
+              28.50166164
+            ],
+            [
+              77.48789471,
+              28.49985802
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_84",
+        "pair": "B",
+        "component_id": 84,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 45,
+        "bbox_area_m2": 28000,
+        "mean_score": 8.789384524027506,
+        "max_score": 10.428023338317871,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.56401643,
+              28.43799705
+            ],
+            [
+              77.56564874,
+              28.43796627
+            ],
+            [
+              77.56568357,
+              28.43940909
+            ],
+            [
+              77.56405124,
+              28.43943987
+            ],
+            [
+              77.56401643,
+              28.43799705
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_97",
+        "pair": "B",
+        "component_id": 97,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 44,
+        "bbox_area_m2": 25600,
+        "mean_score": 11.54665663025596,
+        "max_score": 15.035324096679688,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.13645815,
+              28.78808006
+            ],
+            [
+              77.13932505,
+              28.78803466
+            ],
+            [
+              77.13933611,
+              28.78857586
+            ],
+            [
+              77.13646918,
+              28.78862126
+            ],
+            [
+              77.13645815,
+              28.78808006
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_30",
+        "pair": "B",
+        "component_id": 30,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 42,
+        "bbox_area_m2": 16800,
+        "mean_score": 10.142814681643532,
+        "max_score": 16.47454071044922,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.39080122,
+              28.2146866
+            ],
+            [
+              77.39304126,
+              28.21464741
+            ],
+            [
+              77.39305735,
+              28.21536894
+            ],
+            [
+              77.3908173,
+              28.21540813
+            ],
+            [
+              77.39080122,
+              28.2146866
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_141",
+        "pair": "B",
+        "component_id": 141,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 42,
+        "bbox_area_m2": 17600,
+        "mean_score": 8.959708815529233,
+        "max_score": 10.282697677612305,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.55695032,
+              28.57670337
+            ],
+            [
+              77.55878908,
+              28.57666869
+            ],
+            [
+              77.55881965,
+              28.57793114
+            ],
+            [
+              77.55698087,
+              28.57796582
+            ],
+            [
+              77.55695032,
+              28.57670337
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_57",
+        "pair": "B",
+        "component_id": 57,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 41,
+        "bbox_area_m2": 25200,
+        "mean_score": 13.02009787210604,
+        "max_score": 18.6586971282959,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.62495537,
+              28.17683092
+            ],
+            [
+              77.62719421,
+              28.17678796
+            ],
+            [
+              77.62721185,
+              28.17750936
+            ],
+            [
+              77.624973,
+              28.17755233
+            ],
+            [
+              77.62495537,
+              28.17683092
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_155",
+        "pair": "B",
+        "component_id": 155,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 38,
+        "bbox_area_m2": 17600,
+        "mean_score": 15.963435323614823,
+        "max_score": 26.061790466308594,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.16547077,
+              28.73666609
+            ],
+            [
+              78.16731134,
+              28.73662294
+            ],
+            [
+              78.16733855,
+              28.73752419
+            ],
+            [
+              78.16549796,
+              28.73756734
+            ],
+            [
+              78.16547077,
+              28.73666609
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_33",
+        "pair": "B",
+        "component_id": 33,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 36,
+        "bbox_area_m2": 18000,
+        "mean_score": 9.329062991672092,
+        "max_score": 11.599656105041504,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.26482001,
+              28.85094887
+            ],
+            [
+              77.26666397,
+              28.85091787
+            ],
+            [
+              77.26668354,
+              28.85181978
+            ],
+            [
+              77.26483956,
+              28.85185078
+            ],
+            [
+              77.26482001,
+              28.85094887
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_11",
+        "pair": "B",
+        "component_id": 11,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 35,
+        "bbox_area_m2": 18000,
+        "mean_score": 12.415490545545305,
+        "max_score": 15.34595012664795,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.53473701,
+              28.28842073
+            ],
+            [
+              77.53616331,
+              28.28839424
+            ],
+            [
+              77.53619325,
+              28.28965676
+            ],
+            [
+              77.53476694,
+              28.28968326
+            ],
+            [
+              77.53473701,
+              28.28842073
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_113",
+        "pair": "B",
+        "component_id": 113,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 34,
+        "bbox_area_m2": 19600,
+        "mean_score": 11.67472250321332,
+        "max_score": 14.295981407165527,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.16694905,
+              28.25721796
+            ],
+            [
+              77.1675603,
+              28.25720827
+            ],
+            [
+              77.16760047,
+              28.25919277
+            ],
+            [
+              77.1669892,
+              28.25920247
+            ],
+            [
+              77.16694905,
+              28.25721796
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_121",
+        "pair": "B",
+        "component_id": 121,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 33,
+        "bbox_area_m2": 13200,
+        "mean_score": 9.637069528753107,
+        "max_score": 12.558401107788086,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.3620147,
+              28.33194037
+            ],
+            [
+              77.36303403,
+              28.33192271
+            ],
+            [
+              77.36307795,
+              28.33390692
+            ],
+            [
+              77.3620586,
+              28.33392459
+            ],
+            [
+              77.3620147,
+              28.33194037
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_108",
+        "pair": "B",
+        "component_id": 108,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 32,
+        "bbox_area_m2": 22000,
+        "mean_score": 26.452853456139565,
+        "max_score": 71.30162811279297,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.23002424,
+              28.90115254
+            ],
+            [
+              77.23125417,
+              28.90113216
+            ],
+            [
+              77.23128119,
+              28.90239486
+            ],
+            [
+              77.23005125,
+              28.90241523
+            ],
+            [
+              77.23002424,
+              28.90115254
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_2",
+        "pair": "B",
+        "component_id": 2,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 31,
+        "bbox_area_m2": 16800,
+        "mean_score": 8.175985105576054,
+        "max_score": 8.657135963439941,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.12003026,
+              28.56258244
+            ],
+            [
+              77.12105197,
+              28.56256647
+            ],
+            [
+              77.1210773,
+              28.56382932
+            ],
+            [
+              77.12005557,
+              28.56384529
+            ],
+            [
+              77.12003026,
+              28.56258244
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_63",
+        "pair": "B",
+        "component_id": 63,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 30,
+        "bbox_area_m2": 14000,
+        "mean_score": 12.182811578114828,
+        "max_score": 16.531904220581055,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.30905139,
+              28.20255714
+            ],
+            [
+              77.31027316,
+              28.2025365
+            ],
+            [
+              77.31029257,
+              28.20343847
+            ],
+            [
+              77.30907079,
+              28.2034591
+            ],
+            [
+              77.30905139,
+              28.20255714
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_148",
+        "pair": "B",
+        "component_id": 148,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 28,
+        "bbox_area_m2": 12000,
+        "mean_score": 12.656517165047783,
+        "max_score": 17.019596099853516,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.09005705,
+              28.20228884
+            ],
+            [
+              77.09087168,
+              28.20227639
+            ],
+            [
+              77.09089979,
+              28.20371975
+            ],
+            [
+              77.09008515,
+              28.2037322
+            ],
+            [
+              77.09005705,
+              28.20228884
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_149",
+        "pair": "B",
+        "component_id": 149,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 28,
+        "bbox_area_m2": 12800,
+        "mean_score": 10.381117292812892,
+        "max_score": 15.033349990844727,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.59337963,
+              28.62851644
+            ],
+            [
+              77.59460603,
+              28.62849295
+            ],
+            [
+              77.59462822,
+              28.62939467
+            ],
+            [
+              77.59340181,
+              28.62941816
+            ],
+            [
+              77.59337963,
+              28.62851644
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_51",
+        "pair": "B",
+        "component_id": 51,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 27,
+        "bbox_area_m2": 12000,
+        "mean_score": 13.839316262139214,
+        "max_score": 17.108400344848633,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.16351806,
+              28.25889655
+            ],
+            [
+              77.16494435,
+              28.25887395
+            ],
+            [
+              77.16495893,
+              28.25959559
+            ],
+            [
+              77.16353263,
+              28.25961819
+            ],
+            [
+              77.16351806,
+              28.25889655
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_120",
+        "pair": "B",
+        "component_id": 120,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 27,
+        "bbox_area_m2": 11200,
+        "mean_score": 13.259347950970685,
+        "max_score": 14.88729190826416,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.06351256,
+              28.9012808
+            ],
+            [
+              77.06412759,
+              28.90127138
+            ],
+            [
+              77.06415973,
+              28.90289501
+            ],
+            [
+              77.06354469,
+              28.90290444
+            ],
+            [
+              77.06351256,
+              28.9012808
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_3",
+        "pair": "B",
+        "component_id": 3,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 27,
+        "bbox_area_m2": 10800,
+        "mean_score": 12.747356308831108,
+        "max_score": 16.19898223876953,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.34463426,
+              28.04062219
+            ],
+            [
+              77.34646411,
+              28.04059093
+            ],
+            [
+              77.34647586,
+              28.04113211
+            ],
+            [
+              77.344646,
+              28.04116337
+            ],
+            [
+              77.34463426,
+              28.04062219
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_169",
+        "pair": "B",
+        "component_id": 169,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 27,
+        "bbox_area_m2": 10800,
+        "mean_score": 12.301912095811632,
+        "max_score": 13.875751495361328,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.60057141,
+              28.51362553
+            ],
+            [
+              77.60200066,
+              28.51359815
+            ],
+            [
+              77.60202281,
+              28.51449988
+            ],
+            [
+              77.60059355,
+              28.51452726
+            ],
+            [
+              77.60057141,
+              28.51362553
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_76",
+        "pair": "B",
+        "component_id": 76,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 27,
+        "bbox_area_m2": 14000,
+        "mean_score": 10.29996951421102,
+        "max_score": 11.4813814163208,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.14572797,
+              28.82059563
+            ],
+            [
+              77.14654733,
+              28.8205826
+            ],
+            [
+              77.14657324,
+              28.82184538
+            ],
+            [
+              77.14575387,
+              28.82185841
+            ],
+            [
+              77.14572797,
+              28.82059563
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_21",
+        "pair": "B",
+        "component_id": 21,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 26,
+        "bbox_area_m2": 11200,
+        "mean_score": 12.817604358379658,
+        "max_score": 17.366832733154297,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.56545674,
+              28.57347536
+            ],
+            [
+              77.56688684,
+              28.5734483
+            ],
+            [
+              77.56690874,
+              28.57435004
+            ],
+            [
+              77.56547863,
+              28.57437711
+            ],
+            [
+              77.56545674,
+              28.57347536
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_60",
+        "pair": "B",
+        "component_id": 60,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 26,
+        "bbox_area_m2": 14000,
+        "mean_score": 11.45081905218271,
+        "max_score": 15.651061058044434,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.64248397,
+              28.67844695
+            ],
+            [
+              77.64371091,
+              28.67842298
+            ],
+            [
+              77.64373357,
+              28.67932466
+            ],
+            [
+              77.64250662,
+              28.67934863
+            ],
+            [
+              77.64248397,
+              28.67844695
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_44",
+        "pair": "B",
+        "component_id": 44,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 26,
+        "bbox_area_m2": 12000,
+        "mean_score": 10.360743852762075,
+        "max_score": 11.824752807617188,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.4820094,
+              28.34406419
+            ],
+            [
+              77.48323263,
+              28.34404191
+            ],
+            [
+              77.48325362,
+              28.34494375
+            ],
+            [
+              77.48203038,
+              28.34496602
+            ],
+            [
+              77.4820094,
+              28.34406419
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_107",
+        "pair": "B",
+        "component_id": 107,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 26,
+        "bbox_area_m2": 12000,
+        "mean_score": 8.057616710662842,
+        "max_score": 8.681191444396973,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.59644665,
+              28.45362079
+            ],
+            [
+              77.59746697,
+              28.4536013
+            ],
+            [
+              77.59749344,
+              28.45468339
+            ],
+            [
+              77.59647311,
+              28.45470288
+            ],
+            [
+              77.59644665,
+              28.45362079
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_90",
+        "pair": "B",
+        "component_id": 90,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 25,
+        "bbox_area_m2": 12000,
+        "mean_score": 12.63755599975586,
+        "max_score": 15.034661293029785,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.14298342,
+              28.80573516
+            ],
+            [
+              78.14380201,
+              28.80571608
+            ],
+            [
+              78.14384534,
+              28.8071581
+            ],
+            [
+              78.14302674,
+              28.80717718
+            ],
+            [
+              78.14298342,
+              28.80573516
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_18",
+        "pair": "B",
+        "component_id": 18,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 25,
+        "bbox_area_m2": 12800,
+        "mean_score": 10.097712421417237,
+        "max_score": 12.251169204711914,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.10937483,
+              28.44833339
+            ],
+            [
+              77.11100783,
+              28.44830805
+            ],
+            [
+              77.11102575,
+              28.44921011
+            ],
+            [
+              77.10939274,
+              28.44923544
+            ],
+            [
+              77.10937483,
+              28.44833339
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_95",
+        "pair": "B",
+        "component_id": 95,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 25,
+        "bbox_area_m2": 16000,
+        "mean_score": 8.18993532180786,
+        "max_score": 9.32230281829834,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.30491251,
+              28.21850734
+            ],
+            [
+              77.30613446,
+              28.21848674
+            ],
+            [
+              77.30614997,
+              28.21920831
+            ],
+            [
+              77.30492801,
+              28.21922892
+            ],
+            [
+              77.30491251,
+              28.21850734
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_137",
+        "pair": "B",
+        "component_id": 137,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 24,
+        "bbox_area_m2": 9600,
+        "mean_score": 14.888715505599976,
+        "max_score": 19.6556453704834,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.22375974,
+              28.19566902
+            ],
+            [
+              77.22437062,
+              28.19565909
+            ],
+            [
+              77.22440052,
+              28.19710232
+            ],
+            [
+              77.22378963,
+              28.19711225
+            ],
+            [
+              77.22375974,
+              28.19566902
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_150",
+        "pair": "B",
+        "component_id": 150,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 24,
+        "bbox_area_m2": 9600,
+        "mean_score": 11.524952928225199,
+        "max_score": 15.63044548034668,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.3083574,
+              28.22711124
+            ],
+            [
+              77.30957945,
+              28.22709059
+            ],
+            [
+              77.30959499,
+              28.22781216
+            ],
+            [
+              77.30837293,
+              28.22783281
+            ],
+            [
+              77.3083574,
+              28.22711124
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_132",
+        "pair": "B",
+        "component_id": 132,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 23,
+        "bbox_area_m2": 9600,
+        "mean_score": 11.920647828475289,
+        "max_score": 19.351099014282227,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.57058303,
+              28.42253617
+            ],
+            [
+              77.57139906,
+              28.42252075
+            ],
+            [
+              77.57143395,
+              28.42396357
+            ],
+            [
+              77.5706179,
+              28.42397899
+            ],
+            [
+              77.57058303,
+              28.42253617
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_99",
+        "pair": "B",
+        "component_id": 99,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 23,
+        "bbox_area_m2": 12800,
+        "mean_score": 8.63966525119284,
+        "max_score": 9.380382537841797,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.10905749,
+              28.85149088
+            ],
+            [
+              77.10967221,
+              28.85148126
+            ],
+            [
+              77.10969771,
+              28.85274406
+            ],
+            [
+              77.10908298,
+              28.85275368
+            ],
+            [
+              77.10905749,
+              28.85149088
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_12",
+        "pair": "B",
+        "component_id": 12,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 21,
+        "bbox_area_m2": 8400,
+        "mean_score": 15.417709441412063,
+        "max_score": 18.384191513061523,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.47897026,
+              28.50254733
+            ],
+            [
+              77.47999114,
+              28.5025287
+            ],
+            [
+              77.48001224,
+              28.50343051
+            ],
+            [
+              77.47899135,
+              28.50344915
+            ],
+            [
+              77.47897026,
+              28.50254733
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_81",
+        "pair": "B",
+        "component_id": 81,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 21,
+        "bbox_area_m2": 10000,
+        "mean_score": 14.41137595403762,
+        "max_score": 17.169513702392578,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.59955274,
+              28.22098166
+            ],
+            [
+              77.60097807,
+              28.22095455
+            ],
+            [
+              77.60099119,
+              28.22149561
+            ],
+            [
+              77.59956585,
+              28.22152272
+            ],
+            [
+              77.59955274,
+              28.22098166
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_133",
+        "pair": "B",
+        "component_id": 133,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 21,
+        "bbox_area_m2": 8400,
+        "mean_score": 13.234359582265219,
+        "max_score": 19.11908721923828,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.61261793,
+              28.2304761
+            ],
+            [
+              77.61343247,
+              28.23046053
+            ],
+            [
+              77.61345446,
+              28.23136229
+            ],
+            [
+              77.61263991,
+              28.23137786
+            ],
+            [
+              77.61261793,
+              28.2304761
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_126",
+        "pair": "B",
+        "component_id": 126,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 20,
+        "bbox_area_m2": 8000,
+        "mean_score": 14.269267654418945,
+        "max_score": 18.56825065612793,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.57631532,
+              28.57453252
+            ],
+            [
+              77.57733682,
+              28.57451311
+            ],
+            [
+              77.57736321,
+              28.5755952
+            ],
+            [
+              77.57634171,
+              28.57561461
+            ],
+            [
+              77.57631532,
+              28.57453252
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_59",
+        "pair": "B",
+        "component_id": 59,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 20,
+        "bbox_area_m2": 12000,
+        "mean_score": 13.499393439292907,
+        "max_score": 17.359384536743164,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.60279522,
+              28.51268077
+            ],
+            [
+              77.6038161,
+              28.5126612
+            ],
+            [
+              77.60383826,
+              28.51356292
+            ],
+            [
+              77.60281737,
+              28.5135825
+            ],
+            [
+              77.60279522,
+              28.51268077
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_78",
+        "pair": "B",
+        "component_id": 78,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 20,
+        "bbox_area_m2": 10000,
+        "mean_score": 9.203098344802857,
+        "max_score": 11.29317569732666,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.22768387,
+              28.90678519
+            ],
+            [
+              77.22870886,
+              28.90676823
+            ],
+            [
+              77.22872815,
+              28.90767015
+            ],
+            [
+              77.22770314,
+              28.90768711
+            ],
+            [
+              77.22768387,
+              28.90678519
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_1",
+        "pair": "B",
+        "component_id": 1,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 20,
+        "bbox_area_m2": 10000,
+        "mean_score": 8.42573869228363,
+        "max_score": 9.328513145446777,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.54337815,
+              28.36025513
+            ],
+            [
+              77.54439762,
+              28.3602361
+            ],
+            [
+              77.54441914,
+              28.36113788
+            ],
+            [
+              77.54339966,
+              28.36115692
+            ],
+            [
+              77.54337815,
+              28.36025513
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_105",
+        "pair": "B",
+        "component_id": 105,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 19,
+        "bbox_area_m2": 10000,
+        "mean_score": 8.138824814244321,
+        "max_score": 8.71138858795166,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.63997656,
+              27.97535526
+            ],
+            [
+              77.64078916,
+              27.97533966
+            ],
+            [
+              77.64081113,
+              27.97624143
+            ],
+            [
+              77.63999853,
+              27.97625703
+            ],
+            [
+              77.63997656,
+              27.97535526
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_180",
+        "pair": "B",
+        "component_id": 180,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 18,
+        "bbox_area_m2": 8000,
+        "mean_score": 16.55214982562595,
+        "max_score": 20.255962371826172,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.51840663,
+              28.81108534
+            ],
+            [
+              77.51922571,
+              28.81107005
+            ],
+            [
+              77.51924742,
+              28.81197179
+            ],
+            [
+              77.51842834,
+              28.81198709
+            ],
+            [
+              77.51840663,
+              28.81108534
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_22",
+        "pair": "B",
+        "component_id": 22,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 18,
+        "bbox_area_m2": 8000,
+        "mean_score": 13.457378281487358,
+        "max_score": 18.159090042114258,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.04491717,
+              27.99217165
+            ],
+            [
+              77.04552697,
+              27.99216258
+            ],
+            [
+              77.04554742,
+              27.99324516
+            ],
+            [
+              77.04493761,
+              27.99325424
+            ],
+            [
+              77.04491717,
+              27.99217165
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_179",
+        "pair": "B",
+        "component_id": 179,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 18,
+        "bbox_area_m2": 7200,
+        "mean_score": 13.019627571105957,
+        "max_score": 15.07874584197998,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.31870188,
+              28.22495113
+            ],
+            [
+              77.31972023,
+              28.22493385
+            ],
+            [
+              77.31973583,
+              28.22565542
+            ],
+            [
+              77.31871748,
+              28.2256727
+            ],
+            [
+              77.31870188,
+              28.22495113
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_134",
+        "pair": "B",
+        "component_id": 134,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 18,
+        "bbox_area_m2": 8000,
+        "mean_score": 12.36149009068807,
+        "max_score": 21.926668167114258,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.30180726,
+              28.48094295
+            ],
+            [
+              77.30241974,
+              28.48093257
+            ],
+            [
+              77.30244323,
+              28.48201489
+            ],
+            [
+              77.30183074,
+              28.48202527
+            ],
+            [
+              77.30180726,
+              28.48094295
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_87",
+        "pair": "B",
+        "component_id": 87,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 18,
+        "bbox_area_m2": 7200,
+        "mean_score": 10.728329499562582,
+        "max_score": 12.808466911315918,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.08745376,
+              28.55875639
+            ],
+            [
+              77.08847546,
+              28.55874067
+            ],
+            [
+              77.08848971,
+              28.55946231
+            ],
+            [
+              77.087468,
+              28.55947804
+            ],
+            [
+              77.08745376,
+              28.55875639
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_64",
+        "pair": "B",
+        "component_id": 64,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 18,
+        "bbox_area_m2": 8000,
+        "mean_score": 9.795362048678928,
+        "max_score": 12.431938171386719,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.66994778,
+              28.47817876
+            ],
+            [
+              77.67076418,
+              28.47816272
+            ],
+            [
+              77.67078688,
+              28.4790644
+            ],
+            [
+              77.66997048,
+              28.47908044
+            ],
+            [
+              77.66994778,
+              28.47817876
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_85",
+        "pair": "B",
+        "component_id": 85,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 18,
+        "bbox_area_m2": 8000,
+        "mean_score": 9.238713211483425,
+        "max_score": 11.470173835754395,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.83002782,
+              28.01523656
+            ],
+            [
+              77.83104377,
+              28.01521562
+            ],
+            [
+              77.83106265,
+              28.01593692
+            ],
+            [
+              77.83004669,
+              28.01595786
+            ],
+            [
+              77.83002782,
+              28.01523656
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_176",
+        "pair": "B",
+        "component_id": 176,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 18,
+        "bbox_area_m2": 8000,
+        "mean_score": 8.252597570419312,
+        "max_score": 8.889567375183105,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.79082514,
+              28.04021571
+            ],
+            [
+              77.79163812,
+              28.04019918
+            ],
+            [
+              77.79166142,
+              28.04110083
+            ],
+            [
+              77.79084843,
+              28.04111736
+            ],
+            [
+              77.79082514,
+              28.04021571
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_167",
+        "pair": "B",
+        "component_id": 167,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 17,
+        "bbox_area_m2": 8000,
+        "mean_score": 8.30889917822445,
+        "max_score": 8.884603500366211,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.99014858,
+              28.06398126
+            ],
+            [
+              77.99116485,
+              28.06395911
+            ],
+            [
+              77.99118483,
+              28.0646803
+            ],
+            [
+              77.99016856,
+              28.06470245
+            ],
+            [
+              77.99014858,
+              28.06398126
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_165",
+        "pair": "B",
+        "component_id": 165,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 17,
+        "bbox_area_m2": 8000,
+        "mean_score": 8.006812740774716,
+        "max_score": 8.326706886291504,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.09984379,
+              28.53420241
+            ],
+            [
+              77.10066096,
+              28.53418977
+            ],
+            [
+              77.10067528,
+              28.53491141
+            ],
+            [
+              77.09985811,
+              28.53492405
+            ],
+            [
+              77.09984379,
+              28.53420241
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_74",
+        "pair": "B",
+        "component_id": 74,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 16,
+        "bbox_area_m2": 6400,
+        "mean_score": 24.243564546108246,
+        "max_score": 37.584293365478516,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.09470271,
+              28.04321911
+            ],
+            [
+              77.09551613,
+              28.0432067
+            ],
+            [
+              77.09553013,
+              28.0439284
+            ],
+            [
+              77.09471669,
+              28.04394081
+            ],
+            [
+              77.09470271,
+              28.04321911
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_170",
+        "pair": "B",
+        "component_id": 170,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 16,
+        "bbox_area_m2": 6400,
+        "mean_score": 13.655786573886871,
+        "max_score": 17.612279891967773,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.13269289,
+              28.86465322
+            ],
+            [
+              77.13351261,
+              28.86464025
+            ],
+            [
+              77.13352735,
+              28.86536184
+            ],
+            [
+              77.13270763,
+              28.86537481
+            ],
+            [
+              77.13269289,
+              28.86465322
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_9",
+        "pair": "B",
+        "component_id": 9,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 16,
+        "bbox_area_m2": 6400,
+        "mean_score": 12.770027041435242,
+        "max_score": 17.29539680480957,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.63795596,
+              28.60383943
+            ],
+            [
+              77.63897769,
+              28.60381953
+            ],
+            [
+              77.63899573,
+              28.60454088
+            ],
+            [
+              77.63797399,
+              28.60456078
+            ],
+            [
+              77.63795596,
+              28.60383943
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_54",
+        "pair": "B",
+        "component_id": 54,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 16,
+        "bbox_area_m2": 8000,
+        "mean_score": 12.652384996414185,
+        "max_score": 15.828938484191895,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.1630085,
+              28.79415365
+            ],
+            [
+              77.16382765,
+              28.79414052
+            ],
+            [
+              77.16384629,
+              28.7950425
+            ],
+            [
+              77.16302713,
+              28.79505563
+            ],
+            [
+              77.1630085,
+              28.79415365
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_27",
+        "pair": "B",
+        "component_id": 27,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 16,
+        "bbox_area_m2": 8000,
+        "mean_score": 8.916729390621185,
+        "max_score": 9.35167407989502,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.2680101,
+              28.09171767
+            ],
+            [
+              77.26902723,
+              28.09170084
+            ],
+            [
+              77.26903861,
+              28.09224204
+            ],
+            [
+              77.26802148,
+              28.09225887
+            ],
+            [
+              77.2680101,
+              28.09171767
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_162",
+        "pair": "B",
+        "component_id": 162,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 15,
+        "bbox_area_m2": 6000,
+        "mean_score": 13.814006741841634,
+        "max_score": 18.675439834594727,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.47160307,
+              28.50195982
+            ],
+            [
+              77.47241977,
+              28.50194496
+            ],
+            [
+              77.4724366,
+              28.50266642
+            ],
+            [
+              77.47161989,
+              28.50268128
+            ],
+            [
+              77.47160307,
+              28.50195982
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_82",
+        "pair": "B",
+        "component_id": 82,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 15,
+        "bbox_area_m2": 6400,
+        "mean_score": 12.679668426513672,
+        "max_score": 14.834010124206543,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.26064158,
+              28.21563723
+            ],
+            [
+              77.26125256,
+              28.21562713
+            ],
+            [
+              77.26127157,
+              28.21652913
+            ],
+            [
+              77.26066059,
+              28.21653923
+            ],
+            [
+              77.26064158,
+              28.21563723
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_142",
+        "pair": "B",
+        "component_id": 142,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 15,
+        "bbox_area_m2": 6000,
+        "mean_score": 12.343364016215007,
+        "max_score": 15.204172134399414,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.24133784,
+              28.61531051
+            ],
+            [
+              77.24215555,
+              28.61529698
+            ],
+            [
+              77.24217089,
+              28.61601854
+            ],
+            [
+              77.24135317,
+              28.61603207
+            ],
+            [
+              77.24133784,
+              28.61531051
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_53",
+        "pair": "B",
+        "component_id": 53,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 15,
+        "bbox_area_m2": 6400,
+        "mean_score": 11.791037114461263,
+        "max_score": 13.691771507263184,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.07039787,
+              27.92492389
+            ],
+            [
+              78.07141277,
+              27.92490124
+            ],
+            [
+              78.07142807,
+              27.9254421
+            ],
+            [
+              78.07041317,
+              27.92546475
+            ],
+            [
+              78.07039787,
+              27.92492389
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_181",
+        "pair": "B",
+        "component_id": 181,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 15,
+        "bbox_area_m2": 6000,
+        "mean_score": 11.715190315246582,
+        "max_score": 16.208080291748047,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.29351612,
+              28.17141841
+            ],
+            [
+              77.2943304,
+              28.17140476
+            ],
+            [
+              77.2943458,
+              28.17212635
+            ],
+            [
+              77.29353151,
+              28.17213999
+            ],
+            [
+              77.29351612,
+              28.17141841
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_159",
+        "pair": "B",
+        "component_id": 159,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 15,
+        "bbox_area_m2": 6400,
+        "mean_score": 10.943627580006916,
+        "max_score": 14.328706741333008,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.09870388,
+              28.53855121
+            ],
+            [
+              77.09972538,
+              28.53853542
+            ],
+            [
+              77.09973611,
+              28.53907665
+            ],
+            [
+              77.09871461,
+              28.53909244
+            ],
+            [
+              77.09870388,
+              28.53855121
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_72",
+        "pair": "B",
+        "component_id": 72,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 15,
+        "bbox_area_m2": 6000,
+        "mean_score": 10.466139984130859,
+        "max_score": 12.81869125366211,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.07200828,
+              28.89537567
+            ],
+            [
+              77.07303327,
+              28.89535989
+            ],
+            [
+              77.07304403,
+              28.8959011
+            ],
+            [
+              77.07201903,
+              28.89591688
+            ],
+            [
+              77.07200828,
+              28.89537567
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_6",
+        "pair": "B",
+        "component_id": 6,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 15,
+        "bbox_area_m2": 6000,
+        "mean_score": 10.196725527445475,
+        "max_score": 13.924914360046387,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.62236118,
+              28.02008052
+            ],
+            [
+              77.62297089,
+              28.02006888
+            ],
+            [
+              77.62299276,
+              28.02097065
+            ],
+            [
+              77.62238304,
+              28.0209823
+            ],
+            [
+              77.62236118,
+              28.02008052
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_175",
+        "pair": "B",
+        "component_id": 175,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 15,
+        "bbox_area_m2": 6000,
+        "mean_score": 9.299029477437337,
+        "max_score": 10.722926139831543,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.11825483,
+              28.03058543
+            ],
+            [
+              77.11906815,
+              28.03057288
+            ],
+            [
+              77.1190823,
+              28.03129456
+            ],
+            [
+              77.11826897,
+              28.03130711
+            ],
+            [
+              77.11825483,
+              28.03058543
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_174",
+        "pair": "B",
+        "component_id": 174,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 15,
+        "bbox_area_m2": 6400,
+        "mean_score": 9.25245787302653,
+        "max_score": 10.844915390014648,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.33381085,
+              28.17019593
+            ],
+            [
+              77.33442154,
+              28.17018551
+            ],
+            [
+              77.33444113,
+              28.17108747
+            ],
+            [
+              77.33383043,
+              28.17109788
+            ],
+            [
+              77.33381085,
+              28.17019593
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_160",
+        "pair": "B",
+        "component_id": 160,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 15,
+        "bbox_area_m2": 6000,
+        "mean_score": 8.664282035827636,
+        "max_score": 9.189220428466797,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.56367361,
+              28.56737439
+            ],
+            [
+              77.56449076,
+              28.56735894
+            ],
+            [
+              77.56450826,
+              28.56808034
+            ],
+            [
+              77.5636911,
+              28.56809579
+            ],
+            [
+              77.56367361,
+              28.56737439
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_61",
+        "pair": "B",
+        "component_id": 61,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 14,
+        "bbox_area_m2": 6400,
+        "mean_score": 11.276766777038574,
+        "max_score": 13.178346633911133,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.577187,
+              28.53482104
+            ],
+            [
+              77.57800389,
+              28.53480553
+            ],
+            [
+              77.57802146,
+              28.53552692
+            ],
+            [
+              77.57720456,
+              28.53554244
+            ],
+            [
+              77.577187,
+              28.53482104
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_69",
+        "pair": "B",
+        "component_id": 69,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 14,
+        "bbox_area_m2": 6400,
+        "mean_score": 9.546350070408412,
+        "max_score": 10.907938957214355,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.68144217,
+              28.1311691
+            ],
+            [
+              77.68225592,
+              28.13115317
+            ],
+            [
+              77.68227389,
+              28.13187454
+            ],
+            [
+              77.68146014,
+              28.13189047
+            ],
+            [
+              77.68144217,
+              28.1311691
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_161",
+        "pair": "B",
+        "component_id": 161,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 14,
+        "bbox_area_m2": 6400,
+        "mean_score": 8.845807416098458,
+        "max_score": 9.666114807128906,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.27483268,
+              28.21233405
+            ],
+            [
+              77.27564729,
+              28.21232049
+            ],
+            [
+              77.27565877,
+              28.21286169
+            ],
+            [
+              77.27484416,
+              28.21287524
+            ],
+            [
+              77.27483268,
+              28.21233405
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_147",
+        "pair": "B",
+        "component_id": 147,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 28.169145345687866,
+        "max_score": 40.11998748779297,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.31357156,
+              28.19490149
+            ],
+            [
+              77.31438601,
+              28.19488771
+            ],
+            [
+              77.31439768,
+              28.19542889
+            ],
+            [
+              77.31358322,
+              28.19544267
+            ],
+            [
+              77.31357156,
+              28.19490149
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_151",
+        "pair": "B",
+        "component_id": 151,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 16.420615673065186,
+        "max_score": 17.88076400756836,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.27281909,
+              28.2134503
+            ],
+            [
+              77.27363371,
+              28.21343675
+            ],
+            [
+              77.27364518,
+              28.21397795
+            ],
+            [
+              77.27283055,
+              28.21399149
+            ],
+            [
+              77.27281909,
+              28.2134503
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_145",
+        "pair": "B",
+        "component_id": 145,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 15.184968630472818,
+        "max_score": 24.473587036132812,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.14029764,
+              28.21883713
+            ],
+            [
+              77.14090869,
+              28.21882756
+            ],
+            [
+              77.14092309,
+              28.21954922
+            ],
+            [
+              77.14031204,
+              28.21955879
+            ],
+            [
+              77.14029764,
+              28.21883713
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_140",
+        "pair": "B",
+        "component_id": 140,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 14.75437060991923,
+        "max_score": 17.529804229736328,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.67328889,
+              28.69913144
+            ],
+            [
+              77.67390246,
+              28.69911931
+            ],
+            [
+              77.67392081,
+              28.69984063
+            ],
+            [
+              77.67330723,
+              28.69985276
+            ],
+            [
+              77.67328889,
+              28.69913144
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_40",
+        "pair": "B",
+        "component_id": 40,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 14.685788234074911,
+        "max_score": 20.44139289855957,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.14680527,
+              28.8131798
+            ],
+            [
+              77.14762457,
+              28.81316676
+            ],
+            [
+              77.14763568,
+              28.81370795
+            ],
+            [
+              77.14681637,
+              28.81372099
+            ],
+            [
+              77.14680527,
+              28.8131798
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_24",
+        "pair": "B",
+        "component_id": 24,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 14.417344888051352,
+        "max_score": 18.106204986572266,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.29990749,
+              28.23212605
+            ],
+            [
+              77.30051854,
+              28.23211577
+            ],
+            [
+              77.30053403,
+              28.23283734
+            ],
+            [
+              77.29992297,
+              28.23284763
+            ],
+            [
+              77.29990749,
+              28.23212605
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_128",
+        "pair": "B",
+        "component_id": 128,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 13.981782754262289,
+        "max_score": 18.517257690429688,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.36504073,
+              28.33044431
+            ],
+            [
+              77.36585618,
+              28.33043016
+            ],
+            [
+              77.36586818,
+              28.33097131
+            ],
+            [
+              77.36505272,
+              28.33098546
+            ],
+            [
+              77.36504073,
+              28.33044431
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_109",
+        "pair": "B",
+        "component_id": 109,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 13.601216316223145,
+        "max_score": 20.164918899536133,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.07479528,
+              28.90146835
+            ],
+            [
+              77.07541031,
+              28.90145887
+            ],
+            [
+              77.07542467,
+              28.90218049
+            ],
+            [
+              77.07480964,
+              28.90218997
+            ],
+            [
+              77.07479528,
+              28.90146835
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_4",
+        "pair": "B",
+        "component_id": 4,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 13.321190357208252,
+        "max_score": 16.390445709228516,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.27535476,
+              28.21773919
+            ],
+            [
+              77.27596574,
+              28.21772902
+            ],
+            [
+              77.27598105,
+              28.21845061
+            ],
+            [
+              77.27537006,
+              28.21846078
+            ],
+            [
+              77.27535476,
+              28.21773919
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_139",
+        "pair": "B",
+        "component_id": 139,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 13.255210717519125,
+        "max_score": 17.143817901611328,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.76282345,
+              28.70346579
+            ],
+            [
+              77.76343701,
+              28.70345326
+            ],
+            [
+              77.76345597,
+              28.70417452
+            ],
+            [
+              77.76284241,
+              28.70418706
+            ],
+            [
+              77.76282345,
+              28.70346579
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_38",
+        "pair": "B",
+        "component_id": 38,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 13.211405436197916,
+        "max_score": 15.538111686706543,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.16057377,
+              28.45583111
+            ],
+            [
+              77.1613903,
+              28.45581813
+            ],
+            [
+              77.16140131,
+              28.45635935
+            ],
+            [
+              77.16058478,
+              28.45637232
+            ],
+            [
+              77.16057377,
+              28.45583111
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_92",
+        "pair": "B",
+        "component_id": 92,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 12.081624825795492,
+        "max_score": 14.372652053833008,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.23759618,
+              28.25355263
+            ],
+            [
+              77.23820739,
+              28.25354262
+            ],
+            [
+              77.23822247,
+              28.25426422
+            ],
+            [
+              77.23761126,
+              28.25427424
+            ],
+            [
+              77.23759618,
+              28.25355263
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_123",
+        "pair": "B",
+        "component_id": 123,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 12.025670766830444,
+        "max_score": 15.810972213745117,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.2962473,
+              28.2514967
+            ],
+            [
+              77.2970622,
+              28.251483
+            ],
+            [
+              77.2970738,
+              28.25202418
+            ],
+            [
+              77.2962589,
+              28.25203788
+            ],
+            [
+              77.2962473,
+              28.2514967
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_124",
+        "pair": "B",
+        "component_id": 124,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 11.752837737401327,
+        "max_score": 16.386838912963867,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.08264292,
+              28.89394843
+            ],
+            [
+              77.0834629,
+              28.89393575
+            ],
+            [
+              77.08347371,
+              28.89447695
+            ],
+            [
+              77.08265373,
+              28.89448963
+            ],
+            [
+              77.08264292,
+              28.89394843
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_7",
+        "pair": "B",
+        "component_id": 7,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 11.561979214350382,
+        "max_score": 14.440142631530762,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.18787515,
+              28.57161103
+            ],
+            [
+              77.18869256,
+              28.57159785
+            ],
+            [
+              77.18870376,
+              28.57213904
+            ],
+            [
+              77.18788635,
+              28.57215223
+            ],
+            [
+              77.18787515,
+              28.57161103
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_62",
+        "pair": "B",
+        "component_id": 62,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 11.380367954572042,
+        "max_score": 14.77580451965332,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.41469132,
+              28.54123764
+            ],
+            [
+              77.41550836,
+              28.5412231
+            ],
+            [
+              77.41552071,
+              28.54176421
+            ],
+            [
+              77.41470366,
+              28.54177875
+            ],
+            [
+              77.41469132,
+              28.54123764
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_66",
+        "pair": "B",
+        "component_id": 66,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 11.370551427205404,
+        "max_score": 13.970348358154297,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.27792672,
+              28.27165396
+            ],
+            [
+              77.27853801,
+              28.27164377
+            ],
+            [
+              77.27855337,
+              28.27236535
+            ],
+            [
+              77.27794207,
+              28.27237555
+            ],
+            [
+              77.27792672,
+              28.27165396
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_116",
+        "pair": "B",
+        "component_id": 116,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 11.25568437576294,
+        "max_score": 12.551483154296875,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.10921406,
+              28.03631934
+            ],
+            [
+              77.11002742,
+              28.03630684
+            ],
+            [
+              77.11003799,
+              28.03684811
+            ],
+            [
+              77.10922462,
+              28.0368606
+            ],
+            [
+              77.10921406,
+              28.03631934
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_172",
+        "pair": "B",
+        "component_id": 172,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 10.82655382156372,
+        "max_score": 12.990152359008789,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.2828707,
+              28.25496914
+            ],
+            [
+              77.28348189,
+              28.25495892
+            ],
+            [
+              77.28349728,
+              28.25568051
+            ],
+            [
+              77.28288608,
+              28.25569072
+            ],
+            [
+              77.2828707,
+              28.25496914
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_122",
+        "pair": "B",
+        "component_id": 122,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 10.527224779129028,
+        "max_score": 13.130157470703125,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.5838647,
+              28.53216805
+            ],
+            [
+              77.58447735,
+              28.53215638
+            ],
+            [
+              77.58449496,
+              28.53287777
+            ],
+            [
+              77.58388231,
+              28.53288944
+            ],
+            [
+              77.5838647,
+              28.53216805
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_70",
+        "pair": "B",
+        "component_id": 70,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 10.4453075726827,
+        "max_score": 12.792881965637207,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.0740788,
+              28.5438023
+            ],
+            [
+              77.07489605,
+              28.54378981
+            ],
+            [
+              77.07490666,
+              28.54433104
+            ],
+            [
+              77.07408941,
+              28.54434353
+            ],
+            [
+              77.0740788,
+              28.5438023
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_68",
+        "pair": "B",
+        "component_id": 68,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 10.343884944915771,
+        "max_score": 11.962422370910645,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.29137262,
+              28.24273604
+            ],
+            [
+              77.29218745,
+              28.24272238
+            ],
+            [
+              77.29219902,
+              28.24326356
+            ],
+            [
+              77.29138419,
+              28.24327723
+            ],
+            [
+              77.29137262,
+              28.24273604
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_125",
+        "pair": "B",
+        "component_id": 125,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 10.217554410298666,
+        "max_score": 13.443904876708984,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.36600671,
+              28.60290563
+            ],
+            [
+              77.36661987,
+              28.60289493
+            ],
+            [
+              77.36663605,
+              28.60361643
+            ],
+            [
+              77.36602288,
+              28.60362714
+            ],
+            [
+              77.36600671,
+              28.60290563
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_55",
+        "pair": "B",
+        "component_id": 55,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 9.85932970046997,
+        "max_score": 11.00562858581543,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.61048398,
+              28.20976675
+            ],
+            [
+              77.61129836,
+              28.2097512
+            ],
+            [
+              77.61131153,
+              28.21029226
+            ],
+            [
+              77.61049714,
+              28.21030781
+            ],
+            [
+              77.61048398,
+              28.20976675
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_143",
+        "pair": "B",
+        "component_id": 143,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 9.355782906214396,
+        "max_score": 13.83077621459961,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.14759319,
+              28.82961786
+            ],
+            [
+              78.14841196,
+              28.82959874
+            ],
+            [
+              78.14842825,
+              28.83013949
+            ],
+            [
+              78.14760947,
+              28.83015861
+            ],
+            [
+              78.14759319,
+              28.82961786
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_13",
+        "pair": "B",
+        "component_id": 13,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 8.752255519231161,
+        "max_score": 9.507094383239746,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.5906933,
+              28.52734668
+            ],
+            [
+              77.59130591,
+              28.52733499
+            ],
+            [
+              77.59132357,
+              28.52805637
+            ],
+            [
+              77.59071095,
+              28.52806807
+            ],
+            [
+              77.5906933,
+              28.52734668
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_73",
+        "pair": "B",
+        "component_id": 73,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 8.740655978520712,
+        "max_score": 11.89416790008545,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.82617351,
+              28.07774173
+            ],
+            [
+              77.82698675,
+              28.07772497
+            ],
+            [
+              77.82700092,
+              28.07826594
+            ],
+            [
+              77.82618768,
+              28.0782827
+            ],
+            [
+              77.82617351,
+              28.07774173
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_163",
+        "pair": "B",
+        "component_id": 163,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 8.525176445643107,
+        "max_score": 8.69230842590332,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.61204633,
+              28.29057185
+            ],
+            [
+              77.61286133,
+              28.29055625
+            ],
+            [
+              77.61287455,
+              28.2910973
+            ],
+            [
+              77.61205955,
+              28.2911129
+            ],
+            [
+              77.61204633,
+              28.29057185
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_112",
+        "pair": "B",
+        "component_id": 112,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 12,
+        "bbox_area_m2": 4800,
+        "mean_score": 8.057435433069864,
+        "max_score": 8.398309707641602,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.2931387,
+              28.50508981
+            ],
+            [
+              77.29375132,
+              28.50507947
+            ],
+            [
+              77.29376303,
+              28.50562063
+            ],
+            [
+              77.2931504,
+              28.50563097
+            ],
+            [
+              77.2931387,
+              28.50508981
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_83",
+        "pair": "B",
+        "component_id": 83,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 82.23672273423936,
+        "max_score": 106.13597869873047,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.29384777,
+              28.51897273
+            ],
+            [
+              77.29446048,
+              28.51896238
+            ],
+            [
+              77.2944722,
+              28.51950354
+            ],
+            [
+              77.29385949,
+              28.51951389
+            ],
+            [
+              77.29384777,
+              28.51897273
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_77",
+        "pair": "B",
+        "component_id": 77,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 33.846024725172256,
+        "max_score": 72.8200912475586,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.50070645,
+              28.51477959
+            ],
+            [
+              77.50131904,
+              28.5147683
+            ],
+            [
+              77.50133182,
+              28.51530938
+            ],
+            [
+              77.50071923,
+              28.51532066
+            ],
+            [
+              77.50070645,
+              28.51477959
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_79",
+        "pair": "B",
+        "component_id": 79,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 29.2845368915134,
+        "max_score": 61.80624008178711,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.26607641,
+              28.54831173
+            ],
+            [
+              77.2666893,
+              28.54830149
+            ],
+            [
+              77.26670089,
+              28.54884266
+            ],
+            [
+              77.266088,
+              28.5488529
+            ],
+            [
+              77.26607641,
+              28.54831173
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_65",
+        "pair": "B",
+        "component_id": 65,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 16.78473801083035,
+        "max_score": 25.208234786987305,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.11345373,
+              28.4480896
+            ],
+            [
+              77.1140661,
+              28.44808009
+            ],
+            [
+              77.11407687,
+              28.44862132
+            ],
+            [
+              77.1134645,
+              28.44863084
+            ],
+            [
+              77.11345373,
+              28.4480896
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_96",
+        "pair": "B",
+        "component_id": 96,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 15.434109263949924,
+        "max_score": 20.672109603881836,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.86720138,
+              28.82396699
+            ],
+            [
+              77.86781559,
+              28.82395393
+            ],
+            [
+              77.86783042,
+              28.82449482
+            ],
+            [
+              77.86721622,
+              28.82450789
+            ],
+            [
+              77.86720138,
+              28.82396699
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_15",
+        "pair": "B",
+        "component_id": 15,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 15.266201231214735,
+        "max_score": 22.287460327148438,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.59165786,
+              28.6915188
+            ],
+            [
+              77.59227143,
+              28.69150704
+            ],
+            [
+              77.59228476,
+              28.69204807
+            ],
+            [
+              77.59167119,
+              28.69205983
+            ],
+            [
+              77.59165786,
+              28.6915188
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_42",
+        "pair": "B",
+        "component_id": 42,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 15.190285046895346,
+        "max_score": 18.33623695373535,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.59359543,
+              28.21892957
+            ],
+            [
+              77.59420628,
+              28.21891798
+            ],
+            [
+              77.59421937,
+              28.21945904
+            ],
+            [
+              77.59360852,
+              28.21947063
+            ],
+            [
+              77.59359543,
+              28.21892957
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_135",
+        "pair": "B",
+        "component_id": 135,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 14.878686692979601,
+        "max_score": 16.158309936523438,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.32652158,
+              28.1721246
+            ],
+            [
+              77.32713229,
+              28.17211422
+            ],
+            [
+              77.32714401,
+              28.1726554
+            ],
+            [
+              77.3265333,
+              28.17266578
+            ],
+            [
+              77.32652158,
+              28.1721246
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_158",
+        "pair": "B",
+        "component_id": 158,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 14.704035123189291,
+        "max_score": 17.442813873291016,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.11173274,
+              28.71989445
+            ],
+            [
+              77.11234669,
+              28.71988486
+            ],
+            [
+              77.11235757,
+              28.72042607
+            ],
+            [
+              77.11174362,
+              28.72043566
+            ],
+            [
+              77.11173274,
+              28.71989445
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_37",
+        "pair": "B",
+        "component_id": 37,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 14.464720302157932,
+        "max_score": 17.307355880737305,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.61971474,
+              28.64316545
+            ],
+            [
+              77.62032801,
+              28.64315358
+            ],
+            [
+              77.62034147,
+              28.6436946
+            ],
+            [
+              77.61972819,
+              28.64370647
+            ],
+            [
+              77.61971474,
+              28.64316545
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_49",
+        "pair": "B",
+        "component_id": 49,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 14.148065249125162,
+        "max_score": 18.063732147216797,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.32996206,
+              28.38644752
+            ],
+            [
+              77.33057398,
+              28.38643705
+            ],
+            [
+              77.33058582,
+              28.38697821
+            ],
+            [
+              77.32997389,
+              28.38698868
+            ],
+            [
+              77.32996206,
+              28.38644752
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_101",
+        "pair": "B",
+        "component_id": 101,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 14.043123139275444,
+        "max_score": 17.66215705871582,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.59457254,
+              28.5855515
+            ],
+            [
+              77.59518549,
+              28.58553977
+            ],
+            [
+              77.59519879,
+              28.5860808
+            ],
+            [
+              77.59458583,
+              28.58609253
+            ],
+            [
+              77.59457254,
+              28.5855515
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_56",
+        "pair": "B",
+        "component_id": 56,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 13.997065014309353,
+        "max_score": 19.093965530395508,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.24934922,
+              28.26003673
+            ],
+            [
+              77.24996045,
+              28.26002666
+            ],
+            [
+              77.24997182,
+              28.26056786
+            ],
+            [
+              77.24936058,
+              28.26057792
+            ],
+            [
+              77.24934922,
+              28.26003673
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_119",
+        "pair": "B",
+        "component_id": 119,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 13.914862950642904,
+        "max_score": 20.82274055480957,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.861463,
+              28.37144686
+            ],
+            [
+              77.86207459,
+              28.37143401
+            ],
+            [
+              77.86208912,
+              28.37197494
+            ],
+            [
+              77.86147753,
+              28.37198779
+            ],
+            [
+              77.861463,
+              28.37144686
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_103",
+        "pair": "B",
+        "component_id": 103,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 13.70099523332384,
+        "max_score": 15.592228889465332,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.29369287,
+              28.36991981
+            ],
+            [
+              77.29430471,
+              28.36990951
+            ],
+            [
+              77.29431636,
+              28.37045068
+            ],
+            [
+              77.29370451,
+              28.37046098
+            ],
+            [
+              77.29369287,
+              28.36991981
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_104",
+        "pair": "B",
+        "component_id": 104,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 13.489006890190971,
+        "max_score": 16.22748374938965,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.32788619,
+              27.99958148
+            ],
+            [
+              77.32849592,
+              27.99957115
+            ],
+            [
+              77.32850756,
+              28.00011234
+            ],
+            [
+              77.32789783,
+              28.00012267
+            ],
+            [
+              77.32788619,
+              27.99958148
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_178",
+        "pair": "B",
+        "component_id": 178,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 13.462861855824789,
+        "max_score": 17.09282875061035,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.46019378,
+              28.45038009
+            ],
+            [
+              77.46080601,
+              28.45036901
+            ],
+            [
+              77.46081855,
+              28.45091011
+            ],
+            [
+              77.46020631,
+              28.45092119
+            ],
+            [
+              77.46019378,
+              28.45038009
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_93",
+        "pair": "B",
+        "component_id": 93,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 13.442658636305067,
+        "max_score": 15.386518478393555,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.7439535,
+              28.47363746
+            ],
+            [
+              77.74456573,
+              28.4736251
+            ],
+            [
+              77.74457972,
+              28.47416608
+            ],
+            [
+              77.74396749,
+              28.47417844
+            ],
+            [
+              77.7439535,
+              28.47363746
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_86",
+        "pair": "B",
+        "component_id": 86,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 13.4101259443495,
+        "max_score": 16.33325958251953,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.12495797,
+              28.72600332
+            ],
+            [
+              77.12557195,
+              28.72599366
+            ],
+            [
+              77.1255829,
+              28.72653487
+            ],
+            [
+              77.12496892,
+              28.72654452
+            ],
+            [
+              77.12495797,
+              28.72600332
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_36",
+        "pair": "B",
+        "component_id": 36,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 13.305133289761013,
+        "max_score": 17.169790267944336,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.12072656,
+              28.79013271
+            ],
+            [
+              77.12134091,
+              28.79012305
+            ],
+            [
+              77.12135187,
+              28.79066425
+            ],
+            [
+              77.12073751,
+              28.79067391
+            ],
+            [
+              77.12072656,
+              28.79013271
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_29",
+        "pair": "B",
+        "component_id": 29,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 13.094795968797472,
+        "max_score": 15.595165252685547,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.67504441,
+              28.70378766
+            ],
+            [
+              77.67565801,
+              28.70377552
+            ],
+            [
+              77.67567178,
+              28.7043165
+            ],
+            [
+              77.67505818,
+              28.70432865
+            ],
+            [
+              77.67504441,
+              28.70378766
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_39",
+        "pair": "B",
+        "component_id": 39,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 12.84156608581543,
+        "max_score": 18.768861770629883,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.0566634,
+              28.19250786
+            ],
+            [
+              77.05727433,
+              28.19249867
+            ],
+            [
+              77.0572847,
+              28.19303994
+            ],
+            [
+              77.05667376,
+              28.19304913
+            ],
+            [
+              77.0566634,
+              28.19250786
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_154",
+        "pair": "B",
+        "component_id": 154,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 12.483230696784126,
+        "max_score": 15.0081787109375,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.60822992,
+              28.43463042
+            ],
+            [
+              77.60884199,
+              28.43461868
+            ],
+            [
+              77.60885527,
+              28.43515972
+            ],
+            [
+              77.6082432,
+              28.43517146
+            ],
+            [
+              77.60822992,
+              28.43463042
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_98",
+        "pair": "B",
+        "component_id": 98,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 12.475386513604057,
+        "max_score": 14.507165908813477,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.24239877,
+              28.22983328
+            ],
+            [
+              77.24300983,
+              28.22982325
+            ],
+            [
+              77.24302116,
+              28.23036445
+            ],
+            [
+              77.24241008,
+              28.23037448
+            ],
+            [
+              77.24239877,
+              28.22983328
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_130",
+        "pair": "B",
+        "component_id": 130,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 12.288023312886557,
+        "max_score": 14.121916770935059,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.61263994,
+              28.67126826
+            ],
+            [
+              77.61325338,
+              28.67125641
+            ],
+            [
+              77.61326682,
+              28.67179743
+            ],
+            [
+              77.61265337,
+              28.67180928
+            ],
+            [
+              77.61263994,
+              28.67126826
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_47",
+        "pair": "B",
+        "component_id": 47,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 12.064158386654324,
+        "max_score": 14.774685859680176,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.14329574,
+              28.82189749
+            ],
+            [
+              77.14391027,
+              28.82188773
+            ],
+            [
+              77.14392136,
+              28.82242892
+            ],
+            [
+              77.14330682,
+              28.82243869
+            ],
+            [
+              77.14329574,
+              28.82189749
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_20",
+        "pair": "B",
+        "component_id": 20,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 11.996616575453016,
+        "max_score": 14.816970825195312,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.3232563,
+              28.64857686
+            ],
+            [
+              77.32386975,
+              28.64856634
+            ],
+            [
+              77.32388168,
+              28.64910748
+            ],
+            [
+              77.32326823,
+              28.649118
+            ],
+            [
+              77.3232563,
+              28.64857686
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_48",
+        "pair": "B",
+        "component_id": 48,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 11.959747738308376,
+        "max_score": 15.134725570678711,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.58176438,
+              28.22673192
+            ],
+            [
+              77.58237528,
+              28.22672037
+            ],
+            [
+              77.58238831,
+              28.22726144
+            ],
+            [
+              77.58177741,
+              28.22727298
+            ],
+            [
+              77.58176438,
+              28.22673192
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_129",
+        "pair": "B",
+        "component_id": 129,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 11.837329440646702,
+        "max_score": 16.13121795654297,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.12526843,
+              28.79186585
+            ],
+            [
+              77.12588279,
+              28.79185618
+            ],
+            [
+              77.12589378,
+              28.79239738
+            ],
+            [
+              77.12527941,
+              28.79240705
+            ],
+            [
+              77.12526843,
+              28.79186585
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_28",
+        "pair": "B",
+        "component_id": 28,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 11.734357727898491,
+        "max_score": 14.566122055053711,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.26661606,
+              28.82980631
+            ],
+            [
+              77.26723059,
+              28.82979598
+            ],
+            [
+              77.26724233,
+              28.83033713
+            ],
+            [
+              77.26662779,
+              28.83034746
+            ],
+            [
+              77.26661606,
+              28.82980631
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_16",
+        "pair": "B",
+        "component_id": 16,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 11.546185069613987,
+        "max_score": 14.959195137023926,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.32050758,
+              28.22365729
+            ],
+            [
+              77.32111858,
+              28.22364692
+            ],
+            [
+              77.32113029,
+              28.22418809
+            ],
+            [
+              77.32051929,
+              28.22419846
+            ],
+            [
+              77.32050758,
+              28.22365729
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_136",
+        "pair": "B",
+        "component_id": 136,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 11.323136647542318,
+        "max_score": 12.422472953796387,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.58540987,
+              28.4698896
+            ],
+            [
+              77.58602216,
+              28.46987796
+            ],
+            [
+              77.58603535,
+              28.470419
+            ],
+            [
+              77.58542305,
+              28.47043065
+            ],
+            [
+              77.58540987,
+              28.4698896
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_89",
+        "pair": "B",
+        "component_id": 89,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 11.230409728156197,
+        "max_score": 12.777626037597656,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.60422422,
+              28.52095316
+            ],
+            [
+              77.6048368,
+              28.52094141
+            ],
+            [
+              77.6048501,
+              28.52148244
+            ],
+            [
+              77.60423753,
+              28.52149419
+            ],
+            [
+              77.60422422,
+              28.52095316
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_75",
+        "pair": "B",
+        "component_id": 75,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 11.143130196465385,
+        "max_score": 13.644558906555176,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.45168904,
+              28.45342077
+            ],
+            [
+              77.4523013,
+              28.45340973
+            ],
+            [
+              77.45231379,
+              28.45395083
+            ],
+            [
+              77.45170153,
+              28.45396187
+            ],
+            [
+              77.45168904,
+              28.45342077
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_91",
+        "pair": "B",
+        "component_id": 91,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 11.1308380762736,
+        "max_score": 12.636783599853516,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.23041126,
+              28.58210653
+            ],
+            [
+              77.23102436,
+              28.58209645
+            ],
+            [
+              77.23103579,
+              28.58263763
+            ],
+            [
+              77.23042269,
+              28.58264771
+            ],
+            [
+              77.23041126,
+              28.58210653
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_58",
+        "pair": "B",
+        "component_id": 58,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 10.961583773295084,
+        "max_score": 14.543185234069824,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.60520358,
+              28.67664401
+            ],
+            [
+              77.60581706,
+              28.6766322
+            ],
+            [
+              77.60583046,
+              28.67717322
+            ],
+            [
+              77.60521698,
+              28.67718504
+            ],
+            [
+              77.60520358,
+              28.67664401
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_45",
+        "pair": "B",
+        "component_id": 45,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 10.908085717095268,
+        "max_score": 16.270172119140625,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.46639146,
+              28.79454423
+            ],
+            [
+              77.46700569,
+              28.794533
+            ],
+            [
+              77.46701844,
+              28.79507407
+            ],
+            [
+              77.4664042,
+              28.7950853
+            ],
+            [
+              77.46639146,
+              28.79454423
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_26",
+        "pair": "B",
+        "component_id": 26,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 10.868935955895317,
+        "max_score": 13.72519302368164,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.58539553,
+              28.53628881
+            ],
+            [
+              77.5860082,
+              28.53627714
+            ],
+            [
+              77.58602142,
+              28.53681818
+            ],
+            [
+              77.58540874,
+              28.53682986
+            ],
+            [
+              77.58539553,
+              28.53628881
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_67",
+        "pair": "B",
+        "component_id": 67,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 10.802386283874512,
+        "max_score": 12.435897827148438,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.59838259,
+              28.17264671
+            ],
+            [
+              77.59899318,
+              28.17263511
+            ],
+            [
+              77.59900626,
+              28.17317618
+            ],
+            [
+              77.59839568,
+              28.17318777
+            ],
+            [
+              77.59838259,
+              28.17264671
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_157",
+        "pair": "B",
+        "component_id": 157,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 10.588301340738932,
+        "max_score": 15.32960319519043,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.67399665,
+              28.44435954
+            ],
+            [
+              77.67460875,
+              28.4443475
+            ],
+            [
+              77.67462237,
+              28.44488851
+            ],
+            [
+              77.67401026,
+              28.44490055
+            ],
+            [
+              77.67399665,
+              28.44435954
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_94",
+        "pair": "B",
+        "component_id": 94,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 10.569519095950657,
+        "max_score": 13.366446495056152,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.6028612,
+              28.68119977
+            ],
+            [
+              77.6034747,
+              28.68118796
+            ],
+            [
+              77.60348809,
+              28.68172899
+            ],
+            [
+              77.60287458,
+              28.68174079
+            ],
+            [
+              77.6028612,
+              28.68119977
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_43",
+        "pair": "B",
+        "component_id": 43,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 10.465066803826225,
+        "max_score": 11.336559295654297,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.0835566,
+              28.89862621
+            ],
+            [
+              77.08417161,
+              28.89861669
+            ],
+            [
+              77.08418242,
+              28.8991579
+            ],
+            [
+              77.08356741,
+              28.89916741
+            ],
+            [
+              77.0835566,
+              28.89862621
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_5",
+        "pair": "B",
+        "component_id": 5,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 10.362067540486654,
+        "max_score": 12.75643539428711,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.25732988,
+              28.21316547
+            ],
+            [
+              77.25794085,
+              28.21315539
+            ],
+            [
+              77.25795224,
+              28.21369658
+            ],
+            [
+              77.25734127,
+              28.21370667
+            ],
+            [
+              77.25732988,
+              28.21316547
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_146",
+        "pair": "B",
+        "component_id": 146,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 10.336185137430826,
+        "max_score": 11.41944694519043,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.58485055,
+              28.53070582
+            ],
+            [
+              77.58546319,
+              28.53069416
+            ],
+            [
+              77.58547641,
+              28.5312352
+            ],
+            [
+              77.58486376,
+              28.53124687
+            ],
+            [
+              77.58485055,
+              28.53070582
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_71",
+        "pair": "B",
+        "component_id": 71,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 10.080217997233072,
+        "max_score": 12.7462739944458,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.15604103,
+              28.8139348
+            ],
+            [
+              77.15665551,
+              28.81392498
+            ],
+            [
+              77.15666667,
+              28.81446617
+            ],
+            [
+              77.15605218,
+              28.81447599
+            ],
+            [
+              77.15604103,
+              28.8139348
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_23",
+        "pair": "B",
+        "component_id": 23,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 9.891672558254665,
+        "max_score": 12.202798843383789,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.23842834,
+              28.19579072
+            ],
+            [
+              77.23903922,
+              28.19578073
+            ],
+            [
+              77.2390505,
+              28.19632193
+            ],
+            [
+              77.23843962,
+              28.19633193
+            ],
+            [
+              77.23842834,
+              28.19579072
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_152",
+        "pair": "B",
+        "component_id": 152,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 9.819740454355875,
+        "max_score": 12.303720474243164,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.57942897,
+              28.22280637
+            ],
+            [
+              77.58003985,
+              28.22279484
+            ],
+            [
+              77.58005286,
+              28.22333591
+            ],
+            [
+              77.57944198,
+              28.22334744
+            ],
+            [
+              77.57942897,
+              28.22280637
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_131",
+        "pair": "B",
+        "component_id": 131,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 9.585435708363852,
+        "max_score": 11.379724502563477,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.0988409,
+              28.80202417
+            ],
+            [
+              77.09945534,
+              28.80201462
+            ],
+            [
+              77.09946619,
+              28.80255582
+            ],
+            [
+              77.09885175,
+              28.80256538
+            ],
+            [
+              77.0988409,
+              28.80202417
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_25",
+        "pair": "B",
+        "component_id": 25,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 9.484549734327528,
+        "max_score": 11.161301612854004,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.17040074,
+              28.73727197
+            ],
+            [
+              78.17101427,
+              28.73725756
+            ],
+            [
+              78.17103061,
+              28.73779831
+            ],
+            [
+              78.17041708,
+              28.73781271
+            ],
+            [
+              78.17040074,
+              28.73727197
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_32",
+        "pair": "B",
+        "component_id": 32,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 9.432613690694174,
+        "max_score": 10.905633926391602,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.34777023,
+              28.04453871
+            ],
+            [
+              77.3483802,
+              28.04452828
+            ],
+            [
+              77.34839196,
+              28.04506946
+            ],
+            [
+              77.34778199,
+              28.04507989
+            ],
+            [
+              77.34777023,
+              28.04453871
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_168",
+        "pair": "B",
+        "component_id": 168,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 9.22474839952257,
+        "max_score": 10.073503494262695,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.64425187,
+              28.67552563
+            ],
+            [
+              77.64486532,
+              28.67551364
+            ],
+            [
+              77.64487892,
+              28.67605464
+            ],
+            [
+              77.64426547,
+              28.67606664
+            ],
+            [
+              77.64425187,
+              28.67552563
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_46",
+        "pair": "B",
+        "component_id": 46,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 9.058909310234917,
+        "max_score": 10.716877937316895,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.95593492,
+              28.60701789
+            ],
+            [
+              77.95654781,
+              28.60700451
+            ],
+            [
+              77.95656297,
+              28.60754538
+            ],
+            [
+              77.95595007,
+              28.60755875
+            ],
+            [
+              77.95593492,
+              28.60701789
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_52",
+        "pair": "B",
+        "component_id": 52,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 8.957821581098768,
+        "max_score": 9.613958358764648,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.44761651,
+              28.06156182
+            ],
+            [
+              77.44822653,
+              28.06155094
+            ],
+            [
+              77.4482388,
+              28.06209207
+            ],
+            [
+              77.44762877,
+              28.06210296
+            ],
+            [
+              77.44761651,
+              28.06156182
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_166",
+        "pair": "B",
+        "component_id": 166,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 8.956103960673014,
+        "max_score": 9.624696731567383,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.30008004,
+              28.31603611
+            ],
+            [
+              77.30069158,
+              28.3160258
+            ],
+            [
+              77.30070323,
+              28.31656698
+            ],
+            [
+              77.30009169,
+              28.31657729
+            ],
+            [
+              77.30008004,
+              28.31603611
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_111",
+        "pair": "B",
+        "component_id": 111,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 8.779980977376303,
+        "max_score": 10.533220291137695,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.86042998,
+              28.27963841
+            ],
+            [
+              77.86104103,
+              28.2796256
+            ],
+            [
+              77.8610555,
+              28.28016654
+            ],
+            [
+              77.86044444,
+              28.28017934
+            ],
+            [
+              77.86042998,
+              28.27963841
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_114",
+        "pair": "B",
+        "component_id": 114,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 8.725298881530762,
+        "max_score": 10.409295082092285,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.61024528,
+              28.20832782
+            ],
+            [
+              77.61085606,
+              28.20831616
+            ],
+            [
+              77.61086923,
+              28.20885722
+            ],
+            [
+              77.61025844,
+              28.20886888
+            ],
+            [
+              77.61024528,
+              28.20832782
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_144",
+        "pair": "B",
+        "component_id": 144,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 8.626412285698784,
+        "max_score": 9.07300853729248,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.103275,
+              28.03424471
+            ],
+            [
+              77.10388502,
+              28.03423537
+            ],
+            [
+              77.10389555,
+              28.03477664
+            ],
+            [
+              77.10328553,
+              28.03478598
+            ],
+            [
+              77.103275,
+              28.03424471
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_173",
+        "pair": "B",
+        "component_id": 173,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 8.499289353688559,
+        "max_score": 9.450650215148926,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.77734911,
+              28.06971797
+            ],
+            [
+              77.77795902,
+              28.06970562
+            ],
+            [
+              77.77797295,
+              28.07024661
+            ],
+            [
+              77.77736303,
+              28.07025897
+            ],
+            [
+              77.77734911,
+              28.06971797
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_164",
+        "pair": "B",
+        "component_id": 164,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 8.485208723280165,
+        "max_score": 8.86465835571289,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.16655096,
+              28.73177058
+            ],
+            [
+              78.16716446,
+              28.7317562
+            ],
+            [
+              78.16718078,
+              28.73229695
+            ],
+            [
+              78.16656728,
+              28.73231133
+            ],
+            [
+              78.16655096,
+              28.73177058
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_35",
+        "pair": "B",
+        "component_id": 35,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 8.356648763020834,
+        "max_score": 8.670929908752441,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.04737518,
+              28.27151504
+            ],
+            [
+              77.04798656,
+              28.27150588
+            ],
+            [
+              77.04799692,
+              28.27204714
+            ],
+            [
+              77.04738553,
+              28.27205631
+            ],
+            [
+              77.04737518,
+              28.27151504
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_117",
+        "pair": "B",
+        "component_id": 117,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 8.240815692477756,
+        "max_score": 8.623062133789062,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.84353728,
+              28.01098826
+            ],
+            [
+              77.84414682,
+              28.01097564
+            ],
+            [
+              77.84416104,
+              28.01151661
+            ],
+            [
+              77.8435515,
+              28.01152923
+            ],
+            [
+              77.84353728,
+              28.01098826
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_177",
+        "pair": "B",
+        "component_id": 177,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 8.14696635140313,
+        "max_score": 8.981475830078125,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.72394835,
+              28.37823562
+            ],
+            [
+              77.72456004,
+              28.37822338
+            ],
+            [
+              77.72457388,
+              28.37876437
+            ],
+            [
+              77.72396218,
+              28.37877661
+            ],
+            [
+              77.72394835,
+              28.37823562
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_102",
+        "pair": "B",
+        "component_id": 102,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 8.085935592651367,
+        "max_score": 8.358358383178711,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.82359554,
+              28.02583344
+            ],
+            [
+              77.82420517,
+              28.0258209
+            ],
+            [
+              77.82421931,
+              28.02636188
+            ],
+            [
+              77.82360967,
+              28.02637441
+            ],
+            [
+              77.82359554,
+              28.02583344
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "candidate_id": "B_171",
+        "pair": "B",
+        "component_id": 171,
+        "priority_percentile": 99.9,
+        "score_threshold": 7.690251350402832,
+        "area_px_20m": 9,
+        "bbox_area_m2": 3600,
+        "mean_score": 7.838072617848714,
+        "max_score": 8.043634414672852,
+        "review_status": "unreviewed_candidate_not_ground_truth"
+      }
+    }
+  ]
+}

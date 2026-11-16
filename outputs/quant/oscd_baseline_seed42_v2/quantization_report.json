@@ -1,0 +1,102 @@
+{
+  "checkpoint": "/home/aaryan/projects/skyserve_assignment/outputs/checkpoints/oscd_gpu_v1/baseline_seed42_v2/seed_42/best.pt",
+  "bands": [
+    "B02",
+    "B03",
+    "B04",
+    "B08"
+  ],
+  "base_filters": 16,
+  "opset": 17,
+  "threshold": 0.5,
+  "calibration_split": "train",
+  "evaluation_split": "validation",
+  "test_split_used": false,
+  "stages": {
+    "export": {
+      "path": "outputs/quant/oscd_baseline_seed42_v2/onboard_fp32.onnx",
+      "size_bytes": 1941434,
+      "sha256": "9ea690c452f3f230943cfff58749f96f45d32f6602029fcfe3206d3ca31965b7",
+      "exporter": "torchscript_legacy",
+      "dynamic_axes": [
+        "batch",
+        "height",
+        "width"
+      ]
+    },
+    "parity": {
+      "max_abs_difference": 1.519918441772461e-06,
+      "threshold_agreement": 1.0,
+      "val_ap": 0.33624910561787036,
+      "val_auc": 0.902512887824962
+    },
+    "quantize": {
+      "path": "outputs/quant/oscd_baseline_seed42_v2/onboard_int8.onnx",
+      "size_bytes": 550136,
+      "sha256": "04bd7009878cf7abefc9b7ca8c8ffd2da988458b8824e8530c6aa653653f2e45",
+      "format": "QDQ",
+      "activation": "QInt8",
+      "weight": "QInt8",
+      "per_channel": true,
+      "calibration_batches": 20,
+      "size_ratio_vs_fp32": 0.283
+    },
+    "compare": {
+      "fp32": {
+        "precision": 0.09983590779280203,
+        "recall": 0.7591481703659269,
+        "f1": 0.17646484647349192,
+        "iou": 0.09677074013749015,
+        "tp": 12655.0,
+        "fp": 114103.0,
+        "fn": 4015.0,
+        "tn": 885035.0,
+        "ap": 0.33624910561787036,
+        "auc": 0.902512887824962,
+        "mean_probability": 0.28841811418533325
+      },
+      "int8": {
+        "precision": 0.03909676429995399,
+        "recall": 0.9176364727054589,
+        "f1": 0.07499816144926826,
+        "iou": 0.03896004665934855,
+        "tp": 15297.0,
+        "fp": 375963.0,
+        "fn": 1373.0,
+        "tn": 623175.0,
+        "ap": 0.2619594855966786,
+        "auc": 0.8894994191051475,
+        "mean_probability": 0.46493688225746155
+      },
+      "ap_delta": -0.07428962002119177,
+      "max_probability_shift": 0.8473127484321594,
+      "mean_probability_shift": 0.18483038246631622
+    },
+    "bench": {
+      "cpu_fp32": {
+        "median_ms": 8.76,
+        "min_ms": 7.82,
+        "max_ms": 19.35,
+        "runs": 20
+      },
+      "cpu_int8": {
+        "median_ms": 9.94,
+        "min_ms": 9.45,
+        "max_ms": 11.0,
+        "runs": 20
+      },
+      "available_providers": [
+        "TensorrtExecutionProvider",
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider"
+      ],
+      "cuda_fp32": {
+        "median_ms": 2.43,
+        "min_ms": 1.88,
+        "max_ms": 2.82,
+        "runs": 20
+      },
+      "tensorrt": "provider listed but the TensorRT runtime library is not installed; not attempted"
+    }
+  }
+}

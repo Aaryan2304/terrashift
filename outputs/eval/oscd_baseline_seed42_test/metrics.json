@@ -1,0 +1,52 @@
+{
+  "checkpoint": "/home/aaryan/projects/skyserve_assignment/outputs/checkpoints/oscd_gpu_v1/baseline_seed42_v2/seed_42/best.pt",
+  "split": "test",
+  "pixel": {
+    "precision": 0.2445627095702464,
+    "recall": 0.7617942357037147,
+    "f1": 0.3702592073192819,
+    "iou": 0.22718901618106535,
+    "tp": 143100.0,
+    "fp": 442026.0,
+    "fn": 44746.0,
+    "tn": 3138448.0,
+    "ap": 0.5068205248275963,
+    "auc": 0.8942192833553011,
+    "threshold": 0.5,
+    "patches": 230,
+    "split": "test"
+  },
+  "object": {
+    "precision": 0.03606182026330853,
+    "recall": 0.12401574803149606,
+    "f1": 0.055875831485587585,
+    "iou": 0.02874087591240876,
+    "tp": 126.0,
+    "fp": 3368.0,
+    "fn": 890.0,
+    "mean_matched_iou": 0.5927610868752722
+  },
+  "recall_by_size": {
+    "16_64_px": {
+      "components": 366,
+      "matched": 31,
+      "recall": 0.08469945355191257
+    },
+    "256_plus_px": {
+      "components": 175,
+      "matched": 40,
+      "recall": 0.22857142857142856
+    },
+    "4_16_px": {
+      "components": 126,
+      "matched": 5,
+      "recall": 0.03968253968253968
+    },
+    "64_256_px": {
+      "components": 328,
+      "matched": 50,
+      "recall": 0.1524390243902439
+    }
+  },
+  "note": "The official test regions are evaluated once, here. No threshold, hyperparameter or checkpoint was selected on this split."
+}

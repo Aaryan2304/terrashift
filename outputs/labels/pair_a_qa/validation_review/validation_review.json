@@ -1,0 +1,19 @@
+{
+ "pair": "A",
+ "validation_candidates": 11,
+ "validation_annotations": 11,
+ "proposal_areas": 1366,
+ "proposal_threshold_percentile": 99.0,
+ "proposal_threshold_value": 4.310922145843506,
+ "proposal_pixels": 11667,
+ "annotation_classes": {
+  "change": 1,
+  "no_change": 8,
+  "uncertain": 2
+ },
+ "layers": {
+  "candidates": "/home/aaryan/projects/skyserve_assignment/outputs/labels/pair_a_qa/validation_review/validation_candidates.geojson",
+  "annotations": "/home/aaryan/projects/skyserve_assignment/outputs/labels/pair_a_qa/validation_review/validation_annotations.geojson",
+  "proposals": "/home/aaryan/projects/skyserve_assignment/outputs/labels/pair_a_qa/validation_review/validation_proposal_areas.geojson"
+ }
+}

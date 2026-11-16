@@ -1,0 +1,165 @@
+{
+  "checkpoint": "/home/aaryan/projects/skyserve_assignment/outputs/checkpoints/oscd_gpu_v1/baseline_seed42_v2/seed_42/best.pt",
+  "checkpoint_sha256": "4d9c381dba370becc3ac3ff93431db65929cf21378287191a9f131fae9080d1a",
+  "models": {
+    "fp32": {
+      "path": "/home/aaryan/projects/skyserve_assignment/outputs/quant/oscd_baseline_seed42_v2/onboard_fp32.onnx",
+      "sha256": "9ea690c452f3f230943cfff58749f96f45d32f6602029fcfe3206d3ca31965b7",
+      "size_bytes": 1941434
+    },
+    "int8": {
+      "path": "/home/aaryan/projects/skyserve_assignment/outputs/quant/oscd_baseline_seed42_v2/onboard_int8.onnx",
+      "sha256": "04bd7009878cf7abefc9b7ca8c8ffd2da988458b8824e8530c6aa653653f2e45",
+      "size_bytes": 550136
+    }
+  },
+  "split": "validation",
+  "official_test_accessed": false,
+  "windows": 62,
+  "batch_size": 8,
+  "threshold": 0.5,
+  "band_order": [
+    "B02",
+    "B03",
+    "B04",
+    "B08"
+  ],
+  "warmup_passes": 2,
+  "timed_passes": 3,
+  "available_providers": [
+    "TensorrtExecutionProvider",
+    "CUDAExecutionProvider",
+    "CPUExecutionProvider"
+  ],
+  "status": "measured_development_result",
+  "runs": {
+    "cuda_fp32": {
+      "model": "onboard_fp32.onnx",
+      "active_providers": [
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider"
+      ],
+      "optimisation": "ORT_ENABLE_ALL",
+      "cuda_required": true,
+      "metrics": {
+        "ap": 0.33625576057480694,
+        "auc": 0.9025271924170681,
+        "precision": 0.09980601816805451,
+        "recall": 0.7592681463707258,
+        "f1": 0.17642139302789123,
+        "iou": 0.09674460555381452,
+        "tp": 12657.0,
+        "fp": 114159.0,
+        "fn": 4013.0,
+        "tn": 884979.0
+      },
+      "latency": {
+        "batches": 24,
+        "batch_ms_median": 13.820730491715949,
+        "batch_ms_p95": 94.63967579577002,
+        "batch_ms_min": 13.23967200005427,
+        "batch_ms_max": 97.65838900057133,
+        "window_ms_median": 1.7275913114644936,
+        "windows_per_second": 237.52731775779145
+      },
+      "gpu_memory": {
+        "baseline_mib": 95.0,
+        "peak_mib": 231.0,
+        "delta_mib": 136.0
+      }
+    },
+    "cuda_int8": {
+      "model": "onboard_int8.onnx",
+      "active_providers": [
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider"
+      ],
+      "optimisation": "ORT_ENABLE_ALL",
+      "cuda_required": true,
+      "metrics": {
+        "ap": 0.33147648734194646,
+        "auc": 0.9101108111400785,
+        "precision": 0.0854251115686099,
+        "recall": 0.801499700059988,
+        "f1": 0.15439460121565093,
+        "iou": 0.08365526093353787,
+        "tp": 13361.0,
+        "fp": 143045.0,
+        "fn": 3309.0,
+        "tn": 856093.0
+      },
+      "latency": {
+        "batches": 24,
+        "batch_ms_median": 16.816784504044335,
+        "batch_ms_p95": 96.63876460108439,
+        "batch_ms_min": 16.370306999306194,
+        "batch_ms_max": 97.36142800829839,
+        "window_ms_median": 2.102098063005542,
+        "windows_per_second": 220.1424009002204
+      },
+      "gpu_memory": {
+        "baseline_mib": 99.0,
+        "peak_mib": 233.0,
+        "delta_mib": 134.0
+      }
+    },
+    "cpu_int8": {
+      "model": "onboard_int8.onnx",
+      "active_providers": [
+        "CPUExecutionProvider"
+      ],
+      "optimisation": "ORT_ENABLE_BASIC",
+      "cuda_required": false,
+      "metrics": {
+        "ap": 0.3319827460926376,
+        "auc": 0.9100146238775281,
+        "precision": 0.08565973178873718,
+        "recall": 0.8019796040791841,
+        "f1": 0.15478664590340452,
+        "iou": 0.08388550058981502,
+        "tp": 13369.0,
+        "fp": 142702.0,
+        "fn": 3301.0,
+        "tn": 856436.0
+      },
+      "latency": {
+        "batches": 24,
+        "batch_ms_median": 161.47058000206016,
+        "batch_ms_p95": 183.3097628026735,
+        "batch_ms_min": 135.26194599398877,
+        "batch_ms_max": 185.93676999444142,
+        "window_ms_median": 20.18382250025752,
+        "windows_per_second": 49.10574566219072
+      }
+    }
+  },
+  "partitioning": {
+    "cuda_fp32": {
+      "label": "cuda_fp32",
+      "active_providers": [
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider"
+      ],
+      "kernel_launches": {
+        "CUDAExecutionProvider": 66
+      },
+      "total_kernel_launches": 66,
+      "cuda_fraction": 1.0,
+      "cpu_memcpy_kernel_events": 0
+    },
+    "cuda_int8": {
+      "label": "cuda_int8",
+      "active_providers": [
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider"
+      ],
+      "kernel_launches": {
+        "CPUExecutionProvider": 26,
+        "CUDAExecutionProvider": 202
+      },
+      "total_kernel_launches": 228,
+      "cuda_fraction": 0.8859649122807017,
+      "cpu_memcpy_kernel_events": 26
+    }
+  }
+}

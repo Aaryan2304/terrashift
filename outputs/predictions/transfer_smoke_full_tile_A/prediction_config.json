@@ -1,0 +1,45 @@
+{
+  "pair": "A",
+  "grid": {
+    "crs": "EPSG:32643",
+    "width": 10980,
+    "height": 10980,
+    "window": [
+      0,
+      10980,
+      0,
+      10980
+    ]
+  },
+  "bands": [
+    "B02",
+    "B03",
+    "B04",
+    "B08"
+  ],
+  "checkpoint": "/home/aaryan/projects/skyserve_assignment/outputs/checkpoints/oscd_gpu_v1/baseline_seed42_v2/seed_42/best.pt",
+  "checkpoint_initialization_mode": "unknown",
+  "patch_size": 128,
+  "stride": 128,
+  "threshold": 0.5,
+  "applied_shift_px": [
+    -0.12235838174819946,
+    -0.6390573084354401
+  ],
+  "device": "cuda",
+  "counts": {
+    "windows": 22,
+    "valid_pixels": 120540008,
+    "predicted_positive_pixels": 0,
+    "pixels": 120560400
+  },
+  "valid_fraction": 0.9998308565665011,
+  "positive_fraction_of_valid": 0.0,
+  "status": "pipeline_output_not_a_result",
+  "note": "These predictions are not a detection result. Without a model trained on reviewed local labels, the numbers are a smoke test of the inference path only.",
+  "outputs": [
+    "outputs/predictions/transfer_smoke_full_tile_A/prediction_prob_A.tif",
+    "outputs/predictions/transfer_smoke_full_tile_A/prediction_mask_A.tif",
+    "outputs/predictions/transfer_smoke_full_tile_A/prediction_valid_A.tif"
+  ]
+}

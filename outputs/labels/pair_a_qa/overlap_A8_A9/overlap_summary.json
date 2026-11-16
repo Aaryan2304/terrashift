@@ -1,0 +1,31 @@
+{
+ "pair": "A",
+ "records": {
+  "A_8": {
+   "label_class": "no_change",
+   "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+   "confidence": "high",
+   "reviewer": "Aaryan"
+  },
+  "A_9": {
+   "label_class": "no_change",
+   "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+   "confidence": "high",
+   "reviewer": "Aaryan"
+  }
+ },
+ "metrics": {
+  "intersection_area_m2": 630.1,
+  "intersection_area_px": 6,
+  "share_of_first": 0.0405,
+  "share_of_second": 0.0423,
+  "iou": 0.0211,
+  "first_area_m2": 15540.7,
+  "second_area_m2": 14910.2,
+  "pixel_overlap": 8,
+  "pixel_count_first": 156,
+  "pixel_count_second": 157
+ },
+ "overlay": "/home/aaryan/projects/skyserve_assignment/outputs/labels/pair_a_qa/overlap_A8_A9/overlap_A_8_A_9.geojson",
+ "figure": "/home/aaryan/projects/skyserve_assignment/outputs/labels/pair_a_qa/overlap_A8_A9/overlap_A_8_A_9.png"
+}

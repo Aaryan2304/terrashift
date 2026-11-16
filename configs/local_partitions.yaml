@@ -1,0 +1,17 @@
+# Geographic partitions for manual labels on local Sentinel-2 pairs.
+# Axis selection uses valid-land coverage from the classical baseline only.
+# It does not use labels or predicted change scores.
+# The score directory must be a run that applied the paired observation-valid
+# mask (observation_valid_<pair>.tif next to change_score_<pair>.tif).
+method: contiguous_stripes_with_buffer_v1
+score_raster_pattern: "outputs/baseline_v2_observation_valid/change_score_{pair}.tif"
+output_dir: "outputs/partitions"
+train_fraction_of_extent: 0.70
+validation_fraction_of_extent: 0.15
+test_fraction_of_extent: 0.15
+buffer_m_each_side_of_boundary: 500
+axis_selection:
+  candidates: ["x_low_to_high", "y_top_to_bottom", "x_high_to_low", "y_bottom_to_top"]
+  objective: "maximize minimum valid-land fraction among train, validation, and test; then maximize retained valid-land fraction"
+  valid_land_source: "finite, unmasked pixels in change_score_{pair}.tif"
+  uses_labels: false

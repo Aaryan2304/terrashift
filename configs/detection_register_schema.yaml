@@ -1,0 +1,127 @@
+# Detection register schema.
+#
+# One row describes one reviewed place, or one explicitly unreviewed candidate.
+# A row is never a detection until a human sets status to "confirmed" and fills
+# the evidence fields. See docs/detection_register.md for the full procedure.
+
+version: detection-register-v1
+crs: "EPSG:32643"          # geometry_wkt is in the pair's UTM zone
+geojson_crs: "EPSG:4326"   # the export uses RFC 7946 longitude/latitude
+
+columns:
+  - name: register_id
+    type: string
+    required: true
+    pattern: "^(A|B)-[0-9]{4,}$"
+    note: "PAIR-####, unique across the register."
+
+  - name: pair
+    type: enum
+    required: true
+    values: [A, B]
+
+  - name: tile
+    type: string
+    required: true
+    note: "T43QBB for pair A, T43RGM for pair B."
+
+  - name: date1
+    type: date
+    required: true
+  - name: date2
+    type: date
+    required: true
+
+  - name: geometry_wkt
+    type: wkt
+    required: true
+    geometry_types: [POLYGON, MULTIPOLYGON]
+    note: "In the CRS column below, not WGS84."
+
+  - name: crs
+    type: string
+    required: true
+
+  - name: longitude
+    type: float
+    required: true
+  - name: latitude
+    type: float
+    required: true
+
+  - name: area_m2
+    type: float
+    required: true
+    minimum: 0
+  - name: area_ha
+    type: float
+    required: true
+    minimum: 0
+
+  - name: change_type
+    type: enum
+    required: true
+    values: [construction, demolition, reclamation, other_structural, not_change, unknown]
+
+  - name: confidence
+    type: enum
+    required: true
+    values: [high, medium, low]
+
+  - name: status
+    type: enum
+    required: true
+    values: [candidate, reviewed, confirmed, rejected]
+
+  - name: detection_source
+    type: enum
+    required: true
+    values: [model, classical_baseline, shoreline_sweep, manual_only]
+
+  - name: score
+    type: float
+    required: false
+    note: "Model probability or classical score. Blank for manual_only."
+  - name: threshold
+    type: float
+    required: false
+    note: "Operating point used. Record it only if it was fixed before evaluation."
+
+  - name: evidence
+    type: string
+    required: true
+    min_length: 10
+    note: "What changed, and where it is visible in the two dates."
+
+  - name: before_image
+    type: path
+    required: true
+  - name: after_image
+    type: path
+    required: true
+
+  - name: reviewer
+    type: string
+    required: true
+  - name: reviewed_at
+    type: date
+    required: true
+
+  - name: notes
+    type: string
+    required: false
+
+rules:
+  - A row with status "confirmed" must also have a non-empty reviewer, a
+    reviewed_at date and an evidence note of at least ten characters.
+  - A row with status "candidate" must not carry a change_type other than
+    "unknown", and must not be counted as a detection in any summary.
+  - change_type is never derived from OSM, from a candidate mask, or from a
+    model score.
+  - Rejected rows are kept, not deleted.
+  - The register is per pair. Do not merge pair A and pair B into one list with
+    a shared site identity.
+
+not_supported:
+  - "Completeness or recall: the register has no measured false-negative rate."
+  - "Event dating: two acquisitions bracket a change, they do not date it."

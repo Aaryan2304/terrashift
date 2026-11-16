@@ -1,0 +1,41 @@
+{
+  "config_path": "/home/aaryan/projects/skyserve_assignment/config.yaml",
+  "root": "/home/aaryan/projects/skyserve_assignment/data/oscd/extracted",
+  "output_dir": "/home/aaryan/projects/skyserve_assignment/outputs/checkpoints/adoption_smoke_final/seed_42",
+  "seed": 42,
+  "epochs": 1,
+  "batch_size": 2,
+  "base_filters": 8,
+  "lr": 0.0001,
+  "workers": 0,
+  "optimizer": "adamw",
+  "loss": "bce_dice",
+  "bce_weight": 1.0,
+  "dice_weight": 1.0,
+  "pos_weight": 19.144778298624452,
+  "amp": true,
+  "device": "cuda",
+  "bands": [
+    "B02",
+    "B03",
+    "B04",
+    "B08"
+  ],
+  "model_type": "siamese_unet",
+  "in_channels": 4,
+  "out_channels": 1,
+  "augmentation": {
+    "enabled": true
+  },
+  "threshold": 0.5,
+  "selection_metric": "average_precision",
+  "cli_overrides": {
+    "config": "config.yaml",
+    "epochs": 1,
+    "batch_size": 2,
+    "base": 8,
+    "max_train_batches": 1,
+    "max_val_batches": 1,
+    "output_dir": "outputs/checkpoints/adoption_smoke_final"
+  }
+}

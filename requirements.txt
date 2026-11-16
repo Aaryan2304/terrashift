@@ -19,5 +19,8 @@ torchvision==0.26.0+cu128
 onnx==1.21.0
 onnxruntime-gpu==1.24.4
 
-# Note: geopandas, shapely and pyproj are NOT installed in this env.
-# Use rasterio.warp.transform for coordinate conversion.
+# Geo / API dependencies used by the label and candidate-review code
+pyproj==3.7.2
+requests==2.33.1
+geopandas==1.2.0
+shapely==2.2.0

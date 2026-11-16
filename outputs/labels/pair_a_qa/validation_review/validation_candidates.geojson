@@ -1,0 +1,501 @@
+{
+ "type": "FeatureCollection",
+ "name": "validation_candidates",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "candidate_id": "A_40",
+    "pair": "A",
+    "component_id": 40,
+    "priority_percentile": 99.9,
+    "score_threshold": 7.771233081817627,
+    "area_px_20m": 46,
+    "bbox_area_m2": 22400,
+    "mean_score": 16.74725866317749,
+    "max_score": 26.004587173461914,
+    "review_status": "unreviewed_candidate_not_ground_truth",
+    "queue_partition": "validation",
+    "annotated_as": "no_change",
+    "review_order": "1"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.00384332,
+       19.29159651
+      ],
+      [
+       73.00536526,
+       19.29161315
+      ],
+      [
+       73.00534994,
+       19.29287761
+      ],
+      [
+       73.00382799,
+       19.29286098
+      ],
+      [
+       73.00384332,
+       19.29159651
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "candidate_id": "A_52",
+    "pair": "A",
+    "component_id": 52,
+    "priority_percentile": 99.9,
+    "score_threshold": 7.771233081817627,
+    "area_px_20m": 33,
+    "bbox_area_m2": 16800,
+    "mean_score": 11.782191724488229,
+    "max_score": 15.629989624023438,
+    "review_status": "unreviewed_candidate_not_ground_truth",
+    "queue_partition": "validation",
+    "annotated_as": "uncertain",
+    "review_order": "2"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.9135356,
+       19.18092943
+      ],
+      [
+       72.91467622,
+       19.1809424
+      ],
+      [
+       72.9146603,
+       19.18220681
+      ],
+      [
+       72.91351967,
+       19.18219384
+      ],
+      [
+       72.9135356,
+       19.18092943
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "candidate_id": "A_10",
+    "pair": "A",
+    "component_id": 10,
+    "priority_percentile": 99.9,
+    "score_threshold": 7.771233081817627,
+    "area_px_20m": 28,
+    "bbox_area_m2": 12000,
+    "mean_score": 22.54669233730861,
+    "max_score": 39.13779067993164,
+    "review_status": "unreviewed_candidate_not_ground_truth",
+    "queue_partition": "validation",
+    "annotated_as": "change",
+    "review_order": "3"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.01286688,
+       19.67523421
+      ],
+      [
+       73.01382034,
+       19.67524476
+      ],
+      [
+       73.01380698,
+       19.67632854
+      ],
+      [
+       73.01285352,
+       19.67631799
+      ],
+      [
+       73.01286688,
+       19.67523421
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "candidate_id": "A_70",
+    "pair": "A",
+    "component_id": 70,
+    "priority_percentile": 99.9,
+    "score_threshold": 7.771233081817627,
+    "area_px_20m": 24,
+    "bbox_area_m2": 14000,
+    "mean_score": 9.535837729771933,
+    "max_score": 11.592357635498047,
+    "review_status": "unreviewed_candidate_not_ground_truth",
+    "queue_partition": "validation",
+    "annotated_as": "no_change",
+    "review_order": "4"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.99322443,
+       18.91045965
+      ],
+      [
+       72.99455306,
+       18.91047401
+      ],
+      [
+       72.99454229,
+       18.91137723
+      ],
+      [
+       72.99321365,
+       18.91136287
+      ],
+      [
+       72.99322443,
+       18.91045965
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "candidate_id": "A_55",
+    "pair": "A",
+    "component_id": 55,
+    "priority_percentile": 99.9,
+    "score_threshold": 7.771233081817627,
+    "area_px_20m": 22,
+    "bbox_area_m2": 9600,
+    "mean_score": 12.824005126953125,
+    "max_score": 18.56611442565918,
+    "review_status": "unreviewed_candidate_not_ground_truth",
+    "queue_partition": "validation",
+    "annotated_as": "no_change",
+    "review_order": "5"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.95021343,
+       19.12082202
+      ],
+      [
+       72.95135367,
+       19.12083472
+      ],
+      [
+       72.95134476,
+       19.12155726
+      ],
+      [
+       72.95020452,
+       19.12154456
+      ],
+      [
+       72.95021343,
+       19.12082202
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "candidate_id": "A_47",
+    "pair": "A",
+    "component_id": 47,
+    "priority_percentile": 99.9,
+    "score_threshold": 7.771233081817627,
+    "area_px_20m": 15,
+    "bbox_area_m2": 6000,
+    "mean_score": 11.271971638997396,
+    "max_score": 13.204718589782715,
+    "review_status": "unreviewed_candidate_not_ground_truth",
+    "queue_partition": "validation",
+    "annotated_as": "no_change",
+    "review_order": "6"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.02771464,
+       19.25247119
+      ],
+      [
+       73.02866564,
+       19.25248144
+      ],
+      [
+       73.02865916,
+       19.25302336
+      ],
+      [
+       73.02770816,
+       19.25301311
+      ],
+      [
+       73.02771464,
+       19.25247119
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "candidate_id": "A_57",
+    "pair": "A",
+    "component_id": 57,
+    "priority_percentile": 99.9,
+    "score_threshold": 7.771233081817627,
+    "area_px_20m": 12,
+    "bbox_area_m2": 4800,
+    "mean_score": 18.85471773147583,
+    "max_score": 26.544986724853516,
+    "review_status": "unreviewed_candidate_not_ground_truth",
+    "queue_partition": "validation",
+    "annotated_as": "no_change",
+    "review_order": "7"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.02977406,
+       19.11139339
+      ],
+      [
+       73.03034417,
+       19.11139949
+      ],
+      [
+       73.03033561,
+       19.11212207
+      ],
+      [
+       73.0297655,
+       19.11211597
+      ],
+      [
+       73.02977406,
+       19.11139339
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "candidate_id": "A_61",
+    "pair": "A",
+    "component_id": 61,
+    "priority_percentile": 99.9,
+    "score_threshold": 7.771233081817627,
+    "area_px_20m": 12,
+    "bbox_area_m2": 4800,
+    "mean_score": 10.02375559012095,
+    "max_score": 11.791544914245605,
+    "review_status": "unreviewed_candidate_not_ground_truth",
+    "queue_partition": "validation",
+    "annotated_as": "no_change",
+    "review_order": "8"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.88869301,
+       19.0861631
+      ],
+      [
+       72.88926299,
+       19.08616963
+      ],
+      [
+       72.88925383,
+       19.08689215
+      ],
+      [
+       72.88868385,
+       19.08688562
+      ],
+      [
+       72.88869301,
+       19.0861631
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "candidate_id": "A_67",
+    "pair": "A",
+    "component_id": 67,
+    "priority_percentile": 99.9,
+    "score_threshold": 7.771233081817627,
+    "area_px_20m": 9,
+    "bbox_area_m2": 3600,
+    "mean_score": 15.095108350118002,
+    "max_score": 26.301036834716797,
+    "review_status": "unreviewed_candidate_not_ground_truth",
+    "queue_partition": "validation",
+    "annotated_as": "no_change",
+    "review_order": "9"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.9800346,
+       18.91808527
+      ],
+      [
+       72.98060403,
+       18.91809147
+      ],
+      [
+       72.98059752,
+       18.9186334
+      ],
+      [
+       72.98002808,
+       18.9186272
+      ],
+      [
+       72.9800346,
+       18.91808527
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "candidate_id": "A_49",
+    "pair": "A",
+    "component_id": 49,
+    "priority_percentile": 99.9,
+    "score_threshold": 7.771233081817627,
+    "area_px_20m": 9,
+    "bbox_area_m2": 3600,
+    "mean_score": 12.392505433824327,
+    "max_score": 14.571605682373047,
+    "review_status": "unreviewed_candidate_not_ground_truth",
+    "queue_partition": "validation",
+    "annotated_as": "no_change",
+    "review_order": "10"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.02532637,
+       19.24539951
+      ],
+      [
+       73.02589694,
+       19.24540567
+      ],
+      [
+       73.02589046,
+       19.24594759
+      ],
+      [
+       73.02531988,
+       19.24594143
+      ],
+      [
+       73.02532637,
+       19.24539951
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "candidate_id": "A_48",
+    "pair": "A",
+    "component_id": 48,
+    "priority_percentile": 99.9,
+    "score_threshold": 7.771233081817627,
+    "area_px_20m": 9,
+    "bbox_area_m2": 3600,
+    "mean_score": 11.575059996710884,
+    "max_score": 13.30151653289795,
+    "review_status": "unreviewed_candidate_not_ground_truth",
+    "queue_partition": "validation",
+    "annotated_as": "uncertain",
+    "review_order": "11"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.9071973,
+       19.24607349
+      ],
+      [
+       72.90776783,
+       19.24608001
+      ],
+      [
+       72.90776096,
+       19.2466219
+      ],
+      [
+       72.90719043,
+       19.24661537
+      ],
+      [
+       72.9071973,
+       19.24607349
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

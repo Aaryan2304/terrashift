@@ -1,0 +1,37 @@
+{
+  "method": {
+    "none": {
+      "n_regions": 13,
+      "median_delta_auroc": 0.0,
+      "mean_delta_auroc": 0.0,
+      "median_preservation": 1.0,
+      "min_preservation": 1.0,
+      "median_auroc_after": 0.7823685034864243,
+      "median_mae_reduction_pct": 0.0,
+      "regions_with_lower_auroc": 0
+    },
+    "global": {
+      "n_regions": 13,
+      "median_delta_auroc": 0.03441648208816739,
+      "mean_delta_auroc": 0.02953020739903939,
+      "median_preservation": 0.9465283259692585,
+      "min_preservation": 0.8372291018462129,
+      "median_auroc_after": 0.7902546221300897,
+      "median_mae_reduction_pct": 19.84017322934334,
+      "regions_with_lower_auroc": 1
+    },
+    "histogram": {
+      "n_regions": 13,
+      "median_delta_auroc": 0.029401652507311193,
+      "mean_delta_auroc": 0.029407795461743495,
+      "median_preservation": 0.9880023719752967,
+      "min_preservation": 0.8872146320251943,
+      "median_auroc_after": 0.7850572572634033,
+      "median_mae_reduction_pct": 16.229062819965527,
+      "regions_with_lower_auroc": 1
+    }
+  },
+  "regions": 13,
+  "pif_fraction": 0.5,
+  "data": "OSCD rectified bands, digital numbers, no CRS"
+}

@@ -1,0 +1,124 @@
+{
+ "type": "FeatureCollection",
+ "name": "overlap_A_8_A_9",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_8",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T11:52:04+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "high",
+    "overlay_role": "annotation"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.76062669399131,
+       19.723337429869186
+      ],
+      [
+       72.76174655634887,
+       19.723342728377947
+      ],
+      [
+       72.76175396339512,
+       19.722151898733507
+      ],
+      [
+       72.76063423045032,
+       19.722137909737064
+      ],
+      [
+       72.76062669399131,
+       19.723337429869186
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "record_id": "A_9",
+    "pair": "A",
+    "label_class": "no_change",
+    "reviewer": "Aaryan",
+    "reviewed_at": "2026-11-16T11:54:52+05:30",
+    "evidence_source": "before_after_visual",
+    "evidence": "The reviewed feature remains structurally consistent between the Before and After images. No relevant man-made structural change is observed.",
+    "confidence": "high",
+    "overlay_role": "annotation"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.76161916118771,
+       19.72157926085107
+      ],
+      [
+       72.76292034718485,
+       19.721621924440274
+      ],
+      [
+       72.76287848497135,
+       19.72262520499531
+      ],
+      [
+       72.76163294947686,
+       19.722592040834368
+      ],
+      [
+       72.76161916118771,
+       19.72157926085107
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "overlay_role": "intersection",
+    "record_ids": "A_8+A_9",
+    "area_m2": 630.1,
+    "area_px_10m": 6
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.76175396339512,
+       19.722151898733507
+      ],
+      [
+       72.76162693571403,
+       19.722150312108877
+      ],
+      [
+       72.76163294947686,
+       19.722592040834368
+      ],
+      [
+       72.76175120621701,
+       19.722595189960714
+      ],
+      [
+       72.76175396339512,
+       19.722151898733507
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

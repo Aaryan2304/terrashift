@@ -1,0 +1,18 @@
+{
+  "index_csv": "/home/aaryan/projects/skyserve_assignment/outputs/labels/pair_a_provisional/index_A_f0.002.csv",
+  "patch_size": 256,
+  "stride": 128,
+  "min_labeled_fraction": 0.002,
+  "patch_count_by_split": {
+    "train": 34,
+    "validation": 8,
+    "test": 0
+  },
+  "pair_count": 1,
+  "uses_human_labels_only": true,
+  "uses_osm_labels": false,
+  "buffer_or_cross_split_windows_included": false,
+  "test_index_included": false,
+  "test_label_pixels_read": false,
+  "test_labels_used_for_training": false
+}

@@ -1,0 +1,94 @@
+{
+ "checkpoint": "/home/aaryan/projects/skyserve_assignment/outputs/checkpoints/oscd_gpu_v1/baseline_seed42_v2/seed_42/best.pt",
+ "split": "validation",
+ "threshold": 0.9,
+ "min_area_px": 64,
+ "windows": 62,
+ "results": {
+  "last": {
+   "ap": 0.28064561704998864,
+   "auc": 0.8817786811227923,
+   "pixel_tp": 3596,
+   "pixel_fp": 3515,
+   "pixel_fn": 7914,
+   "pixel_precision": 0.5056954014906483,
+   "pixel_recall": 0.31242397914856646,
+   "pixel_f1": 0.38623059986037267,
+   "object_tp": 12,
+   "object_fp": 24,
+   "object_fn": 65,
+   "object_precision": 0.3333333333333333,
+   "object_recall": 0.15584415584415584,
+   "object_f1": 0.21238938053097345
+  },
+  "mean": {
+   "ap": 0.28341077602515435,
+   "auc": 0.8817677420292862,
+   "pixel_tp": 3695,
+   "pixel_fp": 3507,
+   "pixel_fn": 7815,
+   "pixel_precision": 0.513051930019439,
+   "pixel_recall": 0.3210251954821894,
+   "pixel_f1": 0.3949337323642582,
+   "object_tp": 13,
+   "object_fp": 23,
+   "object_fn": 64,
+   "object_precision": 0.3611111111111111,
+   "object_recall": 0.16883116883116883,
+   "object_f1": 0.23008849557522124
+  },
+  "blend": {
+   "ap": 0.2821780532712746,
+   "auc": 0.8823910267805714,
+   "pixel_tp": 3635,
+   "pixel_fp": 3496,
+   "pixel_fn": 7875,
+   "pixel_precision": 0.5097461786565699,
+   "pixel_recall": 0.3158123370981755,
+   "pixel_f1": 0.3900005364519071,
+   "object_tp": 12,
+   "object_fp": 23,
+   "object_fn": 65,
+   "object_precision": 0.34285714285714286,
+   "object_recall": 0.15584415584415584,
+   "object_f1": 0.21428571428571427
+  }
+ },
+ "overlap_region_differences": {
+  "bordeaux": {
+   "overlap_pixels": 76797,
+   "last_vs_mean_mae": 0.026357540860772133,
+   "last_vs_mean_max": 0.29404908418655396,
+   "last_vs_blend_mae": 0.025344431400299072,
+   "mean_vs_blend_mae": 0.00808059610426426,
+   "mean_vs_blend_max": 0.234296515583992,
+   "flips_last_vs_mean": 196,
+   "flips_last_vs_blend": 187
+  },
+  "pisa": {
+   "overlap_pixels": 118960,
+   "last_vs_mean_mae": 0.01270668301731348,
+   "last_vs_mean_max": 0.24081146717071533,
+   "last_vs_blend_mae": 0.01307288184762001,
+   "mean_vs_blend_mae": 0.006039357744157314,
+   "mean_vs_blend_max": 0.18692868947982788,
+   "flips_last_vs_mean": 153,
+   "flips_last_vs_blend": 174
+  }
+ },
+ "window_disagreement": {
+  "bordeaux": {
+   "overlapping_window_pairs": 11,
+   "max_abs_difference_between_windows": 0.5880981683731079
+  },
+  "pisa": {
+   "overlapping_window_pairs": 15,
+   "max_abs_difference_between_windows": 0.49535059928894043
+  }
+ },
+ "notes": [
+  "Official test split not read.",
+  "Scene-level reconstruction and object matching identical for all three methods.",
+  "The taper is a raised cosine from 1.0 at the patch centre to 0.1 at the border."
+ ]
+}

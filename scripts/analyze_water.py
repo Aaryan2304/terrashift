@@ -13,15 +13,12 @@ import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+from data.manifest import load_manifest, pair_paths
 from data.safeloader import SafeProduct
+from preprocess.indices import ndwi
 
-SAFE_DIR = "/home/aaryan/projects/skyserve"
-PAIRS = {
-    "A": ("S2A_MSIL1C_20221223T054241_N0510_R005_T43QBB_20240809T025636.SAFE",
-          "S2A_MSIL1C_20230512T053641_N0510_R005_T43QBB_20240908T023323.SAFE"),
-    "B": ("S2A_MSIL1C_20231006T052701_N0510_R105_T43RGM_20241101T065943.SAFE",
-          "S2A_MSIL1C_20261022T053241_N0513_R105_T43RGM_20261022T091024.SAFE"),
-}
+MANIFEST = load_manifest()
+PAIRS = {name: pair_paths(MANIFEST, name) for name in sorted(MANIFEST["pairs"])}
 OUT_SHAPE = (1098, 1098)   # 100 m grid, fast overview
 
 
@@ -30,16 +27,10 @@ def read(prod, band):
     return r
 
 
-def ndwi(b03, b08):
-    denom = b03 + b08
-    return np.divide(b03 - b08, denom, out=np.zeros_like(b03, dtype=np.float32),
-                     where=np.abs(denom) > 1e-9)
-
-
 def main():
     for name, (s1, s2) in PAIRS.items():
-        p1 = SafeProduct(os.path.join(SAFE_DIR, s1))
-        p2 = SafeProduct(os.path.join(SAFE_DIR, s2))
+        p1 = SafeProduct(s1)
+        p2 = SafeProduct(s2)
         b03_1, b08_1 = read(p1, "B03"), read(p1, "B08")
         b03_2, b08_2 = read(p2, "B03"), read(p2, "B08")
         w1 = ndwi(b03_1, b08_1)

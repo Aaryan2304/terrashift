@@ -1,0 +1,37 @@
+{
+ "source": "/home/aaryan/projects/skyserve_assignment/labels/manual_labels_A.geojson",
+ "output": "/home/aaryan/projects/skyserve_assignment/labels/manual_labels_A_filtered.geojson",
+ "input_features": 70,
+ "kept_features": 67,
+ "excluded_count": 3,
+ "excluded": [
+  {
+   "record_id": "A_46",
+   "label_class": "no_change",
+   "reason": "guard_band_overlap",
+   "detail": "Wholly inside the validation/test guard band: 48 of 48 burned pixels fall in partition code 0 (x 293239-293300 m, band x 292800-293800 m).",
+   "guard_pixels": 48,
+   "burned_pixels": 48,
+   "guard_fraction": 1.0
+  },
+  {
+   "record_id": "A_51",
+   "label_class": "change",
+   "reason": "guard_band_overlap",
+   "detail": "Wholly inside the validation/test guard band: 574 of 574 burned pixels fall in partition code 0 (x 293377-293724 m, band x 292800-293800 m).",
+   "guard_pixels": 574,
+   "burned_pixels": 574,
+   "guard_fraction": 1.0
+  },
+  {
+   "record_id": "A_58",
+   "label_class": "no_change",
+   "reason": "guard_band_overlap",
+   "detail": "Straddles the train/validation guard band: 448 of 576 burned pixels fall in partition code 0 (x 276300-276481 m, band x 276340-277340 m); the remaining 128 pixels are in train.",
+   "guard_pixels": 448,
+   "burned_pixels": 576,
+   "guard_fraction": 0.7778
+  }
+ ],
+ "policy": "Records listed here are retained unchanged in the master GeoPackage. They are excluded from every training, validation and test export because their geometry overlaps a guard band, so no split can own them. They are not moved, clipped, relabelled or deleted."
+}

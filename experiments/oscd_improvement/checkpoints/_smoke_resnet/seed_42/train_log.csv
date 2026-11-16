@@ -1,0 +1,2 @@
+epoch,train_loss,train_ap,train_auc,train_f1,val_loss,val_ap,val_auc,val_f1,val_iou,train_seconds,val_seconds,gpu_util_mean_pct,gpu_util_max_pct,gpu_memory_used_max_mib,gpu_samples,peak_allocated_gib,peak_reserved_gib
+1,2.0495688957080507,0.22505958943459162,0.8405276514972422,0.13721226756319316,1.869186939731721,0.13913762350533812,0.8625420729945759,0.14162492219225184,0.07620900854918974,15.6,2.0,15.9,37.0,465.0,31,0.306,0.344

@@ -1,0 +1,48 @@
+{
+  "config_path": "/home/aaryan/projects/skyserve_assignment/config.yaml",
+  "dataset": "oscd100",
+  "root": "/home/aaryan/projects/skyserve_assignment/data/oscd/extracted",
+  "train_split": "train",
+  "validation_split": "val",
+  "test_dataset_opened": false,
+  "output_dir": "/home/aaryan/projects/skyserve_assignment/outputs/checkpoints/oscd100_final_v3/seed_42",
+  "seed": 42,
+  "epochs": 1,
+  "batch_size": 2,
+  "base_filters": 8,
+  "lr": 0.0001,
+  "workers": 0,
+  "optimizer": "adamw",
+  "loss": "bce_dice",
+  "bce_weight": 1.0,
+  "dice_weight": 1.0,
+  "pos_weight": 19.144778298624452,
+  "amp": true,
+  "device": "cuda",
+  "bands": [
+    "B02",
+    "B03",
+    "B04",
+    "B08"
+  ],
+  "model_type": "siamese_unet",
+  "in_channels": 4,
+  "out_channels": 1,
+  "augmentation": {
+    "enabled": true
+  },
+  "threshold": 0.5,
+  "selection_metric": "average_precision",
+  "cli_overrides": {
+    "config": "config.yaml",
+    "dataset": "oscd100",
+    "epochs": 1,
+    "batch_size": 2,
+    "base": 8,
+    "seeds": "42",
+    "workers": 0,
+    "max_train_batches": 1,
+    "max_val_batches": 1,
+    "output_dir": "outputs/checkpoints/oscd100_final_v3"
+  }
+}

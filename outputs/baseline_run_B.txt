@@ -1,0 +1,13 @@
+================================================================================
+PAIR B
+  applied registration shift: 0.13 m, -1.19 m
+  land pixels: 29713987 (98.6%)
+  normalisation MAE 0.02475 -> 0.02169 (12.4%)
+  change score percentiles 50/90/95/99/99.5/99.9: 1.534 3.502 4.128 5.388 5.943 7.690
+  threshold 2.0 -> 10765652 px (36.231% of land)
+  components after morphology and area filter: 36377
+  wrote outputs/baseline/change_score_B.tif
+  wrote outputs/baseline/candidate_mask_B.tif
+  wrote outputs/baseline/candidate_components_B.csv
+  largest component: 1917446 px = 766978400 m2
+PAIR B EXIT=0

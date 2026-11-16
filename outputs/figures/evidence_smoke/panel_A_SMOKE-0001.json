@@ -1,0 +1,36 @@
+{
+ "record_id": "SMOKE-0001",
+ "pair": "A",
+ "register": "/home/aaryan/.hermes/cache/scratch/smoke_register.csv",
+ "score_raster": "/home/aaryan/projects/skyserve_assignment/outputs/baseline_v2_observation_valid/change_score_A.tif",
+ "crop_window_rows": [
+  53,
+  131
+ ],
+ "crop_window_cols": [
+  3116,
+  3204
+ ],
+ "crop_bounds": [
+  262300.0,
+  2197400.0,
+  264060.0,
+  2198960.0
+ ],
+ "native_window": [
+  6232,
+  106,
+  176,
+  156
+ ],
+ "candidate_percentile": 99.9,
+ "candidate_threshold": 7.771233081817627,
+ "band_order": [
+  "B04",
+  "B03",
+  "B02"
+ ],
+ "crs": "EPSG:32643",
+ "status": "smoke_test_not_a_detection",
+ "note": "the red overlay marks the score tail, not detected change; the polygon is the reviewer's, not this script's"
+}
