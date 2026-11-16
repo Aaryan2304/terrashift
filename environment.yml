@@ -1,0 +1,26 @@
+name: skyserve-cd
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.13
+  - pip
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - rasterio
+  - opencv
+  - scikit-image
+  - tifffile
+  - imageio
+  - pillow
+  - pyyaml
+  - tqdm
+  - pip:
+      - torch==2.11.0+cu128
+      - torchvision==0.26.0+cu128
+      - onnx==1.21.0
+      - onnxruntime-gpu==1.24.4
+      - weasyprint==69.0

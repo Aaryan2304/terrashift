@@ -1,0 +1,356 @@
+===============================================================================================
+S2A_MSIL1C_20221223T054241_N0510_R005_T43QBB_20240809T025636.SAFE
+  -- radiometric metadata --
+     QUANTIFICATION_VALUE   attrib={'unit': 'none'} text=10000
+     RADIO_ADD_OFFSET       attrib={'band_id': '0'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '1'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '2'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '3'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '4'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '5'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '6'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '7'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '8'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '9'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '10'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '11'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '12'} text=-1000
+     U                      attrib={} text=1.03311293304196
+     PHYSICAL_GAINS         attrib={'bandId': '0'} text=4.10143611
+     PHYSICAL_GAINS         attrib={'bandId': '1'} text=3.74738362
+     PHYSICAL_GAINS         attrib={'bandId': '2'} text=4.17121095
+     PHYSICAL_GAINS         attrib={'bandId': '3'} text=4.50300682
+     PHYSICAL_GAINS         attrib={'bandId': '4'} text=5.18551147
+     PHYSICAL_GAINS         attrib={'bandId': '5'} text=4.85105297
+     PHYSICAL_GAINS         attrib={'bandId': '6'} text=4.51515393
+     PHYSICAL_GAINS         attrib={'bandId': '7'} text=6.13433039
+     PHYSICAL_GAINS         attrib={'bandId': '8'} text=5.1136607
+     PHYSICAL_GAINS         attrib={'bandId': '9'} text=8.49036182
+     PHYSICAL_GAINS         attrib={'bandId': '10'} text=55.13220428
+     PHYSICAL_GAINS         attrib={'bandId': '11'} text=35.31283324
+     PHYSICAL_GAINS         attrib={'bandId': '12'} text=106.33138985
+  -- nodes named *OFFSET* with ancestry --
+     tag=Radiometric_Offset_List text= attrib={}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '0'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '1'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '2'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '3'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '4'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '5'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '6'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '7'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '8'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '9'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '10'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '11'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '12'}
+  -- spectral information --
+     B1: res=60
+     B2: res=10
+     B3: res=10
+     B4: res=10
+     B5: res=20
+     B6: res=20
+     B7: res=20
+     B8: res=10
+     B8A: res=20
+     B9: res=60
+     B10: res=60
+     B11: res=20
+     B12: res=20
+  -- QI_DATA masks --
+     MSK_CLASSI_B00.jp2       shape=(1830, 1830) dtype=uint8 min=0 max=0 unique=1 [0:3348900]
+     MSK_DETFOO_B01.jp2       shape=(1830, 1830) dtype=uint8 min=6 max=12 unique=7 [6:71414, 7:609489, 8:754049, 9:750756, 10:773571, 11:389010, 12:611]
+     MSK_DETFOO_B02.jp2       shape=(10980, 10980) dtype=uint8 min=6 max=12 unique=7 [6:2710662, 7:22126893, 8:27054022, 9:27159989, 10:27619162, 11:13881474, 12:8198]
+     MSK_DETFOO_B03.jp2       shape=(10980, 10980) dtype=uint8 min=6 max=12 unique=7 [6:2680515, 7:22086839, 8:27073128, 9:27129872, 10:27669333, 11:13909829, 12:10884]
+     MSK_DETFOO_B04.jp2       shape=(10980, 10980) dtype=uint8 min=6 max=12 unique=7 [6:2659625, 7:22058906, 8:27092304, 9:27101579, 10:27716916, 11:13918167, 12:12903]
+     MSK_DETFOO_B05.jp2       shape=(5490, 5490) dtype=uint8 min=6 max=12 unique=7 [6:660001, 7:5508151, 8:6775574, 9:6771782, 10:6935551, 11:3485377, 12:3664]
+     MSK_DETFOO_B06.jp2       shape=(5490, 5490) dtype=uint8 min=6 max=12 unique=7 [6:655029, 7:5501660, 8:6778253, 9:6767995, 10:6942171, 11:3490833, 12:4159]
+     MSK_DETFOO_B07.jp2       shape=(5490, 5490) dtype=uint8 min=6 max=12 unique=7 [6:650062, 7:5495200, 8:6780914, 9:6764270, 10:6948744, 11:3496225, 12:4685]
+     MSK_DETFOO_B08.jp2       shape=(10980, 10980) dtype=uint8 min=6 max=12 unique=7 [6:2690949, 7:22100450, 8:27063774, 9:27145541, 10:27644625, 11:13905301, 12:9760]
+     MSK_DETFOO_B09.jp2       shape=(1830, 1830) dtype=uint8 min=6 max=12 unique=7 [6:70620, 7:608396, 8:754359, 9:750365, 10:774359, 11:390105, 12:696]
+     MSK_DETFOO_B10.jp2       shape=(1830, 1830) dtype=uint8 min=6 max=12 unique=7 [6:73887, 7:612598, 8:752279, 9:752409, 10:769965, 11:387379, 12:383]
+     MSK_DETFOO_B11.jp2       shape=(5490, 5490) dtype=uint8 min=6 max=12 unique=7 [6:659588, 7:5506117, 8:6776242, 9:6763676, 10:6944890, 11:3485570, 12:4017]
+     MSK_DETFOO_B12.jp2       shape=(5490, 5490) dtype=uint8 min=6 max=12 unique=7 [6:652120, 7:5496364, 8:6782575, 9:6754642, 10:6961359, 11:3488164, 12:4876]
+     MSK_DETFOO_B8A.jp2       shape=(5490, 5490) dtype=uint8 min=6 max=12 unique=7 [6:647555, 7:5492030, 8:6783707, 9:6760537, 10:6955588, 11:3495710, 12:4973]
+     MSK_QUALIT_B01.jp2       shape=(1830, 1830) dtype=uint8 min=0 max=0 unique=1 [0:3348900]
+     MSK_QUALIT_B02.jp2       shape=(10980, 10980) dtype=uint8 min=0 max=0 unique=1 [0:120560400]
+     MSK_QUALIT_B03.jp2       shape=(10980, 10980) dtype=uint8 min=0 max=0 unique=1 [0:120560400]
+     MSK_QUALIT_B04.jp2       shape=(10980, 10980) dtype=uint8 min=0 max=0 unique=1 [0:120560400]
+     MSK_QUALIT_B05.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B06.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B07.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B08.jp2       shape=(10980, 10980) dtype=uint8 min=0 max=0 unique=1 [0:120560400]
+     MSK_QUALIT_B09.jp2       shape=(1830, 1830) dtype=uint8 min=0 max=0 unique=1 [0:3348900]
+     MSK_QUALIT_B10.jp2       shape=(1830, 1830) dtype=uint8 min=0 max=0 unique=1 [0:3348900]
+     MSK_QUALIT_B11.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B12.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B8A.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+
+===============================================================================================
+S2A_MSIL1C_20230512T053641_N0510_R005_T43QBB_20240908T023323.SAFE
+  -- radiometric metadata --
+     QUANTIFICATION_VALUE   attrib={'unit': 'none'} text=10000
+     RADIO_ADD_OFFSET       attrib={'band_id': '0'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '1'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '2'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '3'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '4'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '5'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '6'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '7'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '8'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '9'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '10'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '11'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '12'} text=-1000
+     U                      attrib={} text=0.982062376618494
+     PHYSICAL_GAINS         attrib={'bandId': '0'} text=4.09844622
+     PHYSICAL_GAINS         attrib={'bandId': '1'} text=3.75136805
+     PHYSICAL_GAINS         attrib={'bandId': '2'} text=4.18223562
+     PHYSICAL_GAINS         attrib={'bandId': '3'} text=4.5162748
+     PHYSICAL_GAINS         attrib={'bandId': '4'} text=5.19860716
+     PHYSICAL_GAINS         attrib={'bandId': '5'} text=4.86455453
+     PHYSICAL_GAINS         attrib={'bandId': '6'} text=4.52639413
+     PHYSICAL_GAINS         attrib={'bandId': '7'} text=6.15033148
+     PHYSICAL_GAINS         attrib={'bandId': '8'} text=5.12801488
+     PHYSICAL_GAINS         attrib={'bandId': '9'} text=8.52068965
+     PHYSICAL_GAINS         attrib={'bandId': '10'} text=55.00631397
+     PHYSICAL_GAINS         attrib={'bandId': '11'} text=35.23159429
+     PHYSICAL_GAINS         attrib={'bandId': '12'} text=106.39883226
+  -- nodes named *OFFSET* with ancestry --
+     tag=Radiometric_Offset_List text= attrib={}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '0'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '1'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '2'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '3'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '4'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '5'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '6'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '7'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '8'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '9'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '10'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '11'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '12'}
+  -- spectral information --
+     B1: res=60
+     B2: res=10
+     B3: res=10
+     B4: res=10
+     B5: res=20
+     B6: res=20
+     B7: res=20
+     B8: res=10
+     B8A: res=20
+     B9: res=60
+     B10: res=60
+     B11: res=20
+     B12: res=20
+  -- QI_DATA masks --
+     MSK_CLASSI_B00.jp2       shape=(1830, 1830) dtype=uint8 min=0 max=0 unique=1 [0:3348900]
+     MSK_DETFOO_B01.jp2       shape=(1830, 1830) dtype=uint8 min=6 max=12 unique=7 [6:61691, 7:593663, 8:754687, 9:750053, 10:774664, 11:412095, 12:2047]
+     MSK_DETFOO_B02.jp2       shape=(10980, 10980) dtype=uint8 min=6 max=12 unique=7 [6:2343887, 7:21575249, 8:27064774, 9:27152362, 10:27642931, 11:14735081, 12:46116]
+     MSK_DETFOO_B03.jp2       shape=(10980, 10980) dtype=uint8 min=6 max=12 unique=7 [6:2317974, 7:21531167, 8:27085801, 9:27118439, 10:27696419, 11:14758535, 12:52065]
+     MSK_DETFOO_B04.jp2       shape=(10980, 10980) dtype=uint8 min=6 max=12 unique=7 [6:2299624, 7:21500110, 8:27107913, 9:27086064, 10:27747961, 11:14762278, 12:56450]
+     MSK_DETFOO_B05.jp2       shape=(5490, 5490) dtype=uint8 min=6 max=12 unique=7 [6:570492, 7:5367801, 8:6779975, 9:6767398, 10:6943659, 11:3695774, 12:15001]
+     MSK_DETFOO_B06.jp2       shape=(5490, 5490) dtype=uint8 min=6 max=12 unique=7 [6:566167, 7:5360607, 8:6783043, 9:6763073, 10:6950718, 11:3700571, 12:15921]
+     MSK_DETFOO_B07.jp2       shape=(5490, 5490) dtype=uint8 min=6 max=12 unique=7 [6:561825, 7:5353512, 8:6786036, 9:6758817, 10:6957745, 11:3705280, 12:16885]
+     MSK_DETFOO_B08.jp2       shape=(10980, 10980) dtype=uint8 min=6 max=12 unique=7 [6:2326559, 7:21547121, 8:27075034, 9:27136186, 10:27669154, 11:14756766, 12:49580]
+     MSK_DETFOO_B09.jp2       shape=(1830, 1830) dtype=uint8 min=6 max=12 unique=7 [6:60984, 7:592481, 8:755043, 9:749598, 10:775483, 11:413114, 12:2197]
+     MSK_DETFOO_B10.jp2       shape=(1830, 1830) dtype=uint8 min=6 max=12 unique=7 [6:63888, 7:597075, 8:752678, 9:752024, 10:770782, 11:410834, 12:1619]
+     MSK_DETFOO_B11.jp2       shape=(5490, 5490) dtype=uint8 min=6 max=12 unique=7 [6:570313, 7:5365477, 8:6780990, 9:6758809, 10:6953471, 11:3695388, 12:15652]
+     MSK_DETFOO_B12.jp2       shape=(5490, 5490) dtype=uint8 min=6 max=12 unique=7 [6:563923, 7:5354617, 8:6788072, 9:6748629, 10:6971138, 11:3696461, 12:17260]
+     MSK_DETFOO_B8A.jp2       shape=(5490, 5490) dtype=uint8 min=6 max=12 unique=7 [6:559672, 7:5349983, 8:6789133, 9:6754649, 10:6965070, 11:3704153, 12:17440]
+     MSK_QUALIT_B01.jp2       shape=(1830, 1830) dtype=uint8 min=0 max=0 unique=1 [0:3348900]
+     MSK_QUALIT_B02.jp2       shape=(10980, 10980) dtype=uint8 min=0 max=0 unique=1 [0:120560400]
+     MSK_QUALIT_B03.jp2       shape=(10980, 10980) dtype=uint8 min=0 max=0 unique=1 [0:120560400]
+     MSK_QUALIT_B04.jp2       shape=(10980, 10980) dtype=uint8 min=0 max=0 unique=1 [0:120560400]
+     MSK_QUALIT_B05.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B06.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B07.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B08.jp2       shape=(10980, 10980) dtype=uint8 min=0 max=0 unique=1 [0:120560400]
+     MSK_QUALIT_B09.jp2       shape=(1830, 1830) dtype=uint8 min=0 max=0 unique=1 [0:3348900]
+     MSK_QUALIT_B10.jp2       shape=(1830, 1830) dtype=uint8 min=0 max=0 unique=1 [0:3348900]
+     MSK_QUALIT_B11.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B12.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B8A.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+
+===============================================================================================
+S2A_MSIL1C_20231006T052701_N0510_R105_T43RGM_20241101T065943.SAFE
+  -- radiometric metadata --
+     QUANTIFICATION_VALUE   attrib={'unit': 'none'} text=10000
+     RADIO_ADD_OFFSET       attrib={'band_id': '0'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '1'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '2'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '3'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '4'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '5'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '6'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '7'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '8'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '9'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '10'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '11'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '12'} text=-1000
+     U                      attrib={} text=0.998702994119012
+     PHYSICAL_GAINS         attrib={'bandId': '0'} text=4.10154829
+     PHYSICAL_GAINS         attrib={'bandId': '1'} text=3.75548107
+     PHYSICAL_GAINS         attrib={'bandId': '2'} text=4.18772932
+     PHYSICAL_GAINS         attrib={'bandId': '3'} text=4.52198573
+     PHYSICAL_GAINS         attrib={'bandId': '4'} text=5.20504163
+     PHYSICAL_GAINS         attrib={'bandId': '5'} text=4.87056057
+     PHYSICAL_GAINS         attrib={'bandId': '6'} text=4.5321063
+     PHYSICAL_GAINS         attrib={'bandId': '7'} text=6.15755123
+     PHYSICAL_GAINS         attrib={'bandId': '8'} text=5.13429676
+     PHYSICAL_GAINS         attrib={'bandId': '9'} text=8.53261723
+     PHYSICAL_GAINS         attrib={'bandId': '10'} text=54.94589948
+     PHYSICAL_GAINS         attrib={'bandId': '11'} text=35.20486305
+     PHYSICAL_GAINS         attrib={'bandId': '12'} text=106.26775811
+  -- nodes named *OFFSET* with ancestry --
+     tag=Radiometric_Offset_List text= attrib={}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '0'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '1'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '2'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '3'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '4'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '5'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '6'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '7'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '8'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '9'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '10'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '11'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '12'}
+  -- spectral information --
+     B1: res=60
+     B2: res=10
+     B3: res=10
+     B4: res=10
+     B5: res=20
+     B6: res=20
+     B7: res=20
+     B8: res=10
+     B8A: res=20
+     B9: res=60
+     B10: res=60
+     B11: res=20
+     B12: res=20
+  -- QI_DATA masks --
+     MSK_CLASSI_B00.jp2       shape=(1830, 1830) dtype=uint8 min=0 max=0 unique=1 [0:3348900]
+     MSK_DETFOO_B01.jp2       shape=(1830, 1830) dtype=uint8 min=7 max=12 unique=6 [7:314354, 8:748084, 9:746983, 10:770447, 11:675029, 12:94003]
+     MSK_DETFOO_B02.jp2       shape=(10980, 10980) dtype=uint8 min=7 max=12 unique=6 [7:11610413, 8:26864876, 9:27024702, 10:27506134, 11:24375762, 12:3178513]
+     MSK_DETFOO_B03.jp2       shape=(10980, 10980) dtype=uint8 min=7 max=12 unique=6 [7:11546286, 8:26878597, 9:26993921, 10:27556596, 11:24359639, 12:3225361]
+     MSK_DETFOO_B04.jp2       shape=(10980, 10980) dtype=uint8 min=7 max=12 unique=6 [7:11502516, 8:26893665, 9:26965660, 10:27604549, 11:24335329, 12:3258681]
+     MSK_DETFOO_B05.jp2       shape=(5490, 5490) dtype=uint8 min=7 max=12 unique=6 [7:2865138, 8:6725091, 9:6737778, 10:6907464, 11:6082926, 12:821703]
+     MSK_DETFOO_B06.jp2       shape=(5490, 5490) dtype=uint8 min=7 max=12 unique=6 [7:2854747, 8:6726905, 9:6733920, 10:6914084, 11:6081797, 12:828647]
+     MSK_DETFOO_B07.jp2       shape=(5490, 5490) dtype=uint8 min=7 max=12 unique=6 [7:2844423, 8:6728688, 9:6730205, 10:6920616, 11:6080677, 12:835491]
+     MSK_DETFOO_B08.jp2       shape=(10980, 10980) dtype=uint8 min=7 max=12 unique=6 [7:11568126, 8:26871127, 9:27009613, 10:27531513, 11:24372822, 12:3207199]
+     MSK_DETFOO_B09.jp2       shape=(1830, 1830) dtype=uint8 min=7 max=12 unique=6 [7:312647, 8:748239, 9:746587, 10:771240, 11:675139, 12:95048]
+     MSK_DETFOO_B10.jp2       shape=(1830, 1830) dtype=uint8 min=7 max=12 unique=6 [7:319378, 8:746751, 9:748635, 10:766814, 11:676407, 12:90915]
+     MSK_DETFOO_B11.jp2       shape=(5490, 5490) dtype=uint8 min=7 max=12 unique=6 [7:2863091, 8:6725512, 9:6729625, 10:6916911, 11:6078344, 12:826617]
+     MSK_DETFOO_B12.jp2       shape=(5490, 5490) dtype=uint8 min=7 max=12 unique=6 [7:2847785, 8:6730417, 9:6720639, 10:6933467, 11:6070021, 12:837771]
+     MSK_DETFOO_B8A.jp2       shape=(5490, 5490) dtype=uint8 min=7 max=12 unique=6 [7:2839466, 8:6730975, 9:6726481, 10:6927548, 11:6076490, 12:839140]
+     MSK_QUALIT_B01.jp2       shape=(1830, 1830) dtype=uint8 min=0 max=0 unique=1 [0:3348900]
+     MSK_QUALIT_B02.jp2       shape=(10980, 10980) dtype=uint8 min=0 max=0 unique=1 [0:120560400]
+     MSK_QUALIT_B03.jp2       shape=(10980, 10980) dtype=uint8 min=0 max=0 unique=1 [0:120560400]
+     MSK_QUALIT_B04.jp2       shape=(10980, 10980) dtype=uint8 min=0 max=0 unique=1 [0:120560400]
+     MSK_QUALIT_B05.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B06.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B07.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B08.jp2       shape=(10980, 10980) dtype=uint8 min=0 max=0 unique=1 [0:120560400]
+     MSK_QUALIT_B09.jp2       shape=(1830, 1830) dtype=uint8 min=0 max=0 unique=1 [0:3348900]
+     MSK_QUALIT_B10.jp2       shape=(1830, 1830) dtype=uint8 min=0 max=0 unique=1 [0:3348900]
+     MSK_QUALIT_B11.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B12.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B8A.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+
+===============================================================================================
+S2A_MSIL1C_20261022T053241_N0513_R105_T43RGM_20261022T091024.SAFE
+  -- radiometric metadata --
+     QUANTIFICATION_VALUE   attrib={'unit': 'none'} text=10000
+     RADIO_ADD_OFFSET       attrib={'band_id': '0'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '1'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '2'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '3'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '4'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '5'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '6'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '7'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '8'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '9'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '10'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '11'} text=-1000
+     RADIO_ADD_OFFSET       attrib={'band_id': '12'} text=-1000
+     U                      attrib={} text=1.00793876658417
+     PHYSICAL_GAINS         attrib={'bandId': '0'} text=4.08902889
+     PHYSICAL_GAINS         attrib={'bandId': '1'} text=3.74981458
+     PHYSICAL_GAINS         attrib={'bandId': '2'} text=4.18477827
+     PHYSICAL_GAINS         attrib={'bandId': '3'} text=4.52116997
+     PHYSICAL_GAINS         attrib={'bandId': '4'} text=5.20512347
+     PHYSICAL_GAINS         attrib={'bandId': '5'} text=4.87432758
+     PHYSICAL_GAINS         attrib={'bandId': '6'} text=4.53654081
+     PHYSICAL_GAINS         attrib={'bandId': '7'} text=6.16748017
+     PHYSICAL_GAINS         attrib={'bandId': '8'} text=5.14162736
+     PHYSICAL_GAINS         attrib={'bandId': '9'} text=8.54641384
+     PHYSICAL_GAINS         attrib={'bandId': '10'} text=55.11922381
+     PHYSICAL_GAINS         attrib={'bandId': '11'} text=35.28059052
+     PHYSICAL_GAINS         attrib={'bandId': '12'} text=106.36654206
+  -- nodes named *OFFSET* with ancestry --
+     tag=Radiometric_Offset_List text= attrib={}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '0'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '1'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '2'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '3'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '4'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '5'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '6'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '7'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '8'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '9'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '10'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '11'}
+     tag=RADIO_ADD_OFFSET text=-1000 attrib={'band_id': '12'}
+  -- spectral information --
+     B1: res=60
+     B2: res=10
+     B3: res=10
+     B4: res=10
+     B5: res=20
+     B6: res=20
+     B7: res=20
+     B8: res=10
+     B8A: res=20
+     B9: res=60
+     B10: res=60
+     B11: res=20
+     B12: res=20
+  -- QI_DATA masks --
+     MSK_CLASSI_B00.jp2       shape=(1830, 1830) dtype=uint8 min=0 max=0 unique=1 [0:3348900]
+     MSK_DETFOO_B01.jp2       shape=(1830, 1830) dtype=uint8 min=7 max=12 unique=6 [7:310885, 8:749079, 9:745974, 10:771502, 11:675363, 12:96097]
+     MSK_DETFOO_B02.jp2       shape=(10980, 10980) dtype=uint8 min=7 max=12 unique=6 [7:11503547, 8:26873594, 9:27017559, 10:27521192, 11:24409176, 12:3235332]
+     MSK_DETFOO_B03.jp2       shape=(10980, 10980) dtype=uint8 min=7 max=12 unique=6 [7:11435374, 8:26893845, 9:26979965, 10:27577706, 11:24387119, 12:3286391]
+     MSK_DETFOO_B04.jp2       shape=(10980, 10980) dtype=uint8 min=7 max=12 unique=6 [7:11387932, 8:26915171, 9:26945015, 10:27630647, 11:24358428, 12:3323207]
+     MSK_DETFOO_B05.jp2       shape=(5490, 5490) dtype=uint8 min=7 max=12 unique=6 [7:2835975, 8:6731267, 9:6731836, 10:6914551, 11:6088060, 12:838411]
+     MSK_DETFOO_B06.jp2       shape=(5490, 5490) dtype=uint8 min=7 max=12 unique=6 [7:2825077, 8:6733777, 9:6727259, 10:6921745, 11:6086331, 12:845911]
+     MSK_DETFOO_B07.jp2       shape=(5490, 5490) dtype=uint8 min=7 max=12 unique=6 [7:2814267, 8:6736215, 9:6722752, 10:6928932, 11:6084687, 12:853247]
+     MSK_DETFOO_B08.jp2       shape=(10980, 10980) dtype=uint8 min=7 max=12 unique=6 [7:11459121, 8:26883335, 9:26999094, 10:27549523, 11:24403031, 12:3266296]
+     MSK_DETFOO_B09.jp2       shape=(1830, 1830) dtype=uint8 min=7 max=12 unique=6 [7:309131, 8:749303, 9:745502, 10:772345, 11:675416, 12:97203]
+     MSK_DETFOO_B10.jp2       shape=(1830, 1830) dtype=uint8 min=7 max=12 unique=6 [7:316228, 8:747286, 9:748110, 10:767511, 11:677075, 12:92690]
+     MSK_DETFOO_B11.jp2       shape=(5490, 5490) dtype=uint8 min=7 max=12 unique=6 [7:2833407, 8:6732370, 9:6723064, 10:6924496, 11:6082933, 12:843830]
+     MSK_DETFOO_B12.jp2       shape=(5490, 5490) dtype=uint8 min=7 max=12 unique=6 [7:2816903, 8:6738919, 9:6712128, 10:6942545, 11:6073476, 12:856129]
+     MSK_DETFOO_B8A.jp2       shape=(5490, 5490) dtype=uint8 min=7 max=12 unique=6 [7:2808804, 8:6739216, 9:6718189, 10:6936475, 11:6080050, 12:857366]
+     MSK_QUALIT_B01.jp2       shape=(1830, 1830) dtype=uint8 min=0 max=0 unique=1 [0:3348900]
+     MSK_QUALIT_B02.jp2       shape=(10980, 10980) dtype=uint8 min=0 max=0 unique=1 [0:120560400]
+     MSK_QUALIT_B03.jp2       shape=(10980, 10980) dtype=uint8 min=0 max=0 unique=1 [0:120560400]
+     MSK_QUALIT_B04.jp2       shape=(10980, 10980) dtype=uint8 min=0 max=0 unique=1 [0:120560400]
+     MSK_QUALIT_B05.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B06.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B07.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B08.jp2       shape=(10980, 10980) dtype=uint8 min=0 max=0 unique=1 [0:120560400]
+     MSK_QUALIT_B09.jp2       shape=(1830, 1830) dtype=uint8 min=0 max=0 unique=1 [0:3348900]
+     MSK_QUALIT_B10.jp2       shape=(1830, 1830) dtype=uint8 min=0 max=0 unique=1 [0:3348900]
+     MSK_QUALIT_B11.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B12.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+     MSK_QUALIT_B8A.jp2       shape=(5490, 5490) dtype=uint8 min=0 max=0 unique=1 [0:30140100]
+

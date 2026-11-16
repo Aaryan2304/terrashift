@@ -1,0 +1,17 @@
+================================================================================
+PAIR A valid land pixels: 454639 stable water: 726830 dynamic: 24135
+  stable pixels: 227320 fit: 113829 validation: 113491
+  none       MAE 0.02403 -> 0.02403  (0.0%)  change score 3.1900 -> 3.1900
+  global     MAE 0.02403 -> 0.00731  (69.6%)  change score 3.1900 -> 3.4479
+  pif        MAE 0.02403 -> 0.00777  (67.7%)  change score 3.1900 -> 2.5262
+  histogram  MAE 0.02403 -> 0.00796  (66.9%)  change score 3.1900 -> 1.0782
+================================================================================
+PAIR B valid land pixels: 1198362 stable water: 2962 dynamic: 4280
+  stable pixels: 599181 fit: 299520 validation: 299661
+  none       MAE 0.01411 -> 0.01411  (0.0%)  change score 1.1326 -> 1.1326
+  global     MAE 0.01411 -> 0.00765  (45.8%)  change score 1.1326 -> 2.5002
+  pif        MAE 0.01411 -> 0.00775  (45.1%)  change score 1.1326 -> 1.4134
+  histogram  MAE 0.01411 -> 0.00775  (45.1%)  change score 1.1326 -> 0.9830
+
+wrote outputs/audit/normalization_comparison.csv
+wrote outputs/audit/normalization_parameters.json

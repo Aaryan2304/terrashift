@@ -1,0 +1,51 @@
+/home/aaryan/projects/skyserve_assignment/scripts/verify_offset.py:93: RuntimeWarning: Mean of empty slice
+  row.append(f"{b}={refl(a).mean():.4f}")
+/home/aaryan/miniconda/envs/gpu/lib/python3.11/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in divide
+  ret = ret.dtype.type(ret / rcount)
+====================================================================================================
+EFFECT OF THE RADIO_ADD_OFFSET CORRECTION (offset = -1000, quant = 10000)
+====================================================================================================
+product            window band     raw DN  reflectance  NDVI_raw  NDVI_refl
+QBB_2022_12_23     SEA    B08      1342.7      0.03427   -0.0094    -0.0948
+                          B04      1750.9      0.07509  NDWI_raw  NDWI_refl
+                          B03      2111.3      0.11113    0.0749     0.2178
+QBB_2022_12_23     LAND   B08      1732.0      0.07320   -0.0094    -0.0948
+                          B04      1845.8      0.08458  NDWI_raw  NDWI_refl
+                          B03      2094.8      0.10948    0.0749     0.2178
+QBB_2023_05_12     SEA    B08      1769.8      0.07698    0.0174     0.0172
+                          B04      1988.6      0.09886  NDWI_raw  NDWI_refl
+                          B03      2276.7      0.12767    0.0100     0.0325
+QBB_2023_05_12     LAND   B08      2343.2      0.13432    0.0174     0.0172
+                          B04      2388.5      0.13885  NDWI_raw  NDWI_refl
+                          B03      2488.4      0.14884    0.0100     0.0325
+RGM_2023_10_06     SEA    B08      3152.8      0.21528    0.2262     0.3558
+                          B04      2243.8      0.12438  NDWI_raw  NDWI_refl
+                          B03      2317.7      0.13177   -0.2062    -0.3194
+RGM_2023_10_06     LAND   B08      3463.8      0.24638    0.2262     0.3558
+                          B04      2037.6      0.10376  NDWI_raw  NDWI_refl
+                          B03      2154.3      0.11543   -0.2062    -0.3194
+RGM_2026_10_22     SEA    B08      3021.5      0.20215    0.1606     0.2584
+                          B04      2225.1      0.12251  NDWI_raw  NDWI_refl
+                          B03      2362.4      0.13624   -0.1395    -0.2204
+RGM_2026_10_22     LAND   B08      3075.0      0.20750    0.1606     0.2584
+                          B04      2257.6      0.12576  NDWI_raw  NDWI_refl
+                          B03      2304.8      0.13048   -0.1395    -0.2204
+
+====================================================================================================
+WATER AND BUILT-UP FRACTIONS: RAW DN vs CORRECTED REFLECTANCE
+====================================================================================================
+product             water_raw  water_refl  built_raw  built_refl  NDVI_mean_refl
+QBB_2022_12_23           47.1        61.4       13.1        12.7         -0.0948
+QBB_2023_05_12            0.0        32.4       25.3        25.1          0.0172
+RGM_2023_10_06            0.0         0.2       26.4        25.3          0.3558
+RGM_2026_10_22            0.0         0.2       40.6        42.3          0.2584
+
+====================================================================================================
+PAIR A RADIOMETRY AFTER CORRECTION (same windows as the plan)
+====================================================================================================
+  window SEA
+    QBB_2022_12_23: B03=0.1111  B04=0.0751  B08=0.0343  B11=0.0153
+    QBB_2023_05_12: B03=0.1277  B04=0.0989  B08=0.0770  B11=0.0773
+  window LAND
+    QBB_2022_12_23: B03=0.1095  B04=0.0846  B08=0.0732  B11=nan
+    QBB_2023_05_12: B03=0.1488  B04=0.1388  B08=0.1343  B11=nan

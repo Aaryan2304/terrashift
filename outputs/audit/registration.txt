@@ -1,0 +1,23 @@
+==========================================================================================
+PAIR A
+  win r2000-4000 c5000-7000: dx=-0.137px dy=-0.690px (-1.37m,-6.90m) corr=+0.924
+  win r4000-6000 c6000-8000: dx=-0.141px dy=-0.445px (-1.41m,-4.45m) corr=+0.823
+  win r6000-8000 c5000-7000: dx=-0.016px dy=-0.588px (-0.16m,-5.88m) corr=+0.840
+  win r7000-9000 c4000-6000: ECC FAILED OpenCV(4.13.0) /io/opencv/modules/video/src/ecc.cpp:595: error: (-7:Iterations do not converge) The algorithm stopped before its convergence. The correlation is going to be minimized. Images may be uncorrelated or non-overlapped in function 'findTransformECCWithMask'
+
+  win r3000-5000 c7000-9000: dx=-0.099px dy=-0.759px (-0.99m,-7.59m) corr=+0.581
+  median shift: dx=-0.118px dy=-0.639px (-1.18m,-6.39m)
+  shift spread (std): dx=0.050px dy=0.118px
+  corr: median=+0.831 min=+0.581 max=+0.924
+  windows with corr>0.5: 4/4
+==========================================================================================
+PAIR B
+  win r2000-4000 c2000-4000: dx=+0.059px dy=-0.119px (+0.59m,-1.19m) corr=+0.782
+  win r4000-6000 c4000-6000: dx=+0.063px dy=-0.104px (+0.63m,-1.04m) corr=+0.507
+  win r6000-8000 c6000-8000: dx=-0.044px dy=-0.192px (-0.44m,-1.92m) corr=+0.219
+  win r3000-5000 c7000-9000: dx=+0.009px dy=-0.166px (+0.09m,-1.66m) corr=+0.221
+  win r5000-7000 c2000-4000: dx=+0.013px dy=-0.119px (+0.13m,-1.19m) corr=+0.650
+  median shift: dx=+0.013px dy=-0.119px (+0.13m,-1.19m)
+  shift spread (std): dx=0.039px dy=0.033px
+  corr: median=+0.507 min=+0.219 max=+0.782
+  windows with corr>0.5: 3/5

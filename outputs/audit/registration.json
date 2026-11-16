@@ -1,0 +1,362 @@
+{
+ "A": {
+  "tile": "T43QBB",
+  "date1": "S2A_MSIL1C_20221223T054241_N0510_R005_T43QBB_20240809T025636.SAFE",
+  "date2": "S2A_MSIL1C_20230512T053641_N0510_R005_T43QBB_20240908T023323.SAFE",
+  "band": "B08",
+  "pixel_size_m": 10.0,
+  "initial": {
+   "n_windows": 5,
+   "n_converged": 4,
+   "n_failed": 1,
+   "failed": [
+    {
+     "dx": null,
+     "dy": null,
+     "correlation": null,
+     "converged": false,
+     "error": "OpenCV(4.13.0) /io/opencv/modules/video/src/ecc.cpp:595: error: (-7:Iterations do not converge) The algorithm stopped before its convergence. The correlation is going to be minimized. Images may be un",
+     "window": [
+      7000,
+      9000,
+      4000,
+      6000
+     ]
+    }
+   ],
+   "median_dx_px": -0.11804249510169029,
+   "median_dy_px": -0.6391986012458801,
+   "std_dx_px": 0.05044370754281065,
+   "std_dy_px": 0.11830174187782483,
+   "median_dx_m": -1.180424951016903,
+   "median_dy_m": -6.391986012458801,
+   "std_dx_m": 0.5044370754281065,
+   "std_dy_m": 1.1830174187782483,
+   "median_correlation": 0.8314838257479926,
+   "min_correlation": 0.5810604594226566,
+   "max_correlation": 0.9244935141110573,
+   "n_above_0_5": 4,
+   "windows": [
+    {
+     "dx": -0.13730037212371826,
+     "dy": -0.6903044581413269,
+     "correlation": 0.9244935141110573,
+     "converged": true,
+     "window": [
+      2000,
+      4000,
+      5000,
+      7000
+     ]
+    },
+    {
+     "dx": -0.1411573439836502,
+     "dy": -0.4447019696235657,
+     "correlation": 0.8230254471632732,
+     "converged": true,
+     "window": [
+      4000,
+      6000,
+      6000,
+      8000
+     ]
+    },
+    {
+     "dx": -0.01571507751941681,
+     "dy": -0.5880927443504333,
+     "correlation": 0.839942204332712,
+     "converged": true,
+     "window": [
+      6000,
+      8000,
+      5000,
+      7000
+     ]
+    },
+    {
+     "dx": null,
+     "dy": null,
+     "correlation": null,
+     "converged": false,
+     "error": "OpenCV(4.13.0) /io/opencv/modules/video/src/ecc.cpp:595: error: (-7:Iterations do not converge) The algorithm stopped before its convergence. The correlation is going to be minimized. Images may be un",
+     "window": [
+      7000,
+      9000,
+      4000,
+      6000
+     ]
+    },
+    {
+     "dx": -0.09878461807966232,
+     "dy": -0.7588956952095032,
+     "correlation": 0.5810604594226566,
+     "converged": true,
+     "window": [
+      3000,
+      5000,
+      7000,
+      9000
+     ]
+    }
+   ],
+   "residual": {
+    "n_converged": 4,
+    "n_failed": 1,
+    "median_dx_px": 0.006437457166612148,
+    "median_dy_px": -0.023643353022634983,
+    "median_dx_m": 0.06437457166612148,
+    "median_dy_m": -0.23643353022634983,
+    "rmse_mean": 0.6526003628969193,
+    "rmse_max": 0.9448394775390625,
+    "windows": [
+     {
+      "dx": -0.011767234653234482,
+      "dy": -0.07319328188896179,
+      "correlation": 0.924715810361444,
+      "converged": true,
+      "window": [
+       2000,
+       4000,
+       5000,
+       7000
+      ],
+      "rmse": 0.4349498152732849
+     },
+     {
+      "dx": -0.017595235258340836,
+      "dy": 0.1834452599287033,
+      "correlation": 0.8236813223358749,
+      "converged": true,
+      "window": [
+       4000,
+       6000,
+       6000,
+       8000
+      ],
+      "rmse": 0.6411483883857727
+     },
+     {
+      "dx": 0.10854183882474899,
+      "dy": 0.025906575843691826,
+      "correlation": 0.8404073569028966,
+      "converged": true,
+      "window": [
+       6000,
+       8000,
+       5000,
+       7000
+      ],
+      "rmse": 0.5894637703895569
+     },
+     {
+      "dx": null,
+      "dy": null,
+      "correlation": null,
+      "converged": false,
+      "error": "OpenCV(4.13.0) /io/opencv/modules/video/src/ecc.cpp:595: error: (-7:Iterations do not converge) The algorithm stopped before its convergence. The correlation is going to be minimized. Images may be un",
+      "window": [
+       7000,
+       9000,
+       4000,
+       6000
+      ],
+      "rmse": 1.4202094078063965
+     },
+     {
+      "dx": 0.02464214898645878,
+      "dy": -0.16103795170783997,
+      "correlation": 0.5820346896579277,
+      "converged": true,
+      "window": [
+       3000,
+       5000,
+       7000,
+       9000
+      ],
+      "rmse": 0.9448394775390625
+     }
+    ]
+   },
+   "applied_shift_px": [
+    -0.11804249510169029,
+    -0.6391986012458801
+   ],
+   "applied_shift_m": [
+    -1.180424951016903,
+    -6.391986012458801
+   ]
+  }
+ },
+ "B": {
+  "tile": "T43RGM",
+  "date1": "S2A_MSIL1C_20231006T052701_N0510_R105_T43RGM_20241101T065943.SAFE",
+  "date2": "S2A_MSIL1C_20261022T053241_N0513_R105_T43RGM_20261022T091024.SAFE",
+  "band": "B08",
+  "pixel_size_m": 10.0,
+  "initial": {
+   "n_windows": 5,
+   "n_converged": 5,
+   "n_failed": 0,
+   "failed": [],
+   "median_dx_px": 0.01305825263261795,
+   "median_dy_px": -0.11901768296957016,
+   "std_dx_px": 0.039081088680256774,
+   "std_dy_px": 0.03328826092004841,
+   "median_dx_m": 0.1305825263261795,
+   "median_dy_m": -1.1901768296957016,
+   "std_dx_m": 0.39081088680256776,
+   "std_dy_m": 0.3328826092004841,
+   "median_correlation": 0.5068035063451621,
+   "min_correlation": 0.2190548310790425,
+   "max_correlation": 0.7819080857335373,
+   "n_above_0_5": 3,
+   "windows": [
+    {
+     "dx": 0.059050366282463074,
+     "dy": -0.11901768296957016,
+     "correlation": 0.7819080857335373,
+     "converged": true,
+     "window": [
+      2000,
+      4000,
+      2000,
+      4000
+     ]
+    },
+    {
+     "dx": 0.06328744441270828,
+     "dy": -0.1037403792142868,
+     "correlation": 0.5068035063451621,
+     "converged": true,
+     "window": [
+      4000,
+      6000,
+      4000,
+      6000
+     ]
+    },
+    {
+     "dx": -0.04371614754199982,
+     "dy": -0.1915241777896881,
+     "correlation": 0.2190548310790425,
+     "converged": true,
+     "window": [
+      6000,
+      8000,
+      6000,
+      8000
+     ]
+    },
+    {
+     "dx": 0.00859808549284935,
+     "dy": -0.16621775925159454,
+     "correlation": 0.22088729168897425,
+     "converged": true,
+     "window": [
+      3000,
+      5000,
+      7000,
+      9000
+     ]
+    },
+    {
+     "dx": 0.01305825263261795,
+     "dy": -0.11894116550683975,
+     "correlation": 0.6504789486293181,
+     "converged": true,
+     "window": [
+      5000,
+      7000,
+      2000,
+      4000
+     ]
+    }
+   ],
+   "residual": {
+    "n_converged": 5,
+    "n_failed": 0,
+    "median_dx_px": 0.014666690491139889,
+    "median_dy_px": -0.008802930824458599,
+    "median_dx_m": 0.1466669049113989,
+    "median_dy_m": -0.08802930824458599,
+    "rmse_mean": 1.0127611994743346,
+    "rmse_max": 1.249442219734192,
+    "windows": [
+     {
+      "dx": 0.06076756864786148,
+      "dy": -0.008802930824458599,
+      "correlation": 0.7819075145801864,
+      "converged": true,
+      "window": [
+       2000,
+       4000,
+       2000,
+       4000
+      ],
+      "rmse": 0.6990951895713806
+     },
+     {
+      "dx": 0.06349727511405945,
+      "dy": 0.017847424373030663,
+      "correlation": 0.5068583879447056,
+      "converged": true,
+      "window": [
+       4000,
+       6000,
+       4000,
+       6000
+      ],
+      "rmse": 1.0006119012832642
+     },
+     {
+      "dx": -0.05329127237200737,
+      "dy": -0.0755324512720108,
+      "correlation": 0.21905911412596069,
+      "converged": true,
+      "window": [
+       6000,
+       8000,
+       6000,
+       8000
+      ],
+      "rmse": 1.249442219734192
+     },
+     {
+      "dx": 0.001377837616018951,
+      "dy": -0.05478835105895996,
+      "correlation": 0.22090342624317774,
+      "converged": true,
+      "window": [
+       3000,
+       5000,
+       7000,
+       9000
+      ],
+      "rmse": 1.2433052062988281
+     },
+     {
+      "dx": 0.014666690491139889,
+      "dy": 0.011468799784779549,
+      "correlation": 0.6506314465988556,
+      "converged": true,
+      "window": [
+       5000,
+       7000,
+       2000,
+       4000
+      ],
+      "rmse": 0.8713514804840088
+     }
+    ]
+   },
+   "applied_shift_px": [
+    0.01305825263261795,
+    -0.11901768296957016
+   ],
+   "applied_shift_m": [
+    0.1305825263261795,
+    -1.1901768296957016
+   ]
+  }
+ }
+}

@@ -1,0 +1,26 @@
+======================================================================
+PAIR A T43QBB
+  pair A window (2000, 4000, 5000, 7000): dx=-0.137 dy=-0.69 corr=0.924 converged=True
+  pair A window (4000, 6000, 6000, 8000): dx=-0.141 dy=-0.445 corr=0.823 converged=True
+  pair A window (6000, 8000, 5000, 7000): dx=-0.016 dy=-0.588 corr=0.84 converged=True
+  pair A window (7000, 9000, 4000, 6000): dx=None dy=None corr=None converged=False
+  pair A window (3000, 5000, 7000, 9000): dx=-0.099 dy=-0.759 corr=0.581 converged=True
+  pair A residual (2000, 4000, 5000, 7000): dx=-0.012 dy=-0.073 corr=0.925 rmse=0.4349
+  pair A residual (4000, 6000, 6000, 8000): dx=-0.018 dy=0.183 corr=0.824 rmse=0.6411
+  pair A residual (6000, 8000, 5000, 7000): dx=0.109 dy=0.026 corr=0.84 rmse=0.5895
+  pair A residual (7000, 9000, 4000, 6000): dx=None dy=None corr=None rmse=1.4202
+  pair A residual (3000, 5000, 7000, 9000): dx=0.025 dy=-0.161 corr=0.582 rmse=0.9448
+======================================================================
+PAIR B T43RGM
+  pair B window (2000, 4000, 2000, 4000): dx=0.059 dy=-0.119 corr=0.782 converged=True
+  pair B window (4000, 6000, 4000, 6000): dx=0.063 dy=-0.104 corr=0.507 converged=True
+  pair B window (6000, 8000, 6000, 8000): dx=-0.044 dy=-0.192 corr=0.219 converged=True
+  pair B window (3000, 5000, 7000, 9000): dx=0.009 dy=-0.166 corr=0.221 converged=True
+  pair B window (5000, 7000, 2000, 4000): dx=0.013 dy=-0.119 corr=0.65 converged=True
+  pair B residual (2000, 4000, 2000, 4000): dx=0.061 dy=-0.009 corr=0.782 rmse=0.6991
+  pair B residual (4000, 6000, 4000, 6000): dx=0.063 dy=0.018 corr=0.507 rmse=1.0006
+  pair B residual (6000, 8000, 6000, 8000): dx=-0.053 dy=-0.076 corr=0.219 rmse=1.2494
+  pair B residual (3000, 5000, 7000, 9000): dx=0.001 dy=-0.055 corr=0.221 rmse=1.2433
+  pair B residual (5000, 7000, 2000, 4000): dx=0.015 dy=0.011 corr=0.651 rmse=0.8714
+
+wrote outputs/audit/registration.json
