@@ -396,36 +396,32 @@ verified path.
 
 ## Verification status
 
-Not every script has been executed end to end. This section states what has been
-run and what has not, so a reader can tell the difference.
+The pipeline was re-run from the repository, writing every output outside the working
+tree, and the results were compared against the artefacts already in the repository.
 
-Executed and verified:
+Reproduced exactly:
 
-| workflow | evidence |
+| stage | comparison |
 |---|---|
-| Locked-test evaluation | pooled AP 0.653204, AUC 0.747176, macro AP 0.667955, Pair A 0.969537, Pair B 0.366373 — reproduces the frozen values exactly |
-| Training (bounded smoke) | one epoch, three seeds, two training batches; checkpoints written and reloadable |
-| Normalisation | both pairs, four methods; MAE reduced 27–37 % on stable land |
-| Review queue | queue and summary generated; three guard-band records flagged as expected |
-| ONNX FP32 | max abs difference against PyTorch 1.565e-07 |
-| Demo | `scripts/demo.sh` exits 0 |
-| Test suite | 635 passed, 9 skipped without `SENTINEL_DATA_ROOT`; 644 passed with it set; 613 passed, 24 skipped in a fresh clone |
+| partitions | partition rasters byte-identical to `outputs/partitions_v2_observation_valid` |
+| training index | 343 windows, same offsets, splits and counts (differs only in the recorded path) |
+| normalisation statistics | byte-identical, sha256 `8aeea033…` |
+| locked test | pooled AP 0.653204, AUC 0.747176, macro 0.667955, A 0.969537, B 0.366373 |
+| ONNX FP32 export | byte-identical, sha256 `6d58e309…` |
+| INT8 quantisation | byte-identical, 550,071 B, sha256 `326fb3c9…` |
+| validation AP (quantize path) | pooled 0.770233, A 0.980576, B 0.743143 |
+| demo | `scripts/demo.sh` exits 0 |
+| test suite | 635 passed, 9 skipped without data; 644 passed with it |
 
-Not executed in the verification pass, and therefore not claimed:
+Measured, but with no shipped counterpart to compare against:
 
-- validation-split AP (0.770233 pooled) — the analysis script was not re-run
-- full-scene inference through `predict_safe_pair.py`
-- the INT8 accuracy comparison; only that the graph loads and runs
-- most audit and reporting scripts, which were checked with `--help` only
+- full-scene inference on Pair A: 10,980 x 10,980 tile, EPSG:32643, 120,540,008 valid
+  pixels, 730 s at 165 k px/s, peak RSS 2.9 GiB. The shipped full-tile predictions came
+  from the OSCD checkpoint, so they are not a baseline for the local model.
+- one full training epoch on the local patches, seed 43, `pos_weight` 0.834.
 
-`scripts/registers/build_detection_register.py` validates against both register
-schemas. It selects v2 when a row carries `pair_id` and v1 otherwise, so the shipped
-register in `artifacts/register/detections.csv` validates directly:
+Not claimed: the validation figure of 0.770233 comes from the quantisation comparison
+over 159 validation windows. `scripts/evaluation/analyse_validation_thresholds.py`
+computes a different quantity on a different pixel set (pooled AP 0.7017) and is not a
+contradiction of it.
 
-    python scripts/registers/build_detection_register.py \
-        --input artifacts/register/detections.csv \
-        --output-csv <dir>/detections.csv --output-geojson <dir>/detections.geojson
-
-Datasets are not part of this repository. Point `SENTINEL_DATA_ROOT` at a directory
-holding the four Sentinel-2 `.SAFE` products named in
-`configs/data_manifest.yaml`.
