@@ -283,6 +283,32 @@ directory that holds the four `.SAFE` products; commands marked *data* fail with
   the manifest, while `train_local_manual.py` is the dedicated human-reviewed fine-tune
   with its own checkpoint-selection rule. Both are retained; neither replaces the other.
 
+## Reproduce the locked-test evaluation from a clone
+
+The evaluation needs four inputs. They are small (2.1 MB) and shipped under
+`artifacts/derived/`, so this runs from a fresh clone without regenerating anything:
+
+    python scripts/evaluation/evaluate_locked_test.py \
+        --checkpoint artifacts/models/best.pt \
+        --normalisation artifacts/derived/dataset_v2/normalisation.json \
+        --registration artifacts/derived/registration/registration.json \
+        --labels-dir artifacts/derived/labels \
+        --partition-dir artifacts/derived/partitions_v2_observation_valid \
+        --output-dir <new-directory> --batch-size 8 --models torch_fp32
+
+Expect `pooled AP 0.653204  AUC 0.747176 | macro AP 0.667955 | A 0.969537 B 0.366373`.
+CPU only; no Sentinel-2 data is read by this command, though
+`SENTINEL_DATA_ROOT` must be set because the manifest expands it.
+
+Regenerating the inputs instead of using the shipped copies:
+
+    python scripts/utilities/prepare_local_partitions.py --output-dir outputs/partitions_v2_observation_valid
+    python scripts/utilities/build_dataset.py normalise --root outputs/dataset/v2
+    python scripts/utilities/run_registration.py --output outputs/audit/registration_v2_observation_valid/registration.json
+
+Those three have not been re-run since the code refactor; the shipped copies are the
+verified path.
+
 ## Verification status
 
 Not every script has been executed end to end. This section states what has been

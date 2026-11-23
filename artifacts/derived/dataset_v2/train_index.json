@@ -1,0 +1,30 @@
+{
+ "index_csv": "/home/aaryan/projects/skyserve_assignment/outputs/dataset/v1/train_index.csv",
+ "patch_size": 256,
+ "stride": 128,
+ "min_labeled_fraction": {
+  "train": 0.002,
+  "validation": 0.0
+ },
+ "min_labeled_fraction_by_split": {
+  "validation": 0.0,
+  "train": 0.002
+ },
+ "empty_window_policy": "rejected: a window must contain at least one reviewed binary pixel (0 or 1); 255 never counts",
+ "patch_count_by_split": {
+  "train": 342,
+  "validation": 0,
+  "test": 0
+ },
+ "pair_count": 2,
+ "uses_human_labels_only": true,
+ "uses_osm_labels": false,
+ "buffer_or_cross_split_windows_included": false,
+ "test_index_included": false,
+ "test_label_pixels_read": false,
+ "test_labels_used_for_training": false,
+ "validation_window_source": "data.validation_windows.ValidationLatticeDataset",
+ "validation_note": "validation is not indexed here; it uses the inference lattice and the validation-only target",
+ "normalisation": "/home/aaryan/projects/skyserve_assignment/outputs/dataset/v1/normalisation.json",
+ "normalisation_scheme": "per-pair per-band z-score, pooled over both dates"
+}

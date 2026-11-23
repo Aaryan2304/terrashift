@@ -1,0 +1,91 @@
+{
+ "scheme": "per-pair per-band z-score, pooled over both dates",
+ "source": "valid TRAIN-partition pixels including unlabelled",
+ "units": "TOA reflectance, (DN + offset) / quantification",
+ "pairs": {
+  "A": {
+   "B02": {
+    "count": 6848512,
+    "mean": 0.13001106815263005,
+    "std": 0.021932436602479743,
+    "variance": 0.00048103177532179313
+   },
+   "B03": {
+    "count": 6848512,
+    "mean": 0.11599824491943543,
+    "std": 0.025060426372836394,
+    "variance": 0.0006280249699883539
+   },
+   "B04": {
+    "count": 6848512,
+    "mean": 0.10980925641312034,
+    "std": 0.034179035924439334,
+    "variance": 0.0011682064967241145
+   },
+   "B08": {
+    "count": 6848512,
+    "mean": 0.16680971002324418,
+    "std": 0.047336849103606506,
+    "variance": 0.0022407772830576123
+   }
+  },
+  "B": {
+   "B02": {
+    "count": 14909440,
+    "mean": 0.1388813565191102,
+    "std": 0.02093343646388923,
+    "variance": 0.0004382087621876872
+   },
+   "B03": {
+    "count": 14909440,
+    "mean": 0.12900117189816102,
+    "std": 0.02168501761750822,
+    "variance": 0.0004702399890716418
+   },
+   "B04": {
+    "count": 14909440,
+    "mean": 0.12159899522402492,
+    "std": 0.032520900706380286,
+    "variance": 0.0010576089827542458
+   },
+   "B08": {
+    "count": 14909440,
+    "mean": 0.21885118649543142,
+    "std": 0.04122932135888257,
+    "variance": 0.0016998569397140104
+   }
+  }
+ },
+ "band_order": [
+  "B02",
+  "B03",
+  "B04",
+  "B08"
+ ],
+ "pooled_dates": true,
+ "partition": "TRAIN only, inside the training windows",
+ "unique_pixels": true,
+ "counting": "each unique geographic coordinate once per date",
+ "registration": "date 2 read through the same loader as the patches",
+ "blocks": {
+  "A": {
+   "source": "training windows, unique coordinates",
+   "windows": 122,
+   "instances": 7995392,
+   "unique": 3424256,
+   "repeated": 4571136,
+   "nodata": 0,
+   "invalid": 0
+  },
+  "B": {
+   "source": "training windows, unique coordinates",
+   "windows": 220,
+   "instances": 14417920,
+   "unique": 7454720,
+   "repeated": 6963200,
+   "nodata": 0,
+   "invalid": 0
+  }
+ },
+ "note": "aligns per-band first and second moments with the training domain; does not equalise higher moments, spatial correlation or the per-date radiometric offset"
+}

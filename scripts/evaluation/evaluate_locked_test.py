@@ -207,6 +207,8 @@ def report_path(path):
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--checkpoint", type=Path, default=CHECKPOINT)
+    parser.add_argument("--normalisation", type=Path, default=NORMALISATION)
     parser.add_argument("--manifest", default=str(ROOT / "configs/data_manifest.yaml"))
     parser.add_argument("--registration", default=None)
     parser.add_argument("--labels-dir", default=str(ROOT / "outputs/labels"))
@@ -222,14 +224,14 @@ def main() -> int:
         print("output directory already populated, refusing to overwrite:", out)
         return 2
 
-    _, _, checkpoint = quantize.load_model(str(CHECKPOINT), "cpu")
-    normalisation = json.load(open(NORMALISATION, encoding="utf-8"))
+    _, _, checkpoint = quantize.load_model(str(args.checkpoint), "cpu")
+    normalisation = json.load(open(args.normalisation, encoding="utf-8"))
     entries = build_test_entries(args, checkpoint, normalisation)
     print("test entries:", {p: len(entries[p]["dataset"]) for p in entries})
 
     sessions = {}
     if "torch_fp32" in args.models:
-        model, _, _ = quantize.load_model(str(CHECKPOINT), "cpu")
+        model, _, _ = quantize.load_model(str(args.checkpoint), "cpu")
         sessions["torch_fp32"] = (TorchSession(model, torch.device("cpu"), half=False),
                                   quantize.INPUT_NAMES)
     for label, relative in (("onnx_fp32", "outputs/quant/local_manual_v2_seed43_posweight_0p834/onboard_fp32.onnx"),

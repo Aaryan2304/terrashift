@@ -1,0 +1,74 @@
+[
+  {
+    "pair": "A",
+    "shape_20m": [
+      5490,
+      5490
+    ],
+    "crs": "EPSG:32643",
+    "split_axis": "x",
+    "train_from": "low-coordinate",
+    "buffer_pixels_20m_each_side": 25,
+    "axis": "x",
+    "train_fraction_of_extent": 0.7,
+    "validation_fraction_of_extent": 0.15,
+    "test_fraction_of_extent": 0.15000000000000005,
+    "buffer_m_each_side_of_boundary": 500.0,
+    "valid_land_pixels_by_split": {
+      "train": 2809724,
+      "validation": 3591773,
+      "test": 4142947
+    },
+    "valid_land_fraction_by_split": {
+      "train": 0.2550220452362784,
+      "validation": 0.3260040119543569,
+      "test": 0.3760308191286774
+    },
+    "valid_land_retained_fraction": 0.9570568763193128,
+    "baseline_valid_land_pixels": 11017573,
+    "valid_pixels_used_only_for_axis_selection": true,
+    "labels_used_for_partition_selection": false,
+    "validity_source": "observation_validity_raster",
+    "paths": {
+      "partition_20m": "outputs/partitions_v2_observation_valid/pair_A_partition_20m.tif",
+      "partition_10m": "outputs/partitions_v2_observation_valid/pair_A_partition_10m.tif",
+      "partitions_geojson": "outputs/partitions_v2_observation_valid/pair_A_partitions.geojson"
+    }
+  },
+  {
+    "pair": "B",
+    "shape_20m": [
+      5490,
+      5490
+    ],
+    "crs": "EPSG:32643",
+    "split_axis": "x",
+    "train_from": "low-coordinate",
+    "buffer_pixels_20m_each_side": 25,
+    "axis": "x",
+    "train_fraction_of_extent": 0.7,
+    "validation_fraction_of_extent": 0.15,
+    "test_fraction_of_extent": 0.15000000000000005,
+    "buffer_m_each_side_of_boundary": 500.0,
+    "valid_land_pixels_by_split": {
+      "train": 20611963,
+      "validation": 4226697,
+      "test": 4328122
+    },
+    "valid_land_fraction_by_split": {
+      "train": 0.6936801592276808,
+      "validation": 0.1422463182166182,
+      "test": 0.14565970053977043
+    },
+    "valid_land_retained_fraction": 0.9815861779840693,
+    "baseline_valid_land_pixels": 29713929,
+    "valid_pixels_used_only_for_axis_selection": true,
+    "labels_used_for_partition_selection": false,
+    "validity_source": "observation_validity_raster",
+    "paths": {
+      "partition_20m": "outputs/partitions_v2_observation_valid/pair_B_partition_20m.tif",
+      "partition_10m": "outputs/partitions_v2_observation_valid/pair_B_partition_10m.tif",
+      "partitions_geojson": "outputs/partitions_v2_observation_valid/pair_B_partitions.geojson"
+    }
+  }
+]
