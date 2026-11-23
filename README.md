@@ -307,13 +307,16 @@ overwrites an existing output directory, so a rerun needs a new path.
     python scripts/utilities/prepare_local_partitions.py \
         --output-dir outputs/partitions_v2_observation_valid
 
-    # 5. per-pair, per-band statistics from TRAIN pixels only
+    # 5. training-window index (256 px patches, stride 128)
+    python scripts/utilities/build_dataset.py --root outputs/dataset/v2 \
+        --partition-dir outputs/partitions_v2_observation_valid \
+        --registration outputs/audit/registration_v2_observation_valid/registration.json index
+
+    # 6. per-pair, per-band statistics from TRAIN pixels only
+    #    (must follow the index: the default --source windows counts each
+    #     geographic pixel once by reading the window index)
     python scripts/utilities/build_dataset.py --root outputs/dataset/v2 \
         --partition-dir outputs/partitions_v2_observation_valid normalise
-
-    # 6. training-window index (256 px patches, stride 128)
-    python scripts/utilities/build_dataset.py --root outputs/dataset/v2 \
-        --partition-dir outputs/partitions_v2_observation_valid index
 
     # 7. optional: write the selected patches to disk
     python scripts/utilities/build_dataset.py --root outputs/dataset/v2 \
@@ -358,10 +361,11 @@ Which stages are verified against this repository, and which are not:
 | stage | status |
 |---|---|
 | 1 registration, 4 partitions, 10 locked test, 12 registers, 14 report, 15 demo | executed |
-| 5 statistics | executed |
-| 6 index, 8 training, 9 validation analysis, 11 inference, 13 quantisation | not re-run since the refactor |
+| 5 index | executed |
+| 6 statistics | executed |
+| 8 training, 9 validation analysis, 11 inference, 13 quantisation | not re-run since the refactor |
 
-Stages 6, 8, 9, 11 and 13 are documented but unverified end to end. Do not treat the
+Stages 8, 9, 11 and 13 are documented but unverified end to end. Do not treat the
 command list as a guarantee for them.
 
 ## Reproduce the locked-test evaluation from a clone
