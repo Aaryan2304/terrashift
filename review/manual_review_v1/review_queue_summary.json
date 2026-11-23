@@ -1,0 +1,52 @@
+{
+ "rows": 249,
+ "counts_by_pair_and_partition": {
+  "A/guard": 2,
+  "A/test": 33,
+  "A/train": 24,
+  "A/validation": 11,
+  "B/test": 14,
+  "B/train": 157,
+  "B/validation": 8
+ },
+ "crosses_partition_boundary": [],
+ "touches_guard_band": [
+  "A_58",
+  "A_51",
+  "A_46"
+ ],
+ "fields": [
+  "candidate_id",
+  "pair",
+  "component_id",
+  "partition",
+  "n_partitions",
+  "partition_codes",
+  "crosses_partition_boundary",
+  "touches_guard_band",
+  "guard_fraction",
+  "bbox_width_px_20m",
+  "bbox_height_px_20m",
+  "bbox_width_m",
+  "bbox_height_m",
+  "bbox_area_m2",
+  "component_area_px_20m",
+  "component_area_m2",
+  "mean_score",
+  "max_score",
+  "score_threshold",
+  "priority_percentile",
+  "centroid_lon",
+  "centroid_lat",
+  "centroid_easting",
+  "centroid_northing",
+  "review_order",
+  "review_status",
+  "human_decision",
+  "evidence",
+  "confidence",
+  "note"
+ ],
+ "status": "review_queue_not_labels",
+ "note": "Every row starts unreviewed with empty human fields. Nothing here is ground truth, and the rasterizer still has the final say."
+}

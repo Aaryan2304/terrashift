@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "pair": "B",
+  "source": "data/manual_annotations_B.gpkg",
+  "policy": "Records listed here are retained unchanged in the master GeoPackage. They are excluded from every training, validation and test export because the rasteriser cannot burn them without violating an integrity rule. They are not moved, clipped, relabelled or deleted. Nothing else is excluded: no Pair B record intersects a guard band, so this manifest contains no guard-band entries at all.",
+  "exclusions": [
+    {
+      "record_id": "B_145",
+      "label_class": "uncertain",
+      "reason": "invalid_observation_pixels",
+      "detail": "8 of 96 burned pixels at 10 m (2 of 24 at 20 m) coincide with invalid observation cells, at 20 m grid rows 3859-3860, column 1162. The rasteriser refuses any polygon that covers an invalid observation. The record is 'uncertain', so excluding it removes no training supervision; without the exclusion the rasteriser stops at this record and the other 189 cannot be burned.",
+      "invalid_pixels_10m": 8,
+      "burned_pixels_10m": 96,
+      "invalid_fraction": 0.0833,
+      "invalid_pixels_20m": 2,
+      "burned_pixels_20m": 24,
+      "area_m2": 9869,
+      "confidence": "low"
+    }
+  ],
+  "notes": [
+    "No Pair B record intersects a guard band, so unlike Pair A this manifest contains no guard_band_overlap entry.",
+    "B_145 is proposed for exclusion, not decided: the alternative is to redraw it clear of the two invalid cells. Both are the owner's call.",
+    "B_175 covers 1,074,864 m2, the largest of the 190 and six times the next largest. It is flagged for review in the validation report but is NOT excluded: size is not an integrity failure.",
+    "Apply with scripts/apply_label_exclusions.py. The script refuses to overwrite and reports every record it removed."
+  ]
+}
