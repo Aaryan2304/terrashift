@@ -1,7 +1,8 @@
 """Validate a detection register and export it as CSV and GeoJSON.
 
 The register is written by a human, one row per reviewed place. This only enforces
-``configs/detection_register_schema.yaml`` and converts WKT to RFC 7946 GeoJSON in WGS84. A
+``configs/detection_register_schema.yaml`` (v1) or ``..._v2.yaml`` when the row
+carries ``pair_id``, and converts WKT to RFC 7946 GeoJSON in WGS84. A
 ``confirmed`` row needs a reviewer, a date and an evidence note; a ``candidate`` row keeps
 ``change_type = unknown`` and is never counted as a detection in the summary.
 """
@@ -11,6 +12,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 from datetime import date, datetime
 from pathlib import Path
 
@@ -20,6 +22,7 @@ from shapely import wkt
 from shapely.geometry import mapping
 
 ROOT = Path(__file__).resolve().parents[2]
+SCHEMA_V2 = ROOT / "configs" / "detection_register_schema_v2.yaml"
 
 from terrashift.data.manifest import load_manifest, pair_config
 
@@ -45,8 +48,63 @@ def _valid_date(value):
         return False
 
 
+def _schema_columns(path):
+    """Column rules from a schema file, so validation follows the declared contract."""
+    payload = yaml.safe_load(Path(path).read_text(encoding="utf-8"))
+    return payload.get("columns", [])
+
+
+def validate_row_v2(row, manifest, seen_ids):
+    """Validate one row against detection-register-v2.
+
+    v2 keeps the reviewer's own vocabulary (``accepted_man_made``, ``uncertain``,
+    ``building_construction``) instead of translating it into v1's enums, and it
+    identifies a row by ``location_id`` rather than ``register_id`` alone.
+    """
+    problems = []
+    for column in _schema_columns(SCHEMA_V2):
+        name = column["name"]
+        if column.get("required") and not str(row.get(name, "")).strip():
+            problems.append("missing required column %r" % name)
+            continue
+        value = str(row.get(name, "")).strip()
+        if not value:
+            continue
+        if column.get("values") and value not in column["values"]:
+            problems.append("%s=%r is not one of %s" % (name, value, column["values"]))
+        pattern = column.get("pattern")
+        if pattern and not re.match(pattern, value):
+            problems.append("%s=%r does not match %s" % (name, value, pattern))
+        if column.get("type") == "date" and not _valid_date(value):
+            problems.append("%s=%r is not a date" % (name, value))
+    if problems:
+        raise ValueError("; ".join(problems))
+
+    identifier = row["location_id"]
+    if identifier in seen_ids:
+        raise ValueError("duplicate location_id %r" % identifier)
+    seen_ids.add(identifier)
+
+    pair = row["pair_id"]
+    pair_cfg = pair_config(manifest, pair)
+    if row["tile"] != pair_cfg["tile"]:
+        raise ValueError("%s: tile %r does not match %s"
+                         % (identifier, row["tile"], pair_cfg["tile"]))
+    if row["crs"] != pair_cfg["crs"]:
+        raise ValueError("%s: crs %r does not match %s"
+                         % (identifier, row["crs"], pair_cfg["crs"]))
+    geometry = wkt.loads(row["geometry_wkt"])
+    if not geometry.is_valid or geometry.geom_type not in ("Polygon", "MultiPolygon"):
+        raise ValueError("%s: geometry is not a valid polygon" % identifier)
+    if geometry.area <= 0:
+        raise ValueError("%s: geometry has zero area" % identifier)
+    return geometry
+
+
 def validate_row(row, manifest, seen_ids):
     """Raise ``ValueError`` if one register row breaks a documented rule."""
+    if "pair_id" in row and "pair" not in row:
+        return validate_row_v2(row, manifest, seen_ids)
     for column in REQUIRED:
         if column not in row or str(row[column]).strip() == "":
             raise ValueError("row is missing required column %r: %r" % (column, row))
@@ -104,7 +162,7 @@ def to_feature(row, geometry, pair_cfg):
     wgs84 = transform_geom(row["crs"], "EPSG:4326", mapping(geometry), precision=8)
     properties = {key: value for key, value in row.items()
                   if key not in ("geometry_wkt", "crs")}
-    properties["register_status"] = row["status"]
+    properties["register_status"] = row.get("status") or row.get("decision_status")
     return {"type": "Feature", "geometry": wgs84, "properties": properties}
 
 
@@ -131,12 +189,13 @@ def main():
     features = []
     for row in rows:
         geometry = validate_row(row, manifest, seen)
-        features.append(to_feature(row, geometry,
-                                   pair_config(manifest, row["pair"])))
+        pair_key = row.get("pair") or row.get("pair_id")
+        features.append(to_feature(row, geometry, pair_config(manifest, pair_key)))
 
     summary = {}
     for row in rows:
-        summary[row["status"]] = summary.get(row["status"], 0) + 1
+        key = row.get("status") or row.get("decision_status")
+        summary[key] = summary.get(key, 0) + 1
 
     args.output_csv.parent.mkdir(parents=True, exist_ok=True)
     fields = list(rows[0].keys())

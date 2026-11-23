@@ -298,7 +298,7 @@ Executed and verified:
 | Review queue | queue and summary generated; three guard-band records flagged as expected |
 | ONNX FP32 | max abs difference against PyTorch 1.565e-07 |
 | Demo | `scripts/demo.sh` exits 0 |
-| Test suite | 635 passed, 2 skipped in a tree with generated outputs; 613 passed, 24 skipped in a fresh clone (evidence-dependent tests skip); 637 passed with `SENTINEL_DATA_ROOT` set |
+| Test suite | 635 passed, 9 skipped without `SENTINEL_DATA_ROOT`; 644 passed with it set; 613 passed, 24 skipped in a fresh clone |
 
 Not executed in the verification pass, and therefore not claimed:
 
@@ -307,11 +307,13 @@ Not executed in the verification pass, and therefore not claimed:
 - the INT8 accuracy comparison; only that the graph loads and runs
 - most audit and reporting scripts, which were checked with `--help` only
 
-Known issue: `scripts/registers/build_detection_register.py` validates against the
-version 1 schema, whose columns include `pair`. The register shipped in
-`outputs/register/detections.csv` follows the version 2 schema and uses `pair_id`,
-so the validator rejects it. Use `build_final_detection_register.py` for the
-shipped register until the two schemas are reconciled.
+`scripts/registers/build_detection_register.py` validates against both register
+schemas. It selects v2 when a row carries `pair_id` and v1 otherwise, so the shipped
+register in `artifacts/register/detections.csv` validates directly:
+
+    python scripts/registers/build_detection_register.py \
+        --input artifacts/register/detections.csv \
+        --output-csv <dir>/detections.csv --output-geojson <dir>/detections.geojson
 
 Datasets are not part of this repository. Point `SENTINEL_DATA_ROOT` at a directory
 holding the four Sentinel-2 `.SAFE` products named in
