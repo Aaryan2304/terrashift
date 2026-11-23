@@ -218,7 +218,7 @@ terrashift/
 ├── eval.py            # pixel, object and size-stratified evaluation
 ├── quantize.py        # ONNX export, parity, INT8 QDQ, benchmark
 ├── train.py           # training entry point (three dataset modes)
-├── train_oscd_original.py, train_local_manual.py
+├── train_oscd_original.py, train_local_manual.py (module, not a CLI)
 ├── configs/           # data manifest, region splits, label and register schemas
 ├── data/              # SAFE loading, grids, validity, registration, patches
 ├── models/            # Siamese U-Net
@@ -264,7 +264,7 @@ directory that holds the four `.SAFE` products; commands marked *data* fail with
 |---|---|---|---|---|
 | Smoke workflow | `PYTHON=$PWD/../miniconda/envs/gpu/bin/python bash scripts/demo.sh` | local demo window | `outputs/demo/local_window_A_v1/` | yes |
 | Train (OSCD) | `python train.py --dataset oscd_original` | `configs/data_manifest.yaml`, SAFE | `outputs/checkpoints/` | yes |
-| Train (manual labels) | `python train_local_manual.py` | `data/manual_annotations*.gpkg`, patch index | `outputs/checkpoints/local_manual_v2*/` | yes |
+| Train (manual labels) | `python train.py --dataset local_manual --init-checkpoint <oscd best.pt>` | `data/manual_annotations*.gpkg`, patch index, normalisation | `outputs/checkpoints/local_manual_v2*/` | yes |
 | Checkpoint evaluation | `python eval.py --checkpoint <best.pt> --output-dir <dir> --split test` | checkpoint, split | metrics JSON under `<dir>` | yes |
 | Locked-test protocol | `python scripts/evaluation/evaluate_locked_test.py --registration <json> --partition-dir <dir> --output-dir <dir>` | frozen registration, partitions, annotations | `test_evaluation_report.md`, `test_metrics.json` | yes |
 | Inference | `python scripts/inference/predict_safe_pair.py --pair A --output-dir <dir>` | SAFE, checkpoint, normalisation | georeferenced GeoTIFF | yes |
@@ -280,8 +280,9 @@ directory that holds the four `.SAFE` products; commands marked *data* fail with
   against `outputs/partitions_v2_observation_valid/` and the manual annotations. It must
   not be used for threshold selection; its membership is frozen.
 - `train.py --dataset local_manual` fine-tunes the general trainer on local patches from
-  the manifest, while `train_local_manual.py` is the dedicated human-reviewed fine-tune
-  with its own checkpoint-selection rule. Both are retained; neither replaces the other.
+  the manifest. `train_local_manual.py` is the module that implements the human-reviewed
+  fine-tune (checkpoint selection on validated AP); it has no `__main__` block, so it is
+  invoked through `train.py --dataset local_manual`, not run directly.
 
 ## Running the full pipeline, in order
 
@@ -323,7 +324,10 @@ overwrites an existing output directory, so a rerun needs a new path.
         --partition-dir outputs/partitions_v2_observation_valid materialise
 
     # 8. train (skip if using the shipped checkpoint in artifacts/models/)
+    #    train_local_manual.py is a library module, not a CLI: train.py is the entry point
+    #    and the OSCD checkpoint is the initialisation the reported run used
     python train.py --dataset local_manual \
+        --init-checkpoint outputs/checkpoints/oscd_gpu_v1/baseline_seed42_v2/seed_42/best.pt \
         --normalisation outputs/dataset/v2/normalisation.json
 
     # 9. validation-split analysis
