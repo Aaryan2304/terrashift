@@ -418,7 +418,10 @@ Measured, but with no shipped counterpart to compare against:
 - full-scene inference on Pair A: 10,980 x 10,980 tile, EPSG:32643, 120,540,008 valid
   pixels, 730 s at 165 k px/s, peak RSS 2.9 GiB. The shipped full-tile predictions came
   from the OSCD checkpoint, so they are not a baseline for the local model.
-- one full training epoch on the local patches, seed 43, `pos_weight` 0.834.
+- one full training epoch on the local patches, seed 43, `pos_weight` 0.834: 342 training
+  patches, 159 validation windows, train AP 0.6683, validation AP 0.7024, F1 0.6884, IoU 0.5249.
+  The selected checkpoint was trained for seven epochs to reach validation AP 0.770233, so a
+  single epoch landing at 0.70 is the expected point on that curve, not a discrepancy.
 
 Not claimed: the validation figure of 0.770233 comes from the quantisation comparison
 over 159 validation windows. `scripts/evaluation/analyse_validation_thresholds.py`
