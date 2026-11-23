@@ -1,0 +1,178 @@
+# Man-Made Change Detection — configuration
+#
+# Two kinds of value live here:
+#
+#   IMPLEMENTED  read by a script at run time. Changing it changes behaviour.
+#   PLANNED      recorded intent for work that is not implemented. No script
+#                reads it. Each such block is marked "PLANNED" below.
+#
+# The values a run actually used are written to that run's run_config.json and
+# stored in its checkpoint, so a run can always be reproduced exactly.
+
+experiment:
+  name: "oscd_original_v1"
+  seed: 42
+  seeds: [42, 43, 44]          # repeat every run; a single seed is not a result
+  device: "cuda"               # PLANNED: the trainer auto-selects CUDA, this value is not read
+  num_workers: 0               # 0 keeps data loading in the main process
+  pin_memory: true
+  output_root: "./outputs"
+
+data:
+  # The default supervised source is the original, region-level OSCD release.
+  dataset: "oscd_original"
+  oscd_original_root: "./data"
+  oscd_region_splits: "./configs/oscd_region_splits.yaml"
+  oscd_patch_index: "./outputs/patches/oscd_original_index.csv"
+  oscd_patch_size: 128
+  oscd_patch_stride: 128
+  manual_label_dir: "./outputs/labels"
+  manual_label_schema: "./configs/manual_label_schema.yaml"
+  # The corrected partitions, produced from the observation-valid baseline.
+  # outputs/partitions holds the pre-correction copy; the two rasters are
+  # byte-identical, but this path names the run the labels came from.
+  local_partition_dir: "./outputs/partitions_v2_observation_valid"
+  local_score_dir: "./outputs/baseline"
+  # The v2 dataset built and verified on 20 Nov: 342 train patches, 256 px,
+  # stride 128. Its metadata sidecar sits next to it as train_index.json.
+  local_patch_index: "./outputs/dataset/v2/train_index.csv"
+  local_patch_size: 256
+  local_patch_stride: 128
+  local_min_labeled_fraction: 0.05
+  registration_summary: "./outputs/audit/registration_v2_observation_valid/registration.json"
+  # Keep OSCD100 available for pipeline smoke tests only.
+  manifest: "./configs/data_manifest.yaml"
+  oscd_root: "./data/oscd/extracted"
+  base_resolution: 10          # metres; the four native 10 m bands
+  analysis_grid: 20            # metres; the classical baseline grid
+  patch_size: 256              # OSCD100 crops are already 256 x 256
+  stride: 128                  # for local-tile patches, not used by OSCD100
+  bands: ["B02", "B03", "B04", "B08"]
+  extra_bands_20m: ["B11"]    # used only for NDBI at 20 m
+  quantification_value: 10000  # read from product metadata by safeloader
+  radio_add_offset: -1000      # read from product metadata by safeloader
+  nodata_value: 0
+
+preprocess:
+  register: true
+  register_windows: 5
+  register_window_size: 2000   # native 10 m pixels
+  # DECISION PENDING. Stable-land error favours a global fit (A 39.6% against
+  # 36.5%, B 32.0% against 31.5% on the corrected basis). Positive controls on
+  # the 13 OSCD development regions favour histogram: it preserved labelled
+  # change amplitude better in 13 of 13 regions (median 0.988 against 0.947,
+  # worst 0.887 against 0.837), while ranking quality was near-equal (median
+  # delta AUROC +0.029 against +0.034). Evidence:
+  # outputs/audit/normalization_positive_controls_v1/ and
+  # outputs/audit/normalization_v2_observation_valid/.
+  normalize: "histogram"       # none | global | pif | histogram
+  resampling: "bilinear"       # reflectance; masks use nearest
+  water_mask: "separate"       # separate stable / dynamic / invalid
+  indices:
+    ndvi: {formula: "(B08-B04)/(B08+B04)", grid: 10}
+    ndwi: {formula: "(B03-B08)/(B03+B08)", grid: 10}
+    ndbi: {formula: "(B11-B08)/(B11+B08)", grid: 20}
+  thresholds:
+    # NDWI > 0.0 is the physical McFeeters boundary. It is the most stable
+    # across dates (62.3% vs 60.7% for Pair A). NDWI > 0.2 is not stable
+    # (61.1% vs 32.3%).
+    water_ndwi: 0.0
+    water_nir_max: 0.15
+    builtup_ndbi: 0.02
+    builtup_ndvi_max: 0.30
+    change_probability: 0.5
+    # EXPLORATORY. A percentile is invariant to score units, but it only sets
+    # a scene-relative prior. It is NOT a calibrated operating point. The old
+    # absolute value 2.0
+    # marked 32% of Pair A land and 36% of Pair B land.
+    change_score_percentile: 99.0
+
+model:
+  # A custom FC-Siam-diff-inspired Siamese U-Net. It is NOT a ResNet-18.
+  type: "siamese_unet"
+  encoder: "custom_cnn"        # four levels, shared weights
+  base_filters: 16
+  pretrained: false
+  in_channels: 4               # B02, B03, B04, B08
+  out_channels: 1              # binary: unchanged vs candidate_change
+  normalization: "batch"       # BatchNorm2d. Use batch_size >= 4 for stable stats.
+  validity_mask: true          # separate mask, not a class
+
+augmentation:
+  enabled: true
+
+training:
+  epochs: 20
+  # BatchNorm with batch_size 1 gives poor running statistics. The Day 2 run
+  # used batch_size 1; that is a known weakness of that run.
+  batch_size: 4
+  lr: 0.0001
+  weight_decay: 0.0001
+  optimizer: "adamw"
+  scheduler: "none"            # not implemented yet
+  amp: true
+  gradient_accumulation: 1     # not implemented yet
+  loss: "bce_dice"
+  bce_weight: 1.0
+  dice_weight: 1.0
+  # DiceBCELoss averages valid-pixel BCE within each sample, then averages over
+  # samples, so the class ratio it sees is the MEAN PER-SAMPLE positive fraction,
+  # not the pooled patch-instance ratio. Measured on the 342-patch index: mean
+  # per-sample fraction 0.5453 -> (1 - 0.5453) / 0.5453 = 0.8339, set to 0.834.
+  # The pooled instance ratio (0.2973, weight 2.3635) describes pixel counts, not
+  # what this reduction sees. null would compute the pooled value.
+  pos_weight: 0.834
+  focal_weight: 0.0
+  focal_gamma: 2.0
+  log_interval: 10
+  val_interval: 1
+  save_every: 5
+
+# PLANNED: no script reads this block; the search is not implemented.
+hparam_search:
+  enabled: true
+  trials:
+    - {name: "baseline", lr: 0.0001, loss: "bce_dice"}
+    - {name: "lr_5e4", lr: 0.0005, loss: "bce_dice"}
+    - {name: "lr_1e3", lr: 0.001, loss: "bce_dice"}
+    - {name: "focal", lr: 0.0001, loss: "bce_dice_focal"}
+  search_space:
+    lr: [0.0001, 0.0005, 0.001]
+    loss: ["bce_dice", "bce_dice_focal"]
+    patch_size: [256]
+
+# eval.py reads evaluation.threshold from here as a fallback; the measurement
+# methods named below are implemented in terrashift/geospatial/geometry.py and selected by CLI
+# flags on scripts/registers/components_to_geojson.py, not from this block.
+evaluation:
+  threshold: 0.5                # NOT meaningful with a large pos_weight
+  selection_metric: "average_precision"
+  metrics: ["precision", "recall", "f1", "iou", "average_precision", "roc_auc"]
+  report_accuracy: false        # accuracy is misleading under class imbalance
+  object_min_area_px: 4
+  size_bins: [4, 16, 64, 256]
+  split_by: "geography"        # applies to the LOCAL tiles and to OSCD cities
+  # Neither line below is consumed by any script. They record the chosen method
+  # so the report and the code agree. terrashift/geospatial/geometry.py implements both, and
+  # scripts/registers/components_to_geojson.py always uses them; its only knob is
+  # --spur-px, which is not read from here either.
+  area_uncertainty: "boundary_sensitivity"   # not consumed; see docs/measurement_uncertainty.md
+  length_method: "skeleton_graph"            # not consumed; skeleton only, never road length
+
+# PLANNED: no script reads this block. quantize.py hardcodes QDQ/QInt8/per-channel.
+quantization:
+  method: "onnx_static_qdq"
+  api: "onnxruntime.quantization.quantize_static"
+  quant_format: "QDQ"
+  quant_type: "QInt8"
+  calibration_batches: 20
+  calibration_split: "train"
+  providers_to_test: ["CPUExecutionProvider", "CUDAExecutionProvider"]
+  initial_route: "cpu_int8"
+
+# PLANNED: no script reads this block; these are estimates, not measurements.
+hardware:
+  ground_proxy: "rtx_3050_ti"
+  onboard_proxy: "jetson_orin_nano_8gb"
+  onboard_proxy_status: "estimate"
+  space_target_status: "conceptual"

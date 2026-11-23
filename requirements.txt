@@ -1,0 +1,26 @@
+# Pinned to the versions in the conda 'gpu' env on this machine (2026-11-13).
+numpy==2.4.3
+scipy==1.17.1
+pandas==3.0.5
+matplotlib==3.10.8
+rasterio==1.4.4
+opencv-python==4.13.0.92
+scikit-image==0.26.0
+tifffile==2026.3.3
+imageio==2.37.3
+pillow==12.1.1
+PyYAML==6.0.3
+tqdm==4.67.3
+weasyprint==69.0
+
+# Deep learning
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+onnx==1.21.0
+onnxruntime-gpu==1.24.4
+
+# Geo / API dependencies used by the label and candidate-review code
+pyproj==3.7.2
+requests==2.33.1
+geopandas==1.2.0
+shapely==2.2.0

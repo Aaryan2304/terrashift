@@ -1,0 +1,101 @@
+[build-system]
+# setuptools is already present in the verified environment (70.2.0) and is the least
+# surprising backend for a src-layout project with no compiled extensions. No build
+# frontend (build/hatch/flit) is added, because installing one is not required to produce
+# an editable install and this task must not add tooling.
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "terrashift"
+dynamic = ["version"]
+description = "Bi-temporal Sentinel-2 change screening with human review"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Aaryan Kurade" }]
+keywords = ["sentinel-2", "change-detection", "remote-sensing", "siamese-unet", "geospatial"]
+classifiers = [
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Scientific/Engineering :: Image Recognition",
+  "Topic :: Scientific/Engineering :: GIS",
+  "Intended Audience :: Science/Research",
+]
+
+# Core runtime dependencies = what the library modules under src/terrashift/ actually import
+# (verified with an AST scan, not from documentation).
+# Lower bounds reflect the verified environment; no patch versions are pinned, because a
+# patch pin here would force every consumer onto this machine's exact build and would
+# conflict with the CUDA wheel policy below.
+dependencies = [
+  "numpy>=1.24",              # verified 2.4.3
+  "rasterio>=1.4",            # verified 1.4.4; pulls GDAL, which must match the rasterio build
+  "torch>=2.4",               # verified 2.11.0+cu128; the CUDA build is chosen by the user, not here
+  "PyYAML>=6",                # verified 6.0.3
+  "scipy>=1.10",              # verified 1.17.1
+  "shapely>=2.0",             # verified 2.2.0
+  "pyproj>=3.6",              # verified 3.7.2; must agree with the rasterio/PROJ data version
+  "opencv-python>=4.8",       # verified cv2 4.13.0, used by data/register.py
+  "requests>=2.28",           # verified 2.33.1, used by data/osm.py
+  "scikit-image>=0.22",       # verified 0.26.0, used by terrashift/geospatial/geometry.py
+]
+
+[project.optional-dependencies]
+# ONNX export, quantisation and provider benchmarking. Kept optional: the CPU FP32 path and
+# the training/inference code do not need ONNX Runtime at all.
+onnx = [
+  "onnx>=1.16",             # verified 1.21.0
+  "onnxruntime>=1.18",      # verified 1.24.4
+  "onnxscript>=0.1",        # NOT installed here; imported by a root-level script only
+]
+
+# Geospatial vector work: registers, review packages and GeoJSON export.
+geo = ["geopandas>=1.0"]     # verified 1.2.0
+
+# Figure generation.
+figures = [
+  "matplotlib>=3.7",        # verified 3.10.8
+  "pillow>=10",             # verified 12.1.1
+]
+
+# Technical-report rendering.
+docs = [
+  "mistune>=3.0",           # verified 3.3.2
+  "weasyprint>=60",         # verified 69.0
+]
+
+# Test and development tooling. scikit-learn is listed here rather than in core because a
+# single exploratory script imports it and it is not installed in the verified environment;
+# nothing on the training, inference or evaluation path needs it.
+dev = [
+  "pytest>=8",              # verified 9.1.1
+  "scikit-learn>=1.3",      # NOT installed here; exploratory script only
+]
+
+# torchvision is only used by models/siamese_resnet18.py, an abandoned architecture that the
+# modular plan archives. Installing torchvision is therefore opt-in.
+resnet = ["torchvision>=0.19"]   # verified 0.26.0+cu128
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["terrashift*"]
+# Regular packages only. setuptools defaults this to true, which makes discovery accept a
+# directory with no __init__.py and ship it as a namespace package. The intended design is
+# conventional packages, so a missing initializer should fail the build rather than degrade
+# into a namespace package at install time. Verified no effect on the current tree: both
+# terrashift and terrashift.data carry __init__.py and are still discovered.
+namespaces = false
+
+# Single source of truth for the version: the package itself.
+[tool.setuptools.dynamic]
+version = { attr = "terrashift.__version__" }
+
+[tool.pytest.ini_options]
+# The suite is unittest-based but pytest collects it unchanged (499 tests at the time of
+# writing). pythonpath keeps the existing top-level imports (``import data.manifest``) working
+# without the PYTHONPATH= prefix, until modules are migrated into the package.
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"

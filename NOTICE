@@ -1,0 +1,9 @@
+TerraShift
+Copyright 2026 Aaryan Kurade
+
+This product includes software developed as part of an ECE-AI/ML assignment
+for SkyServe, evaluating change detection on Sentinel-2 imagery.
+
+Contains data and annotations derived from the Onera Satellite Change Detection
+dataset (Daudt, Le Saux, Boulch, Gousseau, IGARSS 2018), used under the terms
+stated in docs/report.md. Sentinel-2 imagery is Copernicus data.

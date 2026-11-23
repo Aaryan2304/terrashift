@@ -1,0 +1,93 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Data and products (large)
+*.SAFE/
+*.zip
+*.tar.gz
+data/oscd/
+data/Onera Satellite Change Detection dataset - Images/
+data/Onera Satellite Change Detection dataset - Train Labels/
+data/Onera Satellite Change Detection dataset - Test Labels/
+labels/*.tif
+labels/*.geojson
+!labels/manual_labels.template.geojson
+
+# Generated run outputs stay local. Scripts create these files as needed.
+outputs/
+
+# Local credentials and environment settings
+.env
+.env.*
+!.env.example
+
+# OS and editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# ---------------------------------------------------------------------------
+# Documentation policy (Task 1)
+# Only three documentation artefacts are public: README.md, AI_USAGE.md and the
+# final report PDF. All other internal documentation was moved to
+# ../terrashift_local_archive/archived_docs_2026-11-22/ and must not re-enter
+# this repository. These rules are path-specific on purpose: they must never
+# hide configuration, schemas, manifests, source, AI_USAGE.md or the report PDF.
+# ---------------------------------------------------------------------------
+/PLAN.md
+/docs/*.md
+# The canonical, maintained source for the technical report.
+!/docs/report.md
+/docs/*.pdf
+!/docs/report_2026-11-22.pdf
+/docs/decisions/
+/docs/reviews/
+/review/*/*.md
+
+# ---------------------------------------------------------------------------
+# Packaging, build and cache hygiene (Task 3)
+# Path-specific rules only. Deliberately NOT ignored anywhere: *.onnx, *.pt, *.tif,
+# *.jp2, *.csv, *.json, *.yaml, *.geojson — the repository tracks schemas, manifests,
+# label indexes and model artefacts that share those extensions.
+# ---------------------------------------------------------------------------
+build/
+dist/
+.eggs/
+pip-wheel-metadata/
+*.egg-info/
+
+# test, lint and type-check caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# local logs and temporary files
+*.log
+logs/
+
+# Python version pin written by some tools on this machine only
+.python-version
+
+# ---------------------------------------------------------------------------
+# Experiment artefacts (Task 3, confirmed: `git ls-files experiments` returns 0)
+# 706 MB of checkpoints, prediction .npz files and harness scratch from the abandoned
+# OSCD architecture sweep. Never part of the source distribution; the results that matter
+# are summarised in the report. Ignoring this does not delete anything on disk.
+# ---------------------------------------------------------------------------
+/experiments/
