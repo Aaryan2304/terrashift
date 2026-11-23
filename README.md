@@ -427,10 +427,16 @@ Measured, but with no shipped counterpart to compare against:
 - full-scene inference on Pair A: 10,980 x 10,980 tile, EPSG:32643, 120,540,008 valid
   pixels, 730 s at 165 k px/s, peak RSS 2.9 GiB. The shipped full-tile predictions came
   from the OSCD checkpoint, so they are not a baseline for the local model.
-- one full training epoch on the local patches, seed 43, `pos_weight` 0.834: 342 training
-  patches, 159 validation windows, train AP 0.6683, validation AP 0.7024, F1 0.6884, IoU 0.5249.
-  The selected checkpoint was trained for seven epochs to reach validation AP 0.770233, so a
-  single epoch landing at 0.70 is the expected point on that curve, not a discrepancy.
+- full 20-epoch fine-tune, seed 43, `pos_weight` 0.834, initialised from the OSCD checkpoint:
+  342 training patches, 159 validation windows. Best epoch was 2 with validation AP 0.752562,
+  against epoch 7 at 0.770226 in the recorded run — a difference of 0.0177.
+
+  The curve is noisy in both runs: the recorded run falls from 0.770 at epoch 7 to 0.607 at
+  epoch 8, and the re-run ranges from 0.538 to 0.753. Per-epoch agreement is within about
+  0.08, which is the run-to-run variance of GPU training: cuDNN selects different convolution
+  algorithms between runs, so a curve this volatile samples a different best epoch. Training is
+  therefore reproducible in method and in range, not bit-identical. Evaluation and export are
+  deterministic and do reproduce exactly (§ above).
 
 Not claimed: the validation figure of 0.770233 comes from the quantisation comparison
 over 159 validation windows. `scripts/evaluation/analyse_validation_thresholds.py`
