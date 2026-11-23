@@ -36,7 +36,7 @@ machine-specific paths:
 
 ```bash
 export SENTINEL_DATA_ROOT="/path/to/folder/containing/the/SAFE/directories"
-python -m data.manifest
+python -m terrashift.data.manifest
 ```
 
 The data products are not included in this repository. The original OSCD and
@@ -47,7 +47,7 @@ OSCD100 downloads are also local-only.
 Day 1 audit (data loader, masks, registration, normalisation):
 
 ```bash
-python -m data.register                    # self-test of the ECC convention
+python -m terrashift.registration          # self-test of the ECC convention
 python scripts/utilities/run_registration.py --output outputs/audit/registration_v2_observation_valid/registration.json
 python scripts/utilities/run_normalization.py        # normalisation comparison
 python scripts/evaluation/evaluate_normalization_positive_controls.py \
@@ -61,7 +61,7 @@ Original OSCD training uses the authors' 14/10 region split. The local config
 holds out `bordeaux` and `pisa` for validation, excludes `mumbai` because it
 overlaps local Pair A, and preserves all 10 official test regions. Training and
 indexing do not read test-image pixels or test-label pixels. The index builder
-checks test image dimensions only. `data/oscd_original.py` builds a window index.
+checks test image dimensions only. `src/terrashift/data/oscd_original.py` builds a window index.
 It does not copy the imagery.
 
 ```bash
