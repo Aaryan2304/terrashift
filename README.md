@@ -282,3 +282,37 @@ directory that holds the four `.SAFE` products; commands marked *data* fail with
 - `train.py --dataset local_manual` fine-tunes the general trainer on local patches from
   the manifest, while `train_local_manual.py` is the dedicated human-reviewed fine-tune
   with its own checkpoint-selection rule. Both are retained; neither replaces the other.
+
+## Verification status
+
+Not every script has been executed end to end. This section states what has been
+run and what has not, so a reader can tell the difference.
+
+Executed and verified:
+
+| workflow | evidence |
+|---|---|
+| Locked-test evaluation | pooled AP 0.653204, AUC 0.747176, macro AP 0.667955, Pair A 0.969537, Pair B 0.366373 — reproduces the frozen values exactly |
+| Training (bounded smoke) | one epoch, three seeds, two training batches; checkpoints written and reloadable |
+| Normalisation | both pairs, four methods; MAE reduced 27–37 % on stable land |
+| Review queue | queue and summary generated; three guard-band records flagged as expected |
+| ONNX FP32 | max abs difference against PyTorch 1.565e-07 |
+| Demo | `scripts/demo.sh` exits 0 |
+| Test suite | 635 passed, 2 skipped without data; 637 passed with it |
+
+Not executed in the verification pass, and therefore not claimed:
+
+- validation-split AP (0.770233 pooled) — the analysis script was not re-run
+- full-scene inference through `predict_safe_pair.py`
+- the INT8 accuracy comparison; only that the graph loads and runs
+- most audit and reporting scripts, which were checked with `--help` only
+
+Known issue: `scripts/registers/build_detection_register.py` validates against the
+version 1 schema, whose columns include `pair`. The register shipped in
+`outputs/register/detections.csv` follows the version 2 schema and uses `pair_id`,
+so the validator rejects it. Use `build_final_detection_register.py` for the
+shipped register until the two schemas are reconciled.
+
+Datasets are not part of this repository. Point `SENTINEL_DATA_ROOT` at a directory
+holding the four Sentinel-2 `.SAFE` products named in
+`configs/data_manifest.yaml`.
