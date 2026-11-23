@@ -283,6 +283,87 @@ directory that holds the four `.SAFE` products; commands marked *data* fail with
   the manifest, while `train_local_manual.py` is the dedicated human-reviewed fine-tune
   with its own checkpoint-selection rule. Both are retained; neither replaces the other.
 
+## Running the full pipeline, in order
+
+Every command runs from the repository root. Set the data root once:
+
+    export SENTINEL_DATA_ROOT=/path/to/dir/holding/the/four/SAFE/products
+
+The stages below are sequential; each reads what the previous one wrote, and none
+overwrites an existing output directory, so a rerun needs a new path.
+
+    # 1. align the two dates of each pair (ECC on B08)
+    python scripts/utilities/run_registration.py \
+        --output outputs/audit/registration_v2_observation_valid/registration.json
+
+    # 2. water state and validity audit raster
+    python scripts/reporting/make_audit_outputs.py
+
+    # 3. classical baseline: scores, validity, candidate components
+    python scripts/utilities/run_classical_baseline.py \
+        --output-dir outputs/baseline_v2_observation_valid
+
+    # 4. split each pair into train / guard / validation / test regions
+    python scripts/utilities/prepare_local_partitions.py \
+        --output-dir outputs/partitions_v2_observation_valid
+
+    # 5. per-pair, per-band statistics from TRAIN pixels only
+    python scripts/utilities/build_dataset.py --root outputs/dataset/v2 \
+        --partition-dir outputs/partitions_v2_observation_valid normalise
+
+    # 6. training-window index (256 px patches, stride 128)
+    python scripts/utilities/build_dataset.py --root outputs/dataset/v2 \
+        --partition-dir outputs/partitions_v2_observation_valid index
+
+    # 7. optional: write the selected patches to disk
+    python scripts/utilities/build_dataset.py --root outputs/dataset/v2 \
+        --partition-dir outputs/partitions_v2_observation_valid materialise
+
+    # 8. train (skip if using the shipped checkpoint in artifacts/models/)
+    python train.py --dataset local_manual \
+        --normalisation outputs/dataset/v2/normalisation.json
+
+    # 9. validation-split analysis
+    python scripts/evaluation/analyse_validation_thresholds.py \
+        --output outputs/evaluation/validation_threshold_analysis
+
+    # 10. locked-test evaluation
+    python scripts/evaluation/evaluate_locked_test.py \
+        --registration outputs/audit/registration_v2_observation_valid/registration.json \
+        --partition-dir outputs/partitions_v2_observation_valid \
+        --output-dir outputs/evaluation/final_locked_test_v1
+
+    # 11. georeferenced inference
+    python scripts/inference/predict_safe_pair.py --pair A \
+        --checkpoint artifacts/models/best.pt \
+        --normalisation outputs/dataset/v2/normalisation.json \
+        --output-dir outputs/predictions/pair_A_v2
+
+    # 12. registers
+    python scripts/registers/build_final_detection_register.py
+
+    # 13. ONNX export, INT8 quantisation and benchmarks
+    python quantize.py --checkpoint artifacts/models/best.pt \
+        --output-dir outputs/quant/local_manual_v2
+
+    # 14. rebuild the report
+    python scripts/reporting/build_report_pdf.py \
+        --input docs/report.md --output docs/report_2026-11-22.pdf
+
+    # 15. read-only demonstration
+    bash scripts/demo.sh
+
+Which stages are verified against this repository, and which are not:
+
+| stage | status |
+|---|---|
+| 1 registration, 4 partitions, 10 locked test, 12 registers, 14 report, 15 demo | executed |
+| 5 statistics | executed |
+| 6 index, 8 training, 9 validation analysis, 11 inference, 13 quantisation | not re-run since the refactor |
+
+Stages 6, 8, 9, 11 and 13 are documented but unverified end to end. Do not treat the
+command list as a guarantee for them.
+
 ## Reproduce the locked-test evaluation from a clone
 
 The evaluation needs four inputs. They are small (2.1 MB) and shipped under
