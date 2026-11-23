@@ -1,0 +1,28 @@
+version: manual-labels-v1
+coordinate_reference_system: EPSG:4326
+required_properties:
+  record_id: unique non-empty string
+  pair: A or B
+  label_class: change, no_change, or uncertain
+  reviewer: human reviewer name or identifier
+  reviewed_at: ISO-8601 date or datetime
+  evidence_source: before_after_visual, field_verified, or other_manual
+  evidence: short human-written note that cites the before/after evidence
+  confidence: high, medium, or low
+rules:
+  - Never create labels from OSM, candidate scores, or model predictions.
+  - Pixels outside reviewed polygons are unlabeled, not no_change.
+  - uncertain polygons are excluded from training targets.
+  - A polygon must fit wholly inside one non-buffer partition.
+  - A polygon must not cover pixels that are not valid observations, which are
+    source NoData, MSK_CLASSI or MSK_QUALIT flags, or a registration gap.
+  - Water is NOT an invalid observation. A water-to-land transition can be a
+    real reclamation or coastal construction change, so it is a valid change.
+    Do not reject a polygon because it touches water.
+  - Use no_change or uncertain over stable water unless the before/after
+    images show fill, dredging, or construction.
+  - Conflicting labels for the same pixel are an error.
+raster_values:
+  no_change: 0
+  change: 1
+  uncertain_or_unreviewed: 255

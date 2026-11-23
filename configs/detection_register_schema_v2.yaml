@@ -1,0 +1,171 @@
+# Detection register schema v2.
+#
+# Supersedes detection-register-v1 for the final 26-location register. v1 is left in place
+# and unmodified; nothing validates against it any more.
+#
+# Why a new version was necessary rather than a translation:
+#   The human reviewer recorded decisions as `accepted_man_made` / `uncertain`, change types
+#   as `building_construction` / `unknown`, and confidence as `high` / `low`. v1's enums are
+#   change_type: [construction, demolition, reclamation, other_structural, not_change, unknown],
+#   status: [candidate, reviewed, confirmed, rejected]. Two of the reviewer's values have no
+#   v1 equivalent (`accepted_man_made`, `uncertain`) and `building_construction` is finer than
+#   v1's `construction`. Silently renaming a human decision to fit a schema would lose the
+#   reviewer's meaning, so the schema was extended and the original words are preserved.
+
+version: detection-register-v2
+supersedes: detection-register-v1
+crs: "EPSG:32643"          # geometry_wkt is in the projected UTM zone
+geojson_crs: "EPSG:4326"   # RFC 7946 longitude/latitude
+row_grain: "one row per unique geographical location, not per threshold record"
+
+columns:
+  - name: detection_id
+    type: string
+    required: true
+    pattern: "^TS-(A|B)_L[0-9]{2}$"
+    note: "stable, derived from location_id"
+  - name: register_id
+    type: string
+    required: true
+    pattern: "^(A|B)-[0-9]{4}$"
+  - name: location_id
+    type: string
+    required: true
+    pattern: "^(A|B)_L[0-9]{2}$"
+    note: "from the 26-location review package"
+  - name: pair_id
+    type: enum
+    required: true
+    values: [A, B]
+  - name: tile
+    type: string
+    required: true
+    note: from configs/data_manifest.yaml pairs block
+  - name: source_candidate_ids
+    type: string
+    required: true
+    note: "semicolon-separated; exactly two, one per threshold"
+  - name: source_thresholds
+    type: string
+    required: true
+    note: "semicolon-separated; always 0.05;0.50"
+  - name: acquisition_date_before
+    type: date
+    required: true
+    note: from the data manifest, not typed
+  - name: acquisition_date_after
+    type: date
+    required: true
+  - name: change_type
+    type: enum
+    required: true
+    values: [building_construction, demolition, reclamation, other_structural,
+             not_change, unknown]
+    note: "v1 value `construction` is superseded by building_construction"
+  - name: decision_status
+    type: enum
+    required: true
+    values: [accepted_man_made, rejected_natural, rejected_non_target,
+             rejected_acquisition, uncertain, unassessable, awaiting_human_review]
+    note: "reviewer vocabulary; replaces v1 status"
+  - name: confidence
+    type: enum
+    required: true
+    values: [high, medium, low]
+  - name: geometry_wkt
+    type: wkt
+    required: true
+    geometry_types: [POLYGON, MULTIPOLYGON]
+  - name: crs
+    type: string
+    required: true
+  - name: longitude
+    type: float
+    required: true
+    note: "projected easting retained in this column for tooling continuity; the GeoJSON
+           carries true longitude in degrees"
+  - name: latitude
+    type: float
+    required: true
+  - name: area_pixels
+    type: integer
+    required: true
+    minimum: 1
+    note: "reviewed positive pixel count of the component"
+  - name: area_m2
+    type: float
+    required: true
+    minimum: 0
+    note: "area_pixels x 100 m2 (10 m pixels)"
+  - name: area_ha
+    type: float
+    required: true
+    minimum: 0
+    note: "area_m2 / 10000"
+  - name: extent_m2
+    type: float
+    required: false
+    note: "if used, identical to area_m2 and carries the same meaning: the annotated change
+           area of the reviewed component, not a measured building footprint"
+  - name: mean_score
+    type: float
+    required: false
+    note: "mean model probability over the component's reviewed pixels"
+  - name: max_score
+    type: float
+    required: false
+  - name: evidence_before
+    type: path
+    required: true
+  - name: evidence_after
+    type: path
+    required: true
+  - name: overlay_path
+    type: path
+    required: true
+  - name: decision_reason
+    type: string
+    required: true
+    min_length: 10
+    note: verbatim from the reviewer
+  - name: reviewer_notes
+    type: string
+    required: false
+    note: verbatim from the reviewer
+  - name: reviewer
+    type: string
+    required: true
+  - name: reviewed_at
+    type: date
+    required: true
+    note: "completion date of the review artifact; the worksheet has no per-row timestamp"
+  - name: feature_geometry_class
+    type: enum
+    required: true
+    values: [unclassified, linear, areal]
+    note: "reviewer judgement; unclassified because none was recorded"
+  - name: detection_source
+    type: enum
+    required: true
+    values: [model, classical_baseline, shoreline_sweep, manual_only]
+  - name: notes
+    type: string
+    required: false
+
+rules:
+  - decision_status accepted_man_made requires a non-empty decision_reason.
+  - decision_status uncertain must keep change_type unknown and must never be counted as an
+    accepted detection in any summary.
+  - change_type is never derived from a model score, an OSM record or a candidate mask.
+  - geometry and area_pixels are preserved from the reviewed component; they are not
+    re-measured and not simplified.
+  - Rejected rows would be kept, not deleted. This register contains none because the review
+    set contained no reviewed no-change regions; see rejected_cases_note.md.
+  - The register is per location. Two thresholds of the same place are one row, with both
+    source records named in source_candidate_ids.
+
+not_supported:
+  - "Completeness or recall: no measured false-negative rate."
+  - "Scene-wide precision or false-positive rate: unreviewed pixels are not negatives."
+  - "Physical building footprint area: area_m2 is the annotated change area."
+  - "Event dating: two acquisitions bracket a change; they do not date it."

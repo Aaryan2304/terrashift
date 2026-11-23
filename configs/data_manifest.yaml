@@ -1,0 +1,53 @@
+# Data manifest
+
+# The products stay outside this repository. Set SENTINEL_DATA_ROOT to the
+# directory that contains the four .SAFE folders before running data workflows.
+
+products:
+  - id: QBB_2022_12_23
+    pair: A
+    tile: T43QBB
+    date: "2022-12-23"
+    orbit: 5
+    baseline: "05.10"
+    archiving: S2RP
+    path: "${SENTINEL_DATA_ROOT}/S2A_MSIL1C_20221223T054241_N0510_R005_T43QBB_20240809T025636.SAFE"
+
+  - id: QBB_2023_05_12
+    pair: A
+    tile: T43QBB
+    date: "2023-05-12"
+    orbit: 5
+    baseline: "05.10"
+    archiving: S2RP
+    path: "${SENTINEL_DATA_ROOT}/S2A_MSIL1C_20230512T053641_N0510_R005_T43QBB_20240908T023323.SAFE"
+
+  - id: RGM_2023_10_06
+    pair: B
+    tile: T43RGM
+    date: "2023-10-06"
+    orbit: 105
+    baseline: "05.10"
+    archiving: S2RP
+    path: "${SENTINEL_DATA_ROOT}/S2A_MSIL1C_20231006T052701_N0510_R105_T43RGM_20241101T065943.SAFE"
+
+  - id: RGM_2026_10_22
+    pair: B
+    tile: T43RGM
+    date: "2026-10-22"
+    orbit: 105
+    baseline: "05.13"
+    archiving: 2APS
+    path: "${SENTINEL_DATA_ROOT}/S2A_MSIL1C_20261022T053241_N0513_R105_T43RGM_20261022T091024.SAFE"
+
+pairs:
+  A:
+    tile: T43QBB
+    date1: QBB_2022_12_23
+    date2: QBB_2023_05_12
+    crs: "EPSG:32643"
+  B:
+    tile: T43RGM
+    date1: RGM_2023_10_06
+    date2: RGM_2026_10_22
+    crs: "EPSG:32643"

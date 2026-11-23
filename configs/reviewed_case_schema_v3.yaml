@@ -1,0 +1,159 @@
+# Reviewed-case register schema v3.
+#
+# Supersedes detection-register-v2 for the consolidated reviewed-case register only.
+# Neither v1 nor v2 is modified; the original detection register still validates against v2.
+#
+# Why another version was necessary:
+#   v2 could not represent the completed negative review. Its change_type enum stopped at
+#   [building_construction, demolition, reclamation, other_structural, not_change, unknown],
+#   but the reviewer recorded `water_level_or_sediment_change` (4 records) and
+#   `seasonal_vegetation_or_agricultural_variation` (1 record). It also had no way to say
+#   which review a case came from. Renaming those observations to fit v2 would have changed
+#   what the reviewer recorded, so the enum and a source-type column were added.
+
+version: reviewed-case-register-v3
+supersedes: detection-register-v2
+for_register: outputs/register/reviewed_cases_v2/
+crs: "EPSG:32643"
+geojson_crs: "EPSG:4326"
+row_grain: "one row per unique reviewed geographical location, from either review"
+sources:
+  positive_region_review: "outputs/submission_review_v2 (26 locations, reviewed positive pixels)"
+  negative_region_review: "outputs/negative_review_v1 (12 components, reviewed no-change pixels)"
+
+columns:
+  - name: case_id
+    type: string
+    required: true
+    pattern: "^RC-[A-Za-z0-9_]+$"
+    note: "RC- plus the source review id; never collides with the prior TS- detection ids"
+  - name: source_review_id
+    type: string
+    required: true
+    note: "A_L01..A_L16/B_L01..B_L10 (positive) or NA_L01..NB_L08 (negative)"
+  - name: case_source
+    type: enum
+    required: true
+    values: [positive_region_review, negative_region_review]
+  - name: pair_id
+    type: enum
+    required: true
+    values: [A, B]
+  - name: acquisition_date_before
+    type: date
+    required: true
+  - name: acquisition_date_after
+    type: date
+    required: true
+  - name: source_component_id
+    type: integer
+    required: true
+    note: "8-connected component id within its own review construction"
+  - name: source_candidate_ids
+    type: string
+    required: false
+    note: "positive only: the two threshold-specific candidate ids, semicolon-separated"
+  - name: source_thresholds
+    type: string
+    required: false
+    note: "positive 0.05;0.50, negative 0.05"
+  - name: model_threshold
+    type: float
+    required: true
+    values: [0.05]
+    note: "fixed diagnostic point used to identify flagged pixels; never tuned"
+  - name: model_mean_score
+    type: float
+    required: true
+  - name: model_max_score
+    type: float
+    required: true
+  - name: decision_status
+    type: enum
+    required: true
+    values: [accepted_man_made, rejected_natural, rejected_non_target,
+             rejected_acquisition, uncertain, unassessable]
+  - name: change_type
+    type: enum
+    required: true
+    values: [building_construction, demolition, reclamation, other_structural,
+             water_level_or_sediment_change, seasonal_vegetation_or_agricultural_variation,
+             acquisition_artifact, not_change, unknown]
+    note: "v2 enums extended with the two observation classes the negative review used"
+  - name: confidence
+    type: enum
+    required: true
+    values: [high, medium, low]
+  - name: area_pixels
+    type: integer
+    required: true
+    minimum: 1
+  - name: area_m2
+    type: float
+    required: false
+    minimum: 0
+    note: "positive_region_review only: annotated change area, area_pixels x 100 m2"
+  - name: flagged_area_m2
+    type: float
+    required: false
+    minimum: 0
+    note: "negative_region_review only: model-flagged area inside reviewed no-change pixels"
+  - name: area_semantics
+    type: enum
+    required: true
+    values: [annotated_change_area_of_reviewed_component,
+             model_flagged_area_within_reviewed_no_change]
+    note: "mandatory discriminator; the two area meanings must never be pooled silently"
+  - name: visual_change_visible
+    type: enum
+    required: false
+    values: ["yes", "no", unsure]
+    note: "reviewer observation; retained verbatim"
+  - name: evidence_before
+    type: path
+    required: true
+  - name: evidence_after
+    type: path
+    required: true
+  - name: overlay_path
+    type: path
+    required: true
+  - name: decision_reason
+    type: string
+    required: true
+    min_length: 5
+    note: verbatim from the reviewer, never paraphrased
+  - name: reviewer_notes
+    type: string
+    required: false
+    note: verbatim
+  - name: reviewer
+    type: string
+    required: true
+  - name: reviewed_at
+    type: date
+    required: true
+  - name: data_quality_flag
+    type: string
+    required: false
+    note: "e.g. resolution_limited; documents a caveat without changing the decision"
+  - name: geometry_wkt
+    type: wkt
+    required: true
+    geometry_types: [POLYGON, MULTIPOLYGON]
+
+rules:
+  - Every case carries exactly one decision_status from the reviewer's vocabulary.
+  - uncertain is neither accepted nor rejected and must not be counted as either.
+  - decision_reason and reviewer_notes are copied verbatim; no rewording.
+  - area_m2 and flagged_area_m2 are mutually exclusive and are never summed together.
+  - A negative-region geometry is a model-flagged component inside reviewed no-change
+    pixels. It is never described as construction area or infrastructure extent.
+  - A data_quality_flag annotates a caveat. It never replaces or softens a decision.
+  - Threshold-specific source records are not separate cases; each case names its sources.
+
+not_supported:
+  - "Scene-wide false-positive rate: the negative review is a qualitative sample."
+  - "Statistical representativeness of the 12 negative samples."
+  - "Completeness or recall: no false-negative measurement exists."
+  - "Physical building footprint area for any case."
