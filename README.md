@@ -298,7 +298,7 @@ Executed and verified:
 | Review queue | queue and summary generated; three guard-band records flagged as expected |
 | ONNX FP32 | max abs difference against PyTorch 1.565e-07 |
 | Demo | `scripts/demo.sh` exits 0 |
-| Test suite | 635 passed, 2 skipped without data; 637 passed with it |
+| Test suite | 635 passed, 2 skipped in a tree with generated outputs; 613 passed, 24 skipped in a fresh clone (evidence-dependent tests skip); 637 passed with `SENTINEL_DATA_ROOT` set |
 
 Not executed in the verification pass, and therefore not claimed:
 
