@@ -12,6 +12,9 @@ import os
 import re
 import unittest
 
+from pathlib import Path as _Path
+HAVE_OUTPUTS = (_Path(__file__).resolve().parents[1] / "outputs").is_dir()
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEMO = os.path.join(ROOT, "scripts", "demo.sh")
 
@@ -29,6 +32,7 @@ def referenced_paths():
     return [path for path in paths if not path.startswith("/")]
 
 
+@unittest.skipUnless(HAVE_OUTPUTS, "generated outputs are not in the repository")
 class DemoReferenceTests(unittest.TestCase):
 
     def test_demo_script_exists(self):

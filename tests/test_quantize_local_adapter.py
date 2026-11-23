@@ -19,6 +19,9 @@ import torch
 import quantize
 from terrashift.preprocessing.normalisation import load_statistics, pair_statistics
 from terrashift.data.validation_windows import IGNORE_VALUE, ValidationLatticeDataset
+
+ROOT = Path(__file__).resolve().parents[1]
+HAVE_STATISTICS = (ROOT / "outputs" / "dataset" / "v2" / "normalisation.json").is_file()
 from terrashift.evaluation.lattice import LatticeAccumulator
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -101,6 +104,7 @@ class _FakeDataset:
                 "image2": np.zeros((4, 256, 256), dtype=np.float32)}
 
 
+@unittest.skipUnless(HAVE_STATISTICS, "per-pair statistics are not in the repository")
 class LocalCalibrationAdapterTests(unittest.TestCase):
     """The adapter must use the train split and the pair statistics, once each."""
 

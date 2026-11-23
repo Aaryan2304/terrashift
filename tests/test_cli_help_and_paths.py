@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+HAVE_REVIEW_PACKAGE = (ROOT / "outputs" / "submission_review_v1").is_dir()
 
 
 class HelpOrderingTests(unittest.TestCase):
@@ -21,6 +22,7 @@ class HelpOrderingTests(unittest.TestCase):
             self.assertEqual(done.returncode, 0, done.stderr)
             self.assertNotIn("refusing to overwrite", done.stdout)
 
+    @unittest.skipUnless(HAVE_REVIEW_PACKAGE, "review package is not in the repository")
     def test_guard_still_refuses_on_normal_execution(self):
         out = ROOT / "outputs/submission_review_v1"
         before = sorted(p.name for p in out.iterdir()) if out.exists() else []
