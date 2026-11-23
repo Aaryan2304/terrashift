@@ -2,6 +2,86 @@
  "generated": "2026-11-23",
  "artifacts": [
   {
+   "path": "README.md",
+   "bytes": 1989,
+   "sha256": "3f68aa3ef0394ae35b0722e71a7b4699d68fdb53062ae67e018631f0e55592ae"
+  },
+  {
+   "path": "derived/dataset_v2/dataset_manifest.json",
+   "bytes": 201493,
+   "sha256": "f99b9226b1c240e1e06dcbf23e66537a52f53cc63eacaefd23e7f44413df9f0c"
+  },
+  {
+   "path": "derived/dataset_v2/normalisation.json",
+   "bytes": 2244,
+   "sha256": "8aeea033eb2bec5012ebbceb7eca825814b6e43bb699f9e2eaee0c5bba955d2a"
+  },
+  {
+   "path": "derived/dataset_v2/train_index.csv",
+   "bytes": 100076,
+   "sha256": "62d601ff9d3af94ae64c0671f83fef7b42fe544c1e842dc37ad2590aa7035107"
+  },
+  {
+   "path": "derived/dataset_v2/train_index.json",
+   "bytes": 1089,
+   "sha256": "0f777f7fcd0dd9a953c7a7b00de9c5cc880583fd1c22321f191773217548d28e"
+  },
+  {
+   "path": "derived/labels/pair_a_v2/manual_labels_A.tif",
+   "bytes": 201328,
+   "sha256": "0933fc1a0e5564a9db800ede4a74b661e089ee447c7d8522b0c9aa52ae6f4f76"
+  },
+  {
+   "path": "derived/labels/pair_b_v2/manual_labels_B.tif",
+   "bytes": 202744,
+   "sha256": "c14c9d01f2931351d0b2ae839e28f03b0cf3a2ce31d956dbfab1462a29f799df"
+  },
+  {
+   "path": "derived/partitions_v2_observation_valid/pair_A_partition_10m.tif",
+   "bytes": 540416,
+   "sha256": "5822aa28d478ded50125faafc40a0fb2ae50ab7957b9de5edae5a1b6cb3a661c"
+  },
+  {
+   "path": "derived/partitions_v2_observation_valid/pair_A_partition_20m.tif",
+   "bytes": 142285,
+   "sha256": "f5294e592d6345fe16a3197eda8e29d3e94d2ec96715070dfb89fb1b6fb3ba9a"
+  },
+  {
+   "path": "derived/partitions_v2_observation_valid/pair_A_partitions.geojson",
+   "bytes": 4683,
+   "sha256": "0e6effcf2aff83f8f0014cbbc3b27c60fdcaca72c3b69eb14b442647f086ec77"
+  },
+  {
+   "path": "derived/partitions_v2_observation_valid/pair_B_partition_10m.tif",
+   "bytes": 540417,
+   "sha256": "a7df906eef7c389b07ce2da0bd93ad5311a53fb87afada094e45d8144aebd8c6"
+  },
+  {
+   "path": "derived/partitions_v2_observation_valid/pair_B_partition_20m.tif",
+   "bytes": 142286,
+   "sha256": "46986bb10a2208887da063bf415fcb50c51638df57e65106ae8d50bbfcdbc447"
+  },
+  {
+   "path": "derived/partitions_v2_observation_valid/pair_B_partitions.geojson",
+   "bytes": 4689,
+   "sha256": "83e3b1ba8c6659d158e59914d1ed4597c6f68fb48b313460d1cc9b25832deaed"
+  },
+  {
+   "path": "derived/partitions_v2_observation_valid/partition_summary.csv",
+   "bytes": 1009,
+   "sha256": "7ea30ba6df5b5dab4e72a3cc13f0c1ad31b788d09bdc63e45f4b202cb0aa8da3"
+  },
+  {
+   "path": "derived/partitions_v2_observation_valid/partition_summary.json",
+   "bytes": 2447,
+   "sha256": "f6d66dec3d90faf39e3169eca50e0b19bff34417bc2c4767b2a996f825fccb40"
+  },
+  {
+   "path": "derived/registration/registration.json",
+   "bytes": 11649,
+   "sha256": "25e913f8cb595c33e368461662b642b870b76fedcc09951c4e236001922400b5"
+  },
+  {
    "path": "evidence/chips/A_L01_after.png",
    "bytes": 141939,
    "sha256": "97dcfd6248bec38f4a40bf21de12ddf08080a9cfd6e158abc8156bd456860ed4"
@@ -415,6 +495,11 @@
    "path": "models/onboard_int8.onnx",
    "bytes": 550071,
    "sha256": "326fb3c9bf417352d7eb4262aa325d68fbbd3546eace9cd8bdfd7f2a271b0d2e"
+  },
+  {
+   "path": "models/oscd_best.pt",
+   "bytes": 5863091,
+   "sha256": "4d9c381dba370becc3ac3ff93431db65929cf21378287191a9f131fae9080d1a"
   },
   {
    "path": "register/candidate_provenance.csv",

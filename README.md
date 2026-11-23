@@ -86,11 +86,12 @@ The candidate layers are navigation aids, not ground truth. Use the schema and
 review steps in the annotation section of the technical report. The label tool accepts human-edited
 WGS84 GeoJSON only. It creates no labels until you provide and review polygons.
 After you rasterize labels, build and materialize training/validation patches with
-`python -m data.local_patches` and
+`python -m terrashift.data.local_patches` and
 `python scripts/utilities/materialize_local_patches.py`. The training entry point is
-`train.py --dataset local_manual`. To start from a trained original-OSCD
-checkpoint, add `--init-checkpoint PATH`. Without it, local training starts
-from random weights. Test patches are not materialized or indexed by default;
+`train.py --dataset local_manual`. The reported run initialised from a trained
+original-OSCD checkpoint with `--init-checkpoint PATH`; without it, local training
+starts from random weights and follows a different curve. To produce that checkpoint,
+run `train.py --dataset oscd_original` first, or use `artifacts/models/oscd_best.pt`. Test patches are not materialized or indexed by default;
 use `--include-test` only after model selection is complete. The trainer rejects
 an index built with `--include-test`.
 
@@ -323,11 +324,15 @@ overwrites an existing output directory, so a rerun needs a new path.
     python scripts/utilities/build_dataset.py --root outputs/dataset/v2 \
         --partition-dir outputs/partitions_v2_observation_valid materialise
 
-    # 8. train (skip if using the shipped checkpoint in artifacts/models/)
-    #    train_local_manual.py is a library module, not a CLI: train.py is the entry point
-    #    and the OSCD checkpoint is the initialisation the reported run used
-    python train.py --dataset local_manual \
-        --init-checkpoint outputs/checkpoints/oscd_gpu_v1/baseline_seed42_v2/seed_42/best.pt \
+    # 8a. stage one: train on the original OSCD regions. This produces the checkpoint
+    #     that stage two starts from. Skip it if you use artifacts/models/oscd_best.pt.
+    #     train_oscd_original.py is a module; train.py is the entry point.
+    python train.py --dataset oscd_original --epochs 20 --output-dir outputs/checkpoints/oscd_gpu_v1
+
+    # 8b. stage two: fine-tune on the reviewed local patches. Initialising from the OSCD
+    #     checkpoint is what the reported run did; from random weights the curve differs.
+    python train.py --dataset local_manual --epochs 20 --pos-weight 0.834 \
+        --init-checkpoint artifacts/models/oscd_best.pt \
         --normalisation outputs/dataset/v2/normalisation.json
 
     # 9. validation-split analysis

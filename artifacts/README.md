@@ -12,8 +12,12 @@ SHA-256 in `manifest.json`. These are copies: the authoritative versions live in
 | `best.pt` | 5.7 MB | selected checkpoint, seed 43, `pos_weight` 0.834, epoch 7 |
 | `onboard_fp32.onnx` | 1.9 MB | ONNX export, dynamic batch/height/width |
 | `onboard_int8.onnx` | 540 KB | static INT8 quantisation, 28.3 % of FP32 |
+| `oscd_best.pt` | 5.6 MB | OSCD-trained checkpoint; the initialisation the local fine-tune used |
 
-The checkpoint is the one every metric in the report comes from. Load it with
+`best.pt` is the checkpoint every metric in the report comes from. `oscd_best.pt` is the
+stage-one model: `train.py --dataset oscd_original` trains it, and
+`train.py --dataset local_manual --init-checkpoint artifacts/models/oscd_best.pt` is the
+fine-tune the reported figures come from. Load it with
 `terrashift.inference.checkpoints.load_model`. Input bands are B02, B03, B04, B08,
 each normalised by the per-pair statistics in `outputs/dataset/v2/normalisation.json`
 (not shipped; regenerate with `scripts/utilities/build_dataset.py normalise`).
