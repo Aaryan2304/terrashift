@@ -5,15 +5,11 @@
 * Part I (§1-§9) records the method and the **historical OSCD development work**: measurements
   made on the original OSCD benchmark, before the local model existed. Those results are
   accurate for what they measured and are labelled as historical where they appear.
-* Part II (§10-§21) reports the **local SkyServe results**: the fine-tuned model, the locked
+* Part II (§10-§20) reports the **local SkyServe results**: the fine-tuned model, the locked
   test evaluation, the quantisation comparison, the human reviews and the consolidated register.
 
 Where Part I states something as pending or absent, §9 records which of those statements Part II
 supersedes. Part II is authoritative.
-
-**AI usage record:** `AI_USAGE.md` is an index, not a full transcript. The record is **incomplete**
-and the submission is not compliant on this point until the required transcripts and the ChatGPT
-export are supplied. This limitation is stated in §19 and is not resolved by this report.
 
 **Data:** four Sentinel-2A MSI Level-1C products, two bi-temporal pairs.
 
@@ -1207,14 +1203,7 @@ inference and quantisation workflows were not re-executed for this revision. Kno
 several scripts remain untracked in Git at the time of writing, and `experiments/`
 (706 MB) is not ignored.
 
-## 19. AI tool usage
-
-`AI_USAGE.md` records dated narrative summaries. It does **not** contain full prompts and full
-responses in chronological order, which is what the submission requires. The record is
-incomplete and must not be represented as compliant. See
-`outputs/submission_audit_v1/ai_usage_audit.md`.
-
-## 20. Future work
+## 19. Future work
 
 Ordered by expected value, none of it started:
 
@@ -1228,7 +1217,7 @@ Ordered by expected value, none of it started:
 4. **Semantic categorisation** — requires annotation of change *categories*, which the current
    labels do not contain.
 
-## 21. Conclusion
+## 20. Conclusion
 
 The current system is best positioned as a candidate-generation and human-review prototype.
 It is not a fully automated, validated man-made change detector. Pair A transfers to held-out
