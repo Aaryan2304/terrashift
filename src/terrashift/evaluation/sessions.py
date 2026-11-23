@@ -1,11 +1,28 @@
 """Evaluation sessions: per-model scoring, aggregation and reporting."""
 
-import numpy as np
+from pathlib import Path
 
+import numpy as np
+import torch
+from torch.utils.data import DataLoader
+
+from terrashift.data.local_patches import BANDS, pair_image_loader
+from terrashift.data.manifest import load_manifest, pair_config
+from terrashift.data.validation_windows import (
+    IGNORE_VALUE,
+    ValidationLatticeDataset,
+    read_validation_target,
+)
+from terrashift.evaluation.lattice import LatticeAccumulator, evaluate_lattice
 from terrashift.evaluation.prediction import (predict_pair_onnx, predict_pair_torch,
                                              session_probabilities, valid_of)
 from terrashift.evaluation.thresholds import metrics_at_thresholds
 from terrashift.metrics import average_precision, metrics_from_counts, roc_auc
+from terrashift.models.siamese_unet import SiameseUNet
+from terrashift.preprocessing.normalisation import require_statistics
+
+PAIRS = ("A", "B")
+PATCH, STRIDE, BATCH = 256, 128, 4
 
 def evaluate_sessions(sessions, entries, thresholds, batch_size=4):
     """Evaluate sessions on the same lattice, per pair, pooled and macro.
