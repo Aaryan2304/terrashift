@@ -1,0 +1,210 @@
+{
+  "checkpoint": "/home/aaryan/projects/skyserve_assignment/outputs/checkpoints/local_manual_v2_seed43_posweight_0p834/seed_43/best.pt",
+  "checkpoint_sha256": "dbce89f6811d6cdb6d56dd7d6844e58bf673f5ff65806c5d4939cced0a2554cd",
+  "checkpoint_bytes": 5879067,
+  "bands": [
+    "B02",
+    "B03",
+    "B04",
+    "B08"
+  ],
+  "base_filters": 16,
+  "opset": 17,
+  "dataset": "local_manual",
+  "pairs": [
+    "A",
+    "B"
+  ],
+  "patch_size": 256,
+  "stride": 128,
+  "thresholds": [
+    0.05,
+    0.1,
+    0.5
+  ],
+  "threshold_status": "fixed comparison points from earlier experiments; not validated operating thresholds",
+  "calibration": {
+    "rows_available": 342,
+    "rows_selected": 160,
+    "per_pair": {
+      "A": 57,
+      "B": 103
+    },
+    "seed": 43,
+    "split": "train",
+    "batch_size": 8,
+    "batches": 20,
+    "dataset": "local_manual"
+  },
+  "calibration_split": "train",
+  "evaluation_split": "validation",
+  "normalisation": "/home/aaryan/projects/skyserve_assignment/outputs/dataset/v2/normalisation.json",
+  "normalisation_sha256": "8aeea033eb2bec5012ebbceb7eca825814b6e43bb699f9e2eaee0c5bba955d2a",
+  "onnx_output_is_probability": true,
+  "cpu_optimisation": "ORT_ENABLE_BASIC",
+  "test_split_used": false,
+  "stages": {
+    "export": {
+      "path": "outputs/quant/local_manual_v2_seed43_posweight_0p834_int8_v1/onboard_fp32.onnx",
+      "size_bytes": 1941378,
+      "sha256": "6d58e3094a7f61da19571381f2d076ef9c54b8c5e9944a28618de659b5774844",
+      "exporter": "torchscript_legacy",
+      "dummy_shape": [
+        1,
+        4,
+        256,
+        256
+      ],
+      "dynamic_axes": {
+        "image1": {
+          "0": "batch",
+          "2": "height",
+          "3": "width"
+        },
+        "image2": {
+          "0": "batch",
+          "2": "height",
+          "3": "width"
+        },
+        "probability": {
+          "0": "batch",
+          "2": "height",
+          "3": "width"
+        }
+      },
+      "graph_inputs": [
+        [
+          "batch",
+          4,
+          "height",
+          "width"
+        ],
+        [
+          "batch",
+          4,
+          "height",
+          "width"
+        ]
+      ],
+      "graph_outputs": [
+        [
+          "batch",
+          1,
+          "height",
+          "width"
+        ]
+      ]
+    },
+    "verify": {
+      "graph_inputs": [
+        "image1",
+        "image2"
+      ],
+      "graph_outputs": [
+        "probability"
+      ],
+      "batches": {
+        "batch_1": {
+          "shape": [
+            1,
+            1,
+            256,
+            256
+          ],
+          "expected_shape": [
+            1,
+            1,
+            256,
+            256
+          ],
+          "shape_ok": true,
+          "finite": true,
+          "in_probability_range": true,
+          "min": 0.024666637182235718,
+          "max": 0.45209091901779175
+        },
+        "batch_8": {
+          "shape": [
+            8,
+            1,
+            256,
+            256
+          ],
+          "expected_shape": [
+            8,
+            1,
+            256,
+            256
+          ],
+          "shape_ok": true,
+          "finite": true,
+          "in_probability_range": true,
+          "min": 0.01876971125602722,
+          "max": 0.45712578296661377
+        }
+      },
+      "problems": [],
+      "passed": true
+    },
+    "parity": {
+      "max_abs_difference": 2.7120113372802734e-06,
+      "threshold_agreement": 1.0,
+      "per_pair": {
+        "A": {
+          "max_abs_difference": 1.8477439880371094e-06,
+          "mean_abs_difference": 8.104280624365856e-08,
+          "p95_abs_difference": 3.5762786865234375e-07,
+          "p99_abs_difference": 8.344650268554688e-07,
+          "pearson_r": 0.9999999999998577,
+          "pixels": 2759,
+          "shape_match": true,
+          "threshold_agreement": 1.0,
+          "torch_mean": 0.22904998064041138,
+          "onnx_mean": 0.22904996573925018
+        },
+        "B": {
+          "max_abs_difference": 2.7120113372802734e-06,
+          "mean_abs_difference": 1.1026413204717755e-07,
+          "p95_abs_difference": 4.172325134277344e-07,
+          "p99_abs_difference": 7.748603820800781e-07,
+          "pearson_r": 0.99999999999978,
+          "pixels": 22650,
+          "shape_match": true,
+          "threshold_agreement": 1.0,
+          "torch_mean": 0.2157898247241974,
+          "onnx_mean": 0.2157897800207138
+        }
+      },
+      "non_finite_torch": 0,
+      "non_finite_onnx": 0,
+      "scores_match": true,
+      "tolerance": 1e-05,
+      "note": "both sources are probabilities; no sigmoid is applied here"
+    },
+    "quantize": {
+      "path": "outputs/quant/local_manual_v2_seed43_posweight_0p834_int8_v1/onboard_int8.onnx",
+      "size_bytes": 550071,
+      "sha256": "326fb3c9bf417352d7eb4262aa325d68fbbd3546eace9cd8bdfd7f2a271b0d2e",
+      "format": "QDQ",
+      "activation": "QInt8",
+      "weight": "QInt8",
+      "per_channel": true,
+      "calibration_batches": 20,
+      "calibration_samples": 160,
+      "per_pair_calibration": {
+        "A": 57,
+        "B": 103
+      },
+      "size_ratio_vs_fp32": 0.283
+    }
+  },
+  "parity_gate": {
+    "status": "passed",
+    "max_abs_difference": 2.7120113372802734e-06,
+    "tolerance": 1e-05,
+    "non_finite": 0,
+    "scores_match": true
+  },
+  "elapsed_seconds": 369.85,
+  "peak_process_rss_mib": 4626.5
+}

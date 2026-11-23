@@ -1,0 +1,456 @@
+{
+ "A": {
+  "tile": "T43QBB",
+  "crs": "EPSG:32643",
+  "date1": "QBB_2022_12_23",
+  "date2": "QBB_2023_05_12",
+  "path_date1": "/home/aaryan/projects/skyserve/S2A_MSIL1C_20221223T054241_N0510_R005_T43QBB_20240809T025636.SAFE",
+  "path_date2": "/home/aaryan/projects/skyserve/S2A_MSIL1C_20230512T053641_N0510_R005_T43QBB_20240908T023323.SAFE",
+  "band": "B08",
+  "pixel_size_m": 10.0,
+  "initial": {
+   "n_windows": 5,
+   "n_converged": 4,
+   "n_failed": 1,
+   "failed": [
+    {
+     "dx": null,
+     "dy": null,
+     "correlation": null,
+     "converged": false,
+     "error": "OpenCV(4.13.0) /io/opencv/modules/video/src/ecc.cpp:595: error: (-7:Iterations do not converge) The algorithm stopped before its convergence. The correlation is going to be minimized. Images may be un",
+     "n_valid_pixels": 4000000,
+     "window": [
+      7000,
+      9000,
+      4000,
+      6000
+     ],
+     "invalid_pixels_date1": 0,
+     "invalid_pixels_date2": 0,
+     "window_pixels": 4000000
+    }
+   ],
+   "median_dx_px": -0.12235838174819946,
+   "median_dy_px": -0.6390573084354401,
+   "std_dx_px": 0.049510429555049036,
+   "std_dy_px": 0.11308591346889878,
+   "median_dx_m": -1.2235838174819946,
+   "median_dy_m": -6.390573084354401,
+   "std_dx_m": 0.49510429555049035,
+   "std_dy_m": 1.1308591346889878,
+   "median_correlation": 0.8317128406446807,
+   "min_correlation": 0.5811604263617205,
+   "max_correlation": 0.9245211028952206,
+   "n_above_0_5": 4,
+   "windows": [
+    {
+     "dx": -0.14254112541675568,
+     "dy": -0.690466582775116,
+     "correlation": 0.9245211028952206,
+     "converged": true,
+     "n_valid_pixels": 3999999,
+     "window": [
+      2000,
+      4000,
+      5000,
+      7000
+     ],
+     "invalid_pixels_date1": 0,
+     "invalid_pixels_date2": 1,
+     "window_pixels": 4000000
+    },
+    {
+     "dx": -0.13979560136795044,
+     "dy": -0.4593855142593384,
+     "correlation": 0.8234259481995404,
+     "converged": true,
+     "n_valid_pixels": 3999987,
+     "window": [
+      4000,
+      6000,
+      6000,
+      8000
+     ],
+     "invalid_pixels_date1": 0,
+     "invalid_pixels_date2": 13,
+     "window_pixels": 4000000
+    },
+    {
+     "dx": -0.01999606005847454,
+     "dy": -0.5876480340957642,
+     "correlation": 0.8399997330898209,
+     "converged": true,
+     "n_valid_pixels": 3999999,
+     "window": [
+      6000,
+      8000,
+      5000,
+      7000
+     ],
+     "invalid_pixels_date1": 0,
+     "invalid_pixels_date2": 1,
+     "window_pixels": 4000000
+    },
+    {
+     "dx": null,
+     "dy": null,
+     "correlation": null,
+     "converged": false,
+     "error": "OpenCV(4.13.0) /io/opencv/modules/video/src/ecc.cpp:595: error: (-7:Iterations do not converge) The algorithm stopped before its convergence. The correlation is going to be minimized. Images may be un",
+     "n_valid_pixels": 4000000,
+     "window": [
+      7000,
+      9000,
+      4000,
+      6000
+     ],
+     "invalid_pixels_date1": 0,
+     "invalid_pixels_date2": 0,
+     "window_pixels": 4000000
+    },
+    {
+     "dx": -0.10492116212844849,
+     "dy": -0.7593390941619873,
+     "correlation": 0.5811604263617205,
+     "converged": true,
+     "n_valid_pixels": 3999998,
+     "window": [
+      3000,
+      5000,
+      7000,
+      9000
+     ],
+     "invalid_pixels_date1": 0,
+     "invalid_pixels_date2": 2,
+     "window_pixels": 4000000
+    }
+   ],
+   "validity_masked": true,
+   "validity_definition": "nodata+msk_classi+msk_qualit, window-aligned",
+   "residual": {
+    "n_converged": 4,
+    "n_failed": 1,
+    "median_dx_px": 0.0039051873609423637,
+    "median_dy_px": -0.025595474988222122,
+    "median_dx_m": 0.03905187360942364,
+    "median_dy_m": -0.2559547498822212,
+    "median_displacement_px": 0.12983883038756805,
+    "p95_displacement_px": 0.18025820959793196,
+    "median_displacement_m": 1.2983883038756805,
+    "p95_displacement_m": 1.8025820959793195,
+    "rmse_mean": 0.6523452401161194,
+    "rmse_max": 0.9448238015174866,
+    "rmse_mean_without_validity": 0.6526003628969193,
+    "windows": [
+     {
+      "dx": -0.013439210131764412,
+      "dy": -0.07512585073709488,
+      "correlation": 0.9247089925069624,
+      "converged": true,
+      "n_valid_pixels": 3997999,
+      "window": [
+       2000,
+       4000,
+       5000,
+       7000
+      ],
+      "rmse": 0.43494194746017456,
+      "rmse_without_validity": 0.4349498152732849,
+      "joint_valid_pixels": 3997999
+     },
+     {
+      "dx": -0.019214656203985214,
+      "dy": 0.18490074574947357,
+      "correlation": 0.8241400506305578,
+      "converged": true,
+      "n_valid_pixels": 3997987,
+      "window": [
+       4000,
+       6000,
+       6000,
+       8000
+      ],
+      "rmse": 0.640261173248291,
+      "rmse_without_validity": 0.6411483883857727,
+      "joint_valid_pixels": 3997987
+     },
+     {
+      "dx": 0.1087670773267746,
+      "dy": 0.023934900760650635,
+      "correlation": 0.8405485927807796,
+      "converged": true,
+      "n_valid_pixels": 3997999,
+      "window": [
+       6000,
+       8000,
+       5000,
+       7000
+      ],
+      "rmse": 0.5893540382385254,
+      "rmse_without_validity": 0.5894637703895569,
+      "joint_valid_pixels": 3997999
+     },
+     {
+      "dx": null,
+      "dy": null,
+      "correlation": null,
+      "converged": false,
+      "error": "OpenCV(4.13.0) /io/opencv/modules/video/src/ecc.cpp:595: error: (-7:Iterations do not converge) The algorithm stopped before its convergence. The correlation is going to be minimized. Images may be un",
+      "n_valid_pixels": 3998000,
+      "window": [
+       7000,
+       9000,
+       4000,
+       6000
+      ],
+      "rmse": 1.4202114343643188,
+      "rmse_without_validity": 1.4202094078063965,
+      "joint_valid_pixels": 3998000
+     },
+     {
+      "dx": 0.02124958485364914,
+      "dy": -0.14677798748016357,
+      "correlation": 0.582045503572914,
+      "converged": true,
+      "n_valid_pixels": 3997998,
+      "window": [
+       3000,
+       5000,
+       7000,
+       9000
+      ],
+      "rmse": 0.9448238015174866,
+      "rmse_without_validity": 0.9448394775390625,
+      "joint_valid_pixels": 3997998
+     }
+    ]
+   },
+   "applied_shift_px": [
+    -0.12235838174819946,
+    -0.6390573084354401
+   ],
+   "applied_shift_m": [
+    -1.2235838174819946,
+    -6.390573084354401
+   ]
+  }
+ },
+ "B": {
+  "tile": "T43RGM",
+  "crs": "EPSG:32643",
+  "date1": "RGM_2023_10_06",
+  "date2": "RGM_2026_10_22",
+  "path_date1": "/home/aaryan/projects/skyserve/S2A_MSIL1C_20231006T052701_N0510_R105_T43RGM_20241101T065943.SAFE",
+  "path_date2": "/home/aaryan/projects/skyserve/S2A_MSIL1C_20261022T053241_N0513_R105_T43RGM_20261022T091024.SAFE",
+  "band": "B08",
+  "pixel_size_m": 10.0,
+  "initial": {
+   "n_windows": 5,
+   "n_converged": 5,
+   "n_failed": 0,
+   "failed": [],
+   "median_dx_px": 0.01305825263261795,
+   "median_dy_px": -0.11894116550683975,
+   "std_dx_px": 0.038728591217509795,
+   "std_dy_px": 0.0319749857358159,
+   "median_dx_m": 0.1305825263261795,
+   "median_dy_m": -1.1894116550683975,
+   "std_dx_m": 0.38728591217509795,
+   "std_dy_m": 0.319749857358159,
+   "median_correlation": 0.5081011477578048,
+   "min_correlation": 0.2190548310790425,
+   "max_correlation": 0.7830127047089551,
+   "n_above_0_5": 3,
+   "windows": [
+    {
+     "dx": 0.05447007715702057,
+     "dy": -0.11538252234458923,
+     "correlation": 0.7830127047089551,
+     "converged": true,
+     "n_valid_pixels": 3999989,
+     "window": [
+      2000,
+      4000,
+      2000,
+      4000
+     ],
+     "invalid_pixels_date1": 0,
+     "invalid_pixels_date2": 11,
+     "window_pixels": 4000000
+    },
+    {
+     "dx": 0.06580361723899841,
+     "dy": -0.1120738610625267,
+     "correlation": 0.5081011477578048,
+     "converged": true,
+     "n_valid_pixels": 3999984,
+     "window": [
+      4000,
+      6000,
+      4000,
+      6000
+     ],
+     "invalid_pixels_date1": 0,
+     "invalid_pixels_date2": 16,
+     "window_pixels": 4000000
+    },
+    {
+     "dx": -0.04371614754199982,
+     "dy": -0.1915241777896881,
+     "correlation": 0.2190548310790425,
+     "converged": true,
+     "n_valid_pixels": 4000000,
+     "window": [
+      6000,
+      8000,
+      6000,
+      8000
+     ],
+     "invalid_pixels_date1": 0,
+     "invalid_pixels_date2": 0,
+     "window_pixels": 4000000
+    },
+    {
+     "dx": 0.009728091768920422,
+     "dy": -0.16509407758712769,
+     "correlation": 0.2208967780283315,
+     "converged": true,
+     "n_valid_pixels": 3999997,
+     "window": [
+      3000,
+      5000,
+      7000,
+      9000
+     ],
+     "invalid_pixels_date1": 3,
+     "invalid_pixels_date2": 0,
+     "window_pixels": 4000000
+    },
+    {
+     "dx": 0.01305825263261795,
+     "dy": -0.11894116550683975,
+     "correlation": 0.6504789486293181,
+     "converged": true,
+     "n_valid_pixels": 4000000,
+     "window": [
+      5000,
+      7000,
+      2000,
+      4000
+     ],
+     "invalid_pixels_date1": 0,
+     "invalid_pixels_date2": 0,
+     "window_pixels": 4000000
+    }
+   ],
+   "validity_masked": true,
+   "validity_definition": "nodata+msk_classi+msk_qualit, window-aligned",
+   "residual": {
+    "n_converged": 5,
+    "n_failed": 0,
+    "median_dx_px": 0.014666690491139889,
+    "median_dy_px": -0.0031228619627654552,
+    "median_dx_m": 0.1466669049113989,
+    "median_dy_m": -0.031228619627654552,
+    "median_displacement_px": 0.056324165543789884,
+    "p95_displacement_px": 0.08697596627902779,
+    "median_displacement_m": 0.5632416554378988,
+    "p95_displacement_m": 0.8697596627902779,
+    "rmse_mean": 1.0119936108589171,
+    "rmse_max": 1.249442219734192,
+    "rmse_mean_without_validity": 1.0127611994743346,
+    "windows": [
+     {
+      "dx": 0.05623752623796463,
+      "dy": -0.0031228619627654552,
+      "correlation": 0.7830090361322174,
+      "converged": true,
+      "n_valid_pixels": 3999989,
+      "window": [
+       2000,
+       4000,
+       2000,
+       4000
+      ],
+      "rmse": 0.6969922184944153,
+      "rmse_without_validity": 0.6990951895713806,
+      "joint_valid_pixels": 3999989
+     },
+     {
+      "dx": 0.06398193538188934,
+      "dy": 0.01212537381798029,
+      "correlation": 0.5081410565868559,
+      "converged": true,
+      "n_valid_pixels": 3999984,
+      "window": [
+       4000,
+       6000,
+       4000,
+       6000
+      ],
+      "rmse": 0.9989206790924072,
+      "rmse_without_validity": 1.0006119012832642,
+      "joint_valid_pixels": 3999984
+     },
+     {
+      "dx": -0.05329127237200737,
+      "dy": -0.0755324512720108,
+      "correlation": 0.21905911412596069,
+      "converged": true,
+      "n_valid_pixels": 4000000,
+      "window": [
+       6000,
+       8000,
+       6000,
+       8000
+      ],
+      "rmse": 1.249442219734192,
+      "rmse_without_validity": 1.249442219734192,
+      "joint_valid_pixels": 4000000
+     },
+     {
+      "dx": 0.002769994083791971,
+      "dy": -0.053416505455970764,
+      "correlation": 0.22091302653115305,
+      "converged": true,
+      "n_valid_pixels": 3999997,
+      "window": [
+       3000,
+       5000,
+       7000,
+       9000
+      ],
+      "rmse": 1.243261456489563,
+      "rmse_without_validity": 1.2433052062988281,
+      "joint_valid_pixels": 3999997
+     },
+     {
+      "dx": 0.014666690491139889,
+      "dy": 0.011468799784779549,
+      "correlation": 0.6506314465988556,
+      "converged": true,
+      "n_valid_pixels": 4000000,
+      "window": [
+       5000,
+       7000,
+       2000,
+       4000
+      ],
+      "rmse": 0.8713514804840088,
+      "rmse_without_validity": 0.8713514804840088,
+      "joint_valid_pixels": 4000000
+     }
+    ]
+   },
+   "applied_shift_px": [
+    0.01305825263261795,
+    -0.11894116550683975
+   ],
+   "applied_shift_m": [
+    0.1305825263261795,
+    -1.1894116550683975
+   ]
+  }
+ }
+}

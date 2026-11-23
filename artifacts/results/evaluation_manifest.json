@@ -1,0 +1,115 @@
+{
+ "evaluation": "final locked test evaluation",
+ "date_utc": "2026-11-22T05:17:56+00:00",
+ "dataset_root": "SENTINEL_DATA_ROOT",
+ "splits": {
+  "A": {
+   "partition": {
+    "path": "outputs/partitions_v2_observation_valid/pair_A_partition_10m.tif",
+    "sha256": "5822aa28d478ded50125faafc40a0fb2ae50ab7957b9de5edae5a1b6cb3a661c"
+   },
+   "labels": {
+    "path": "/home/aaryan/projects/skyserve_assignment/outputs/labels/pair_a_v2/manual_labels_A.tif",
+    "sha256": "0933fc1a0e5564a9db800ede4a74b661e089ee447c7d8522b0c9aa52ae6f4f76"
+   }
+  },
+  "B": {
+   "partition": {
+    "path": "outputs/partitions_v2_observation_valid/pair_B_partition_10m.tif",
+    "sha256": "a7df906eef7c389b07ce2da0bd93ad5311a53fb87afada094e45d8144aebd8c6"
+   },
+   "labels": {
+    "path": "/home/aaryan/projects/skyserve_assignment/outputs/labels/pair_b_v2/manual_labels_B.tif",
+    "sha256": "c14c9d01f2931351d0b2ae839e28f03b0cf3a2ce31d956dbfab1462a29f799df"
+   }
+  }
+ },
+ "artifacts": {
+  "checkpoint": {
+   "path": "outputs/checkpoints/local_manual_v2_seed43_posweight_0p834/seed_43/best.pt",
+   "sha256": "dbce89f6811d6cdb6d56dd7d6844e58bf673f5ff65806c5d4939cced0a2554cd",
+   "bytes": 5879067
+  },
+  "normalisation": {
+   "path": "outputs/dataset/v2/normalisation.json",
+   "sha256": "8aeea033eb2bec5012ebbceb7eca825814b6e43bb699f9e2eaee0c5bba955d2a",
+   "bytes": 2244
+  },
+  "onnx_fp32": {
+   "path": "outputs/quant/local_manual_v2_seed43_posweight_0p834/onboard_fp32.onnx",
+   "sha256": "6d58e3094a7f61da19571381f2d076ef9c54b8c5e9944a28618de659b5774844",
+   "bytes": 1941378
+  },
+  "onnx_int8": {
+   "path": "outputs/quant/local_manual_v2_seed43_posweight_0p834_int8_v1/onboard_int8.onnx",
+   "sha256": "326fb3c9bf417352d7eb4262aa325d68fbbd3546eace9cd8bdfd7f2a271b0d2e",
+   "bytes": 550071
+  }
+ },
+ "protocol": {
+  "split": "test",
+  "partition_code": 3,
+  "patch_size": 256,
+  "stride": 128,
+  "device": "cpu",
+  "precision": "fp32 (primary)",
+  "thresholds": [
+   0.05,
+   0.1,
+   0.5
+  ],
+  "threshold_status": "fixed diagnostic operating points, not optimised",
+  "eligible_labels": {
+   "change": 1,
+   "no_change": 0,
+   "ignored": 255
+  },
+  "invalid_observation_pixels_excluded": true,
+  "label_reads_restricted_to_test_stripe": true
+ },
+ "counts": {
+  "A": {
+   "windows": 104,
+   "reviewed_pixels_in_stripe": 9261,
+   "reviewed_positive_in_stripe": 5211,
+   "reviewed_negative_in_stripe": 4050,
+   "window_pixel_hits_valid": 42689,
+   "window_pixel_hits_invalid": 6773055,
+   "ignored_uncertain_255_pixels": 17536779,
+   "evaluated_unique_positive": 5211,
+   "evaluated_unique_negative": 4050,
+   "reviewed_pixels_dropped_as_invalid": 0
+  },
+  "B": {
+   "windows": 71,
+   "reviewed_pixels_in_stripe": 12102,
+   "reviewed_positive_in_stripe": 2572,
+   "reviewed_negative_in_stripe": 9530,
+   "window_pixel_hits_valid": 47764,
+   "window_pixel_hits_invalid": 4605292,
+   "ignored_uncertain_255_pixels": 17533938,
+   "evaluated_unique_positive": 2572,
+   "evaluated_unique_negative": 9530,
+   "reviewed_pixels_dropped_as_invalid": 0
+  }
+ },
+ "models_evaluated": [
+  "torch_fp32",
+  "onnx_fp32",
+  "onnx_int8"
+ ],
+ "software": {
+  "python": "3.11.15",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "torch": "2.11.0+cu128",
+  "onnxruntime": "1.24.4",
+  "numpy": "2.4.3",
+  "rasterio": "1.4.4"
+ },
+ "commands": [
+  "python scripts/split_integrity_check.py",
+  "python scripts/evaluate_locked_test.py --registration outputs/audit/registration_v2_observation_valid/registration.json --partition-dir outputs/partitions_v2_observation_valid --batch-size 8"
+ ],
+ "test_labels_used_for_training_or_selection": false,
+ "threshold_selected_from_test": false
+}

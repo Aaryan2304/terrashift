@@ -1,0 +1,2788 @@
+{
+ "protocol": {
+  "split": "test",
+  "partition_code": 3,
+  "patch_size": 256,
+  "stride": 128,
+  "device": "cpu",
+  "precision": "fp32 (primary)",
+  "thresholds": [
+   0.05,
+   0.1,
+   0.5
+  ],
+  "threshold_status": "fixed diagnostic operating points, not optimised",
+  "eligible_labels": {
+   "change": 1,
+   "no_change": 0,
+   "ignored": 255
+  },
+  "invalid_observation_pixels_excluded": true,
+  "label_reads_restricted_to_test_stripe": true
+ },
+ "counts": {
+  "A": {
+   "windows": 104,
+   "reviewed_pixels_in_stripe": 9261,
+   "reviewed_positive_in_stripe": 5211,
+   "reviewed_negative_in_stripe": 4050,
+   "window_pixel_hits_valid": 42689,
+   "window_pixel_hits_invalid": 6773055,
+   "ignored_uncertain_255_pixels": 17536779,
+   "evaluated_unique_positive": 5211,
+   "evaluated_unique_negative": 4050,
+   "reviewed_pixels_dropped_as_invalid": 0
+  },
+  "B": {
+   "windows": 71,
+   "reviewed_pixels_in_stripe": 12102,
+   "reviewed_positive_in_stripe": 2572,
+   "reviewed_negative_in_stripe": 9530,
+   "window_pixel_hits_valid": 47764,
+   "window_pixel_hits_invalid": 4605292,
+   "ignored_uncertain_255_pixels": 17533938,
+   "evaluated_unique_positive": 2572,
+   "evaluated_unique_negative": 9530,
+   "reviewed_pixels_dropped_as_invalid": 0
+  }
+ },
+ "models": {
+  "torch_fp32": {
+   "pairs": {
+    "A": {
+     "ap": 0.969537,
+     "auc": 0.963734,
+     "pixels": 9261,
+     "positives": 5211,
+     "thresholds": {
+      "0.05": {
+       "precision": 0.947063,
+       "recall": 0.813663,
+       "f1": 0.87531,
+       "iou": 0.778267,
+       "tp": 4240.0,
+       "fp": 237.0,
+       "fn": 971.0,
+       "tn": 3813.0,
+       "predicted_positive_fraction": 0.483425
+      },
+      "0.10": {
+       "precision": 0.955093,
+       "recall": 0.775475,
+       "f1": 0.855963,
+       "iou": 0.748195,
+       "tp": 4041.0,
+       "fp": 190.0,
+       "fn": 1170.0,
+       "tn": 3860.0,
+       "predicted_positive_fraction": 0.456862
+      },
+      "0.50": {
+       "precision": 0.96577,
+       "recall": 0.60641,
+       "f1": 0.745019,
+       "iou": 0.59365,
+       "tp": 3160.0,
+       "fp": 112.0,
+       "fn": 2051.0,
+       "tn": 3938.0,
+       "predicted_positive_fraction": 0.35331
+      }
+     }
+    },
+    "B": {
+     "ap": 0.366373,
+     "auc": 0.644516,
+     "pixels": 12102,
+     "positives": 2572,
+     "thresholds": {
+      "0.05": {
+       "precision": 0.252075,
+       "recall": 0.826594,
+       "f1": 0.386335,
+       "iou": 0.239414,
+       "tp": 2126.0,
+       "fp": 6308.0,
+       "fn": 446.0,
+       "tn": 3222.0,
+       "predicted_positive_fraction": 0.69691
+      },
+      "0.10": {
+       "precision": 0.259596,
+       "recall": 0.78888,
+       "f1": 0.390643,
+       "iou": 0.242732,
+       "tp": 2029.0,
+       "fp": 5787.0,
+       "fn": 543.0,
+       "tn": 3743.0,
+       "predicted_positive_fraction": 0.645844
+      },
+      "0.50": {
+       "precision": 0.275221,
+       "recall": 0.58126,
+       "f1": 0.373563,
+       "iou": 0.229682,
+       "tp": 1495.0,
+       "fp": 3937.0,
+       "fn": 1077.0,
+       "tn": 5593.0,
+       "predicted_positive_fraction": 0.448851
+      }
+     }
+    }
+   },
+   "pooled": {
+    "ap": 0.653204,
+    "auc": 0.747176,
+    "pixels": 21363,
+    "positives": 7783,
+    "thresholds": {
+     "0.05": {
+      "precision": 0.493068,
+      "recall": 0.817937,
+      "f1": 0.615251,
+      "iou": 0.444305,
+      "tp": 6366.0,
+      "fp": 6545.0,
+      "fn": 1417.0,
+      "tn": 7035.0,
+      "predicted_positive_fraction": 0.604363
+     },
+     "0.10": {
+      "precision": 0.50386,
+      "recall": 0.779905,
+      "f1": 0.612204,
+      "iou": 0.441134,
+      "tp": 6070.0,
+      "fp": 5977.0,
+      "fn": 1713.0,
+      "tn": 7603.0,
+      "predicted_positive_fraction": 0.563919
+     },
+     "0.50": {
+      "precision": 0.534812,
+      "recall": 0.598098,
+      "f1": 0.564687,
+      "iou": 0.393425,
+      "tp": 4655.0,
+      "fp": 4049.0,
+      "fn": 3128.0,
+      "tn": 9531.0,
+      "predicted_positive_fraction": 0.407433
+     }
+    }
+   },
+   "macro": {
+    "ap": 0.667955,
+    "auc": 0.804125,
+    "pairs_averaged": 2,
+    "thresholds": {
+     "0.05": {
+      "precision": 0.599569,
+      "recall": 0.820129,
+      "f1": 0.630823,
+      "iou": 0.508841,
+      "predicted_positive_fraction": 0.590167
+     },
+     "0.10": {
+      "precision": 0.607344,
+      "recall": 0.782177,
+      "f1": 0.623303,
+      "iou": 0.495464,
+      "predicted_positive_fraction": 0.551353
+     },
+     "0.50": {
+      "precision": 0.620495,
+      "recall": 0.593835,
+      "f1": 0.559291,
+      "iou": 0.411666,
+      "predicted_positive_fraction": 0.401081
+     }
+    }
+   }
+  },
+  "onnx_fp32": {
+   "pairs": {
+    "A": {
+     "ap": 0.969537,
+     "auc": 0.963733,
+     "pixels": 9261,
+     "positives": 5211,
+     "thresholds": {
+      "0.05": {
+       "precision": 0.947063,
+       "recall": 0.813663,
+       "f1": 0.87531,
+       "iou": 0.778267,
+       "tp": 4240.0,
+       "fp": 237.0,
+       "fn": 971.0,
+       "tn": 3813.0,
+       "predicted_positive_fraction": 0.483425
+      },
+      "0.10": {
+       "precision": 0.955093,
+       "recall": 0.775475,
+       "f1": 0.855963,
+       "iou": 0.748195,
+       "tp": 4041.0,
+       "fp": 190.0,
+       "fn": 1170.0,
+       "tn": 3860.0,
+       "predicted_positive_fraction": 0.456862
+      },
+      "0.50": {
+       "precision": 0.96577,
+       "recall": 0.60641,
+       "f1": 0.745019,
+       "iou": 0.59365,
+       "tp": 3160.0,
+       "fp": 112.0,
+       "fn": 2051.0,
+       "tn": 3938.0,
+       "predicted_positive_fraction": 0.35331
+      }
+     }
+    },
+    "B": {
+     "ap": 0.366373,
+     "auc": 0.644516,
+     "pixels": 12102,
+     "positives": 2572,
+     "thresholds": {
+      "0.05": {
+       "precision": 0.252075,
+       "recall": 0.826594,
+       "f1": 0.386335,
+       "iou": 0.239414,
+       "tp": 2126.0,
+       "fp": 6308.0,
+       "fn": 446.0,
+       "tn": 3222.0,
+       "predicted_positive_fraction": 0.69691
+      },
+      "0.10": {
+       "precision": 0.259596,
+       "recall": 0.78888,
+       "f1": 0.390643,
+       "iou": 0.242732,
+       "tp": 2029.0,
+       "fp": 5787.0,
+       "fn": 543.0,
+       "tn": 3743.0,
+       "predicted_positive_fraction": 0.645844
+      },
+      "0.50": {
+       "precision": 0.275221,
+       "recall": 0.58126,
+       "f1": 0.373563,
+       "iou": 0.229682,
+       "tp": 1495.0,
+       "fp": 3937.0,
+       "fn": 1077.0,
+       "tn": 5593.0,
+       "predicted_positive_fraction": 0.448851
+      }
+     }
+    }
+   },
+   "pooled": {
+    "ap": 0.653204,
+    "auc": 0.747176,
+    "pixels": 21363,
+    "positives": 7783,
+    "thresholds": {
+     "0.05": {
+      "precision": 0.493068,
+      "recall": 0.817937,
+      "f1": 0.615251,
+      "iou": 0.444305,
+      "tp": 6366.0,
+      "fp": 6545.0,
+      "fn": 1417.0,
+      "tn": 7035.0,
+      "predicted_positive_fraction": 0.604363
+     },
+     "0.10": {
+      "precision": 0.50386,
+      "recall": 0.779905,
+      "f1": 0.612204,
+      "iou": 0.441134,
+      "tp": 6070.0,
+      "fp": 5977.0,
+      "fn": 1713.0,
+      "tn": 7603.0,
+      "predicted_positive_fraction": 0.563919
+     },
+     "0.50": {
+      "precision": 0.534812,
+      "recall": 0.598098,
+      "f1": 0.564687,
+      "iou": 0.393425,
+      "tp": 4655.0,
+      "fp": 4049.0,
+      "fn": 3128.0,
+      "tn": 9531.0,
+      "predicted_positive_fraction": 0.407433
+     }
+    }
+   },
+   "macro": {
+    "ap": 0.667955,
+    "auc": 0.804124,
+    "pairs_averaged": 2,
+    "thresholds": {
+     "0.05": {
+      "precision": 0.599569,
+      "recall": 0.820129,
+      "f1": 0.630823,
+      "iou": 0.508841,
+      "predicted_positive_fraction": 0.590167
+     },
+     "0.10": {
+      "precision": 0.607344,
+      "recall": 0.782177,
+      "f1": 0.623303,
+      "iou": 0.495464,
+      "predicted_positive_fraction": 0.551353
+     },
+     "0.50": {
+      "precision": 0.620495,
+      "recall": 0.593835,
+      "f1": 0.559291,
+      "iou": 0.411666,
+      "predicted_positive_fraction": 0.401081
+     }
+    }
+   }
+  },
+  "onnx_int8": {
+   "pairs": {
+    "A": {
+     "ap": 0.882317,
+     "auc": 0.859708,
+     "pixels": 9261,
+     "positives": 5211,
+     "thresholds": {
+      "0.05": {
+       "precision": 0.969746,
+       "recall": 0.572059,
+       "f1": 0.719614,
+       "iou": 0.562029,
+       "tp": 2981.0,
+       "fp": 93.0,
+       "fn": 2230.0,
+       "tn": 3957.0,
+       "predicted_positive_fraction": 0.33193
+      },
+      "0.10": {
+       "precision": 0.983045,
+       "recall": 0.534063,
+       "f1": 0.692116,
+       "iou": 0.529188,
+       "tp": 2783.0,
+       "fp": 48.0,
+       "fn": 2428.0,
+       "tn": 4002.0,
+       "predicted_positive_fraction": 0.305691
+      },
+      "0.50": {
+       "precision": 0.998543,
+       "recall": 0.39455,
+       "f1": 0.565612,
+       "iou": 0.394323,
+       "tp": 2056.0,
+       "fp": 3.0,
+       "fn": 3155.0,
+       "tn": 4047.0,
+       "predicted_positive_fraction": 0.22233
+      }
+     }
+    },
+    "B": {
+     "ap": 0.363904,
+     "auc": 0.632073,
+     "pixels": 12102,
+     "positives": 2572,
+     "thresholds": {
+      "0.05": {
+       "precision": 0.247313,
+       "recall": 0.742613,
+       "f1": 0.371054,
+       "iou": 0.227788,
+       "tp": 1910.0,
+       "fp": 5813.0,
+       "fn": 662.0,
+       "tn": 3717.0,
+       "predicted_positive_fraction": 0.638159
+      },
+      "0.10": {
+       "precision": 0.255382,
+       "recall": 0.710342,
+       "f1": 0.375694,
+       "iou": 0.231295,
+       "tp": 1827.0,
+       "fp": 5327.0,
+       "fn": 745.0,
+       "tn": 4203.0,
+       "predicted_positive_fraction": 0.591142
+      },
+      "0.50": {
+       "precision": 0.279552,
+       "recall": 0.513997,
+       "f1": 0.362142,
+       "iou": 0.221107,
+       "tp": 1322.0,
+       "fp": 3407.0,
+       "fn": 1250.0,
+       "tn": 6123.0,
+       "predicted_positive_fraction": 0.390762
+      }
+     }
+    }
+   },
+   "pooled": {
+    "ap": 0.554784,
+    "auc": 0.652792,
+    "pixels": 21363,
+    "positives": 7783,
+    "thresholds": {
+     "0.05": {
+      "precision": 0.452996,
+      "recall": 0.628421,
+      "f1": 0.52648,
+      "iou": 0.357294,
+      "tp": 4891.0,
+      "fp": 5906.0,
+      "fn": 2892.0,
+      "tn": 7674.0,
+      "predicted_positive_fraction": 0.505407
+     },
+     "0.10": {
+      "precision": 0.461693,
+      "recall": 0.592317,
+      "f1": 0.51891,
+      "iou": 0.350357,
+      "tp": 4610.0,
+      "fp": 5375.0,
+      "fn": 3173.0,
+      "tn": 8205.0,
+      "predicted_positive_fraction": 0.467397
+     },
+     "0.50": {
+      "precision": 0.497643,
+      "recall": 0.434023,
+      "f1": 0.463661,
+      "iou": 0.301796,
+      "tp": 3378.0,
+      "fp": 3410.0,
+      "fn": 4405.0,
+      "tn": 10170.0,
+      "predicted_positive_fraction": 0.317746
+     }
+    }
+   },
+   "macro": {
+    "ap": 0.623111,
+    "auc": 0.745891,
+    "pairs_averaged": 2,
+    "thresholds": {
+     "0.05": {
+      "precision": 0.608529,
+      "recall": 0.657336,
+      "f1": 0.545334,
+      "iou": 0.394908,
+      "predicted_positive_fraction": 0.485044
+     },
+     "0.10": {
+      "precision": 0.619213,
+      "recall": 0.622202,
+      "f1": 0.533905,
+      "iou": 0.380242,
+      "predicted_positive_fraction": 0.448416
+     },
+     "0.50": {
+      "precision": 0.639047,
+      "recall": 0.454273,
+      "f1": 0.463877,
+      "iou": 0.307715,
+      "predicted_positive_fraction": 0.306546
+     }
+    }
+   }
+  }
+ },
+ "components": {
+  "torch_fp32": {
+   "A": {
+    "0.05": {
+     "components": 16,
+     "rows": [
+      {
+       "component": 2,
+       "pixels": 1125,
+       "recall": 0.877333,
+       "mean_score": 0.572813,
+       "median_score": 0.651859,
+       "rank_by_area": 1
+      },
+      {
+       "component": 3,
+       "pixels": 649,
+       "recall": 1.0,
+       "mean_score": 0.788843,
+       "median_score": 0.85105,
+       "rank_by_area": 2
+      },
+      {
+       "component": 16,
+       "pixels": 596,
+       "recall": 0.473154,
+       "mean_score": 0.092947,
+       "median_score": 0.043211,
+       "rank_by_area": 3
+      },
+      {
+       "component": 14,
+       "pixels": 556,
+       "recall": 1.0,
+       "mean_score": 0.997056,
+       "median_score": 0.99963,
+       "rank_by_area": 4
+      },
+      {
+       "component": 15,
+       "pixels": 377,
+       "recall": 0.702918,
+       "mean_score": 0.650033,
+       "median_score": 0.99244,
+       "rank_by_area": 5
+      },
+      {
+       "component": 13,
+       "pixels": 310,
+       "recall": 1.0,
+       "mean_score": 0.998755,
+       "median_score": 0.999922,
+       "rank_by_area": 6
+      },
+      {
+       "component": 12,
+       "pixels": 273,
+       "recall": 0.47619,
+       "mean_score": 0.098825,
+       "median_score": 0.043246,
+       "rank_by_area": 7
+      },
+      {
+       "component": 8,
+       "pixels": 263,
+       "recall": 0.802281,
+       "mean_score": 0.252261,
+       "median_score": 0.252689,
+       "rank_by_area": 8
+      },
+      {
+       "component": 6,
+       "pixels": 255,
+       "recall": 0.819608,
+       "mean_score": 0.646921,
+       "median_score": 0.883712,
+       "rank_by_area": 9
+      },
+      {
+       "component": 10,
+       "pixels": 220,
+       "recall": 1.0,
+       "mean_score": 0.8322,
+       "median_score": 0.919559,
+       "rank_by_area": 10
+      },
+      {
+       "component": 9,
+       "pixels": 190,
+       "recall": 0.705263,
+       "mean_score": 0.466431,
+       "median_score": 0.556763,
+       "rank_by_area": 11
+      },
+      {
+       "component": 5,
+       "pixels": 126,
+       "recall": 1.0,
+       "mean_score": 0.964906,
+       "median_score": 0.974127,
+       "rank_by_area": 12
+      },
+      {
+       "component": 1,
+       "pixels": 90,
+       "recall": 1.0,
+       "mean_score": 0.645045,
+       "median_score": 0.621052,
+       "rank_by_area": 13
+      },
+      {
+       "component": 4,
+       "pixels": 88,
+       "recall": 0.0,
+       "mean_score": 0.002831,
+       "median_score": 0.001447,
+       "rank_by_area": 14
+      },
+      {
+       "component": 11,
+       "pixels": 48,
+       "recall": 1.0,
+       "mean_score": 0.967584,
+       "median_score": 0.976758,
+       "rank_by_area": 15
+      },
+      {
+       "component": 7,
+       "pixels": 45,
+       "recall": 0.511111,
+       "mean_score": 0.070507,
+       "median_score": 0.060388,
+       "rank_by_area": 16
+      }
+     ],
+     "groups": {
+      "large_ge_200px": {
+       "components": 10,
+       "pixels": 4624,
+       "pixel_weighted_recall": 0.825908
+      },
+      "small_lt_200px": {
+       "components": 6,
+       "pixels": 587,
+       "pixel_weighted_recall": 0.717206
+      }
+     },
+     "known_component": {
+      "status": "not_applicable",
+      "reason": "no audited component identity for pair A"
+     }
+    },
+    "0.10": {
+     "components": 16,
+     "rows": [
+      {
+       "component": 2,
+       "pixels": 1125,
+       "recall": 0.847111,
+       "mean_score": 0.572813,
+       "median_score": 0.651859,
+       "rank_by_area": 1
+      },
+      {
+       "component": 3,
+       "pixels": 649,
+       "recall": 1.0,
+       "mean_score": 0.788843,
+       "median_score": 0.85105,
+       "rank_by_area": 2
+      },
+      {
+       "component": 16,
+       "pixels": 596,
+       "recall": 0.338926,
+       "mean_score": 0.092947,
+       "median_score": 0.043211,
+       "rank_by_area": 3
+      },
+      {
+       "component": 14,
+       "pixels": 556,
+       "recall": 1.0,
+       "mean_score": 0.997056,
+       "median_score": 0.99963,
+       "rank_by_area": 4
+      },
+      {
+       "component": 15,
+       "pixels": 377,
+       "recall": 0.689655,
+       "mean_score": 0.650033,
+       "median_score": 0.99244,
+       "rank_by_area": 5
+      },
+      {
+       "component": 13,
+       "pixels": 310,
+       "recall": 1.0,
+       "mean_score": 0.998755,
+       "median_score": 0.999922,
+       "rank_by_area": 6
+      },
+      {
+       "component": 12,
+       "pixels": 273,
+       "recall": 0.347985,
+       "mean_score": 0.098825,
+       "median_score": 0.043246,
+       "rank_by_area": 7
+      },
+      {
+       "component": 8,
+       "pixels": 263,
+       "recall": 0.722433,
+       "mean_score": 0.252261,
+       "median_score": 0.252689,
+       "rank_by_area": 8
+      },
+      {
+       "component": 6,
+       "pixels": 255,
+       "recall": 0.784314,
+       "mean_score": 0.646921,
+       "median_score": 0.883712,
+       "rank_by_area": 9
+      },
+      {
+       "component": 10,
+       "pixels": 220,
+       "recall": 0.995455,
+       "mean_score": 0.8322,
+       "median_score": 0.919559,
+       "rank_by_area": 10
+      },
+      {
+       "component": 9,
+       "pixels": 190,
+       "recall": 0.678947,
+       "mean_score": 0.466431,
+       "median_score": 0.556763,
+       "rank_by_area": 11
+      },
+      {
+       "component": 5,
+       "pixels": 126,
+       "recall": 1.0,
+       "mean_score": 0.964906,
+       "median_score": 0.974127,
+       "rank_by_area": 12
+      },
+      {
+       "component": 1,
+       "pixels": 90,
+       "recall": 1.0,
+       "mean_score": 0.645045,
+       "median_score": 0.621052,
+       "rank_by_area": 13
+      },
+      {
+       "component": 4,
+       "pixels": 88,
+       "recall": 0.0,
+       "mean_score": 0.002831,
+       "median_score": 0.001447,
+       "rank_by_area": 14
+      },
+      {
+       "component": 11,
+       "pixels": 48,
+       "recall": 1.0,
+       "mean_score": 0.967584,
+       "median_score": 0.976758,
+       "rank_by_area": 15
+      },
+      {
+       "component": 7,
+       "pixels": 45,
+       "recall": 0.311111,
+       "mean_score": 0.070507,
+       "median_score": 0.060388,
+       "rank_by_area": 16
+      }
+     ],
+     "groups": {
+      "large_ge_200px": {
+       "components": 10,
+       "pixels": 4624,
+       "pixel_weighted_recall": 0.7859
+      },
+      "small_lt_200px": {
+       "components": 6,
+       "pixels": 587,
+       "pixel_weighted_recall": 0.693356
+      }
+     },
+     "known_component": {
+      "status": "not_applicable",
+      "reason": "no audited component identity for pair A"
+     }
+    },
+    "0.50": {
+     "components": 16,
+     "rows": [
+      {
+       "component": 2,
+       "pixels": 1125,
+       "recall": 0.656,
+       "mean_score": 0.572813,
+       "median_score": 0.651859,
+       "rank_by_area": 1
+      },
+      {
+       "component": 3,
+       "pixels": 649,
+       "recall": 0.90755,
+       "mean_score": 0.788843,
+       "median_score": 0.85105,
+       "rank_by_area": 2
+      },
+      {
+       "component": 16,
+       "pixels": 596,
+       "recall": 0.011745,
+       "mean_score": 0.092947,
+       "median_score": 0.043211,
+       "rank_by_area": 3
+      },
+      {
+       "component": 14,
+       "pixels": 556,
+       "recall": 1.0,
+       "mean_score": 0.997056,
+       "median_score": 0.99963,
+       "rank_by_area": 4
+      },
+      {
+       "component": 15,
+       "pixels": 377,
+       "recall": 0.657825,
+       "mean_score": 0.650033,
+       "median_score": 0.99244,
+       "rank_by_area": 5
+      },
+      {
+       "component": 13,
+       "pixels": 310,
+       "recall": 1.0,
+       "mean_score": 0.998755,
+       "median_score": 0.999922,
+       "rank_by_area": 6
+      },
+      {
+       "component": 12,
+       "pixels": 273,
+       "recall": 0.010989,
+       "mean_score": 0.098825,
+       "median_score": 0.043246,
+       "rank_by_area": 7
+      },
+      {
+       "component": 8,
+       "pixels": 263,
+       "recall": 0.0,
+       "mean_score": 0.252261,
+       "median_score": 0.252689,
+       "rank_by_area": 8
+      },
+      {
+       "component": 6,
+       "pixels": 255,
+       "recall": 0.666667,
+       "mean_score": 0.646921,
+       "median_score": 0.883712,
+       "rank_by_area": 9
+      },
+      {
+       "component": 10,
+       "pixels": 220,
+       "recall": 0.913636,
+       "mean_score": 0.8322,
+       "median_score": 0.919559,
+       "rank_by_area": 10
+      },
+      {
+       "component": 9,
+       "pixels": 190,
+       "recall": 0.536842,
+       "mean_score": 0.466431,
+       "median_score": 0.556763,
+       "rank_by_area": 11
+      },
+      {
+       "component": 5,
+       "pixels": 126,
+       "recall": 1.0,
+       "mean_score": 0.964906,
+       "median_score": 0.974127,
+       "rank_by_area": 12
+      },
+      {
+       "component": 1,
+       "pixels": 90,
+       "recall": 0.688889,
+       "mean_score": 0.645045,
+       "median_score": 0.621052,
+       "rank_by_area": 13
+      },
+      {
+       "component": 4,
+       "pixels": 88,
+       "recall": 0.0,
+       "mean_score": 0.002831,
+       "median_score": 0.001447,
+       "rank_by_area": 14
+      },
+      {
+       "component": 11,
+       "pixels": 48,
+       "recall": 1.0,
+       "mean_score": 0.967584,
+       "median_score": 0.976758,
+       "rank_by_area": 15
+      },
+      {
+       "component": 7,
+       "pixels": 45,
+       "recall": 0.0,
+       "mean_score": 0.070507,
+       "median_score": 0.060388,
+       "rank_by_area": 16
+      }
+     ],
+     "groups": {
+      "large_ge_200px": {
+       "components": 10,
+       "pixels": 4624,
+       "pixel_weighted_recall": 0.610294
+      },
+      "small_lt_200px": {
+       "components": 6,
+       "pixels": 587,
+       "pixel_weighted_recall": 0.575809
+      }
+     },
+     "known_component": {
+      "status": "not_applicable",
+      "reason": "no audited component identity for pair A"
+     }
+    }
+   },
+   "B": {
+    "0.05": {
+     "components": 10,
+     "rows": [
+      {
+       "component": 3,
+       "pixels": 962,
+       "recall": 0.984407,
+       "mean_score": 0.601283,
+       "median_score": 0.639001,
+       "rank_by_area": 1
+      },
+      {
+       "component": 4,
+       "pixels": 548,
+       "recall": 0.456204,
+       "mean_score": 0.149104,
+       "median_score": 0.040873,
+       "rank_by_area": 2
+      },
+      {
+       "component": 2,
+       "pixels": 280,
+       "recall": 0.525,
+       "mean_score": 0.213757,
+       "median_score": 0.065907,
+       "rank_by_area": 3
+      },
+      {
+       "component": 5,
+       "pixels": 223,
+       "recall": 1.0,
+       "mean_score": 0.933288,
+       "median_score": 0.965474,
+       "rank_by_area": 4
+      },
+      {
+       "component": 6,
+       "pixels": 206,
+       "recall": 1.0,
+       "mean_score": 0.971301,
+       "median_score": 0.984518,
+       "rank_by_area": 5
+      },
+      {
+       "component": 1,
+       "pixels": 147,
+       "recall": 1.0,
+       "mean_score": 0.945789,
+       "median_score": 0.991391,
+       "rank_by_area": 6
+      },
+      {
+       "component": 7,
+       "pixels": 77,
+       "recall": 1.0,
+       "mean_score": 0.968429,
+       "median_score": 0.976927,
+       "rank_by_area": 7
+      },
+      {
+       "component": 10,
+       "pixels": 49,
+       "recall": 1.0,
+       "mean_score": 0.781166,
+       "median_score": 0.821982,
+       "rank_by_area": 8
+      },
+      {
+       "component": 8,
+       "pixels": 45,
+       "recall": 1.0,
+       "mean_score": 0.975801,
+       "median_score": 0.982715,
+       "rank_by_area": 9
+      },
+      {
+       "component": 9,
+       "pixels": 35,
+       "recall": 1.0,
+       "mean_score": 0.931826,
+       "median_score": 0.945926,
+       "rank_by_area": 10
+      }
+     ],
+     "groups": {
+      "large_ge_200px": {
+       "components": 5,
+       "pixels": 2219,
+       "pixel_weighted_recall": 0.799008
+      },
+      "small_lt_200px": {
+       "components": 5,
+       "pixels": 353,
+       "pixel_weighted_recall": 1.0
+      }
+     },
+     "known_component": {
+      "status": "not_identified",
+      "reason": "0 components match 10749 px"
+     }
+    },
+    "0.10": {
+     "components": 10,
+     "rows": [
+      {
+       "component": 3,
+       "pixels": 962,
+       "recall": 0.960499,
+       "mean_score": 0.601283,
+       "median_score": 0.639001,
+       "rank_by_area": 1
+      },
+      {
+       "component": 4,
+       "pixels": 548,
+       "recall": 0.355839,
+       "mean_score": 0.149104,
+       "median_score": 0.040873,
+       "rank_by_area": 2
+      },
+      {
+       "component": 2,
+       "pixels": 280,
+       "recall": 0.457143,
+       "mean_score": 0.213757,
+       "median_score": 0.065907,
+       "rank_by_area": 3
+      },
+      {
+       "component": 5,
+       "pixels": 223,
+       "recall": 1.0,
+       "mean_score": 0.933288,
+       "median_score": 0.965474,
+       "rank_by_area": 4
+      },
+      {
+       "component": 6,
+       "pixels": 206,
+       "recall": 1.0,
+       "mean_score": 0.971301,
+       "median_score": 0.984518,
+       "rank_by_area": 5
+      },
+      {
+       "component": 1,
+       "pixels": 147,
+       "recall": 1.0,
+       "mean_score": 0.945789,
+       "median_score": 0.991391,
+       "rank_by_area": 6
+      },
+      {
+       "component": 7,
+       "pixels": 77,
+       "recall": 1.0,
+       "mean_score": 0.968429,
+       "median_score": 0.976927,
+       "rank_by_area": 7
+      },
+      {
+       "component": 10,
+       "pixels": 49,
+       "recall": 1.0,
+       "mean_score": 0.781166,
+       "median_score": 0.821982,
+       "rank_by_area": 8
+      },
+      {
+       "component": 8,
+       "pixels": 45,
+       "recall": 1.0,
+       "mean_score": 0.975801,
+       "median_score": 0.982715,
+       "rank_by_area": 9
+      },
+      {
+       "component": 9,
+       "pixels": 35,
+       "recall": 1.0,
+       "mean_score": 0.931826,
+       "median_score": 0.945926,
+       "rank_by_area": 10
+      }
+     ],
+     "groups": {
+      "large_ge_200px": {
+       "components": 5,
+       "pixels": 2219,
+       "pixel_weighted_recall": 0.755295
+      },
+      "small_lt_200px": {
+       "components": 5,
+       "pixels": 353,
+       "pixel_weighted_recall": 1.0
+      }
+     },
+     "known_component": {
+      "status": "not_identified",
+      "reason": "0 components match 10749 px"
+     }
+    },
+    "0.50": {
+     "components": 10,
+     "rows": [
+      {
+       "component": 3,
+       "pixels": 962,
+       "recall": 0.642412,
+       "mean_score": 0.601283,
+       "median_score": 0.639001,
+       "rank_by_area": 1
+      },
+      {
+       "component": 4,
+       "pixels": 548,
+       "recall": 0.076642,
+       "mean_score": 0.149104,
+       "median_score": 0.040873,
+       "rank_by_area": 2
+      },
+      {
+       "component": 2,
+       "pixels": 280,
+       "recall": 0.2,
+       "mean_score": 0.213757,
+       "median_score": 0.065907,
+       "rank_by_area": 3
+      },
+      {
+       "component": 5,
+       "pixels": 223,
+       "recall": 1.0,
+       "mean_score": 0.933288,
+       "median_score": 0.965474,
+       "rank_by_area": 4
+      },
+      {
+       "component": 6,
+       "pixels": 206,
+       "recall": 1.0,
+       "mean_score": 0.971301,
+       "median_score": 0.984518,
+       "rank_by_area": 5
+      },
+      {
+       "component": 1,
+       "pixels": 147,
+       "recall": 1.0,
+       "mean_score": 0.945789,
+       "median_score": 0.991391,
+       "rank_by_area": 6
+      },
+      {
+       "component": 7,
+       "pixels": 77,
+       "recall": 1.0,
+       "mean_score": 0.968429,
+       "median_score": 0.976927,
+       "rank_by_area": 7
+      },
+      {
+       "component": 10,
+       "pixels": 49,
+       "recall": 0.938776,
+       "mean_score": 0.781166,
+       "median_score": 0.821982,
+       "rank_by_area": 8
+      },
+      {
+       "component": 8,
+       "pixels": 45,
+       "recall": 1.0,
+       "mean_score": 0.975801,
+       "median_score": 0.982715,
+       "rank_by_area": 9
+      },
+      {
+       "component": 9,
+       "pixels": 35,
+       "recall": 1.0,
+       "mean_score": 0.931826,
+       "median_score": 0.945926,
+       "rank_by_area": 10
+      }
+     ],
+     "groups": {
+      "large_ge_200px": {
+       "components": 5,
+       "pixels": 2219,
+       "pixel_weighted_recall": 0.515998
+      },
+      "small_lt_200px": {
+       "components": 5,
+       "pixels": 353,
+       "pixel_weighted_recall": 0.991501
+      }
+     },
+     "known_component": {
+      "status": "not_identified",
+      "reason": "0 components match 10749 px"
+     }
+    }
+   }
+  },
+  "onnx_fp32": {
+   "A": {
+    "0.05": {
+     "components": 16,
+     "rows": [
+      {
+       "component": 2,
+       "pixels": 1125,
+       "recall": 0.877333,
+       "mean_score": 0.572813,
+       "median_score": 0.651858,
+       "rank_by_area": 1
+      },
+      {
+       "component": 3,
+       "pixels": 649,
+       "recall": 1.0,
+       "mean_score": 0.788843,
+       "median_score": 0.85105,
+       "rank_by_area": 2
+      },
+      {
+       "component": 16,
+       "pixels": 596,
+       "recall": 0.473154,
+       "mean_score": 0.092947,
+       "median_score": 0.043211,
+       "rank_by_area": 3
+      },
+      {
+       "component": 14,
+       "pixels": 556,
+       "recall": 1.0,
+       "mean_score": 0.997056,
+       "median_score": 0.99963,
+       "rank_by_area": 4
+      },
+      {
+       "component": 15,
+       "pixels": 377,
+       "recall": 0.702918,
+       "mean_score": 0.650033,
+       "median_score": 0.99244,
+       "rank_by_area": 5
+      },
+      {
+       "component": 13,
+       "pixels": 310,
+       "recall": 1.0,
+       "mean_score": 0.998755,
+       "median_score": 0.999922,
+       "rank_by_area": 6
+      },
+      {
+       "component": 12,
+       "pixels": 273,
+       "recall": 0.47619,
+       "mean_score": 0.098825,
+       "median_score": 0.043246,
+       "rank_by_area": 7
+      },
+      {
+       "component": 8,
+       "pixels": 263,
+       "recall": 0.802281,
+       "mean_score": 0.252261,
+       "median_score": 0.252689,
+       "rank_by_area": 8
+      },
+      {
+       "component": 6,
+       "pixels": 255,
+       "recall": 0.819608,
+       "mean_score": 0.646921,
+       "median_score": 0.883712,
+       "rank_by_area": 9
+      },
+      {
+       "component": 10,
+       "pixels": 220,
+       "recall": 1.0,
+       "mean_score": 0.8322,
+       "median_score": 0.919558,
+       "rank_by_area": 10
+      },
+      {
+       "component": 9,
+       "pixels": 190,
+       "recall": 0.705263,
+       "mean_score": 0.466431,
+       "median_score": 0.556762,
+       "rank_by_area": 11
+      },
+      {
+       "component": 5,
+       "pixels": 126,
+       "recall": 1.0,
+       "mean_score": 0.964906,
+       "median_score": 0.974127,
+       "rank_by_area": 12
+      },
+      {
+       "component": 1,
+       "pixels": 90,
+       "recall": 1.0,
+       "mean_score": 0.645045,
+       "median_score": 0.621052,
+       "rank_by_area": 13
+      },
+      {
+       "component": 4,
+       "pixels": 88,
+       "recall": 0.0,
+       "mean_score": 0.002831,
+       "median_score": 0.001447,
+       "rank_by_area": 14
+      },
+      {
+       "component": 11,
+       "pixels": 48,
+       "recall": 1.0,
+       "mean_score": 0.967584,
+       "median_score": 0.976758,
+       "rank_by_area": 15
+      },
+      {
+       "component": 7,
+       "pixels": 45,
+       "recall": 0.511111,
+       "mean_score": 0.070507,
+       "median_score": 0.060388,
+       "rank_by_area": 16
+      }
+     ],
+     "groups": {
+      "large_ge_200px": {
+       "components": 10,
+       "pixels": 4624,
+       "pixel_weighted_recall": 0.825908
+      },
+      "small_lt_200px": {
+       "components": 6,
+       "pixels": 587,
+       "pixel_weighted_recall": 0.717206
+      }
+     },
+     "known_component": {
+      "status": "not_applicable",
+      "reason": "no audited component identity for pair A"
+     }
+    },
+    "0.10": {
+     "components": 16,
+     "rows": [
+      {
+       "component": 2,
+       "pixels": 1125,
+       "recall": 0.847111,
+       "mean_score": 0.572813,
+       "median_score": 0.651858,
+       "rank_by_area": 1
+      },
+      {
+       "component": 3,
+       "pixels": 649,
+       "recall": 1.0,
+       "mean_score": 0.788843,
+       "median_score": 0.85105,
+       "rank_by_area": 2
+      },
+      {
+       "component": 16,
+       "pixels": 596,
+       "recall": 0.338926,
+       "mean_score": 0.092947,
+       "median_score": 0.043211,
+       "rank_by_area": 3
+      },
+      {
+       "component": 14,
+       "pixels": 556,
+       "recall": 1.0,
+       "mean_score": 0.997056,
+       "median_score": 0.99963,
+       "rank_by_area": 4
+      },
+      {
+       "component": 15,
+       "pixels": 377,
+       "recall": 0.689655,
+       "mean_score": 0.650033,
+       "median_score": 0.99244,
+       "rank_by_area": 5
+      },
+      {
+       "component": 13,
+       "pixels": 310,
+       "recall": 1.0,
+       "mean_score": 0.998755,
+       "median_score": 0.999922,
+       "rank_by_area": 6
+      },
+      {
+       "component": 12,
+       "pixels": 273,
+       "recall": 0.347985,
+       "mean_score": 0.098825,
+       "median_score": 0.043246,
+       "rank_by_area": 7
+      },
+      {
+       "component": 8,
+       "pixels": 263,
+       "recall": 0.722433,
+       "mean_score": 0.252261,
+       "median_score": 0.252689,
+       "rank_by_area": 8
+      },
+      {
+       "component": 6,
+       "pixels": 255,
+       "recall": 0.784314,
+       "mean_score": 0.646921,
+       "median_score": 0.883712,
+       "rank_by_area": 9
+      },
+      {
+       "component": 10,
+       "pixels": 220,
+       "recall": 0.995455,
+       "mean_score": 0.8322,
+       "median_score": 0.919558,
+       "rank_by_area": 10
+      },
+      {
+       "component": 9,
+       "pixels": 190,
+       "recall": 0.678947,
+       "mean_score": 0.466431,
+       "median_score": 0.556762,
+       "rank_by_area": 11
+      },
+      {
+       "component": 5,
+       "pixels": 126,
+       "recall": 1.0,
+       "mean_score": 0.964906,
+       "median_score": 0.974127,
+       "rank_by_area": 12
+      },
+      {
+       "component": 1,
+       "pixels": 90,
+       "recall": 1.0,
+       "mean_score": 0.645045,
+       "median_score": 0.621052,
+       "rank_by_area": 13
+      },
+      {
+       "component": 4,
+       "pixels": 88,
+       "recall": 0.0,
+       "mean_score": 0.002831,
+       "median_score": 0.001447,
+       "rank_by_area": 14
+      },
+      {
+       "component": 11,
+       "pixels": 48,
+       "recall": 1.0,
+       "mean_score": 0.967584,
+       "median_score": 0.976758,
+       "rank_by_area": 15
+      },
+      {
+       "component": 7,
+       "pixels": 45,
+       "recall": 0.311111,
+       "mean_score": 0.070507,
+       "median_score": 0.060388,
+       "rank_by_area": 16
+      }
+     ],
+     "groups": {
+      "large_ge_200px": {
+       "components": 10,
+       "pixels": 4624,
+       "pixel_weighted_recall": 0.7859
+      },
+      "small_lt_200px": {
+       "components": 6,
+       "pixels": 587,
+       "pixel_weighted_recall": 0.693356
+      }
+     },
+     "known_component": {
+      "status": "not_applicable",
+      "reason": "no audited component identity for pair A"
+     }
+    },
+    "0.50": {
+     "components": 16,
+     "rows": [
+      {
+       "component": 2,
+       "pixels": 1125,
+       "recall": 0.656,
+       "mean_score": 0.572813,
+       "median_score": 0.651858,
+       "rank_by_area": 1
+      },
+      {
+       "component": 3,
+       "pixels": 649,
+       "recall": 0.90755,
+       "mean_score": 0.788843,
+       "median_score": 0.85105,
+       "rank_by_area": 2
+      },
+      {
+       "component": 16,
+       "pixels": 596,
+       "recall": 0.011745,
+       "mean_score": 0.092947,
+       "median_score": 0.043211,
+       "rank_by_area": 3
+      },
+      {
+       "component": 14,
+       "pixels": 556,
+       "recall": 1.0,
+       "mean_score": 0.997056,
+       "median_score": 0.99963,
+       "rank_by_area": 4
+      },
+      {
+       "component": 15,
+       "pixels": 377,
+       "recall": 0.657825,
+       "mean_score": 0.650033,
+       "median_score": 0.99244,
+       "rank_by_area": 5
+      },
+      {
+       "component": 13,
+       "pixels": 310,
+       "recall": 1.0,
+       "mean_score": 0.998755,
+       "median_score": 0.999922,
+       "rank_by_area": 6
+      },
+      {
+       "component": 12,
+       "pixels": 273,
+       "recall": 0.010989,
+       "mean_score": 0.098825,
+       "median_score": 0.043246,
+       "rank_by_area": 7
+      },
+      {
+       "component": 8,
+       "pixels": 263,
+       "recall": 0.0,
+       "mean_score": 0.252261,
+       "median_score": 0.252689,
+       "rank_by_area": 8
+      },
+      {
+       "component": 6,
+       "pixels": 255,
+       "recall": 0.666667,
+       "mean_score": 0.646921,
+       "median_score": 0.883712,
+       "rank_by_area": 9
+      },
+      {
+       "component": 10,
+       "pixels": 220,
+       "recall": 0.913636,
+       "mean_score": 0.8322,
+       "median_score": 0.919558,
+       "rank_by_area": 10
+      },
+      {
+       "component": 9,
+       "pixels": 190,
+       "recall": 0.536842,
+       "mean_score": 0.466431,
+       "median_score": 0.556762,
+       "rank_by_area": 11
+      },
+      {
+       "component": 5,
+       "pixels": 126,
+       "recall": 1.0,
+       "mean_score": 0.964906,
+       "median_score": 0.974127,
+       "rank_by_area": 12
+      },
+      {
+       "component": 1,
+       "pixels": 90,
+       "recall": 0.688889,
+       "mean_score": 0.645045,
+       "median_score": 0.621052,
+       "rank_by_area": 13
+      },
+      {
+       "component": 4,
+       "pixels": 88,
+       "recall": 0.0,
+       "mean_score": 0.002831,
+       "median_score": 0.001447,
+       "rank_by_area": 14
+      },
+      {
+       "component": 11,
+       "pixels": 48,
+       "recall": 1.0,
+       "mean_score": 0.967584,
+       "median_score": 0.976758,
+       "rank_by_area": 15
+      },
+      {
+       "component": 7,
+       "pixels": 45,
+       "recall": 0.0,
+       "mean_score": 0.070507,
+       "median_score": 0.060388,
+       "rank_by_area": 16
+      }
+     ],
+     "groups": {
+      "large_ge_200px": {
+       "components": 10,
+       "pixels": 4624,
+       "pixel_weighted_recall": 0.610294
+      },
+      "small_lt_200px": {
+       "components": 6,
+       "pixels": 587,
+       "pixel_weighted_recall": 0.575809
+      }
+     },
+     "known_component": {
+      "status": "not_applicable",
+      "reason": "no audited component identity for pair A"
+     }
+    }
+   },
+   "B": {
+    "0.05": {
+     "components": 10,
+     "rows": [
+      {
+       "component": 3,
+       "pixels": 962,
+       "recall": 0.984407,
+       "mean_score": 0.601283,
+       "median_score": 0.639001,
+       "rank_by_area": 1
+      },
+      {
+       "component": 4,
+       "pixels": 548,
+       "recall": 0.456204,
+       "mean_score": 0.149104,
+       "median_score": 0.040873,
+       "rank_by_area": 2
+      },
+      {
+       "component": 2,
+       "pixels": 280,
+       "recall": 0.525,
+       "mean_score": 0.213756,
+       "median_score": 0.065907,
+       "rank_by_area": 3
+      },
+      {
+       "component": 5,
+       "pixels": 223,
+       "recall": 1.0,
+       "mean_score": 0.933288,
+       "median_score": 0.965474,
+       "rank_by_area": 4
+      },
+      {
+       "component": 6,
+       "pixels": 206,
+       "recall": 1.0,
+       "mean_score": 0.971301,
+       "median_score": 0.984518,
+       "rank_by_area": 5
+      },
+      {
+       "component": 1,
+       "pixels": 147,
+       "recall": 1.0,
+       "mean_score": 0.945788,
+       "median_score": 0.991391,
+       "rank_by_area": 6
+      },
+      {
+       "component": 7,
+       "pixels": 77,
+       "recall": 1.0,
+       "mean_score": 0.968429,
+       "median_score": 0.976927,
+       "rank_by_area": 7
+      },
+      {
+       "component": 10,
+       "pixels": 49,
+       "recall": 1.0,
+       "mean_score": 0.781166,
+       "median_score": 0.821982,
+       "rank_by_area": 8
+      },
+      {
+       "component": 8,
+       "pixels": 45,
+       "recall": 1.0,
+       "mean_score": 0.975801,
+       "median_score": 0.982715,
+       "rank_by_area": 9
+      },
+      {
+       "component": 9,
+       "pixels": 35,
+       "recall": 1.0,
+       "mean_score": 0.931826,
+       "median_score": 0.945926,
+       "rank_by_area": 10
+      }
+     ],
+     "groups": {
+      "large_ge_200px": {
+       "components": 5,
+       "pixels": 2219,
+       "pixel_weighted_recall": 0.799008
+      },
+      "small_lt_200px": {
+       "components": 5,
+       "pixels": 353,
+       "pixel_weighted_recall": 1.0
+      }
+     },
+     "known_component": {
+      "status": "not_identified",
+      "reason": "0 components match 10749 px"
+     }
+    },
+    "0.10": {
+     "components": 10,
+     "rows": [
+      {
+       "component": 3,
+       "pixels": 962,
+       "recall": 0.960499,
+       "mean_score": 0.601283,
+       "median_score": 0.639001,
+       "rank_by_area": 1
+      },
+      {
+       "component": 4,
+       "pixels": 548,
+       "recall": 0.355839,
+       "mean_score": 0.149104,
+       "median_score": 0.040873,
+       "rank_by_area": 2
+      },
+      {
+       "component": 2,
+       "pixels": 280,
+       "recall": 0.457143,
+       "mean_score": 0.213756,
+       "median_score": 0.065907,
+       "rank_by_area": 3
+      },
+      {
+       "component": 5,
+       "pixels": 223,
+       "recall": 1.0,
+       "mean_score": 0.933288,
+       "median_score": 0.965474,
+       "rank_by_area": 4
+      },
+      {
+       "component": 6,
+       "pixels": 206,
+       "recall": 1.0,
+       "mean_score": 0.971301,
+       "median_score": 0.984518,
+       "rank_by_area": 5
+      },
+      {
+       "component": 1,
+       "pixels": 147,
+       "recall": 1.0,
+       "mean_score": 0.945788,
+       "median_score": 0.991391,
+       "rank_by_area": 6
+      },
+      {
+       "component": 7,
+       "pixels": 77,
+       "recall": 1.0,
+       "mean_score": 0.968429,
+       "median_score": 0.976927,
+       "rank_by_area": 7
+      },
+      {
+       "component": 10,
+       "pixels": 49,
+       "recall": 1.0,
+       "mean_score": 0.781166,
+       "median_score": 0.821982,
+       "rank_by_area": 8
+      },
+      {
+       "component": 8,
+       "pixels": 45,
+       "recall": 1.0,
+       "mean_score": 0.975801,
+       "median_score": 0.982715,
+       "rank_by_area": 9
+      },
+      {
+       "component": 9,
+       "pixels": 35,
+       "recall": 1.0,
+       "mean_score": 0.931826,
+       "median_score": 0.945926,
+       "rank_by_area": 10
+      }
+     ],
+     "groups": {
+      "large_ge_200px": {
+       "components": 5,
+       "pixels": 2219,
+       "pixel_weighted_recall": 0.755295
+      },
+      "small_lt_200px": {
+       "components": 5,
+       "pixels": 353,
+       "pixel_weighted_recall": 1.0
+      }
+     },
+     "known_component": {
+      "status": "not_identified",
+      "reason": "0 components match 10749 px"
+     }
+    },
+    "0.50": {
+     "components": 10,
+     "rows": [
+      {
+       "component": 3,
+       "pixels": 962,
+       "recall": 0.642412,
+       "mean_score": 0.601283,
+       "median_score": 0.639001,
+       "rank_by_area": 1
+      },
+      {
+       "component": 4,
+       "pixels": 548,
+       "recall": 0.076642,
+       "mean_score": 0.149104,
+       "median_score": 0.040873,
+       "rank_by_area": 2
+      },
+      {
+       "component": 2,
+       "pixels": 280,
+       "recall": 0.2,
+       "mean_score": 0.213756,
+       "median_score": 0.065907,
+       "rank_by_area": 3
+      },
+      {
+       "component": 5,
+       "pixels": 223,
+       "recall": 1.0,
+       "mean_score": 0.933288,
+       "median_score": 0.965474,
+       "rank_by_area": 4
+      },
+      {
+       "component": 6,
+       "pixels": 206,
+       "recall": 1.0,
+       "mean_score": 0.971301,
+       "median_score": 0.984518,
+       "rank_by_area": 5
+      },
+      {
+       "component": 1,
+       "pixels": 147,
+       "recall": 1.0,
+       "mean_score": 0.945788,
+       "median_score": 0.991391,
+       "rank_by_area": 6
+      },
+      {
+       "component": 7,
+       "pixels": 77,
+       "recall": 1.0,
+       "mean_score": 0.968429,
+       "median_score": 0.976927,
+       "rank_by_area": 7
+      },
+      {
+       "component": 10,
+       "pixels": 49,
+       "recall": 0.938776,
+       "mean_score": 0.781166,
+       "median_score": 0.821982,
+       "rank_by_area": 8
+      },
+      {
+       "component": 8,
+       "pixels": 45,
+       "recall": 1.0,
+       "mean_score": 0.975801,
+       "median_score": 0.982715,
+       "rank_by_area": 9
+      },
+      {
+       "component": 9,
+       "pixels": 35,
+       "recall": 1.0,
+       "mean_score": 0.931826,
+       "median_score": 0.945926,
+       "rank_by_area": 10
+      }
+     ],
+     "groups": {
+      "large_ge_200px": {
+       "components": 5,
+       "pixels": 2219,
+       "pixel_weighted_recall": 0.515998
+      },
+      "small_lt_200px": {
+       "components": 5,
+       "pixels": 353,
+       "pixel_weighted_recall": 0.991501
+      }
+     },
+     "known_component": {
+      "status": "not_identified",
+      "reason": "0 components match 10749 px"
+     }
+    }
+   }
+  },
+  "onnx_int8": {
+   "A": {
+    "0.05": {
+     "components": 16,
+     "rows": [
+      {
+       "component": 2,
+       "pixels": 1125,
+       "recall": 0.648889,
+       "mean_score": 0.350619,
+       "median_score": 0.226469,
+       "rank_by_area": 1
+      },
+      {
+       "component": 3,
+       "pixels": 649,
+       "recall": 0.986133,
+       "mean_score": 0.486798,
+       "median_score": 0.53137,
+       "rank_by_area": 2
+      },
+      {
+       "component": 16,
+       "pixels": 596,
+       "recall": 0.013423,
+       "mean_score": 0.0025,
+       "median_score": 0.0,
+       "rank_by_area": 3
+      },
+      {
+       "component": 14,
+       "pixels": 556,
+       "recall": 0.989209,
+       "mean_score": 0.936055,
+       "median_score": 0.992152,
+       "rank_by_area": 4
+      },
+      {
+       "component": 15,
+       "pixels": 377,
+       "recall": 0.578249,
+       "mean_score": 0.528515,
+       "median_score": 0.86078,
+       "rank_by_area": 5
+      },
+      {
+       "component": 13,
+       "pixels": 310,
+       "recall": 1.0,
+       "mean_score": 0.980982,
+       "median_score": 0.999995,
+       "rank_by_area": 6
+      },
+      {
+       "component": 12,
+       "pixels": 273,
+       "recall": 0.25641,
+       "mean_score": 0.081703,
+       "median_score": 0.011765,
+       "rank_by_area": 7
+      },
+      {
+       "component": 8,
+       "pixels": 263,
+       "recall": 0.155894,
+       "mean_score": 0.029937,
+       "median_score": 0.009804,
+       "rank_by_area": 8
+      },
+      {
+       "component": 6,
+       "pixels": 255,
+       "recall": 0.627451,
+       "mean_score": 0.398295,
+       "median_score": 0.299998,
+       "rank_by_area": 9
+      },
+      {
+       "component": 10,
+       "pixels": 220,
+       "recall": 0.031818,
+       "mean_score": 0.006332,
+       "median_score": 0.0,
+       "rank_by_area": 10
+      },
+      {
+       "component": 9,
+       "pixels": 190,
+       "recall": 0.0,
+       "mean_score": 0.008803,
+       "median_score": 0.005392,
+       "rank_by_area": 11
+      },
+      {
+       "component": 5,
+       "pixels": 126,
+       "recall": 0.896825,
+       "mean_score": 0.319505,
+       "median_score": 0.274508,
+       "rank_by_area": 12
+      },
+      {
+       "component": 1,
+       "pixels": 90,
+       "recall": 0.955556,
+       "mean_score": 0.431948,
+       "median_score": 0.387253,
+       "rank_by_area": 13
+      },
+      {
+       "component": 4,
+       "pixels": 88,
+       "recall": 0.0,
+       "mean_score": 2.2e-05,
+       "median_score": 0.0,
+       "rank_by_area": 14
+      },
+      {
+       "component": 11,
+       "pixels": 48,
+       "recall": 1.0,
+       "mean_score": 0.930592,
+       "median_score": 0.949015,
+       "rank_by_area": 15
+      },
+      {
+       "component": 7,
+       "pixels": 45,
+       "recall": 0.0,
+       "mean_score": 0.0,
+       "median_score": 0.0,
+       "rank_by_area": 16
+      }
+     ],
+     "groups": {
+      "large_ge_200px": {
+       "components": 10,
+       "pixels": 4624,
+       "pixel_weighted_recall": 0.591263
+      },
+      "small_lt_200px": {
+       "components": 6,
+       "pixels": 587,
+       "pixel_weighted_recall": 0.420784
+      }
+     },
+     "known_component": {
+      "status": "not_applicable",
+      "reason": "no audited component identity for pair A"
+     }
+    },
+    "0.10": {
+     "components": 16,
+     "rows": [
+      {
+       "component": 2,
+       "pixels": 1125,
+       "recall": 0.591111,
+       "mean_score": 0.350619,
+       "median_score": 0.226469,
+       "rank_by_area": 1
+      },
+      {
+       "component": 3,
+       "pixels": 649,
+       "recall": 0.919877,
+       "mean_score": 0.486798,
+       "median_score": 0.53137,
+       "rank_by_area": 2
+      },
+      {
+       "component": 16,
+       "pixels": 596,
+       "recall": 0.001678,
+       "mean_score": 0.0025,
+       "median_score": 0.0,
+       "rank_by_area": 3
+      },
+      {
+       "component": 14,
+       "pixels": 556,
+       "recall": 0.982014,
+       "mean_score": 0.936055,
+       "median_score": 0.992152,
+       "rank_by_area": 4
+      },
+      {
+       "component": 15,
+       "pixels": 377,
+       "recall": 0.575597,
+       "mean_score": 0.528515,
+       "median_score": 0.86078,
+       "rank_by_area": 5
+      },
+      {
+       "component": 13,
+       "pixels": 310,
+       "recall": 1.0,
+       "mean_score": 0.980982,
+       "median_score": 0.999995,
+       "rank_by_area": 6
+      },
+      {
+       "component": 12,
+       "pixels": 273,
+       "recall": 0.190476,
+       "mean_score": 0.081703,
+       "median_score": 0.011765,
+       "rank_by_area": 7
+      },
+      {
+       "component": 8,
+       "pixels": 263,
+       "recall": 0.102662,
+       "mean_score": 0.029937,
+       "median_score": 0.009804,
+       "rank_by_area": 8
+      },
+      {
+       "component": 6,
+       "pixels": 255,
+       "recall": 0.568627,
+       "mean_score": 0.398295,
+       "median_score": 0.299998,
+       "rank_by_area": 9
+      },
+      {
+       "component": 10,
+       "pixels": 220,
+       "recall": 0.0,
+       "mean_score": 0.006332,
+       "median_score": 0.0,
+       "rank_by_area": 10
+      },
+      {
+       "component": 9,
+       "pixels": 190,
+       "recall": 0.0,
+       "mean_score": 0.008803,
+       "median_score": 0.005392,
+       "rank_by_area": 11
+      },
+      {
+       "component": 5,
+       "pixels": 126,
+       "recall": 0.738095,
+       "mean_score": 0.319505,
+       "median_score": 0.274508,
+       "rank_by_area": 12
+      },
+      {
+       "component": 1,
+       "pixels": 90,
+       "recall": 0.911111,
+       "mean_score": 0.431948,
+       "median_score": 0.387253,
+       "rank_by_area": 13
+      },
+      {
+       "component": 4,
+       "pixels": 88,
+       "recall": 0.0,
+       "mean_score": 2.2e-05,
+       "median_score": 0.0,
+       "rank_by_area": 14
+      },
+      {
+       "component": 11,
+       "pixels": 48,
+       "recall": 1.0,
+       "mean_score": 0.930592,
+       "median_score": 0.949015,
+       "rank_by_area": 15
+      },
+      {
+       "component": 7,
+       "pixels": 45,
+       "recall": 0.0,
+       "mean_score": 0.0,
+       "median_score": 0.0,
+       "rank_by_area": 16
+      }
+     ],
+     "groups": {
+      "large_ge_200px": {
+       "components": 10,
+       "pixels": 4624,
+       "pixel_weighted_recall": 0.553633
+      },
+      "small_lt_200px": {
+       "components": 6,
+       "pixels": 587,
+       "pixel_weighted_recall": 0.379898
+      }
+     },
+     "known_component": {
+      "status": "not_applicable",
+      "reason": "no audited component identity for pair A"
+     }
+    },
+    "0.50": {
+     "components": 16,
+     "rows": [
+      {
+       "component": 2,
+       "pixels": 1125,
+       "recall": 0.372444,
+       "mean_score": 0.350619,
+       "median_score": 0.226469,
+       "rank_by_area": 1
+      },
+      {
+       "component": 3,
+       "pixels": 649,
+       "recall": 0.545455,
+       "mean_score": 0.486798,
+       "median_score": 0.53137,
+       "rank_by_area": 2
+      },
+      {
+       "component": 16,
+       "pixels": 596,
+       "recall": 0.0,
+       "mean_score": 0.0025,
+       "median_score": 0.0,
+       "rank_by_area": 3
+      },
+      {
+       "component": 14,
+       "pixels": 556,
+       "recall": 0.94964,
+       "mean_score": 0.936055,
+       "median_score": 0.992152,
+       "rank_by_area": 4
+      },
+      {
+       "component": 15,
+       "pixels": 377,
+       "recall": 0.543767,
+       "mean_score": 0.528515,
+       "median_score": 0.86078,
+       "rank_by_area": 5
+      },
+      {
+       "component": 13,
+       "pixels": 310,
+       "recall": 0.993548,
+       "mean_score": 0.980982,
+       "median_score": 0.999995,
+       "rank_by_area": 6
+      },
+      {
+       "component": 12,
+       "pixels": 273,
+       "recall": 0.058608,
+       "mean_score": 0.081703,
+       "median_score": 0.011765,
+       "rank_by_area": 7
+      },
+      {
+       "component": 8,
+       "pixels": 263,
+       "recall": 0.0,
+       "mean_score": 0.029937,
+       "median_score": 0.009804,
+       "rank_by_area": 8
+      },
+      {
+       "component": 6,
+       "pixels": 255,
+       "recall": 0.431373,
+       "mean_score": 0.398295,
+       "median_score": 0.299998,
+       "rank_by_area": 9
+      },
+      {
+       "component": 10,
+       "pixels": 220,
+       "recall": 0.0,
+       "mean_score": 0.006332,
+       "median_score": 0.0,
+       "rank_by_area": 10
+      },
+      {
+       "component": 9,
+       "pixels": 190,
+       "recall": 0.0,
+       "mean_score": 0.008803,
+       "median_score": 0.005392,
+       "rank_by_area": 11
+      },
+      {
+       "component": 5,
+       "pixels": 126,
+       "recall": 0.31746,
+       "mean_score": 0.319505,
+       "median_score": 0.274508,
+       "rank_by_area": 12
+      },
+      {
+       "component": 1,
+       "pixels": 90,
+       "recall": 0.311111,
+       "mean_score": 0.431948,
+       "median_score": 0.387253,
+       "rank_by_area": 13
+      },
+      {
+       "component": 4,
+       "pixels": 88,
+       "recall": 0.0,
+       "mean_score": 2.2e-05,
+       "median_score": 0.0,
+       "rank_by_area": 14
+      },
+      {
+       "component": 11,
+       "pixels": 48,
+       "recall": 1.0,
+       "mean_score": 0.930592,
+       "median_score": 0.949015,
+       "rank_by_area": 15
+      },
+      {
+       "component": 7,
+       "pixels": 45,
+       "recall": 0.0,
+       "mean_score": 0.0,
+       "median_score": 0.0,
+       "rank_by_area": 16
+      }
+     ],
+     "groups": {
+      "large_ge_200px": {
+       "components": 10,
+       "pixels": 4624,
+       "pixel_weighted_recall": 0.41955
+      },
+      "small_lt_200px": {
+       "components": 6,
+       "pixels": 587,
+       "pixel_weighted_recall": 0.197615
+      }
+     },
+     "known_component": {
+      "status": "not_applicable",
+      "reason": "no audited component identity for pair A"
+     }
+    }
+   },
+   "B": {
+    "0.05": {
+     "components": 10,
+     "rows": [
+      {
+       "component": 3,
+       "pixels": 962,
+       "recall": 0.844075,
+       "mean_score": 0.451961,
+       "median_score": 0.439213,
+       "rank_by_area": 1
+      },
+      {
+       "component": 4,
+       "pixels": 548,
+       "recall": 0.293796,
+       "mean_score": 0.093593,
+       "median_score": 0.004902,
+       "rank_by_area": 2
+      },
+      {
+       "component": 2,
+       "pixels": 280,
+       "recall": 0.553571,
+       "mean_score": 0.272033,
+       "median_score": 0.118627,
+       "rank_by_area": 3
+      },
+      {
+       "component": 5,
+       "pixels": 223,
+       "recall": 1.0,
+       "mean_score": 0.933021,
+       "median_score": 0.966662,
+       "rank_by_area": 4
+      },
+      {
+       "component": 6,
+       "pixels": 206,
+       "recall": 1.0,
+       "mean_score": 0.970759,
+       "median_score": 0.984309,
+       "rank_by_area": 5
+      },
+      {
+       "component": 1,
+       "pixels": 147,
+       "recall": 1.0,
+       "mean_score": 0.938877,
+       "median_score": 0.990191,
+       "rank_by_area": 6
+      },
+      {
+       "component": 7,
+       "pixels": 77,
+       "recall": 1.0,
+       "mean_score": 0.957876,
+       "median_score": 0.970583,
+       "rank_by_area": 7
+      },
+      {
+       "component": 10,
+       "pixels": 49,
+       "recall": 1.0,
+       "mean_score": 0.789792,
+       "median_score": 0.811761,
+       "rank_by_area": 8
+      },
+      {
+       "component": 8,
+       "pixels": 45,
+       "recall": 1.0,
+       "mean_score": 0.964897,
+       "median_score": 0.972544,
+       "rank_by_area": 9
+      },
+      {
+       "component": 9,
+       "pixels": 35,
+       "recall": 1.0,
+       "mean_score": 0.931424,
+       "median_score": 0.949015,
+       "rank_by_area": 10
+      }
+     ],
+     "groups": {
+      "large_ge_200px": {
+       "components": 5,
+       "pixels": 2219,
+       "pixel_weighted_recall": 0.701668
+      },
+      "small_lt_200px": {
+       "components": 5,
+       "pixels": 353,
+       "pixel_weighted_recall": 1.0
+      }
+     },
+     "known_component": {
+      "status": "not_identified",
+      "reason": "0 components match 10749 px"
+     }
+    },
+    "0.10": {
+     "components": 10,
+     "rows": [
+      {
+       "component": 3,
+       "pixels": 962,
+       "recall": 0.79106,
+       "mean_score": 0.451961,
+       "median_score": 0.439213,
+       "rank_by_area": 1
+      },
+      {
+       "component": 4,
+       "pixels": 548,
+       "recall": 0.257299,
+       "mean_score": 0.093593,
+       "median_score": 0.004902,
+       "rank_by_area": 2
+      },
+      {
+       "component": 2,
+       "pixels": 280,
+       "recall": 0.510714,
+       "mean_score": 0.272033,
+       "median_score": 0.118627,
+       "rank_by_area": 3
+      },
+      {
+       "component": 5,
+       "pixels": 223,
+       "recall": 1.0,
+       "mean_score": 0.933021,
+       "median_score": 0.966662,
+       "rank_by_area": 4
+      },
+      {
+       "component": 6,
+       "pixels": 206,
+       "recall": 1.0,
+       "mean_score": 0.970759,
+       "median_score": 0.984309,
+       "rank_by_area": 5
+      },
+      {
+       "component": 1,
+       "pixels": 147,
+       "recall": 1.0,
+       "mean_score": 0.938877,
+       "median_score": 0.990191,
+       "rank_by_area": 6
+      },
+      {
+       "component": 7,
+       "pixels": 77,
+       "recall": 1.0,
+       "mean_score": 0.957876,
+       "median_score": 0.970583,
+       "rank_by_area": 7
+      },
+      {
+       "component": 10,
+       "pixels": 49,
+       "recall": 1.0,
+       "mean_score": 0.789792,
+       "median_score": 0.811761,
+       "rank_by_area": 8
+      },
+      {
+       "component": 8,
+       "pixels": 45,
+       "recall": 1.0,
+       "mean_score": 0.964897,
+       "median_score": 0.972544,
+       "rank_by_area": 9
+      },
+      {
+       "component": 9,
+       "pixels": 35,
+       "recall": 1.0,
+       "mean_score": 0.931424,
+       "median_score": 0.949015,
+       "rank_by_area": 10
+      }
+     ],
+     "groups": {
+      "large_ge_200px": {
+       "components": 5,
+       "pixels": 2219,
+       "pixel_weighted_recall": 0.664263
+      },
+      "small_lt_200px": {
+       "components": 5,
+       "pixels": 353,
+       "pixel_weighted_recall": 1.0
+      }
+     },
+     "known_component": {
+      "status": "not_identified",
+      "reason": "0 components match 10749 px"
+     }
+    },
+    "0.50": {
+     "components": 10,
+     "rows": [
+      {
+       "component": 3,
+       "pixels": 962,
+       "recall": 0.464657,
+       "mean_score": 0.451961,
+       "median_score": 0.439213,
+       "rank_by_area": 1
+      },
+      {
+       "component": 4,
+       "pixels": 548,
+       "recall": 0.043796,
+       "mean_score": 0.093593,
+       "median_score": 0.004902,
+       "rank_by_area": 2
+      },
+      {
+       "component": 2,
+       "pixels": 280,
+       "recall": 0.253571,
+       "mean_score": 0.272033,
+       "median_score": 0.118627,
+       "rank_by_area": 3
+      },
+      {
+       "component": 5,
+       "pixels": 223,
+       "recall": 1.0,
+       "mean_score": 0.933021,
+       "median_score": 0.966662,
+       "rank_by_area": 4
+      },
+      {
+       "component": 6,
+       "pixels": 206,
+       "recall": 1.0,
+       "mean_score": 0.970759,
+       "median_score": 0.984309,
+       "rank_by_area": 5
+      },
+      {
+       "component": 1,
+       "pixels": 147,
+       "recall": 0.993197,
+       "mean_score": 0.938877,
+       "median_score": 0.990191,
+       "rank_by_area": 6
+      },
+      {
+       "component": 7,
+       "pixels": 77,
+       "recall": 1.0,
+       "mean_score": 0.957876,
+       "median_score": 0.970583,
+       "rank_by_area": 7
+      },
+      {
+       "component": 10,
+       "pixels": 49,
+       "recall": 0.979592,
+       "mean_score": 0.789792,
+       "median_score": 0.811761,
+       "rank_by_area": 8
+      },
+      {
+       "component": 8,
+       "pixels": 45,
+       "recall": 1.0,
+       "mean_score": 0.964897,
+       "median_score": 0.972544,
+       "rank_by_area": 9
+      },
+      {
+       "component": 9,
+       "pixels": 35,
+       "recall": 1.0,
+       "mean_score": 0.931424,
+       "median_score": 0.949015,
+       "rank_by_area": 10
+      }
+     ],
+     "groups": {
+      "large_ge_200px": {
+       "components": 5,
+       "pixels": 2219,
+       "pixel_weighted_recall": 0.437585
+      },
+      "small_lt_200px": {
+       "components": 5,
+       "pixels": 353,
+       "pixel_weighted_recall": 0.994334
+      }
+     },
+     "known_component": {
+      "status": "not_identified",
+      "reason": "0 components match 10749 px"
+     }
+    }
+   }
+  }
+ },
+ "predictions_directory": "outputs/evaluation/final_locked_test_v1/test_predictions",
+ "predictions_note": "one row per evaluated unique test pixel; ordering is identical across models and to the label vector"
+}

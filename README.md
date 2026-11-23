@@ -4,7 +4,7 @@ A reproducible system that detects, localises and analyses structural man-made
 changes in Sentinel-2 MSI Level-1C imagery from two dates.
 
 **Status:** complete. The technical report `docs/report_2026-11-22.pdf` is the authoritative
-record of method and results; internal planning documents are in the external archive (§ Documentation).
+record of method and results; internal planning documents are in the external archive ( Documentation).
 
 ## Data
 
@@ -212,7 +212,7 @@ overwrite. Reproducibility is described in the technical report.
 
 ```
 terrashift/
-├── AI_USAGE.md        # AI usage record
+├── artifacts/         # frozen models, register, results and evidence
 ├── README.md          # setup and exact commands
 ├── config.yaml        # the configuration the scripts read
 ├── eval.py            # pixel, object and size-stratified evaluation
@@ -238,12 +238,12 @@ not define a software license.
 
 ## Documentation
 
-Only three documentation artefacts are public in this repository:
+Only two documentation artefacts are public in this repository. The AI usage record is
+supplied separately with the submission:
 
 | file | content |
 |---|---|
 | `README.md` | this file: install, run, test, layout |
-| `AI_USAGE.md` | complete AI usage record |
 | `docs/report_2026-11-22.pdf` | technical report: method, results, limitations |
 
 Everything else — decision records, the annotation and measurement-uncertainty notes, the
