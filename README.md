@@ -4,7 +4,8 @@ A reproducible system that detects, localises and analyses structural man-made
 changes in Sentinel-2 MSI Level-1C imagery from two dates.
 
 **Status:** complete. The technical report `docs/report_2026-11-22.pdf` is the authoritative
-record of method and results; internal planning documents are in the external archive ( Documentation).
+record of method and results, and `docs/report.md` is the Markdown source it is rendered from.
+Internal planning documents are not part of this repository.
 
 ## Data
 
@@ -213,47 +214,72 @@ overwrite. Reproducibility is described in the technical report.
 
 ```
 terrashift/
-├── artifacts/         # frozen models, register, results and evidence
-├── README.md          # setup and exact commands
+├── src/terrashift/    # the installable package
+│   ├── data/          # SAFE reader, manifest, grids, masks, validity, patch index
+│   ├── preprocessing/ # normalisation statistics, spectral indices, water state
+│   ├── registration.py # ECC alignment of the two acquisition dates
+│   ├── models/        # Siamese U-Net and a ResNet-18 variant
+│   ├── inference/     # sliding window, ONNX Runtime, Torch session, checkpoints
+│   ├── evaluation/    # lattice accumulation, metrics, matching, locked-test protocol
+│   ├── geospatial/    # geometry, rendering, component vectors
+│   ├── review/        # chip rendering for human review
+│   └── training/      # configuration, seeding, precision, checkpoint retention
+├── scripts/           # CLI workflows: audit, evaluation, inference, registers,
+│                      #   reporting, review, training, utilities, plus demo.sh
+├── artifacts/         # frozen models, register, results, evidence and derived inputs
+├── configs/           # data manifest, region splits, label and register schemas
+├── data/              # annotation GeoPackages (datasets stay local and are ignored)
+├── docs/              # report.md, the rendered PDF and figures/
+├── labels/            # annotation sets, exclusion lists, register template
+├── review/            # review queue and calibration sheets
+├── outputs/           # generated local-only outputs (gitignored)
+├── tests/             # pytest suite
 ├── config.yaml        # the configuration the scripts read
 ├── eval.py            # pixel, object and size-stratified evaluation
 ├── quantize.py        # ONNX export, parity, INT8 QDQ, benchmark
 ├── train.py           # training entry point (three dataset modes)
-├── train_oscd_original.py, train_local_manual.py (module, not a CLI)
-├── configs/           # data manifest, region splits, label and register schemas
-├── data/              # SAFE loading, grids, validity, registration, patches
-├── models/            # Siamese U-Net
-├── preprocess/        # indices, normalisation, water
-├── scripts/           # audits, partitions, labels, figures, inference, manifests
-├── labels/            # annotation template and detection-register template
-├── outputs/           # generated local-only outputs (gitignored)
-├── docs/              # report, architecture, reproducibility, audit notes
-└── tests/             # unit and regression tests
+├── train_oscd_original.py, train_local_manual.py  # modules, invoked through train.py
+├── pyproject.toml, requirements.txt, environment.yml
+└── LICENSE, NOTICE    # Apache-2.0
 ```
 
-## Data sources and software license
+## Data sources
 
-See the technical report for dataset provenance and attribution. The final
-assignment report and AI-use record are not complete yet. This repository does
-not define a software license.
+See the technical report for dataset provenance and attribution. The AI usage record is
+supplied separately with the submission.
+
+## Licence
+
+TerraShift is released under the **Apache License 2.0**. The full text is in `LICENSE`.
+GitHub identifies the repository licence as Apache-2.0.
+
+`NOTICE` holds the copyright line, a statement that the work was produced for the SkyServe
+assignment, the OSCD/OSCD100 attribution with its citation, and a note that the Sentinel-2
+imagery is Copernicus data. It does not restate the licence terms.
+
+The Sentinel-2 imagery is Copernicus data and is not redistributed here. OSCD and OSCD100
+retain their own terms, described in the technical report.
 
 ## Documentation
 
-Only two documentation artefacts are public in this repository. The AI usage record is
+Three documentation artefacts are public in this repository. The AI usage record is
 supplied separately with the submission:
 
 | file | content |
 |---|---|
 | `README.md` | this file: install, run, test, layout |
-| `docs/report_2026-11-22.pdf` | technical report: method, results, limitations |
+| `docs/report.md` | Markdown source of the technical report |
+| `docs/report_2026-11-22.pdf` | technical report: method, results, limitations — the authoritative rendered version |
 
-Everything else — decision records, the annotation and measurement-uncertainty notes, the
+Other documentation — decision records, the annotation and measurement-uncertainty notes, the
 reproducibility note, the detection-register procedure, internal plans and interim audits — is
-preserved in the external archive at `../terrashift_local_archive/archived_docs_2026-11-22/`,
-under its original relative path. Submission evidence (locked test outputs, registers, review
-packages, quantisation comparison) is in `../terrashift_local_archive/submission_evidence/`.
+maintained separately by the author. It is **not** part of this repository and is not required to
+build, test or run anything described here; where the technical report cites those notes, the
+citation names a document that lives outside the public tree.
 
-Nothing was deleted: the archive holds every document at the path it used to occupy here.
+Submission evidence beyond what is committed — full locked-test outputs and the wider review
+packages — is likewise held separately. The subset needed to check the recorded numbers is
+committed under `artifacts/`.
 
 
 ## Command reference
@@ -263,7 +289,7 @@ directory that holds the four `.SAFE` products; commands marked *data* fail with
 
 | Operation | Command | Inputs | Outputs | Verified |
 |---|---|---|---|---|
-| Smoke workflow | `PYTHON=$PWD/../miniconda/envs/gpu/bin/python bash scripts/demo.sh` | local demo window | `outputs/demo/local_window_A_v1/` | yes |
+| Smoke workflow | `PYTHON=python3 bash scripts/demo.sh` | local demo window | `outputs/demo/local_window_A_v1/` | yes |
 | Train (OSCD) | `python train.py --dataset oscd_original` | `configs/data_manifest.yaml`, SAFE | `outputs/checkpoints/` | yes |
 | Train (manual labels) | `python train.py --dataset local_manual --init-checkpoint <oscd best.pt>` | `data/manual_annotations*.gpkg`, patch index, normalisation | `outputs/checkpoints/local_manual_v2*/` | yes |
 | Checkpoint evaluation | `python eval.py --checkpoint <best.pt> --output-dir <dir> --split test` | checkpoint, split | metrics JSON under `<dir>` | yes |
@@ -365,22 +391,79 @@ overwrites an existing output directory, so a rerun needs a new path.
     # 15. read-only demonstration
     bash scripts/demo.sh
 
-Which stages are verified against this repository, and which are not:
+## Reproducibility, stage by stage
 
-| stage | status |
-|---|---|
-| 1 registration, 4 partitions, 10 locked test, 12 registers, 14 report, 15 demo | executed |
-| 5 index | executed |
-| 6 statistics | executed |
-| 8 training, 9 validation analysis, 11 inference, 13 quantisation | not re-run since the refactor |
+Each stage below was executed at least once during verification and compared against what is
+committed. Where a stage was run for one pair only, the table says so; nothing here claims
+equivalent coverage across both pairs. The distinction that matters is **whether a stage needs
+the original Sentinel-2 imagery**: without it several stages cannot run at all, because the
+evaluator, the inference tool and the trainer open the SAFE products, not just the manifest.
 
-Stages 8, 9, 11 and 13 are documented but unverified end to end. Do not treat the
-command list as a guarantee for them.
+| Stage | Required inputs | Verification status |
+|---|---|---|
+| Register validation | Repository and the committed register artefacts | Reproduced, no SAFE data needed |
+| Test suite | Repository and dependencies; project data only for the data-dependent tests | 635 passed, 9 skipped without data; 644 passed with it |
+| Locked-test evaluation | The four `.SAFE` products, `SENTINEL_DATA_ROOT`, the committed checkpoint and the committed derived inputs (registration, partitions, labels, normalisation) | Reproduced with the exact recorded metrics |
+| Georeferenced inference | `.SAFE` products, the registration summary named by `config.yaml: data.registration_summary`, the checkpoint and the normalisation statistics | Pair A full-scene inference executed. **Pair B full-scene inference was not run**, so the two pairs are not equally verified |
+| Two-stage training | Stage one: the extracted OSCD region data. Stage two: `.SAFE` products, the reviewed annotations, the local patch index, the partitions, the normalisation statistics and the stage-one checkpoint | Reproduced in method and metric range, **not bit-identically** |
+| ONNX FP32 and INT8 quantisation | Checkpoint, `.SAFE` products, the local patch index, the label rasters and partitions, the normalisation statistics, and the ONNX dependencies. Calibration reads the **train** split; evaluation runs on **validation**; the test split is never touched | Reproduced with byte-identical FP32 and INT8 outputs |
+
+Stages 5 (index), 6 (statistics), 1 (registration), 4 (partitions), 10 (locked test),
+12 (registers), 14 (report) and 15 (demo) were executed; partitions, index and statistics
+reproduced byte-identically.
+
+**Training is method-reproducible, not bit-identical.** Two runs of the same seed with the
+same initialisation follow the same curve but do not land on the same epoch: the recorded run
+reached validation AP 0.770226 at epoch 7, the verification run 0.752562 at epoch 2, on a
+curve that swings between roughly 0.54 and 0.77. cuDNN selects different convolution
+algorithms between runs, so identical checkpoints are not guaranteed. Deterministic stages —
+evaluation, ONNX export, quantisation — do reproduce exactly.
+
+**Pair B is substantially weaker than Pair A** on the reviewed locked-test pixels (AP
+0.366373 against 0.969537). That is a reported limitation, not a defect that was fixed; the
+cause is analysed in the report.
+
+## Limitations
+
+These are the boundaries of what this repository establishes. They are stated in the
+technical report and repeated here so no reader has to infer them.
+
+- **TerraShift is a candidate-generation and human-review system, not a fully automated
+  validated detector.** The model proposes regions; a person accepts, rejects or marks them
+  uncertain, and the register records that decision with its evidence.
+- **Pair B performs substantially worse than Pair A.** On the reviewed locked-test pixels,
+  AP is 0.366373 for Pair B against 0.969537 for Pair A. The cause is analysed in the report:
+  Pair B's reviewed sample is not representative across the score range, and the pair spans
+  3.0 years rather than 4.7 months.
+- **Thresholds are fixed diagnostic comparison points, not validated operating thresholds.**
+  0.05, 0.10 and 0.50 exist to compare models on a common scale. None was selected from the
+  locked test, and none is a calibrated operating point.
+- **Full-scene score rasters are not confirmed detections.** They are continuous
+  probabilities, and at low thresholds the candidate fraction is far larger than any
+  defensible detection rate.
+- **The reviewed test pixels are not representative of the entire scene.** Metrics are
+  computed on pixels a human reviewed, so they describe that sample, not scene-wide accuracy.
+- **Training is method-reproducible, but GPU runs are not guaranteed to produce identical
+  checkpoints.** Deterministic stages — evaluation, ONNX export, quantisation — do reproduce
+  exactly.
 
 ## Reproduce the locked-test evaluation from a clone
 
-The evaluation needs four inputs. They are small (2.1 MB) and shipped under
-`artifacts/derived/`, so this runs from a fresh clone without regenerating anything:
+Two different sets of inputs are involved, and they are not interchangeable.
+
+**Shipped, small (2.1 MB), under `artifacts/derived/`** — four derived evaluation inputs, so
+nothing has to be regenerated:
+
+    registration/registration.json      the ECC shift per pair
+    partitions_v2_observation_valid/    the train / guard / validation / test split rasters
+    labels/                             the reviewed label rasters per pair
+    dataset_v2/normalisation.json       the per-pair, per-band statistics
+
+**Not shipped, required at run time** — the four original Sentinel-2 `.SAFE` products. The
+derived inputs replace the need to recompute partitions, labels or statistics. They do **not**
+replace the imagery: the evaluator opens the `.SAFE` bands for every window it scores.
+
+With both present, the command runs from a fresh clone:
 
     python scripts/evaluation/evaluate_locked_test.py \
         --checkpoint artifacts/models/best.pt \
@@ -391,8 +474,31 @@ The evaluation needs four inputs. They are small (2.1 MB) and shipped under
         --output-dir <new-directory> --batch-size 8 --models torch_fp32
 
 Expect `pooled AP 0.653204  AUC 0.747176 | macro AP 0.667955 | A 0.969537 B 0.366373`.
-CPU only; no Sentinel-2 data is read by this command, though
-`SENTINEL_DATA_ROOT` must be set because the manifest expands it.
+
+**This command reads the Sentinel-2 imagery.** The execution path is
+`evaluate_locked_test.py` → `quantize.pair_image_loader` → `load_manifest` → `SafeProduct` →
+`read_pair_window`: the evaluator opens the `.SAFE` bands for every window it scores. The
+committed derived inputs replace the need to regenerate partitions, labels or statistics, but
+they do not replace the imagery.
+
+Set the data root before running it:
+
+```bash
+# Linux / WSL
+export SENTINEL_DATA_ROOT=/path/to/dir/holding/the/four/SAFE/products
+
+# Windows PowerShell
+$env:SENTINEL_DATA_ROOT = "D:\path\to\the\SAFE\parent"
+
+# Windows cmd
+set SENTINEL_DATA_ROOT=D:\path\to\the\SAFE\parent
+```
+
+`SENTINEL_DATA_ROOT` must be the **directory that contains** the four `.SAFE` folders, not a
+`.SAFE` folder itself. Without it the command fails while loading the manifest:
+
+    ValueError: unexpanded environment variable in product 'QBB_2022_12_23' path;
+                set SENTINEL_DATA_ROOT
 
 Regenerating the inputs instead of using the shipped copies:
 
@@ -400,8 +506,8 @@ Regenerating the inputs instead of using the shipped copies:
     python scripts/utilities/build_dataset.py normalise --root outputs/dataset/v2
     python scripts/utilities/run_registration.py --output outputs/audit/registration_v2_observation_valid/registration.json
 
-Those three have not been re-run since the code refactor; the shipped copies are the
-verified path.
+All three were re-run during verification. Partitions, index and statistics reproduced the
+committed artefacts byte for byte, so the shipped copies and a regenerated set agree.
 
 ## Verification status
 
@@ -429,14 +535,8 @@ Measured, but with no shipped counterpart to compare against:
   from the OSCD checkpoint, so they are not a baseline for the local model.
 - full 20-epoch fine-tune, seed 43, `pos_weight` 0.834, initialised from the OSCD checkpoint:
   342 training patches, 159 validation windows. Best epoch was 2 with validation AP 0.752562,
-  against epoch 7 at 0.770226 in the recorded run — a difference of 0.0177.
-
-  The curve is noisy in both runs: the recorded run falls from 0.770 at epoch 7 to 0.607 at
-  epoch 8, and the re-run ranges from 0.538 to 0.753. Per-epoch agreement is within about
-  0.08, which is the run-to-run variance of GPU training: cuDNN selects different convolution
-  algorithms between runs, so a curve this volatile samples a different best epoch. Training is
-  therefore reproducible in method and in range, not bit-identical. Evaluation and export are
-  deterministic and do reproduce exactly (§ above).
+  against epoch 7 at 0.770226 in the recorded run. See "Reproducibility, stage by stage" above
+  for why training reproduces in method and range rather than bit-identically.
 
 Not claimed: the validation figure of 0.770233 comes from the quantisation comparison
 over 159 validation windows. `scripts/evaluation/analyse_validation_thresholds.py`

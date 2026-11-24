@@ -2,13 +2,22 @@
 
 **Status:** final, with two document parts that must be read as different evidence.
 
-* Part I (§1-§9) records the method and the **historical OSCD development work**: measurements
-  made on the original OSCD benchmark, before the local model existed. Those results are
-  accurate for what they measured and are labelled as historical where they appear.
-* Part II (§10-§20) reports the **local SkyServe results**: the fine-tuned model, the locked
+* Part I (Sections 1–9) covers the **method, the historical OSCD development work and the pipeline
+  decisions**: measurements made on the original OSCD benchmark before the local model
+  existed, together with the preprocessing, registration and validity decisions that apply to
+  both models. It is not exclusively OSCD material — several sections report local
+  measurements of the local products, for example the mask statistics in Section 2.1, the
+  registration residuals in Section 2.2 and Section 5.7, and the candidate-volume diagnostics. Where a
+  section mixes the two, the local measurement is identified as such.
+* Part II (Sections 10–20) reports the **local SkyServe results**: the fine-tuned model, the locked
   test evaluation, the quantisation comparison, the human reviews and the consolidated register.
 
-Where Part I states something as pending or absent, §9 records which of those statements Part II
+**Supporting documents.** Some sections cite internal project notes under `docs/`. Those notes
+belong to the internal archive and are not included in the submitted repository; they are named
+for provenance only, and a public reader is not expected to open them. The documents that ship
+are listed in the repository README.
+
+Where Part I states something as pending or absent, Section 9 records which of those statements Part II
 supersedes. Part II is authoritative.
 
 **Data:** four Sentinel-2A MSI Level-1C products, two bi-temporal pairs.
@@ -81,7 +90,7 @@ standard deviation.
 One global translation per pair, estimated with masked ECC on band B08 over
 five 2000 x 2000 land windows.
 
-| Pair | Median shift | Correlation (median / min) | Windows converged | Residual RMSE mean |
+| Pair | Median shift | Correlation (median / min) | Windows converged | Residual RMSE mean (normalised units) |
 |---|---|---|---|---|
 | A | -0.122 / -0.639 px  (-1.22 / -6.39 m) | 0.832 / 0.581 | 4 of 5 | 0.6523 |
 | B | +0.013 / -0.119 px  (0.13 / -1.19 m) | 0.508 / 0.219 | 5 of 5 | 1.0120 |
@@ -91,19 +100,18 @@ deviation 0.0023 against 0.045-0.073 in the four that converged. ECC hit its
 iteration cap on a textureless region, so the median uses the four converged
 windows.
 
-Per-window bounds, correlations and residual displacements, and the difference
-between the masked and unmasked pass, are tabulated in
+The RMSE is computed on zero-mean, unit-standard-deviation normalised B08
+(`registration._normalise`), so it is expressed in standard deviations of the valid
+population, not in reflectance. Per-window bounds, correlations and residual
+displacements, and the difference between the masked and unmasked pass, are tabulated in
 `docs/measurement_uncertainty.md` section 5.2a.
 
-Five independent control windows that do not overlap the estimation windows:
-
-| Pair | Median residual | p95 residual | Max |
-|---|---|---|---|
-| A | 0.263 px (2.63 m) | 0.555 px (5.55 m) | 0.595 px (5.95 m) |
-| B | 0.084 px (0.84 m) | 0.196 px (1.96 m) | 0.211 px (2.11 m) |
-
-All sub-pixel. Both pairs show a mixed sign across control windows, which is
-what a residual local difference looks like, not a second global offset.
+**Limitation.** Every residual quoted here is measured on the estimation windows
+themselves, after the estimated translation is applied. No artefact retained in this
+repository records an independent control-window measurement, so the report does not
+claim independent control-window validation of registration accuracy. The residual
+figures show agreement on the windows that were aligned; they are not a test of
+agreement on windows the estimator never saw.
 
 ### 2.3 Normalisation
 
@@ -168,10 +176,10 @@ masked registration, normalisation, four-band stack, Siamese U-Net, sliding
 window inference, georeferenced output. The spacecraft segment is designed but
 not implemented; it exists to route tiles, not to confirm change.
 
-Full diagram, interface contract and the measured/proposed distinction: §16.
+Full diagram, interface contract and the measured/proposed distinction: Section 16.
 
 **Pending:** target-board benchmark, onboard throughput and power. INT8 quantisation is no longer
-pending — it was implemented and evaluated on held-out data (§14), and is **not recommended for
+pending — it was implemented and evaluated on held-out data (Section 14), and is **not recommended for
 deployment**. No onboard estimate is stated here because none has been measured.
 
 ## 4. Training and hyperparameter tuning
@@ -299,10 +307,11 @@ Run once, on the checkpoint selected by validation AP. 230 windows.
 
 Pixel metrics at threshold 0.5: precision 0.2446, recall 0.7618, F1 0.3703,
 IoU 0.2272, AP 0.5068, AUC 0.8942, over tp 143,100 / fp 442,026 / fn 44,746
-pixels. These are patch-framed numbers: the same model scores AP 0.2806 under
-scene framing on validation, a difference of about 0.05 caused by overlapping
-edge patches being counted twice. See `experiments/oscd_improvement/EXPERIMENTS.md`
-section 1.4.
+pixels. These are patch-framed numbers. The same model scores AP 0.2806 under scene
+framing; the two values were not computed on a matched split, so their difference does not
+isolate the framing effect and no framing-only correction is claimed here. Sliding-window
+overlap duplicates windows, and whether it also duplicates pixels depends on the accumulation
+rule. See `experiments/oscd_improvement/EXPERIMENTS.md` section 1.4.
 
 Object metrics (4-connected, matched greedily at IoU >= 0.5, counted per 128 px
 patch): 126 true objects against
@@ -388,7 +397,7 @@ No detection register row was created from these outputs, and none will be.
 
 **Status: measured.** The classical baseline and review layers were measured first; the local
 model was then validated on 159 canonical validation windows (pooled AP 0.770233) and evaluated
-once on the locked test split (pooled AP 0.653204, Pair A 0.969537, Pair B 0.366373) — §10.
+once on the locked test split (pooled AP 0.653204, Pair A 0.969537, Pair B 0.366373) — Section 10.
 Part I keeps the OSCD-era figures as historical record.
 
 ### 5.1 Classical baseline
@@ -439,7 +448,7 @@ give 64 patch slots but 36 unique pixels, and the evaluator reports 36.
 
 **Measured on real reviewed labels.** Validation uses 159 canonical windows (Pair A 90, Pair B 69)
 over 25,409 reviewed pixels; the locked test uses 104 (A) and 71 (B) windows over 21,363 reviewed
-pixels. Each reviewed pixel is scored once after overlap averaging. Results are in §10 and in
+pixels. Each reviewed pixel is scored once after overlap averaging. Results are in Section 10 and in
 `outputs/evaluation/final_locked_test_v1/test_metrics.json`.
 
 ### 5.4 Candidate sensitivity
@@ -639,7 +648,7 @@ INT8 QDQ on CPU as the reference. Same checkpoint, same 62 windows, same batch
 of 8, same threshold of 0.5, same `evaluate_ort` implementation. CUDA is
 required, not requested, so a fallback would have raised instead of producing a
 number. The official test split was not opened *for that OSCD benchmark*; the local
-model's locked test evaluation is reported in §10 and is a separate split.
+model's locked test evaluation is reported in Section 10 and is a separate split.
 
     python scripts/evaluation/benchmark_validation_providers.py \
         --checkpoint outputs/checkpoints/oscd_gpu_v1/baseline_seed42_v2/seed_42/best.pt \
@@ -730,10 +739,22 @@ With the transform disabled the CPU path returns to the CUDA result:
 
 So the corrected figure for INT8 on CPU is **AP 0.33198**, and the earlier 0.0743
 AP loss was an artefact of the optimiser defect: against FP32 on CUDA the true
-cost is about 0.005 AP on either provider. The deployment conclusion is
-unchanged — INT8 is smaller but slower than FP32 on both providers.
+cost is about 0.005 AP on either provider on the **OSCD validation benchmark of Section 6.3**. That is a different evaluation from the local held-out comparison in Section 14, where pooled AP falls by **0.098**, from 0.653204 to 0.554784.
 
-The workaround is applied: `utils/ort_session.create_session` takes an
+On performance the evidence is asymmetric. **On CUDA, INT8 is slower than FP32**, measured
+under the same protocol. **A like-for-like CPU comparison was not established**: the only fast
+CPU INT8 figure (59.96 ms per batch) came from the defective optimiser path and is not valid
+evidence, and the corrected path (161.47 ms per batch) has no matched FP32 CPU measurement at
+the same batch size and protocol. INT8 is therefore smaller, slower on CUDA, and unmeasured
+against FP32 on CPU. The deployment conclusion rests on accuracy, not speed: INT8 is not
+recommended because of the measured held-out degradation.
+
+All recorded results in this report come from **onnxruntime-gpu 1.24.4**. The upstream fix is
+recorded in PR #28229; which release first ships it, and whether TerraShift's ONNX graph has
+been exercised on any release after 1.24.4, are **not verified here**. No later runtime was
+installed or tested, so the workaround remains in force in the measured configuration.
+
+The workaround is applied: `terrashift.inference.onnx_runtime.create_session` takes an
 `optimization_level`, `quantize.py` and the benchmark script pin CPU QDQ sessions
 to `ORT_ENABLE_BASIC`, CUDA keeps `ORT_ENABLE_ALL`, and every benchmark entry
 records both the provider and the optimisation level. Seven regression tests in
@@ -742,8 +763,9 @@ tooling still uses BASIC.
 
 The cost is CPU speed. Disabling the fusion also disables the fast fused int8
 kernels: CPU median latency went from 59.96 ms to 161.47 ms per batch of eight,
-about 2.7 times slower. That is the price of correctness until ORT 1.27 or later
-is available, where only the non-conforming convolutions are skipped.
+about 2.7 times slower. That is the measured price of correctness in the 1.24.4 environment.
+Whether a later release, which would skip only the non-conforming convolutions, removes this
+cost for this model has not been tested.
 
 The model itself still violates the invariant. The durable fix is to export and
 quantise so both Siamese branches share one weight quantisation, or to give each
@@ -759,7 +781,6 @@ work running:
 |---|---|---|---|
 | CPU FP32 | 8.76 ms | 7.82 ms | 19.35 ms |
 | CPU INT8 | 9.94 ms | 9.45 ms | 11.00 ms |
-| CUDA FP32 | 2.43 ms | 1.88 ms | 2.82 ms |
 
 These are per-window figures at batch 1 and are not comparable with the per-batch
 figures above. Batching amortises the per-call overhead. The CPU INT8 line was
@@ -776,7 +797,7 @@ benchmarked**, and that is a decision, not an unfinished implementation:
   gigabytes of download, and it would touch an environment that currently works
   for PyTorch, ONNX Runtime and the raster stack.
 - The measurements already taken answer the question TensorRT would have
-  answered. CUDA FP32 at 2.43 ms is the fastest measured path measured here. A
+  answered. Batch-eight CUDA FP32 is the fastest measured path here. A
   TensorRT number could refine the CUDA figure; it could not change the
   conclusion that INT8 post-training quantisation is not a win on this model.
 
@@ -785,7 +806,7 @@ benchmarked**, and that is a decision, not an unfinished implementation:
 > `ORT_ENABLE_ALL`, the optimiser setting whose QDQ defect is diagnosed in
 > `docs/decisions/009-cpu-qdq-optimiser-defect.md`. Those CPU INT8 latency and AP-loss numbers
 > **must not be quoted as current**. The authoritative quantisation result for the selected model
-> is the held-out comparison in §14 (pooled test AP 0.554784 versus 0.653204), measured with the
+> is the held-out comparison in Section 14 (pooled test AP 0.554784 versus 0.653204), measured with the
 > corrected `ORT_ENABLE_BASIC` path.
 
 No TensorRT latency, memory or accuracy figure is claimed anywhere in this
@@ -828,7 +849,7 @@ reports `['CPUExecutionProvider']` and still runs; with it the session reports
 runs with 202 of 228 kernels on CUDA. The libraries came from the `nvidia-*` site
 packages in this environment, not from the PyTorch wheel.
 
-Because the fallback is silent, `utils/ort_session.py` now wraps session
+Because the fallback is silent, `terrashift.inference.onnx_runtime` now wraps session
 construction. `create_session(..., require="CUDAExecutionProvider")` raises when
 the provider is absent, and `quantize.py` records the provider list beside every
 latency figure, writing `{"status": "not_measured"}` instead of a timing when the
@@ -844,10 +865,12 @@ measurement; sections 6.2 and 6.3 hold those.
 Post-training INT8 on this model buys size, not speed. It is 28.3 % of the FP32
 file, and it is slower on both providers: 16.82 ms against 13.82 ms per batch of
 eight on CUDA, and 161.47 ms on CPU with the optimiser pinned for correctness.
-Its accuracy cost is about 0.005 AP on either provider — the larger figure
-reported earlier was the CPU fusion defect, not quantisation.
+Its accuracy cost on OSCD validation is about 0.005 AP under the corrected configuration of Section 6.3.
+That is a separate evaluation from the local held-out test in Section 14, where pooled AP falls from
+0.653204 to 0.554784 — a reduction of about 0.098 AP. The CPU fusion defect affected the earlier
+OSCD CPU INT8 result; it does not explain away the local held-out degradation.
 
-CUDA FP32 remains the fastest measured path at 1.73 ms per window on the
+CUDA FP32 remains the fastest measured path, at an amortised 1.73 ms per window on the
 corrected run, with the whole graph on the GPU and no boundary copies. TensorRT
 was not installed by decision
 (section 6.4). The honest onboard story is therefore pruning or a smaller
@@ -903,9 +926,9 @@ describe results they were written before the local model existed, and the follo
 statements in them are superseded:
 
 - an earlier version of this section said "no trained model, so no accuracy claim". A model
-  was trained; §10 and §11 carry its measured accuracy.
-- the INT8 figures in §6 were measured on the OSCD checkpoint and an OSCD validation split,
-  not on the selected local model. §14 supersedes them for the local model.
+  was trained; Section 10 and Section 11 carry its measured accuracy.
+- the INT8 figures in Section 6 were measured on the OSCD checkpoint and an OSCD validation split,
+  not on the selected local model. Section 14 supersedes them for the local model.
 
 Limitations that still hold, unchanged:
 
@@ -913,9 +936,9 @@ Limitations that still hold, unchanged:
 - Pair B spans 3.0 years, so "change" there can include seasonal and inter-annual effects
   that a two-date comparison cannot separate from construction.
 - The OSCD validation split is two cities, not a geographic sample.
-- Reviewed-pixel metrics do not measure scene-wide precision (§12, §13).
+- Reviewed-pixel metrics do not measure scene-wide precision (Section 12, Section 13).
 
-Everything from §10 onward is the authoritative final state.
+Everything from Section 10 onward is the authoritative final state.
 
 
 ---
@@ -953,7 +976,7 @@ Interpretation, stated as required:
   reviewed validation sample for Pair B was 52.7 % positive against 21.3 % on test, which makes
   the validation figure optimistic and also explains the precision collapse.
 - The reviewed-pixel evaluation does not establish scene-wide precision.
-- No satisfactory full-scene operating threshold has been established (§12).
+- No satisfactory full-scene operating threshold has been established (Section 12).
 - The model produces change scores, not reliable semantic identification of infrastructure
   events.
 
@@ -984,12 +1007,16 @@ the threshold falls; this is why no operating threshold is recommended.
 `outputs/inference/full_scene_candidate_analysis_v1/`. On the full tile the model flags
 70-90 % of scene area at thresholds 0.03-0.10, with the largest connected component spanning
 83-99 % of the candidate area — effectively the whole tile. Volume becomes tractable only at
-0.50 (Pair A 2.66 %, Pair B 12.67 %) and 0.70 (A 1.01 %, B 4.10 %). **The binding deployment
-constraint is candidate volume, not detection skill.**
+0.50 (Pair A 2.66 %, Pair B 12.67 %) and 0.70 (A 1.01 %, B 4.10 %). **Candidate volume is a
+binding constraint on human review**, because the reviewer workload scales with it. It is not
+the only limitation: Pair B's ranking on the reviewed test pixels is separately degraded
+(AUC 0.644516 against 0.963734 for Pair A), and no threshold adjustment addresses that.
 
-Root cause was diagnosed in `outputs/evaluation/full_scene_diagnostic_audit_v1/`: both
-inference paths agree to 8.63e-04 (r = 1.000000), so the coordinate mapping and preprocessing
-are correct; the reviewed sample simply does not represent the scene. Pair A no-change is a
+The two inference paths agree to 8.63e-04 with r = 1.000000, measured in
+`outputs/evaluation/full_scene_diagnostic_audit_v1/`. That agreement establishes that the two paths
+produce the same scores; it does not by itself prove that every preprocessing step is correct, and
+it does not identify a cause for the full-scene behaviour. Separately, the reviewed sample is not
+representative of the full-scene score distribution. Pair A no-change is a
 spike at 0.0 whose interquartile range holds 0.0 % of the scene, while the scene median is
 0.220.
 
@@ -998,7 +1025,8 @@ spike at 0.0 whose interquartile range holds 0.0 % of the scene, while the scene
 **Figure 4.** Full-scene probability map for Pair B (T43RGM, 2023-10-06 to 2026-10-22), 120,560,299
 valid pixels. At thresholds of 0.03 to 0.10 the model flags 70-90 % of scene area, and the largest
 connected component spans most of the tile. The map is a score field, not a detection product; it
-shows why candidate volume, not detection skill, is the binding deployment constraint.
+shows why candidate volume constrains deployment. Detection skill is a separate and, for
+Pair B, unresolved constraint.
 
 ## 13. Accepted, rejected, uncertain and failed cases
 
@@ -1091,7 +1119,7 @@ the work that needs accuracy.**
     L1C pair (.SAFE, 13 bands)                          src/terrashift/data/safeloader.py
         |  DN -> TOA reflectance, DN 0 = NoData
         v
-    quality and validity                                src/terrashift/data/masks.py, src/terrashift/src/terrashift/data/validity.py
+    quality and validity                                src/terrashift/data/masks.py, src/terrashift/data/validity.py
         |  MSK_CLASSI (cloud, cirrus, snow/ice)
         |  MSK_QUALIT (lost, degraded, defective, nodata, saturated, cross-talk)
         v
@@ -1140,7 +1168,7 @@ benchmark, so INT8 is not recommended for deployment on the evidence measured he
 | Item | Value | Source |
 |---|---|---|
 | Input bands | B02, B03, B04, B08 | `config.yaml: data.bands` |
-| Input radiometry | TOA reflectance, `(DN + RADIO_ADD_OFFSET) / QUANTIFICATION_VALUE` | `src/terrashift/src/terrashift/data/safeloader.py` |
+| Input radiometry | TOA reflectance, `(DN + RADIO_ADD_OFFSET) / QUANTIFICATION_VALUE` | `src/terrashift/data/safeloader.py` |
 | Input resolution | 10 m, native | `configs/data_manifest.yaml` |
 | Patch size | 256 local, 128 OSCD; multiple of 8 | run config of each run |
 | Model input | `(N, 4, H, W)` per date, z-scored with training statistics | `train_local_manual.py` |
@@ -1183,45 +1211,73 @@ benchmark, so INT8 is not recommended for deployment on the evidence measured he
 2. **Band availability.** L1C carries 13 bands; a flight instrument downlinking only four changes
    the model contract.
 3. **Quantisation drift.** With BatchNorm and static QDQ calibrated on a small set, the operating
-   point shifts — measured directly in §14. Any threshold must be re-checked after quantisation,
+   point shifts — measured directly in Section 14. Any threshold must be re-checked after quantisation,
    on validation data only.
 
 ## 17. Computational and hardware limitations
 
 RTX 3050 Ti Laptop, 4 GB VRAM; 16 GB host RAM; WSL2, which periodically exhausted memory and
 killed long runs. Full-scene inference peaked at 3,530.7 MiB RSS and 171 MiB GPU in 353.58 s
-for 120.5 Mpx. No multi-GPU, no TensorRT (provider absent), no ONNX FP16 GPU path tested.
+for 120.5 Mpx. No multi-GPU, no TensorRT benchmark (the provider is compiled into the installed build but the TensorRT runtime library is absent, so it cannot initialise), no ONNX FP16 GPU path tested.
 
 ## 18. Reproducibility
 
 Pinned by SHA256: checkpoint, normalisation, both ONNX graphs, dataset manifest. Every
 evaluation directory carries a manifest with software versions and exact commands. The test
-suite reports **635 passed, 2 skipped** with `SENTINEL_DATA_ROOT` unset and **637 passed**
-with it set (P6 verification, 2026-11-23). These are unit and integration tests: they do
-not constitute an end-to-end pipeline verification, and the training, locked-test,
-inference and quantisation workflows were not re-executed for this revision. Known gaps:
-several scripts remain untracked in Git at the time of writing, and `experiments/`
-(706 MB) is not ignored.
+suite reports **635 passed, 9 skipped** with `SENTINEL_DATA_ROOT` unset and **644 passed**
+with it set (P6 and P10 verification, 2026-11-23). The nine skipped tests read the Sentinel-2
+products or the project datasets and skip cleanly when those are absent; the rest need no
+imagery.
+
+Reproduced exactly in that verification: the locked-test metrics, five of five to the recorded
+digits (pooled AP 0.653204, Pair A 0.969537, Pair B 0.366373, pooled AUC 0.747176, macro AP
+0.667955); the FP32 ONNX export and the INT8 quantisation, byte-identical to the shipped
+artefacts; the partitions, patch index and normalisation statistics, byte-identical; and ONNX
+FP32 parity against PyTorch at a maximum absolute difference of 1.565e-07.
+
+Reproduced in method but **not** bit-identically: the 20-epoch local fine-tune. Same seed and
+initialisation gave validation AP 0.752562 at epoch 2, against 0.770226 at epoch 7 in the
+recorded run. GPU kernel selection varies between runs, so identical checkpoints are not
+guaranteed.
+
+Scope limits: full-scene inference was executed for **Pair A only** — Pair B full-scene
+inference with the final local checkpoint was not performed. The demo workflow ran. The
+validation-split analysis and the OSCD training stage were not re-executed for this revision.
+
+Repository state, 2026-11-23: the frozen artefacts are committed under `artifacts/` with a
+90-entry SHA256 manifest; `outputs/` is generated and untracked. `experiments/` (706 MB) is
+still not ignored by Git, and a small number of scripts remain untracked. Earlier revisions of
+this section described a larger set of untracked scripts; that observation is historical.
 
 ## 19. Future work
 
 Ordered by expected value, none of it started:
 
 1. **Data path** — decode each band once per strip and overlap read/normalise with the forward
-   pass. This is the only route to a real throughput gain (§15).
-2. **Annotation sampling** — Pair B's collapse is driven by a non-representative reviewed
-   sample; stratified review across the full score range would fix the measurement before any
-   model change.
+   pass. This is the only route to a real throughput gain (Section 15).
+2. **Annotation sampling** — Pair B shows two distinct problems: a reviewed sample that does
+   not represent the scene, and degraded ranking on the locked-test sample (AUC 0.644516).
+   Stratified review across the full score range would make the measurement representative and
+   is a prerequisite for any model work; it would not by itself remove the observed ranking
+   degradation, and no scene-wide ground truth exists to bound either effect.
 3. **Candidate-only deployment** — the system is best positioned as a candidate-generation and
-   human-review prototype, at a high threshold, with the register workflow in §13.
+   human-review prototype, with the register workflow in Section 13. **No operating threshold is
+   recommended here.** Raising the threshold reduces candidate volume and also reduces recall;
+   every fixed threshold in this report (0.05, 0.10, 0.50, 0.70) is a diagnostic comparison
+   point, not a validated operating point. Selecting one requires representative reviewed data
+   and an explicit precision/recall or operational-cost target, and it must not be chosen on
+   the locked test.
 4. **Semantic categorisation** — requires annotation of change *categories*, which the current
    labels do not contain.
 
 ## 20. Conclusion
 
 The current system is best positioned as a candidate-generation and human-review prototype.
-It is not a fully automated, validated man-made change detector. Pair A transfers to held-out
-geography; Pair B does not, and the failure is a property of the reviewed sample as much as of
-the model. Reviewed-pixel AP does not establish scene-wide precision, no satisfactory
+It is not a fully automated, validated man-made change detector. Pair A performs strongly on its
+geographically held-out test partition of the same tile; Pair B does not. Its loss has two parts: the reviewed sample does not represent the
+scene, and Pair B's ranking on the locked-test sample is degraded (AUC 0.644516 against
+0.963734 for Pair A). No representative scene-wide ground truth exists to bound either effect,
+and sample representativeness does not explain the lower AUC. Reviewed-pixel AP does not
+establish scene-wide precision, no satisfactory
 full-scene threshold exists, INT8 is not deployment-ready, and CUDA FP16 is an optional
 inference path rather than evidence of onboard deployment.

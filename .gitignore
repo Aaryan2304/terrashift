@@ -37,11 +37,13 @@ Thumbs.db
 
 # ---------------------------------------------------------------------------
 # Documentation policy (Task 1)
-# Only three documentation artefacts are public: README.md, AI_USAGE.md and the
-# final report PDF. All other internal documentation was moved to
+# Only two documentation artefacts are public: README.md and the final report
+# PDF. AI_USAGE.md is kept on disk but excluded from Git by a rule below. All
+# other internal documentation was moved to
 # ../terrashift_local_archive/archived_docs_2026-11-22/ and must not re-enter
 # this repository. These rules are path-specific on purpose: they must never
-# hide configuration, schemas, manifests, source, AI_USAGE.md or the report PDF.
+# hide configuration, schemas, manifests, source, the AI usage record or the
+# report PDF.
 # ---------------------------------------------------------------------------
 /PLAN.md
 /docs/*.md
@@ -91,3 +93,6 @@ logs/
 # are summarised in the report. Ignoring this does not delete anything on disk.
 # ---------------------------------------------------------------------------
 /experiments/
+
+# internal AI usage record, withheld from publication
+/AI_USAGE.md
