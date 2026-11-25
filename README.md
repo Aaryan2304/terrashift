@@ -248,18 +248,6 @@ terrashift/
 See the technical report for dataset provenance and attribution. The AI usage record is
 supplied separately with the submission.
 
-## Licence
-
-TerraShift is released under the **Apache License 2.0**. The full text is in `LICENSE`.
-GitHub identifies the repository licence as Apache-2.0.
-
-`NOTICE` holds the copyright line, a statement that the work was produced for the SkyServe
-assignment, the OSCD/OSCD100 attribution with its citation, and a note that the Sentinel-2
-imagery is Copernicus data. It does not restate the licence terms.
-
-The Sentinel-2 imagery is Copernicus data and is not redistributed here. OSCD and OSCD100
-retain their own terms, described in the technical report.
-
 ## Documentation
 
 Three documentation artefacts are public in this repository. The AI usage record is
@@ -543,3 +531,14 @@ over 159 validation windows. `scripts/evaluation/analyse_validation_thresholds.p
 computes a different quantity on a different pixel set (pooled AP 0.7017) and is not a
 contradiction of it.
 
+## Licence
+
+TerraShift is released under the **Apache License 2.0**. The full text is in `LICENSE`.
+GitHub identifies the repository licence as Apache-2.0.
+
+`NOTICE` holds the copyright line, a statement that the work was produced for the SkyServe
+assignment, the OSCD/OSCD100 attribution with its citation, and a note that the Sentinel-2
+imagery is Copernicus data. It does not restate the licence terms.
+
+The Sentinel-2 imagery is Copernicus data and is not redistributed here. OSCD and OSCD100
+retain their own terms, described in the technical report.
